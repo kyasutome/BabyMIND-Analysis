@@ -1,0 +1,23 @@
+0 1 1743 1743
+1 2 1543 1543
+2 3 1343 1343
+4 4 1143 1143
+5 5 943 943
+6 6 743 743 
+7 7 543 543
+32 1 1733 1733
+33 2 1533 1533
+34 3 1333 1333
+35 4 1133 1133
+36 5 933 933
+37 6 733 733
+38 7 533 533
+
+
+channel/ID/posy(L)/posy(R)
+L : Left module
+R : Right module
+Each position is measured from B2 floor.
+
+0~7   : 1st module
+32-38 : 2nd module

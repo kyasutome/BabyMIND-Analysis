@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/examples/Calibration_txt.cpp
+stdio.h
+-
+string.h
+-
+exception
+-
+fstream
+-
+vector
+-
+iostream
+-
+sstream
+-
+iterator
+-
+algorithm
+-
+

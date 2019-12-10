@@ -1,0 +1,13 @@
+message(STATUS "MakeCalib ... ")
+
+AUX_SOURCE_DIRECTORY(.	SOURCE_FILES)
+message(STATUS "${SOURCE_FILES}")
+
+if    (ROOT_FOUND)
+
+  ADD_EXECUTABLE(MakeCalib	MakeCalib.cpp)
+  TARGET_LINK_LIBRARIES(MakeCalib	${ROOT_LIBRARIES})
+  TARGET_INCLUDE_DIRECTORIES(MakeCalib	PUBLIC	${PROJECT_SOURCE_DIR}/include/MakeCalib
+  						${PROJECT_SOURCE_DIR}/lib)
+
+endif (ROOT_FOUND)

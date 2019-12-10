@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc ../../lib/libtestlib.a  CMakeFiles/testlib.dir/testlib.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib ../../lib/libtestlib.a
