@@ -43,10 +43,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35
+CMAKE_SOURCE_DIR = /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build
+CMAKE_BINARY_DIR = /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build
 
 # Include any dependencies generated for this target.
 include examples/CMakeFiles/ufe-monitor.dir/depend.make
@@ -59,16 +59,16 @@ include examples/CMakeFiles/ufe-monitor.dir/flags.make
 
 examples/CMakeFiles/ufe-monitor.dir/ufe_monitor.cpp.o: examples/CMakeFiles/ufe-monitor.dir/flags.make
 examples/CMakeFiles/ufe-monitor.dir/ufe_monitor.cpp.o: ../examples/ufe_monitor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/CMakeFiles/ufe-monitor.dir/ufe_monitor.cpp.o"
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build/examples && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ufe-monitor.dir/ufe_monitor.cpp.o -c /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/examples/ufe_monitor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/CMakeFiles/ufe-monitor.dir/ufe_monitor.cpp.o"
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build/examples && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ufe-monitor.dir/ufe_monitor.cpp.o -c /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/examples/ufe_monitor.cpp
 
 examples/CMakeFiles/ufe-monitor.dir/ufe_monitor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ufe-monitor.dir/ufe_monitor.cpp.i"
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build/examples && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/examples/ufe_monitor.cpp > CMakeFiles/ufe-monitor.dir/ufe_monitor.cpp.i
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build/examples && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/examples/ufe_monitor.cpp > CMakeFiles/ufe-monitor.dir/ufe_monitor.cpp.i
 
 examples/CMakeFiles/ufe-monitor.dir/ufe_monitor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ufe-monitor.dir/ufe_monitor.cpp.s"
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build/examples && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/examples/ufe_monitor.cpp -o CMakeFiles/ufe-monitor.dir/ufe_monitor.cpp.s
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build/examples && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/examples/ufe_monitor.cpp -o CMakeFiles/ufe-monitor.dir/ufe_monitor.cpp.s
 
 # Object files for target ufe-monitor
 ufe__monitor_OBJECTS = \
@@ -81,8 +81,8 @@ ufe__monitor_EXTERNAL_OBJECTS =
 ../bin/ufe-monitor: examples/CMakeFiles/ufe-monitor.dir/build.make
 ../bin/ufe-monitor: ../lib/libBabyMINDUnpack.dylib
 ../bin/ufe-monitor: examples/CMakeFiles/ufe-monitor.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/ufe-monitor"
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ufe-monitor.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/ufe-monitor"
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ufe-monitor.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 examples/CMakeFiles/ufe-monitor.dir/build: ../bin/ufe-monitor
@@ -90,10 +90,10 @@ examples/CMakeFiles/ufe-monitor.dir/build: ../bin/ufe-monitor
 .PHONY : examples/CMakeFiles/ufe-monitor.dir/build
 
 examples/CMakeFiles/ufe-monitor.dir/clean:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build/examples && $(CMAKE_COMMAND) -P CMakeFiles/ufe-monitor.dir/cmake_clean.cmake
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build/examples && $(CMAKE_COMMAND) -P CMakeFiles/ufe-monitor.dir/cmake_clean.cmake
 .PHONY : examples/CMakeFiles/ufe-monitor.dir/clean
 
 examples/CMakeFiles/ufe-monitor.dir/depend:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35 /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/examples /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build/examples /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build/examples/CMakeFiles/ufe-monitor.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35 /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/examples /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build/examples /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build/examples/CMakeFiles/ufe-monitor.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : examples/CMakeFiles/ufe-monitor.dir/depend
 

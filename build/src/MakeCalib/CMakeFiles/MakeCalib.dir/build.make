@@ -43,10 +43,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/kenji/Dropbox/wagasci/babymind/software/analysis
+CMAKE_SOURCE_DIR = /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/kenji/Dropbox/wagasci/babymind/software/analysis/build
+CMAKE_BINARY_DIR = /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build
 
 # Include any dependencies generated for this target.
 include src/MakeCalib/CMakeFiles/MakeCalib.dir/depend.make
@@ -57,31 +57,33 @@ include src/MakeCalib/CMakeFiles/MakeCalib.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/MakeCalib/CMakeFiles/MakeCalib.dir/flags.make
 
-src/MakeCalib/CMakeFiles/MakeCalib.dir/MakeCalib.cpp.o: src/MakeCalib/CMakeFiles/MakeCalib.dir/flags.make
-src/MakeCalib/CMakeFiles/MakeCalib.dir/MakeCalib.cpp.o: ../src/MakeCalib/MakeCalib.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/analysis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/MakeCalib/CMakeFiles/MakeCalib.dir/MakeCalib.cpp.o"
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/build/src/MakeCalib && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MakeCalib.dir/MakeCalib.cpp.o -c /Users/kenji/Dropbox/wagasci/babymind/software/analysis/src/MakeCalib/MakeCalib.cpp
+src/MakeCalib/CMakeFiles/MakeCalib.dir/main.cpp.o: src/MakeCalib/CMakeFiles/MakeCalib.dir/flags.make
+src/MakeCalib/CMakeFiles/MakeCalib.dir/main.cpp.o: ../src/MakeCalib/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/MakeCalib/CMakeFiles/MakeCalib.dir/main.cpp.o"
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/src/MakeCalib && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MakeCalib.dir/main.cpp.o -c /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/src/MakeCalib/main.cpp
 
-src/MakeCalib/CMakeFiles/MakeCalib.dir/MakeCalib.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MakeCalib.dir/MakeCalib.cpp.i"
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/build/src/MakeCalib && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenji/Dropbox/wagasci/babymind/software/analysis/src/MakeCalib/MakeCalib.cpp > CMakeFiles/MakeCalib.dir/MakeCalib.cpp.i
+src/MakeCalib/CMakeFiles/MakeCalib.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MakeCalib.dir/main.cpp.i"
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/src/MakeCalib && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/src/MakeCalib/main.cpp > CMakeFiles/MakeCalib.dir/main.cpp.i
 
-src/MakeCalib/CMakeFiles/MakeCalib.dir/MakeCalib.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MakeCalib.dir/MakeCalib.cpp.s"
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/build/src/MakeCalib && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenji/Dropbox/wagasci/babymind/software/analysis/src/MakeCalib/MakeCalib.cpp -o CMakeFiles/MakeCalib.dir/MakeCalib.cpp.s
+src/MakeCalib/CMakeFiles/MakeCalib.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MakeCalib.dir/main.cpp.s"
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/src/MakeCalib && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/src/MakeCalib/main.cpp -o CMakeFiles/MakeCalib.dir/main.cpp.s
 
 # Object files for target MakeCalib
 MakeCalib_OBJECTS = \
-"CMakeFiles/MakeCalib.dir/MakeCalib.cpp.o"
+"CMakeFiles/MakeCalib.dir/main.cpp.o"
 
 # External object files for target MakeCalib
 MakeCalib_EXTERNAL_OBJECTS =
 
-../bin/MakeCalib: src/MakeCalib/CMakeFiles/MakeCalib.dir/MakeCalib.cpp.o
+../bin/MakeCalib: src/MakeCalib/CMakeFiles/MakeCalib.dir/main.cpp.o
 ../bin/MakeCalib: src/MakeCalib/CMakeFiles/MakeCalib.dir/build.make
+../bin/MakeCalib: ../lib/library/BMBasicRecon.so
+../bin/MakeCalib: ../lib/library/BMBeaminfo.so
 ../bin/MakeCalib: src/MakeCalib/CMakeFiles/MakeCalib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/analysis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../../bin/MakeCalib"
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/build/src/MakeCalib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MakeCalib.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../../bin/MakeCalib"
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/src/MakeCalib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MakeCalib.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/MakeCalib/CMakeFiles/MakeCalib.dir/build: ../bin/MakeCalib
@@ -89,10 +91,10 @@ src/MakeCalib/CMakeFiles/MakeCalib.dir/build: ../bin/MakeCalib
 .PHONY : src/MakeCalib/CMakeFiles/MakeCalib.dir/build
 
 src/MakeCalib/CMakeFiles/MakeCalib.dir/clean:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/build/src/MakeCalib && $(CMAKE_COMMAND) -P CMakeFiles/MakeCalib.dir/cmake_clean.cmake
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/src/MakeCalib && $(CMAKE_COMMAND) -P CMakeFiles/MakeCalib.dir/cmake_clean.cmake
 .PHONY : src/MakeCalib/CMakeFiles/MakeCalib.dir/clean
 
 src/MakeCalib/CMakeFiles/MakeCalib.dir/depend:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/kenji/Dropbox/wagasci/babymind/software/analysis /Users/kenji/Dropbox/wagasci/babymind/software/analysis/src/MakeCalib /Users/kenji/Dropbox/wagasci/babymind/software/analysis/build /Users/kenji/Dropbox/wagasci/babymind/software/analysis/build/src/MakeCalib /Users/kenji/Dropbox/wagasci/babymind/software/analysis/build/src/MakeCalib/CMakeFiles/MakeCalib.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/src/MakeCalib /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/src/MakeCalib /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/src/MakeCalib/CMakeFiles/MakeCalib.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/MakeCalib/CMakeFiles/MakeCalib.dir/depend
 

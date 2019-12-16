@@ -80,7 +80,7 @@ list
 exception
 -
 
-/Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/examples/babyMindCalibration.cpp
+/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/examples/babyMindCalibration.cpp
 stdio.h
 -
 string.h
@@ -92,9 +92,9 @@ fstream
 TCanvas.h
 -
 MDdataWordBM.h
-/Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/examples/MDdataWordBM.h
+/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/examples/MDdataWordBM.h
 MDargumentHandler.h
-/Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/examples/MDargumentHandler.h
+/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/examples/MDargumentHandler.h
 iostream
 -
 sstream

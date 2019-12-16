@@ -43,10 +43,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35
+CMAKE_SOURCE_DIR = /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build
+CMAKE_BINARY_DIR = /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build
 
 # Include any dependencies generated for this target.
 include examples/CMakeFiles/HG_reconstructed.dir/depend.make
@@ -59,16 +59,16 @@ include examples/CMakeFiles/HG_reconstructed.dir/flags.make
 
 examples/CMakeFiles/HG_reconstructed.dir/HG_reconstructed.cpp.o: examples/CMakeFiles/HG_reconstructed.dir/flags.make
 examples/CMakeFiles/HG_reconstructed.dir/HG_reconstructed.cpp.o: ../examples/HG_reconstructed.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/CMakeFiles/HG_reconstructed.dir/HG_reconstructed.cpp.o"
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build/examples && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HG_reconstructed.dir/HG_reconstructed.cpp.o -c /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/examples/HG_reconstructed.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/CMakeFiles/HG_reconstructed.dir/HG_reconstructed.cpp.o"
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build/examples && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HG_reconstructed.dir/HG_reconstructed.cpp.o -c /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/examples/HG_reconstructed.cpp
 
 examples/CMakeFiles/HG_reconstructed.dir/HG_reconstructed.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HG_reconstructed.dir/HG_reconstructed.cpp.i"
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build/examples && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/examples/HG_reconstructed.cpp > CMakeFiles/HG_reconstructed.dir/HG_reconstructed.cpp.i
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build/examples && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/examples/HG_reconstructed.cpp > CMakeFiles/HG_reconstructed.dir/HG_reconstructed.cpp.i
 
 examples/CMakeFiles/HG_reconstructed.dir/HG_reconstructed.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HG_reconstructed.dir/HG_reconstructed.cpp.s"
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build/examples && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/examples/HG_reconstructed.cpp -o CMakeFiles/HG_reconstructed.dir/HG_reconstructed.cpp.s
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build/examples && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/examples/HG_reconstructed.cpp -o CMakeFiles/HG_reconstructed.dir/HG_reconstructed.cpp.s
 
 # Object files for target HG_reconstructed
 HG_reconstructed_OBJECTS = \
@@ -81,8 +81,8 @@ HG_reconstructed_EXTERNAL_OBJECTS =
 ../bin/HG_reconstructed: examples/CMakeFiles/HG_reconstructed.dir/build.make
 ../bin/HG_reconstructed: ../lib/libBabyMINDUnpack.dylib
 ../bin/HG_reconstructed: examples/CMakeFiles/HG_reconstructed.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/HG_reconstructed"
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/HG_reconstructed.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/HG_reconstructed"
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/HG_reconstructed.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 examples/CMakeFiles/HG_reconstructed.dir/build: ../bin/HG_reconstructed
@@ -90,10 +90,10 @@ examples/CMakeFiles/HG_reconstructed.dir/build: ../bin/HG_reconstructed
 .PHONY : examples/CMakeFiles/HG_reconstructed.dir/build
 
 examples/CMakeFiles/HG_reconstructed.dir/clean:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build/examples && $(CMAKE_COMMAND) -P CMakeFiles/HG_reconstructed.dir/cmake_clean.cmake
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build/examples && $(CMAKE_COMMAND) -P CMakeFiles/HG_reconstructed.dir/cmake_clean.cmake
 .PHONY : examples/CMakeFiles/HG_reconstructed.dir/clean
 
 examples/CMakeFiles/HG_reconstructed.dir/depend:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35 /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/examples /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build/examples /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build/examples/CMakeFiles/HG_reconstructed.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35 /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/examples /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build/examples /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build/examples/CMakeFiles/HG_reconstructed.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : examples/CMakeFiles/HG_reconstructed.dir/depend
 

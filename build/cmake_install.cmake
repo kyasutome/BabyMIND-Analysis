@@ -1,4 +1,4 @@
-# Install script for directory: /Users/kenji/Dropbox/wagasci/babymind/software/analysis
+# Install script for directory: /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,8 +34,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/kenji/Dropbox/wagasci/babymind/software/analysis/build/src/MakeCalib/cmake_install.cmake")
-  include("/Users/kenji/Dropbox/wagasci/babymind/software/analysis/build/lib/cmake_install.cmake")
+  include("/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/src/MakeCalib/cmake_install.cmake")
+  include("/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/src/EvtDisp/cmake_install.cmake")
 
 endif()
 
@@ -47,5 +47,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/kenji/Dropbox/wagasci/babymind/software/analysis/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

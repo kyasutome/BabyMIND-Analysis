@@ -43,10 +43,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35
+CMAKE_SOURCE_DIR = /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build
+CMAKE_BINARY_DIR = /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build
 
 # Include any dependencies generated for this target.
 include examples/CMakeFiles/DataQualityCheck.dir/depend.make
@@ -59,16 +59,16 @@ include examples/CMakeFiles/DataQualityCheck.dir/flags.make
 
 examples/CMakeFiles/DataQualityCheck.dir/babyMindDataQualityCheck.cpp.o: examples/CMakeFiles/DataQualityCheck.dir/flags.make
 examples/CMakeFiles/DataQualityCheck.dir/babyMindDataQualityCheck.cpp.o: ../examples/babyMindDataQualityCheck.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/CMakeFiles/DataQualityCheck.dir/babyMindDataQualityCheck.cpp.o"
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build/examples && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DataQualityCheck.dir/babyMindDataQualityCheck.cpp.o -c /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/examples/babyMindDataQualityCheck.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/CMakeFiles/DataQualityCheck.dir/babyMindDataQualityCheck.cpp.o"
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build/examples && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DataQualityCheck.dir/babyMindDataQualityCheck.cpp.o -c /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/examples/babyMindDataQualityCheck.cpp
 
 examples/CMakeFiles/DataQualityCheck.dir/babyMindDataQualityCheck.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DataQualityCheck.dir/babyMindDataQualityCheck.cpp.i"
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build/examples && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/examples/babyMindDataQualityCheck.cpp > CMakeFiles/DataQualityCheck.dir/babyMindDataQualityCheck.cpp.i
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build/examples && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/examples/babyMindDataQualityCheck.cpp > CMakeFiles/DataQualityCheck.dir/babyMindDataQualityCheck.cpp.i
 
 examples/CMakeFiles/DataQualityCheck.dir/babyMindDataQualityCheck.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DataQualityCheck.dir/babyMindDataQualityCheck.cpp.s"
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build/examples && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/examples/babyMindDataQualityCheck.cpp -o CMakeFiles/DataQualityCheck.dir/babyMindDataQualityCheck.cpp.s
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build/examples && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/examples/babyMindDataQualityCheck.cpp -o CMakeFiles/DataQualityCheck.dir/babyMindDataQualityCheck.cpp.s
 
 # Object files for target DataQualityCheck
 DataQualityCheck_OBJECTS = \
@@ -81,8 +81,8 @@ DataQualityCheck_EXTERNAL_OBJECTS =
 ../bin/DataQualityCheck: examples/CMakeFiles/DataQualityCheck.dir/build.make
 ../bin/DataQualityCheck: ../lib/libBabyMINDUnpack.dylib
 ../bin/DataQualityCheck: examples/CMakeFiles/DataQualityCheck.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/DataQualityCheck"
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/DataQualityCheck.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/DataQualityCheck"
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/DataQualityCheck.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 examples/CMakeFiles/DataQualityCheck.dir/build: ../bin/DataQualityCheck
@@ -90,10 +90,10 @@ examples/CMakeFiles/DataQualityCheck.dir/build: ../bin/DataQualityCheck
 .PHONY : examples/CMakeFiles/DataQualityCheck.dir/build
 
 examples/CMakeFiles/DataQualityCheck.dir/clean:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build/examples && $(CMAKE_COMMAND) -P CMakeFiles/DataQualityCheck.dir/cmake_clean.cmake
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build/examples && $(CMAKE_COMMAND) -P CMakeFiles/DataQualityCheck.dir/cmake_clean.cmake
 .PHONY : examples/CMakeFiles/DataQualityCheck.dir/clean
 
 examples/CMakeFiles/DataQualityCheck.dir/depend:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35 /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/examples /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build/examples /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build/examples/CMakeFiles/DataQualityCheck.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35 /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/examples /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build/examples /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build/examples/CMakeFiles/DataQualityCheck.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : examples/CMakeFiles/DataQualityCheck.dir/depend
 

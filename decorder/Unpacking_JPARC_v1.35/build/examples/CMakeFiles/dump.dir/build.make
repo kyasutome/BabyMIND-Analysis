@@ -43,10 +43,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35
+CMAKE_SOURCE_DIR = /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build
+CMAKE_BINARY_DIR = /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build
 
 # Include any dependencies generated for this target.
 include examples/CMakeFiles/dump.dir/depend.make
@@ -59,16 +59,16 @@ include examples/CMakeFiles/dump.dir/flags.make
 
 examples/CMakeFiles/dump.dir/babyMindDataDump.cpp.o: examples/CMakeFiles/dump.dir/flags.make
 examples/CMakeFiles/dump.dir/babyMindDataDump.cpp.o: ../examples/babyMindDataDump.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/CMakeFiles/dump.dir/babyMindDataDump.cpp.o"
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build/examples && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dump.dir/babyMindDataDump.cpp.o -c /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/examples/babyMindDataDump.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/CMakeFiles/dump.dir/babyMindDataDump.cpp.o"
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build/examples && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dump.dir/babyMindDataDump.cpp.o -c /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/examples/babyMindDataDump.cpp
 
 examples/CMakeFiles/dump.dir/babyMindDataDump.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dump.dir/babyMindDataDump.cpp.i"
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build/examples && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/examples/babyMindDataDump.cpp > CMakeFiles/dump.dir/babyMindDataDump.cpp.i
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build/examples && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/examples/babyMindDataDump.cpp > CMakeFiles/dump.dir/babyMindDataDump.cpp.i
 
 examples/CMakeFiles/dump.dir/babyMindDataDump.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dump.dir/babyMindDataDump.cpp.s"
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build/examples && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/examples/babyMindDataDump.cpp -o CMakeFiles/dump.dir/babyMindDataDump.cpp.s
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build/examples && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/examples/babyMindDataDump.cpp -o CMakeFiles/dump.dir/babyMindDataDump.cpp.s
 
 # Object files for target dump
 dump_OBJECTS = \
@@ -81,8 +81,8 @@ dump_EXTERNAL_OBJECTS =
 ../bin/dump: examples/CMakeFiles/dump.dir/build.make
 ../bin/dump: ../lib/libBabyMINDUnpack.dylib
 ../bin/dump: examples/CMakeFiles/dump.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/dump"
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/dump.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/dump"
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/dump.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 examples/CMakeFiles/dump.dir/build: ../bin/dump
@@ -90,10 +90,10 @@ examples/CMakeFiles/dump.dir/build: ../bin/dump
 .PHONY : examples/CMakeFiles/dump.dir/build
 
 examples/CMakeFiles/dump.dir/clean:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build/examples && $(CMAKE_COMMAND) -P CMakeFiles/dump.dir/cmake_clean.cmake
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build/examples && $(CMAKE_COMMAND) -P CMakeFiles/dump.dir/cmake_clean.cmake
 .PHONY : examples/CMakeFiles/dump.dir/clean
 
 examples/CMakeFiles/dump.dir/depend:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35 /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/examples /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build/examples /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/build/examples/CMakeFiles/dump.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35 /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/examples /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build/examples /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/build/examples/CMakeFiles/dump.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : examples/CMakeFiles/dump.dir/depend
 

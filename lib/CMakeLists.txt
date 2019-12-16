@@ -1,8 +1,0 @@
-message(STATUS "lib ... ")
-
-AUX_SOURCE_DIRECTORY(.	SOURCE_FILES)
-message(STATUS "${SOURCE_FILES}")
-
-ADD_LIBRARY(testlib    STATIC  ${PROJECT_SOURCE_DIR}/lib/testlib.cpp)
-TARGET_INCLUDE_DIRECTORIES(testlib	PUBLIC	${PROJECT_SOURCE_DIR}/include)
-

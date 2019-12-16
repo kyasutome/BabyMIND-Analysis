@@ -6,5 +6,5 @@ CXX_FLAGS =  -Wall -O3 -std=c++11 -isysroot /Library/Developer/CommandLineTools/
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/. -I/Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/src -I/Users/kenji/local/root/root-6.18.02/built/include 
+CXX_INCLUDES = -I/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/. -I/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/src -I/Users/kenji/local/root/root-6.18.02/built/include 
 

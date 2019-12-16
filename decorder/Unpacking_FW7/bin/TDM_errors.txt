@@ -1,0 +1,426 @@
+141072519 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79071
+141072520 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315832 (0)
+141072521 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315832
+141072522 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79072
+141072523 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315833 (1)
+141072524 Data out from TMD slots:  BM FEB Channel: 33  HitId: 6  TagId: 0  Time (0, RE): 520
+141072525 Data out from TMD slots:  BM FEB Channel: 33  HitId: 6  TagId: 0  Time (1, FE): 528
+141072526 Data out from TMD slots:  BM FEB Channel: 33  HitId: 7  TagId: 0  Time (0, RE): 657
+141072527 Data out from TMD slots:  BM FEB Channel: 33  HitId: 7  TagId: 0  Time (1, FE): 674
+141072528 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315833
+141072529 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 2  Trigger Time: 79073
+141072530 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315834 (2)
+141072531 Data out from TMD slots:  BM FEB Channel: 33  HitId: 7  TagId: 1  Amplitude Id: 3  Charge: 273
+141072532 Data out from TMD slots:  BM FEB Channel: 33  HitId: 7  TagId: 1  Amplitude Id: 2  Charge: 1188
+141072533 Data out from TMD slots:  BM FEB Channel: 33  HitId: 0  TagId: 1  Time (0, RE): 3551
+141072534 Data out from TMD slots:  BM FEB Channel: 33  HitId: 0  TagId: 1  Time (1, FE): 3560
+141072535 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315834
+141072536 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 1  Trigger Time: 79074
+141072537 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315835 (3)
+141072538 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315835
+141072539 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79075
+141072540 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315836 (0)
+141072541 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315836
+141072542 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79076
+141072543 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315837 (1)
+141072544 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315837
+141072545 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79077
+141072546 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315838 (2)
+141072547 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315838
+141072548 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79078
+141072549 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315839 (3)
+141072550 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315839
+141072551 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79079
+141072552 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315840 (0)
+141072553 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315840
+141072554 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79080
+141072555 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315841 (1)
+141072556 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315841
+141072557 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79081
+141072558 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315842 (2)
+141072559 Data out from TMD slots:  BM FEB Channel: 33  HitId: 1  TagId: 1  Time (0, RE): 1704
+141072560 Data out from TMD slots:  BM FEB Channel: 33  HitId: 1  TagId: 1  Time (1, FE): 1710
+141072561 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315842
+141072562 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 1  Trigger Time: 79082
+141072563 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315843 (3)
+141072564 Data out from TMD slots:  BM FEB Channel: 33  HitId: 1  TagId: 2  Amplitude Id: 3  Charge: 77
+141072565 Data out from TMD slots:  BM FEB Channel: 33  HitId: 1  TagId: 2  Amplitude Id: 2  Charge: 354
+141072566 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315843
+141072567 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79083
+141072568 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315844 (0)
+141072569 Data out from TMD slots:  BM FEB Channel: 33  HitId: 2  TagId: 3  Time (0, RE): 2362
+141072570 Data out from TMD slots:  BM FEB Channel: 33  HitId: 2  TagId: 3  Time (1, FE): 2367
+141072571 Data out from TMD slots:  BM FEB Channel: 33  HitId: 3  TagId: 3  Time (0, RE): 2509
+141072572 Data out from TMD slots:  BM FEB Channel: 33  HitId: 3  TagId: 3  Time (1, FE): 2516
+141072573 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315844
+141072574 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 2  Trigger Time: 79084
+141072575 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315845 (1)
+141072576 Data out from TMD slots:  BM FEB Channel: 33  HitId: 3  TagId: 0  Amplitude Id: 3  Charge: 31
+141072577 Data out from TMD slots:  BM FEB Channel: 33  HitId: 3  TagId: 0  Amplitude Id: 2  Charge: 253
+141072578 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315845
+141072579 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79085
+141072580 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315846 (2)
+141072581 Data out from TMD slots:  BM FEB Channel: 33  HitId: 4  TagId: 1  Time (0, RE): 2597
+141072582 Data out from TMD slots:  BM FEB Channel: 33  HitId: 4  TagId: 1  Time (1, FE): 2604
+141072583 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315846
+141072584 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 1  Trigger Time: 79086
+141072585 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315847 (3)
+141072586 Data out from TMD slots:  BM FEB Channel: 33  HitId: 4  TagId: 2  Amplitude Id: 3  Charge: 36
+141072587 Data out from TMD slots:  BM FEB Channel: 33  HitId: 4  TagId: 2  Amplitude Id: 2  Charge: 230
+141072588 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315847
+141072589 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79087
+141072590 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315848 (0)
+141072591 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315848
+141072592 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79088
+141072593 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315849 (1)
+141072594 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315849
+141072595 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79089
+141072596 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315850 (2)
+141072597 Data out from TMD slots:  BM FEB Channel: 33  HitId: 5  TagId: 1  Time (0, RE): 1554
+141072598 Data out from TMD slots:  BM FEB Channel: 33  HitId: 5  TagId: 1  Time (1, FE): 1561
+141072599 Data out from TMD slots:  BM FEB Channel: 33  HitId: 6  TagId: 1  Time (0, RE): 2127
+141072600 Data out from TMD slots:  BM FEB Channel: 33  HitId: 6  TagId: 1  Time (1, FE): 2134
+141072601 Data out from TMD slots:  BM FEB Channel: 33  HitId: 7  TagId: 1  Time (0, RE): 2139
+141072602 Data out from TMD slots:  BM FEB Channel: 33  HitId: 7  TagId: 1  Time (1, FE): 2142
+141072603 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315850
+141072604 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 3  Trigger Time: 79090
+141072605 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315851 (3)
+141072606 Data out from TMD slots:  BM FEB Channel: 33  HitId: 7  TagId: 2  Amplitude Id: 3  Charge: 77
+141072607 Data out from TMD slots:  BM FEB Channel: 33  HitId: 7  TagId: 2  Amplitude Id: 2  Charge: 389
+141072608 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315851
+141072609 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79091
+141072610 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315852 (0)
+141072611 Data out from TMD slots:  BM FEB Channel: 33  HitId: 0  TagId: 3  Time (0, RE): 2854
+141072612 Data out from TMD slots:  BM FEB Channel: 33  HitId: 0  TagId: 3  Time (1, FE): 2859
+141072613 Data out from TMD slots:  BM FEB Channel: 33  HitId: 1  TagId: 3  Time (0, RE): 3935
+141072614 Data out from TMD slots:  BM FEB Channel: 33  HitId: 1  TagId: 3  Time (1, FE): 3940
+141072615 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315852
+141072616 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 2  Trigger Time: 79092
+141072617 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315853 (1)
+141072618 Data out from TMD slots:  BM FEB Channel: 33  HitId: 1  TagId: 0  Amplitude Id: 3  Charge: 25
+141072619 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315853
+141072620 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79093
+141072621 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315854 (2)
+141072622 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315854
+141072623 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79094
+141072624 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315855 (3)
+141072625 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315855
+141072626 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79095
+141072627 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315856 (0)
+141072628 Data out from TMD slots:  BM FEB Channel: 33  HitId: 2  TagId: 3  Time (0, RE): 1004
+141072629 Data out from TMD slots:  BM FEB Channel: 33  HitId: 2  TagId: 3  Time (1, FE): 1009
+141072630 Data out from TMD slots:  BM FEB Channel: 33  HitId: 3  TagId: 3  Time (0, RE): 3820
+141072631 Data out from TMD slots:  BM FEB Channel: 33  HitId: 3  TagId: 3  Time (1, FE): 3825
+141072632 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315856
+141072633 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 2  Trigger Time: 79096
+141072634 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315857 (1)
+141072635 Data out from TMD slots:  BM FEB Channel: 33  HitId: 3  TagId: 0  Amplitude Id: 3  Charge: 21
+141072636 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315857
+141072637 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79097
+141072638 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315858 (2)
+141072639 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315858
+141072640 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79098
+141072641 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315859 (3)
+141072642 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315859
+141072643 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79099
+141072644 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315860 (0)
+141072645 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315860
+141072646 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79100
+141072647 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315861 (1)
+141072648 Data out from TMD slots:  BM FEB Channel: 33  HitId: 4  TagId: 0  Time (0, RE): 1886
+141072649 Data out from TMD slots:  BM FEB Channel: 33  HitId: 4  TagId: 0  Time (1, FE): 1891
+141072650 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315861
+141072651 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 1  Trigger Time: 79101
+141072652 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315862 (2)
+141072653 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315862
+141072654 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79102
+141072655 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315863 (3)
+141072656 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315863
+141072657 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79103
+141072658 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315864 (0)
+141072659 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315864
+141072660 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79104
+141072661 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315865 (1)
+141072662 Data out from TMD slots:  BM FEB Channel: 33  HitId: 5  TagId: 0  Time (0, RE): 1249
+141072663 Data out from TMD slots:  BM FEB Channel: 33  HitId: 5  TagId: 0  Time (1, FE): 1255
+141072664 Data out from TMD slots:  BM FEB Channel: 33  HitId: 6  TagId: 0  Time (0, RE): 2056
+141072665 Data out from TMD slots:  BM FEB Channel: 33  HitId: 6  TagId: 0  Time (1, FE): 2062
+141072666 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315865
+141072667 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 2  Trigger Time: 79105
+141072668 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315866 (2)
+141072669 Data out from TMD slots:  BM FEB Channel: 33  HitId: 6  TagId: 1  Amplitude Id: 3  Charge: 42
+141072670 Data out from TMD slots:  BM FEB Channel: 33  HitId: 6  TagId: 1  Amplitude Id: 2  Charge: 247
+141072671 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315866
+141072672 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79106
+141072673 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315867 (3)
+141072674 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315867
+141072675 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79107
+141072676 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315868 (0)
+141072677 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315868
+141072678 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79108
+141072679 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315869 (1)
+141072680 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315869
+141072681 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79109
+141072682 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315870 (2)
+141072683 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315870
+141072684 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79110
+141072685 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315871 (3)
+141072686 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315871
+141072687 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79111
+141072688 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315872 (0)
+141072689 Data out from TMD slots:  BM FEB Channel: 33  HitId: 7  TagId: 3  Time (0, RE): 991
+141072690 Data out from TMD slots:  BM FEB Channel: 33  HitId: 7  TagId: 3  Time (1, FE): 996
+141072691 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315872
+141072692 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 1  Trigger Time: 79112
+141072693 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315873 (1)
+141072694 Data out from TMD slots:  BM FEB Channel: 33  HitId: 7  TagId: 0  Amplitude Id: 3  Charge: 27
+141072695 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315873
+141072696 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79113
+141072697 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315874 (2)
+141072698 Data out from TMD slots:  BM FEB Channel: 33  HitId: 0  TagId: 1  Time (0, RE): 3228
+141072699 Data out from TMD slots:  BM FEB Channel: 33  HitId: 0  TagId: 1  Time (1, FE): 3244
+141072700 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315874
+141072701 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 1  Trigger Time: 79114
+141072702 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315875 (3)
+141072703 Data out from TMD slots:  BM FEB Channel: 33  HitId: 1  TagId: 2  Time (0, RE): 3275
+141072704 Data out from TMD slots:  BM FEB Channel: 33  HitId: 1  TagId: 2  Time (1, FE): 3287
+141072705 Data out from TMD slots:  BM FEB Channel: 33  HitId: 0  TagId: 2  Amplitude Id: 3  Charge: 132
+141072706 Data out from TMD slots:  BM FEB Channel: 33  HitId: 0  TagId: 2  Amplitude Id: 2  Charge: 640
+141072707 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315875
+141072708 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 1  Trigger Time: 79115
+141072709 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315876 (0)
+141072710 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315876
+141072711 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79116
+141072712 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315877 (1)
+141072713 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315877
+141072714 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79117
+141072715 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315878 (2)
+141072716 Data out from TMD slots:  BM FEB Channel: 33  HitId: 2  TagId: 1  Time (0, RE): 2851
+141072717 Data out from TMD slots:  BM FEB Channel: 33  HitId: 2  TagId: 1  Time (1, FE): 2856
+141072718 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315878
+141072719 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 1  Trigger Time: 79118
+141072720 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315879 (3)
+141072721 Data out from TMD slots:  BM FEB Channel: 33  HitId: 3  TagId: 2  Time (0, RE): 2762
+141072722 Data out from TMD slots:  BM FEB Channel: 33  HitId: 3  TagId: 2  Time (1, FE): 2765
+141072723 Data out from TMD slots:  BM FEB Channel: 33  HitId: 3  TagId: 2  Amplitude Id: 3  Charge: 28
+141072724 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315879
+141072725 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 1  Trigger Time: 79119
+141072726 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315880 (0)
+141072727 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315880
+141072728 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79120
+141072729 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315881 (1)
+141072730 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315881
+141072731 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79121
+141072732 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315882 (2)
+141072733 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315882
+141072734 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79122
+141072735 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315883 (3)
+141072736 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315883
+141072737 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79123
+141072738 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315884 (0)
+141072739 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315884
+141072740 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79124
+141072741 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315885 (1)
+141072742 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315885
+141072743 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79125
+141072744 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315886 (2)
+141072745 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315886
+141072746 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79126
+141072747 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315887 (3)
+141072748 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315887
+141072749 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79127
+141072750 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315888 (0)
+141072751 Data out from TMD slots:  BM FEB Channel: 33  HitId: 4  TagId: 3  Time (0, RE): 890
+141072752 Data out from TMD slots:  BM FEB Channel: 33  HitId: 4  TagId: 3  Time (1, FE): 896
+141072753 Data out from TMD slots:  BM FEB Channel: 33  HitId: 5  TagId: 3  Time (0, RE): 1328
+141072754 Data out from TMD slots:  BM FEB Channel: 33  HitId: 5  TagId: 3  Time (1, FE): 1334
+141072755 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315888
+141072756 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 2  Trigger Time: 79128
+141072757 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315889 (1)
+141072758 Data out from TMD slots:  BM FEB Channel: 33  HitId: 5  TagId: 0  Amplitude Id: 3  Charge: 24
+141072759 Data out from TMD slots:  BM FEB Channel: 33  HitId: 5  TagId: 0  Amplitude Id: 2  Charge: 218
+141072760 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315889
+141072761 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79129
+141072762 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315890 (2)
+141072763 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315890
+141072764 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79130
+141072765 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315891 (3)
+141072766 Data out from TMD slots:  BM FEB Channel: 33  HitId: 6  TagId: 2  Time (0, RE): 2403
+141072767 Data out from TMD slots:  BM FEB Channel: 33  HitId: 6  TagId: 2  Time (1, FE): 2408
+141072768 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315891
+141072769 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 1  Trigger Time: 79131
+141072770 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315892 (0)
+141072771 Data out from TMD slots:  BM FEB Channel: 33  HitId: 6  TagId: 3  Amplitude Id: 3  Charge: 30
+141072772 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315892
+141072773 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79132
+141072774 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315893 (1)
+141072775 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315893
+141072776 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79133
+141072777 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315894 (2)
+141072778 Data out from TMD slots:  BM FEB Channel: 33  HitId: 7  TagId: 1  Time (0, RE): 2526
+141072779 Data out from TMD slots:  BM FEB Channel: 33  HitId: 7  TagId: 1  Time (1, FE): 2533
+141072780 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315894
+141072781 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 1  Trigger Time: 79134
+141072782 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315895 (3)
+141072783 Data out from TMD slots:  BM FEB Channel: 33  HitId: 7  TagId: 2  Amplitude Id: 3  Charge: 26
+141072784 Data out from TMD slots:  BM FEB Channel: 33  HitId: 7  TagId: 2  Amplitude Id: 2  Charge: 223
+141072785 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315895
+141072786 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79135
+141072787 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315896 (0)
+141072788 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315896
+141072789 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79136
+141072790 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315897 (1)
+141072791 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315897
+141072792 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79137
+141072793 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315898 (2)
+141072794 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315898
+141072795 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79138
+141072796 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315899 (3)
+141072797 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315899
+141072798 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79139
+141072799 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315900 (0)
+141072800 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315900
+141072801 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79140
+141072802 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315901 (1)
+141072803 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315901
+141072804 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79141
+141072805 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315902 (2)
+141072806 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315902
+141072807 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79142
+141072808 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315903 (3)
+141072809 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315903
+141072810 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79143
+141072811 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315904 (0)
+141072812 Data out from TMD slots:  BM FEB Channel: 33  HitId: 0  TagId: 3  Time (0, RE): 2100
+141072813 Data out from TMD slots:  BM FEB Channel: 33  HitId: 0  TagId: 3  Time (1, FE): 2108
+141072814 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315904
+141072815 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 1  Trigger Time: 79144
+141072816 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315905 (1)
+141072817 Data out from TMD slots:  BM FEB Channel: 33  HitId: 0  TagId: 0  Amplitude Id: 3  Charge: 57
+141072818 Data out from TMD slots:  BM FEB Channel: 33  HitId: 0  TagId: 0  Amplitude Id: 2  Charge: 303
+141072819 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315905
+141072820 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79145
+141072821 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315906 (2)
+141072822 Data out from TMD slots:  BM FEB Channel: 33  HitId: 1  TagId: 1  Time (0, RE): 2657
+141072823 Data out from TMD slots:  BM FEB Channel: 33  HitId: 1  TagId: 1  Time (1, FE): 2661
+141072824 Data out from TMD slots:  BM FEB Channel: 33  HitId: 2  TagId: 1  Time (0, RE): 3218
+141072825 Data out from TMD slots:  BM FEB Channel: 33  HitId: 2  TagId: 1  Time (1, FE): 3226
+141072826 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315906
+141072827 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 2  Trigger Time: 79146
+141072828 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315907 (3)
+141072829 Data out from TMD slots:  BM FEB Channel: 33  HitId: 2  TagId: 2  Amplitude Id: 3  Charge: 67
+141072830 Data out from TMD slots:  BM FEB Channel: 33  HitId: 2  TagId: 2  Amplitude Id: 2  Charge: 359
+141072831 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315907
+141072832 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79147
+141072833 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315908 (0)
+141072834 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315908
+141072835 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79148
+141072836 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315909 (1)
+141072837 Data out from TMD slots:  BM FEB Channel: 33  HitId: 3  TagId: 0  Time (0, RE): 2743
+141072838 Data out from TMD slots:  BM FEB Channel: 33  HitId: 3  TagId: 0  Time (1, FE): 2750
+141072839 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315909
+141072840 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 1  Trigger Time: 79149
+141072841 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315910 (2)
+141072842 Data out from TMD slots:  BM FEB Channel: 33  HitId: 3  TagId: 1  Amplitude Id: 3  Charge: 45
+141072843 Data out from TMD slots:  BM FEB Channel: 33  HitId: 3  TagId: 1  Amplitude Id: 2  Charge: 243
+141072844 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315910
+141072845 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79150
+141072846 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315911 (3)
+141072847 Data out from TMD slots:  BM FEB Channel: 33  HitId: 4  TagId: 2  Time (0, RE): 829
+141072848 Data out from TMD slots:  BM FEB Channel: 33  HitId: 4  TagId: 2  Time (1, FE): 838
+141072849 Data out from TMD slots:  BM FEB Channel: 33  HitId: 5  TagId: 2  Time (0, RE): 2269
+141072850 Data out from TMD slots:  BM FEB Channel: 33  HitId: 5  TagId: 2  Time (1, FE): 2273
+141072851 Data out from TMD slots:  BM FEB Channel: 33  HitId: 6  TagId: 2  Time (0, RE): 3674
+141072852 Data out from TMD slots:  BM FEB Channel: 33  HitId: 6  TagId: 2  Time (1, FE): 3683
+141072853 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315911
+141072854 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 3  Trigger Time: 79151
+141072855 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315912 (0)
+141072856 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315912
+141072857 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79152
+141072858 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315913 (1)
+141072859 Data out from TMD slots:  BM FEB Channel: 33  HitId: 6  TagId: 3  Amplitude Id: 3  Charge: 100
+141072860 Data out from TMD slots:  BM FEB Channel: 33  HitId: 6  TagId: 3  Amplitude Id: 2  Charge: 495
+141072861 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315913
+141072862 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79153
+141072863 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315914 (2)
+141072864 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315914
+141072865 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79154
+141072866 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315915 (3)
+141072867 Data out from TMD slots:  BM FEB Channel: 33  HitId: 7  TagId: 2  Time (0, RE): 1971
+141072868 Data out from TMD slots:  BM FEB Channel: 33  HitId: 7  TagId: 2  Time (1, FE): 1978
+141072869 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315915
+141072870 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 1  Trigger Time: 79155
+141072871 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315916 (0)
+141072872 Data out from TMD slots:  BM FEB Channel: 33  HitId: 7  TagId: 3  Amplitude Id: 3  Charge: 40
+141072873 Data out from TMD slots:  BM FEB Channel: 33  HitId: 7  TagId: 3  Amplitude Id: 2  Charge: 224
+141072874 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315916
+141072875 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79156
+141072876 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315917 (1)
+141072877 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315917
+141072878 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79157
+141072879 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315918 (2)
+141072880 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 12315918
+141072881 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 79158
+141072882 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 12315919 (3)
+Slot 2 TDM Tag (data) 244 != 243 (calculated);
+ BM FEB TDM Stop: 0 TDM sumL: 763 TDM sumH: 416 182470662
+182470783 TDM Slot ID start: 5 TDM Slot ID end: 0 Unpacking Error!
+TDM Stop: 0 TDM sumL: 763 TDM sumH: 416
+625 700
+182470784 Data out from TMD slots:  BM FEB Channel: 60  HitId: 5  TagId: 2  Time (1, FE): 3180
+182470785 Data out from TMD slots:  BM FEB Channel: 35  HitId: 0  TagId: 3  Amplitude Id: 3  Charge: 88
+182470786 Data out from TMD slots:  BM FEB Channel: 32  HitId: 1  TagId: 0  Time (0, RE): 1942
+ BM FEB TDM Stop: 0 TDM sumL: 802 TDM sumH: 819 224233383
+224233604 TDM Slot ID start: 5 TDM Slot ID end: 0 Unpacking Error!
+TDM Stop: 0 TDM sumL: 802 TDM sumH: 819
+106 986
+ BM FEB TDM Stop: 0 TDM sumL: 612 TDM sumH: 908 404174824
+404174975 TDM Slot ID start: 5 TDM Slot ID end: 0 Unpacking Error!
+TDM Stop: 0 TDM sumL: 612 TDM sumH: 908
+1793 888
+404174976 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 93804
+404174977 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 24047802 (2)
+404174978 Data out from TMD slots:  BM FEB Channel: 24  HitId: 4  TagId: 2  Time (0, RE): 1089
+ BM FEB TDM Stop: 0 TDM sumL: 1566 TDM sumH: 155 430100401
+430100609 TDM Slot ID start: 5 TDM Slot ID end: 0 Unpacking Error!
+TDM Stop: 0 TDM sumL: 1566 TDM sumH: 155
+959 258
+430100610 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 25022293
+430100611 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 170929
+ BM FEB TDM Stop: 0 TDM sumL: 854 TDM sumH: 388 438630347
+438630531 TDM Slot ID start: 5 TDM Slot ID end: 0 Unpacking Error!
+TDM Stop: 0 TDM sumL: 854 TDM sumH: 388
+506 139
+438630532 Data out from TMD slots:  BM FEB Trigger Trailer (2)  Hit count: 0  Trigger Time: 126530
+ BM FEB TDM Stop: 0 TDM sumL: 32 TDM sumH: 833 553461735
+553461889 TDM Slot ID start: 5 TDM Slot ID end: 0 Unpacking Error!
+TDM Stop: 0 TDM sumL: 32 TDM sumH: 833
+29 532
+ BM FEB TDM Stop: 0 TDM sumL: 941 TDM sumH: 240 628068203
+628068479 TDM Slot ID start: 5 TDM Slot ID end: 0 Unpacking Error!
+TDM Stop: 0 TDM sumL: 941 TDM sumH: 240
+82 24
+628068480 Data out from TMD slots:  BM FEB Trigger Trailer (1)  Gl. Trigger Tag: 32606403
+ BM FEB TDM Stop: 0 TDM sumL: 1261 TDM sumH: 607 669028292
+669028480 TDM Slot ID start: 5 TDM Slot ID end: 0 Unpacking Error!
+TDM Stop: 0 TDM sumL: 1261 TDM sumH: 607
+1213 601
+ BM FEB TDM Stop: 0 TDM sumL: 1140 TDM sumH: 754 787632033
+787632254 TDM Slot ID start: 5 TDM Slot ID end: 0 Unpacking Error!
+TDM Stop: 0 TDM sumL: 1140 TDM sumH: 754
+1719 675
+787632255 Data out from TMD slots:  BM FEB Trigger Header  Gl. Trigger Tag: 39436502 (2)
+787632256 Data out from TMD slots:  BM FEB Channel: 46  HitId: 3  TagId: 2  Amplitude Id: 3  Charge: 76
+787632257 Data out from TMD slots:  BM FEB Channel: 46  HitId: 3  TagId: 2  Amplitude Id: 2  Charge: 282
+
+../../BabyMIND/BabyMIND_JPARC/data/2019/data/test_MCR_0_Run0_2019_10_21_11_06_00_Slot_0.daq ----- data for FEB on slot0 in TDM mode.
+
+../../BabyMIND/BabyMIND_JPARC/data/2019/data/test_MCR_0_Run0_2019_10_21_11_06_00_Slot_1.daq ----- data for FEB on slot1 in TDM mode.
+
+../../BabyMIND/BabyMIND_JPARC/data/2019/data/test_MCR_0_Run0_2019_10_21_11_06_00_Slot_2.daq ----- data for FEB on slot2 in TDM mode.
+
+../../BabyMIND/BabyMIND_JPARC/data/2019/data/test_MCR_0_Run0_2019_10_21_11_06_00_Slot_3.daq ----- data for FEB on slot3 in TDM mode.
+
+../../BabyMIND/BabyMIND_JPARC/data/2019/data/test_MCR_0_Run0_2019_10_21_11_06_00_Slot_4.daq ----- data for FEB on slot4 in TDM mode.
+
+../../BabyMIND/BabyMIND_JPARC/data/2019/data/test_MCR_0_Run0_2019_10_21_11_06_00_Slot_5.daq ----- data for FEB on slot5 in TDM mode.

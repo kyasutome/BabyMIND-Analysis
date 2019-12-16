@@ -1,15 +1,29 @@
 #!/bin/sh
 
+if [ $# -ne 3 ] ; then
+  echo ""
+  echo "  !!! ./MakeCalib.sh [date] [month] [run] !!!"
+  echo "example)"
+  echo "./MakeCalib.sh 5 Dec 2"
+  exit 1
+fi
+
 date=$1
 month=$2
-anadir="/Users/kenji/Dropbox/wagasci/babymind/software/analysis"
-datadir="/Users/kenji/Dropbox/wagasci/babymind/data/physdata/$date$month"
+run=$3
 
-echo "Finding a file in " $datadir
-filename=$(find  $datadir -type f -name "*all*")
-echo "Filename= "$filename
-echo "Found a file!"
-echo "Analyze a file..."
+anadir=${PWD}
+datadir=$anadir/../../data/physdata/$date$month
 
-#cd $anadir
-#./bin/MakeCalib $datadir/$filename
+filename=$(find  $datadir -type f -name "*Run$run*all*")
+if [ $? -eq 0 ] ; then
+    echo "Found a file"
+    else
+    exit 0
+fi
+
+echo "Filename="$filename
+echo "Analyze the file..."
+
+cd $anadir
+./bin/MakeCalib $filename $date $month $run

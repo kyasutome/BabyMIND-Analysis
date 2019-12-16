@@ -4,17 +4,17 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/kenji/Dropbox/wagasci/babymind/software/analysis/src/MakeCalib/MakeCalib.cpp" "/Users/kenji/Dropbox/wagasci/babymind/software/analysis/build/src/MakeCalib/CMakeFiles/MakeCalib.dir/MakeCalib.cpp.o"
+  "/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/src/MakeCalib/main.cpp" "/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/src/MakeCalib/CMakeFiles/MakeCalib.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../."
   "../include"
+  "../lib"
   "/Users/kenji/local/root/root-6.18.02/built/include"
   "../include/MakeCalib"
-  "../lib"
+  "../lib/src"
   )
 
 # Targets to which this target links.

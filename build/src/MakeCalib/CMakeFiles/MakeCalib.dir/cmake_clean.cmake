@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "../../../bin/MakeCalib"
   "../../../bin/MakeCalib.pdb"
-  "CMakeFiles/MakeCalib.dir/MakeCalib.cpp.o"
+  "CMakeFiles/MakeCalib.dir/main.cpp.o"
 )
 
 # Per-language clean rules from dependency scanning.

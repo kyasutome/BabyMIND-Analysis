@@ -2,11 +2,19 @@
 #include <fstream>
 
 #include "DataReader.hpp"
+#include "BMData.hpp"
 
 using namespace std;
 
 DataReader::DataReader()
 {
+
+  for(int ifeb=0; ifeb<NUMBEROFFEB; ifeb++)
+    {
+      intersection[ifeb].clear();
+      febspill[ifeb].clear();
+    }
+
   cout << "read required data file..." << '\n';
 
   ifstream fmap("./data/B2-connection.map");
@@ -22,7 +30,7 @@ DataReader::DataReader()
     temp++;
   }
   fmap.close();
-  cout << "B2-connection.map" << '\n';
+  cout << "[B2-connection.map]" << '\n';
 
   ifstream horizontalgeometry("./data/v1_horizontal_from_center.txt");
   temp=0;
@@ -37,7 +45,7 @@ DataReader::DataReader()
     temp++;
   }
   horizontalgeometry.close();
-  cout << "v1_horizontal_from_center.txt" << '\n';
+  cout << "[v1_horizontal_from_center.txt]" << '\n';
 
   ifstream verticalgeometry("./data/v1_vertical_from_center.txt");
   temp=0;
@@ -52,7 +60,7 @@ DataReader::DataReader()
     temp++;
   }
   verticalgeometry.close();
-  cout << "v1_vertical_from_center.txt" << '\n';
+  cout << "[v1_vertical_from_center.txt]" << '\n';
 
   ifstream ScinModPos("./data/Scin_Mod_position.txt");
   temp=1;
@@ -67,7 +75,7 @@ DataReader::DataReader()
     temp++;
   }
   ScinModPos.close();
-  cout << "Scin_Mod_position" << '\n';
+  cout << "[Scin_Mod_position]" << '\n';
 
 }
 
@@ -77,6 +85,7 @@ DataReader::~DataReader()
 
 void DataReader::ReadTree(TString filename, BMdata* BMbranch[NUMBEROFFEB])
 {  
+  cout << "Start reading FEB tree..." << '\n';
   if (gSystem->GetPathInfo(filename.Data(), info)!=0)
     {
       cout << "File" << filename << " done not exist" << '\n';
@@ -85,6 +94,7 @@ void DataReader::ReadTree(TString filename, BMdata* BMbranch[NUMBEROFFEB])
     Fileinput = new TFile(filename, "READ");
     
     for(int itree=0; itree<NUMBEROFFEB; itree++)
+    //for(int itree=0; itree<10; itree++)
       {
 	treename.Form("FEB_%d", itree);
 	if((TTree*)Fileinput->Get(treename))
@@ -106,6 +116,8 @@ void DataReader::ReadTree(TString filename, BMdata* BMbranch[NUMBEROFFEB])
 	    FEBtree[itree]
 	      ->SetBranchAddress(Form("%s_hitAmpl",treename.Data()), &BMbranch[itree]->hitAmpl);
 	    FEBtree[itree]
+	      ->SetBranchAddress(Form("%s_hitLGAmpl",treename.Data()), &BMbranch[itree]->hitLGAmpl);
+	    FEBtree[itree]
 	      ->SetBranchAddress(Form("%s_hitLeadTime",treename.Data()), &BMbranch[itree]->hitLeadTime);
 	    FEBtree[itree]
 	      ->SetBranchAddress(Form("%s_hitTrailTime",treename.Data()), &BMbranch[itree]->hitTrailTime);
@@ -125,9 +137,69 @@ void DataReader::ReadTree(TString filename, BMdata* BMbranch[NUMBEROFFEB])
 	      ->SetBranchAddress(Form("%s_BoardHumidity",treename.Data()), &BMbranch[itree]->BoardHumidity);
 	    FEBtree[itree]
 	      ->SetBranchAddress(Form("%s_GlobalHV",treename.Data()), &BMbranch[itree]->GlobalHV);
+
+	    for(int ientry=0; ientry<FEBtree[itree]->GetEntries(); ientry++)
+	      {
+		FEBtree[itree]->GetEntry(ientry);
+		for(int idata=0; idata<BMbranch[itree]->SpillTag->size(); idata++)
+		  {
+		    febspill[itree].push_back(BMbranch[itree]->SpillTag->at(idata));
+		  }		
+	      }
 	  }
+	DuplicateCut(&febspill[itree]);
       }
     
   }//File Exist (else)
+
+  cout << "****************** Read Summary ******************"  << '\n';
+  cout << "Total Number of Spills = " << febspill[0].size() << '\n';
+
+}
+
+void DataReader::DuplicateCut(vector<double> *vec)
+{
+  auto last = unique(vec->begin(), vec->end());
+  vec->erase(last, vec->end());
+}
+
+
+void DataReader::BMSpillMatch(vector<double> *commonspill)
+{
+  set_intersection(febspill[0].begin(), febspill[0].end(),
+		   febspill[1].begin(), febspill[1].end(),
+		   inserter(intersection[0], intersection[0].end()));
+
+  for(int ifeb=1; ifeb<62; ifeb++)
+  //for(int ifeb=1; ifeb<10; ifeb++)
+    {
+      if(febspill[ifeb].size()!=0)
+	{
+	  set_intersection(febspill[ifeb-1].begin(), febspill[ifeb-1].end(),
+			   febspill[ifeb].begin(), febspill[ifeb].end(),
+			   inserter(intersection[ifeb], intersection[ifeb].end()));
+	}
+
+      if(febspill[ifeb].size()==0)
+	{
+	  set_intersection(febspill[ifeb-1].begin(), febspill[ifeb-1].end(),
+			   febspill[ifeb-1].begin(), febspill[ifeb-1].end(),
+			   inserter(intersection[ifeb], intersection[ifeb].end()));
+
+	}
+
+    }
+
+  /*
+  for(int i=0; i<intersection[5].size(); i++)
+    commonspill->push_back(intersection[9].at(i));
+  */
+
+  
+  for(int i=0; i<intersection[61].size(); i++)
+    commonspill->push_back(intersection[61].at(i));
+  
+
+  cout << "Total Number of Common Spills = " << febspill[0].size() << '\n';
 
 }

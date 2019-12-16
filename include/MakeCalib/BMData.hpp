@@ -37,9 +37,6 @@ public:
   BMdata();
   ~BMdata();
  
-  
-
-
 };
 
 #endif

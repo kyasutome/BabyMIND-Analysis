@@ -6,5 +6,5 @@ CXX_FLAGS =  -Wall -O3 -std=c++11 -isysroot /Library/Developer/CommandLineTools/
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/kenji/Dropbox/wagasci/babymind/software/analysis/. -I/Users/kenji/Dropbox/wagasci/babymind/software/analysis/include -I/Users/kenji/local/root/root-6.18.02/built/include -I/Users/kenji/Dropbox/wagasci/babymind/software/analysis/include/MakeCalib -I/Users/kenji/Dropbox/wagasci/babymind/software/analysis/lib 
+CXX_INCLUDES = -I/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/include -I/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/lib -I/Users/kenji/local/root/root-6.18.02/built/include -I/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/include/MakeCalib -I/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/lib/src 
 

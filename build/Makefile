@@ -48,10 +48,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/kenji/Dropbox/wagasci/babymind/software/analysis
+CMAKE_SOURCE_DIR = /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/kenji/Dropbox/wagasci/babymind/software/analysis/build
+CMAKE_BINARY_DIR = /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kenji/Dropbox/wagasci/babymind/software/analysis/build/CMakeFiles /Users/kenji/Dropbox/wagasci/babymind/software/analysis/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kenji/Dropbox/wagasci/babymind/software/analysis/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -124,17 +124,43 @@ MakeCalib/fast:
 .PHONY : MakeCalib/fast
 
 #=============================================================================
-# Target rules for targets named testlib
+# Target rules for targets named MakePMClass
 
 # Build rule for target.
-testlib: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 testlib
-.PHONY : testlib
+MakePMClass: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 MakePMClass
+.PHONY : MakePMClass
 
 # fast build rule for target.
-testlib/fast:
-	$(MAKE) -f lib/CMakeFiles/testlib.dir/build.make lib/CMakeFiles/testlib.dir/build
-.PHONY : testlib/fast
+MakePMClass/fast:
+	$(MAKE) -f src/EvtDisp/CMakeFiles/MakePMClass.dir/build.make src/EvtDisp/CMakeFiles/MakePMClass.dir/build
+.PHONY : MakePMClass/fast
+
+#=============================================================================
+# Target rules for targets named MakeDisp
+
+# Build rule for target.
+MakeDisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 MakeDisp
+.PHONY : MakeDisp
+
+# fast build rule for target.
+MakeDisp/fast:
+	$(MAKE) -f src/EvtDisp/CMakeFiles/MakeDisp.dir/build.make src/EvtDisp/CMakeFiles/MakeDisp.dir/build
+.PHONY : MakeDisp/fast
+
+#=============================================================================
+# Target rules for targets named MakeEvt
+
+# Build rule for target.
+MakeEvt: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 MakeEvt
+.PHONY : MakeEvt
+
+# fast build rule for target.
+MakeEvt/fast:
+	$(MAKE) -f src/EvtDisp/CMakeFiles/MakeEvt.dir/build.make src/EvtDisp/CMakeFiles/MakeEvt.dir/build
+.PHONY : MakeEvt/fast
 
 # Help Target
 help:
@@ -145,7 +171,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... MakeCalib"
-	@echo "... testlib"
+	@echo "... MakePMClass"
+	@echo "... MakeDisp"
+	@echo "... MakeEvt"
 .PHONY : help
 
 

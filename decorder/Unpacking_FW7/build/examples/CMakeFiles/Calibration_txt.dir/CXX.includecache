@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_FW7/examples/Calibration_txt.cpp
+stdio.h
+-
+string.h
+-
+exception
+-
+fstream
+-
+vector
+-
+iostream
+-
+sstream
+-
+iterator
+-
+algorithm
+-
+

@@ -1,0 +1,45 @@
+#include <iostream>
+#include <stdio.h>
+
+#include "BMBasicRecon.hpp"
+
+using namespace std;
+
+BMBasicRecon::BMBasicRecon()
+{
+  mod.clear();
+  view.clear();
+  pln.clear();
+  channel.clear();
+  HG.clear();
+  LG.clear();
+  Ltime.clear();
+  Ftime.clear();
+  Htime.clear();
+  timedif.clear();
+  bunch.clear();
+
+  bm_event=-1;
+}
+
+
+BMBasicRecon::~BMBasicRecon()
+{
+}
+
+void BMBasicRecon::Clear()
+{
+  mod.clear();
+  view.clear();
+  pln.clear();
+  channel.clear();
+  HG.clear();
+  LG.clear();
+  Ltime.clear();
+  Ftime.clear();
+  Htime.clear();
+  timedif.clear();
+  bunch.clear();
+
+  bm_event=-1;
+}

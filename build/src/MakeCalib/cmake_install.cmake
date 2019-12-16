@@ -1,4 +1,4 @@
-# Install script for directory: /Users/kenji/Dropbox/wagasci/babymind/software/analysis/src/MakeCalib
+# Install script for directory: /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/src/MakeCalib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

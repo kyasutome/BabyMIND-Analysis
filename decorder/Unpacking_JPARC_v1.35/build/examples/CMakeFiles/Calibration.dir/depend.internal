@@ -7,7 +7,7 @@ examples/CMakeFiles/Calibration.dir/babyMindCalibration.cpp.o
  ../src/MDdataWord.h
  ../src/MDdataWordBM.h
  ../src/MDexception.h
- /Users/kenji/Dropbox/wagasci/babymind/software/analysis/decorder/Unpacking_JPARC_v1.35/examples/babyMindCalibration.cpp
+ /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/decorder/Unpacking_JPARC_v1.35/examples/babyMindCalibration.cpp
  /Users/kenji/local/root/root-6.18.02/built/include/Buttons.h
  /Users/kenji/local/root/root-6.18.02/built/include/Bytes.h
  /Users/kenji/local/root/root-6.18.02/built/include/Byteswap.h

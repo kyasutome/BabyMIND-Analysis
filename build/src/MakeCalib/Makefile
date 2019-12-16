@@ -48,10 +48,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/kenji/Dropbox/wagasci/babymind/software/analysis
+CMAKE_SOURCE_DIR = /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/kenji/Dropbox/wagasci/babymind/software/analysis/build
+CMAKE_BINARY_DIR = /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/kenji/Dropbox/wagasci/babymind/software/analysis/build/CMakeFiles /Users/kenji/Dropbox/wagasci/babymind/software/analysis/build/src/MakeCalib/CMakeFiles/progress.marks
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/MakeCalib/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kenji/Dropbox/wagasci/babymind/software/analysis/build/CMakeFiles 0
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/src/MakeCalib/CMakeFiles/progress.marks
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/MakeCalib/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/MakeCalib/clean
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/MakeCalib/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/MakeCalib/preinstall
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/MakeCalib/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/MakeCalib/preinstall
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/MakeCalib/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/MakeCalib/CMakeFiles/MakeCalib.dir/rule:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/MakeCalib/CMakeFiles/MakeCalib.dir/rule
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/MakeCalib/CMakeFiles/MakeCalib.dir/rule
 .PHONY : src/MakeCalib/CMakeFiles/MakeCalib.dir/rule
 
 # Convenience name for target.
@@ -122,35 +122,35 @@ MakeCalib: src/MakeCalib/CMakeFiles/MakeCalib.dir/rule
 
 # fast build rule for target.
 MakeCalib/fast:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/build && $(MAKE) -f src/MakeCalib/CMakeFiles/MakeCalib.dir/build.make src/MakeCalib/CMakeFiles/MakeCalib.dir/build
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/MakeCalib/CMakeFiles/MakeCalib.dir/build.make src/MakeCalib/CMakeFiles/MakeCalib.dir/build
 .PHONY : MakeCalib/fast
 
-MakeCalib.o: MakeCalib.cpp.o
+main.o: main.cpp.o
 
-.PHONY : MakeCalib.o
+.PHONY : main.o
 
 # target to build an object file
-MakeCalib.cpp.o:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/build && $(MAKE) -f src/MakeCalib/CMakeFiles/MakeCalib.dir/build.make src/MakeCalib/CMakeFiles/MakeCalib.dir/MakeCalib.cpp.o
-.PHONY : MakeCalib.cpp.o
+main.cpp.o:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/MakeCalib/CMakeFiles/MakeCalib.dir/build.make src/MakeCalib/CMakeFiles/MakeCalib.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-MakeCalib.i: MakeCalib.cpp.i
+main.i: main.cpp.i
 
-.PHONY : MakeCalib.i
+.PHONY : main.i
 
 # target to preprocess a source file
-MakeCalib.cpp.i:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/build && $(MAKE) -f src/MakeCalib/CMakeFiles/MakeCalib.dir/build.make src/MakeCalib/CMakeFiles/MakeCalib.dir/MakeCalib.cpp.i
-.PHONY : MakeCalib.cpp.i
+main.cpp.i:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/MakeCalib/CMakeFiles/MakeCalib.dir/build.make src/MakeCalib/CMakeFiles/MakeCalib.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-MakeCalib.s: MakeCalib.cpp.s
+main.s: main.cpp.s
 
-.PHONY : MakeCalib.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-MakeCalib.cpp.s:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/build && $(MAKE) -f src/MakeCalib/CMakeFiles/MakeCalib.dir/build.make src/MakeCalib/CMakeFiles/MakeCalib.dir/MakeCalib.cpp.s
-.PHONY : MakeCalib.cpp.s
+main.cpp.s:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/MakeCalib/CMakeFiles/MakeCalib.dir/build.make src/MakeCalib/CMakeFiles/MakeCalib.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -161,9 +161,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... MakeCalib"
-	@echo "... MakeCalib.o"
-	@echo "... MakeCalib.i"
-	@echo "... MakeCalib.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 
@@ -175,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/analysis/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
