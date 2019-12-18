@@ -26,7 +26,8 @@ message(STATUS "C flags      : " ${CMAKE_C_FLAGS})
 message(STATUS "CXX flags    : " ${CMAKE_CXX_FLAGS})
 message(STATUS "Linker flags : " ${CMAKE_EXE_LINKER_FLAGS}\n)
 
-#add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/lib/MakeCalib)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/src/MakeCalib)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/src/EvtDisp)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/src/DataSanity)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/src/BSDApply)
 

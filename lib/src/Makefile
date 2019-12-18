@@ -28,6 +28,10 @@ PMRecon:
 	rootcint -f $(@)Dict.cc -c $(@).hpp $(@)LinkDef.hh
 	$(CXX) `root-config --cflags --libs` -shared $(@)Dict.cc $(@).cpp -o ${MAKEDIR}/$(@).so
 
+BMBSD:
+	rootcint -f $(@)Dict.cc -c $(@).hpp $(@)LinkDef.hh
+	$(CXX) `root-config --cflags --libs` -shared $(@)Dict.cc $(@).cpp -o ${MAKEDIR}/$(@).so
+
 move:
 	mv ./*pcm ${MAKEDIR}/
 

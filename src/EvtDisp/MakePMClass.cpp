@@ -26,7 +26,7 @@ int main( int argc, char **argv )
   PMRecon *pmrecon = new PMRecon();
   MakePMChain *makepmchain = new MakePMChain();
   
-  TFile *fout = new TFile(Form("./process/PMClass_%d_%d_%d.root",pmrun,pmssub,pmesub),"recreate");
+  TFile *fout = new TFile(Form("./process/2-PMClass/PMClass_%d_%d_%d.root",pmrun,pmssub,pmesub),"recreate");
   TTree *otree = new TTree("tree","tree");
   otree->Branch("PMRecon","PMRecon",&pmrecon,32000,2);
 

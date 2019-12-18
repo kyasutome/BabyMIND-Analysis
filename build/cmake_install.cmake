@@ -36,6 +36,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/src/MakeCalib/cmake_install.cmake")
   include("/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/src/EvtDisp/cmake_install.cmake")
+  include("/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/src/DataSanity/cmake_install.cmake")
+  include("/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/src/BSDApply/cmake_install.cmake")
 
 endif()
 

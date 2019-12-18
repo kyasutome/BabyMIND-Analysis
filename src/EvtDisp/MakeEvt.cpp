@@ -44,7 +44,8 @@ int main( int argc, char **argv )
 
   vector<int> commonspill;
   
-  TFile *fout = new TFile(Form("./process/BMEvt_%s%s_%s.root",date.c_str(),month.c_str(),run.c_str()),"recreate");
+  TFile *fout = new TFile(Form("./process/4-BMEVT/BMEvt_%s%s_%s.root"
+			       ,date.c_str(),month.c_str(),run.c_str()),"recreate");
   TTree *otree = new TTree("tree","tree");
   otree->Branch("BMDisp","BMDisp",&bmdisp,32000,2);
 

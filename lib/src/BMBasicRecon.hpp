@@ -31,7 +31,9 @@ public:
 
   BMBasicRecon();
   ~BMBasicRecon(); 
+  
   void Clear();
+  void CopyClass(BMBasicRecon* bmbasicrecon1, BMBasicRecon* bmbasicrecon2);
 
 };
 

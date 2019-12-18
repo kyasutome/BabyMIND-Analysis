@@ -6,7 +6,8 @@ date=$1
 mon="$2"
 run=$3
 
-unpacking="Unpacking_FW7"
+#unpacking="Unpacking_FW7"
+unpacking="Unpacking_JPARC_v1.35"
 
 while [ $i -le $MAX ]; do
 
@@ -43,7 +44,7 @@ while [ $i -le $MAX ]; do
     fi
 
 directory="$date$mon/mode1pw1bw35_HG50vh_HG30yb_DAC10b220y240v260h_Tin_27_2_Tout_24_1"
-filename="beam_200us_MCR_"$mcr"_Run"$run"_2019_12_15_14_39_36.daq"
+filename="beam_200us_MCR_"$mcr"_Run"$run"_2019_12_16_09_37_40.daq"
 
 #beamdata
 ./$unpacking/bin/TDMunpack -f ~/Dropbox/wagasci/babymind/data/physdata/$directory/$filename  1>&2

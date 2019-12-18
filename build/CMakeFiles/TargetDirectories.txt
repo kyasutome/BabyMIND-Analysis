@@ -8,3 +8,9 @@
 /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/src/EvtDisp/CMakeFiles/MakePMClass.dir
 /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/src/EvtDisp/CMakeFiles/MakeDisp.dir
 /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/src/EvtDisp/CMakeFiles/MakeEvt.dir
+/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/src/DataSanity/CMakeFiles/rebuild_cache.dir
+/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/src/DataSanity/CMakeFiles/edit_cache.dir
+/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/src/DataSanity/CMakeFiles/DataSanity.dir
+/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/src/BSDApply/CMakeFiles/rebuild_cache.dir
+/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/src/BSDApply/CMakeFiles/edit_cache.dir
+/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/src/BSDApply/CMakeFiles/BSDApply.dir

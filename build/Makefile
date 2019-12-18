@@ -162,6 +162,32 @@ MakeEvt/fast:
 	$(MAKE) -f src/EvtDisp/CMakeFiles/MakeEvt.dir/build.make src/EvtDisp/CMakeFiles/MakeEvt.dir/build
 .PHONY : MakeEvt/fast
 
+#=============================================================================
+# Target rules for targets named DataSanity
+
+# Build rule for target.
+DataSanity: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 DataSanity
+.PHONY : DataSanity
+
+# fast build rule for target.
+DataSanity/fast:
+	$(MAKE) -f src/DataSanity/CMakeFiles/DataSanity.dir/build.make src/DataSanity/CMakeFiles/DataSanity.dir/build
+.PHONY : DataSanity/fast
+
+#=============================================================================
+# Target rules for targets named BSDApply
+
+# Build rule for target.
+BSDApply: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 BSDApply
+.PHONY : BSDApply
+
+# fast build rule for target.
+BSDApply/fast:
+	$(MAKE) -f src/BSDApply/CMakeFiles/BSDApply.dir/build.make src/BSDApply/CMakeFiles/BSDApply.dir/build
+.PHONY : BSDApply/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -174,6 +200,8 @@ help:
 	@echo "... MakePMClass"
 	@echo "... MakeDisp"
 	@echo "... MakeEvt"
+	@echo "... DataSanity"
+	@echo "... BSDApply"
 .PHONY : help
 
 

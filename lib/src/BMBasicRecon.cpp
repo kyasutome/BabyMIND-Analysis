@@ -43,3 +43,8 @@ void BMBasicRecon::Clear()
 
   bm_event=-1;
 }
+
+void BMBasicRecon::CopyClass(BMBasicRecon* bmbasicrecon1, BMBasicRecon* bmbasicrecon2)
+{
+  bmbasicrecon2 = bmbasicrecon1;
+}

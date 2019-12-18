@@ -8,6 +8,7 @@ using namespace std;
 BMBeaminfo::BMBeaminfo()
 {
   spillnum = -1;
+
 }
 
 

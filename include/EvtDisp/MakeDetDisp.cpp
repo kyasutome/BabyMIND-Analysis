@@ -110,7 +110,7 @@ void MakeDetDisp::VetoSci(double x,double y,double x1,double y1, int view){
 
 void MakeDetDisp::DrawBabyMIND(int view)
 {
-  double Scin_thickness = 40; //cm                                                                                   
+  //double Scin_thickness = 40; //cm
   double Iron_thickness = 40; //cm 
   double YASU_width = 1800; //mm
   double YASU_height = 200; //mm 

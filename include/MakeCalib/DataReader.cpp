@@ -171,7 +171,6 @@ void DataReader::BMSpillMatch(vector<double> *commonspill)
 		   inserter(intersection[0], intersection[0].end()));
 
   for(int ifeb=1; ifeb<62; ifeb++)
-  //for(int ifeb=1; ifeb<10; ifeb++)
     {
       if(febspill[ifeb].size()!=0)
 	{
@@ -189,11 +188,6 @@ void DataReader::BMSpillMatch(vector<double> *commonspill)
 	}
 
     }
-
-  /*
-  for(int i=0; i<intersection[5].size(); i++)
-    commonspill->push_back(intersection[9].at(i));
-  */
 
   
   for(int i=0; i<intersection[61].size(); i++)

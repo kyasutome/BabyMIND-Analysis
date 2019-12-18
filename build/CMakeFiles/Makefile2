@@ -55,18 +55,24 @@ CMAKE_BINARY_DIR = /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analy
 # The main recursive "all" target.
 all: src/MakeCalib/all
 all: src/EvtDisp/all
+all: src/DataSanity/all
+all: src/BSDApply/all
 
 .PHONY : all
 
 # The main recursive "clean" target.
 clean: src/MakeCalib/clean
 clean: src/EvtDisp/clean
+clean: src/DataSanity/clean
+clean: src/BSDApply/clean
 
 .PHONY : clean
 
 # The main recursive "preinstall" target.
 preinstall: src/MakeCalib/preinstall
 preinstall: src/EvtDisp/preinstall
+preinstall: src/DataSanity/preinstall
+preinstall: src/BSDApply/preinstall
 
 .PHONY : preinstall
 
@@ -95,7 +101,7 @@ src/MakeCalib/preinstall:
 src/MakeCalib/CMakeFiles/MakeCalib.dir/all:
 	$(MAKE) -f src/MakeCalib/CMakeFiles/MakeCalib.dir/build.make src/MakeCalib/CMakeFiles/MakeCalib.dir/depend
 	$(MAKE) -f src/MakeCalib/CMakeFiles/MakeCalib.dir/build.make src/MakeCalib/CMakeFiles/MakeCalib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=1,2 "Built target MakeCalib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=5,6 "Built target MakeCalib"
 .PHONY : src/MakeCalib/CMakeFiles/MakeCalib.dir/all
 
 # Build rule for subdir invocation for target.
@@ -144,7 +150,7 @@ src/EvtDisp/preinstall:
 src/EvtDisp/CMakeFiles/MakePMClass.dir/all:
 	$(MAKE) -f src/EvtDisp/CMakeFiles/MakePMClass.dir/build.make src/EvtDisp/CMakeFiles/MakePMClass.dir/depend
 	$(MAKE) -f src/EvtDisp/CMakeFiles/MakePMClass.dir/build.make src/EvtDisp/CMakeFiles/MakePMClass.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=7,8 "Built target MakePMClass"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=11,12 "Built target MakePMClass"
 .PHONY : src/EvtDisp/CMakeFiles/MakePMClass.dir/all
 
 # Build rule for subdir invocation for target.
@@ -171,7 +177,7 @@ src/EvtDisp/CMakeFiles/MakePMClass.dir/clean:
 src/EvtDisp/CMakeFiles/MakeDisp.dir/all:
 	$(MAKE) -f src/EvtDisp/CMakeFiles/MakeDisp.dir/build.make src/EvtDisp/CMakeFiles/MakeDisp.dir/depend
 	$(MAKE) -f src/EvtDisp/CMakeFiles/MakeDisp.dir/build.make src/EvtDisp/CMakeFiles/MakeDisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=3,4 "Built target MakeDisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=7,8 "Built target MakeDisp"
 .PHONY : src/EvtDisp/CMakeFiles/MakeDisp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -198,7 +204,7 @@ src/EvtDisp/CMakeFiles/MakeDisp.dir/clean:
 src/EvtDisp/CMakeFiles/MakeEvt.dir/all:
 	$(MAKE) -f src/EvtDisp/CMakeFiles/MakeEvt.dir/build.make src/EvtDisp/CMakeFiles/MakeEvt.dir/depend
 	$(MAKE) -f src/EvtDisp/CMakeFiles/MakeEvt.dir/build.make src/EvtDisp/CMakeFiles/MakeEvt.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=5,6 "Built target MakeEvt"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=9,10 "Built target MakeEvt"
 .PHONY : src/EvtDisp/CMakeFiles/MakeEvt.dir/all
 
 # Build rule for subdir invocation for target.
@@ -217,6 +223,96 @@ MakeEvt: src/EvtDisp/CMakeFiles/MakeEvt.dir/rule
 src/EvtDisp/CMakeFiles/MakeEvt.dir/clean:
 	$(MAKE) -f src/EvtDisp/CMakeFiles/MakeEvt.dir/build.make src/EvtDisp/CMakeFiles/MakeEvt.dir/clean
 .PHONY : src/EvtDisp/CMakeFiles/MakeEvt.dir/clean
+
+#=============================================================================
+# Directory level rules for directory src/DataSanity
+
+# Recursive "all" directory target.
+src/DataSanity/all: src/DataSanity/CMakeFiles/DataSanity.dir/all
+
+.PHONY : src/DataSanity/all
+
+# Recursive "clean" directory target.
+src/DataSanity/clean: src/DataSanity/CMakeFiles/DataSanity.dir/clean
+
+.PHONY : src/DataSanity/clean
+
+# Recursive "preinstall" directory target.
+src/DataSanity/preinstall:
+
+.PHONY : src/DataSanity/preinstall
+
+#=============================================================================
+# Target rules for target src/DataSanity/CMakeFiles/DataSanity.dir
+
+# All Build rule for target.
+src/DataSanity/CMakeFiles/DataSanity.dir/all:
+	$(MAKE) -f src/DataSanity/CMakeFiles/DataSanity.dir/build.make src/DataSanity/CMakeFiles/DataSanity.dir/depend
+	$(MAKE) -f src/DataSanity/CMakeFiles/DataSanity.dir/build.make src/DataSanity/CMakeFiles/DataSanity.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=3,4 "Built target DataSanity"
+.PHONY : src/DataSanity/CMakeFiles/DataSanity.dir/all
+
+# Build rule for subdir invocation for target.
+src/DataSanity/CMakeFiles/DataSanity.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 src/DataSanity/CMakeFiles/DataSanity.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles 0
+.PHONY : src/DataSanity/CMakeFiles/DataSanity.dir/rule
+
+# Convenience name for target.
+DataSanity: src/DataSanity/CMakeFiles/DataSanity.dir/rule
+
+.PHONY : DataSanity
+
+# clean rule for target.
+src/DataSanity/CMakeFiles/DataSanity.dir/clean:
+	$(MAKE) -f src/DataSanity/CMakeFiles/DataSanity.dir/build.make src/DataSanity/CMakeFiles/DataSanity.dir/clean
+.PHONY : src/DataSanity/CMakeFiles/DataSanity.dir/clean
+
+#=============================================================================
+# Directory level rules for directory src/BSDApply
+
+# Recursive "all" directory target.
+src/BSDApply/all: src/BSDApply/CMakeFiles/BSDApply.dir/all
+
+.PHONY : src/BSDApply/all
+
+# Recursive "clean" directory target.
+src/BSDApply/clean: src/BSDApply/CMakeFiles/BSDApply.dir/clean
+
+.PHONY : src/BSDApply/clean
+
+# Recursive "preinstall" directory target.
+src/BSDApply/preinstall:
+
+.PHONY : src/BSDApply/preinstall
+
+#=============================================================================
+# Target rules for target src/BSDApply/CMakeFiles/BSDApply.dir
+
+# All Build rule for target.
+src/BSDApply/CMakeFiles/BSDApply.dir/all:
+	$(MAKE) -f src/BSDApply/CMakeFiles/BSDApply.dir/build.make src/BSDApply/CMakeFiles/BSDApply.dir/depend
+	$(MAKE) -f src/BSDApply/CMakeFiles/BSDApply.dir/build.make src/BSDApply/CMakeFiles/BSDApply.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=1,2 "Built target BSDApply"
+.PHONY : src/BSDApply/CMakeFiles/BSDApply.dir/all
+
+# Build rule for subdir invocation for target.
+src/BSDApply/CMakeFiles/BSDApply.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 src/BSDApply/CMakeFiles/BSDApply.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles 0
+.PHONY : src/BSDApply/CMakeFiles/BSDApply.dir/rule
+
+# Convenience name for target.
+BSDApply: src/BSDApply/CMakeFiles/BSDApply.dir/rule
+
+.PHONY : BSDApply
+
+# clean rule for target.
+src/BSDApply/CMakeFiles/BSDApply.dir/clean:
+	$(MAKE) -f src/BSDApply/CMakeFiles/BSDApply.dir/build.make src/BSDApply/CMakeFiles/BSDApply.dir/clean
+.PHONY : src/BSDApply/CMakeFiles/BSDApply.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
