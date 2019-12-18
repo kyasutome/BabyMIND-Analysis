@@ -84,7 +84,9 @@ Brief usage is written in the code itself.
 5: Baby MIND
 6: YASU tracker
 
-Layout
+
+<Layout>
+
              -------------        -------------------    
               Wall MRD (4)
               -------------          
@@ -95,6 +97,7 @@ Layout
            -------------         
            Wall MRD (3)
            ------------- 
+
 
 <view> For Y channel (side view) (0), For channel X (top view) (1)
 <pln> Scintillator plane ID
