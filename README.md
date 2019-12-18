@@ -18,7 +18,7 @@ go to lib/src
 5. make BMBSD        -> create ../library/BMBSD.so
 6. make move         -> move *Dict_rdict_pcm files ../library/
 
-You sucessfully compile libraries.
+You successfully compile libraries.
 
 ## 2.Installation --- General ---
 

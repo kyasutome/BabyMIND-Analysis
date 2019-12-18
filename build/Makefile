@@ -188,6 +188,19 @@ BSDApply/fast:
 	$(MAKE) -f src/BSDApply/CMakeFiles/BSDApply.dir/build.make src/BSDApply/CMakeFiles/BSDApply.dir/build
 .PHONY : BSDApply/fast
 
+#=============================================================================
+# Target rules for targets named YASUTracker
+
+# Build rule for target.
+YASUTracker: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 YASUTracker
+.PHONY : YASUTracker
+
+# fast build rule for target.
+YASUTracker/fast:
+	$(MAKE) -f src/YASUTracker/CMakeFiles/YASUTracker.dir/build.make src/YASUTracker/CMakeFiles/YASUTracker.dir/build
+.PHONY : YASUTracker/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -202,6 +215,7 @@ help:
 	@echo "... MakeEvt"
 	@echo "... DataSanity"
 	@echo "... BSDApply"
+	@echo "... YASUTracker"
 .PHONY : help
 
 

@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/src/YASUTracker/main.cpp
+iostream
+-
+stdio.h
+-
+

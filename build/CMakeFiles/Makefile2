@@ -57,6 +57,7 @@ all: src/MakeCalib/all
 all: src/EvtDisp/all
 all: src/DataSanity/all
 all: src/BSDApply/all
+all: src/YASUTracker/all
 
 .PHONY : all
 
@@ -65,6 +66,7 @@ clean: src/MakeCalib/clean
 clean: src/EvtDisp/clean
 clean: src/DataSanity/clean
 clean: src/BSDApply/clean
+clean: src/YASUTracker/clean
 
 .PHONY : clean
 
@@ -73,6 +75,7 @@ preinstall: src/MakeCalib/preinstall
 preinstall: src/EvtDisp/preinstall
 preinstall: src/DataSanity/preinstall
 preinstall: src/BSDApply/preinstall
+preinstall: src/YASUTracker/preinstall
 
 .PHONY : preinstall
 
@@ -313,6 +316,51 @@ BSDApply: src/BSDApply/CMakeFiles/BSDApply.dir/rule
 src/BSDApply/CMakeFiles/BSDApply.dir/clean:
 	$(MAKE) -f src/BSDApply/CMakeFiles/BSDApply.dir/build.make src/BSDApply/CMakeFiles/BSDApply.dir/clean
 .PHONY : src/BSDApply/CMakeFiles/BSDApply.dir/clean
+
+#=============================================================================
+# Directory level rules for directory src/YASUTracker
+
+# Recursive "all" directory target.
+src/YASUTracker/all: src/YASUTracker/CMakeFiles/YASUTracker.dir/all
+
+.PHONY : src/YASUTracker/all
+
+# Recursive "clean" directory target.
+src/YASUTracker/clean: src/YASUTracker/CMakeFiles/YASUTracker.dir/clean
+
+.PHONY : src/YASUTracker/clean
+
+# Recursive "preinstall" directory target.
+src/YASUTracker/preinstall:
+
+.PHONY : src/YASUTracker/preinstall
+
+#=============================================================================
+# Target rules for target src/YASUTracker/CMakeFiles/YASUTracker.dir
+
+# All Build rule for target.
+src/YASUTracker/CMakeFiles/YASUTracker.dir/all:
+	$(MAKE) -f src/YASUTracker/CMakeFiles/YASUTracker.dir/build.make src/YASUTracker/CMakeFiles/YASUTracker.dir/depend
+	$(MAKE) -f src/YASUTracker/CMakeFiles/YASUTracker.dir/build.make src/YASUTracker/CMakeFiles/YASUTracker.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=13,14 "Built target YASUTracker"
+.PHONY : src/YASUTracker/CMakeFiles/YASUTracker.dir/all
+
+# Build rule for subdir invocation for target.
+src/YASUTracker/CMakeFiles/YASUTracker.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 src/YASUTracker/CMakeFiles/YASUTracker.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles 0
+.PHONY : src/YASUTracker/CMakeFiles/YASUTracker.dir/rule
+
+# Convenience name for target.
+YASUTracker: src/YASUTracker/CMakeFiles/YASUTracker.dir/rule
+
+.PHONY : YASUTracker
+
+# clean rule for target.
+src/YASUTracker/CMakeFiles/YASUTracker.dir/clean:
+	$(MAKE) -f src/YASUTracker/CMakeFiles/YASUTracker.dir/build.make src/YASUTracker/CMakeFiles/YASUTracker.dir/clean
+.PHONY : src/YASUTracker/CMakeFiles/YASUTracker.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
