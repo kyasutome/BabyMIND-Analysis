@@ -33,7 +33,7 @@ int main( int argc, char **argv )
   int pmesub = std::atoi(argv[7]);
   TString bmfilepath(name);
   TString pmfilepath;
-  pmfilepath.Form("./process/PMClass_%d_%d_%d.root"
+  pmfilepath.Form("./process/2-PMClass/PMClass_%d_%d_%d.root"
 		  ,pmrun, pmssub, pmesub);
 
   BMBasicRecon *bmbasicrecon = new BMBasicRecon();
