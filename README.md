@@ -37,32 +37,37 @@ Fill parameters such as "plane", "channel", "view"  into the BasicRecon class
 Fill spillnumber into the Beaminfo class
 Get files in process/1-BMCalib
 
-2. PMClass
-
-Read data taken by Proton Modules
-Fill parameters into PMRecon class
-Get files in process/2-PMClass
-
-3. BSDApply
+2. BSDApply
 
 Read T2K offcial BSD
 Implement beam information such as "unixtime", "P.O.T" into BMBSD class
 Get files in process/3-BMBSD
 
-4. EvtDisp
+3. EvtDisp
 
-4-1. MakeEvt
+3-1. PMClass
+
+Read data taken by Proton Modules
+Fill parameters into PMRecon class
+Get files in process/2-PMClass
+
+3-2. MakeEvt
 
 Create the format for makeing Event Display
 Get files in process/4-BMEVT
 
-4-2. MakeDisp
+3-3. MakeDisp
 
 Create the Event Display
 
 Event Display (This is the very immature version. Will be updated more.)
 1. Color dots means Each Bunch.
 2. Currently using the spill matching between Baby MIND & Proton Module
+
+4. DataSanity
+
+Create the data taking efficiency plot using "BMBSD*.root"
+which is a output of program 2 "BSDApply".
 
 ## Shell control
 
