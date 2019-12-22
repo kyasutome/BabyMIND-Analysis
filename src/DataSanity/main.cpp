@@ -39,19 +39,25 @@ int main( int argc, char **argv )
 
   bsdapply->ReadBSDfile();
 
-  for(int idate=startdate; idate<enddate; idate++)
+  for(int imon=0; imon<2; imon++)
     {
-      for(int irun=startrun; irun<endrun; irun++)
-        {
-          bmfilename.Form("%s/BMBSD_%d_Nov_%d.root", bmdirpath.Data(), idate, irun);
-          if (gSystem->GetPathInfo(bmfilename.Data(), info)!=0)
-            {
-              continue;
-            }else{
-            bmchain->Add(bmfilename);
-          }
-        }//isub
-    }//irun
+      TString MON;
+      if(imon==0) MON.Form("Nov");
+      if(imon==1) MON.Form("Dec");
+      for(int idate=startdate; idate<enddate; idate++)
+	{
+	  for(int irun=startrun; irun<endrun; irun++)
+	    {
+	      bmfilename.Form("%s/BMBSD_%d_%s_%d.root", bmdirpath.Data(), idate, MON.Data(), irun);
+	      if (gSystem->GetPathInfo(bmfilename.Data(), info)!=0)
+		{
+		  continue;
+		}else{
+		bmchain->Add(bmfilename);
+	      }
+	    }//isub
+	}//irun
+    }//imon
   bmchain->SetBranchAddress("BMBSD", &bmbsd);
   cout << "Baby MIND entries = " << bmchain->GetEntries() <<'\n';
   
@@ -63,9 +69,8 @@ int main( int argc, char **argv )
   cout << "sunix= " << sunix << " eunix= " << eunix << '\n';
 
   TFile* fout = new TFile("./result/BSD/Accumlated_pot.root", "recreate");
-
-  TH2D *bsd_accumlated_plot = new TH2D("bsd_accumlated_plot", "", 500, sunix, eunix, 500, 0, 2.0);
-  TH2D *bm_accumlated_plot = new TH2D("bm_accumlated_plot", "", 500, sunix, eunix, 500, 0, 2.0);
+  TH2D *bsd_accumlated_plot = new TH2D("bsd_accumlated_plot", "", 500, sunix, eunix, 500, 0, 4.0);
+  TH2D *bm_accumlated_plot = new TH2D("bm_accumlated_plot", "", 500, sunix, eunix, 500, 0, 4.0);
   char ytitle[128] = "Accumlated P.O.T (10^{20})";
   datasanity->SetHistLabel(bsd_accumlated_plot, "Data Taking Efficiency", ytitle);
   datasanity->SetHistLabel(bm_accumlated_plot, "Data Taking Efficiency", ytitle);

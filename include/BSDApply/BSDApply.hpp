@@ -53,7 +53,7 @@ public:
 
   void ReadBSDfile();
   void GetMonDateHour(time_t unixtime, int* Mon, int* Date, int* Hour);
-  void FindFirstSpill(int bmfirstspill, int bmmon, int bmdate, int bmhour);
+  void FindFirstSpill(int *bmfirstspill, int bmmon, int bmdate, int bmhour);
   void MakeBeamGroup(int isub);
   void SpillMatch(int isub);
   void FillBSD(TTree* tree, TTree* otree, BMBSD* bmbsd);

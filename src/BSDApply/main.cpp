@@ -59,21 +59,39 @@ int main( int argc, char **argv )
   tree->GetEntry(0);
   int bmfirstspill = bmbeaminfo->spillnum;
   int subfile=0;
+  int icount=0;
+  bool firstcheck = false;
+
+  bsdapply->ReadBSDfile();
+  bsdapply->FindFirstSpill(&bmfirstspill, bmmon, bmdate, bmhour);
+
+  cout << "bmfirstspill= " << bmfirstspill << '\n';
 
   for(int ientry=0; ientry<tree->GetEntries(); ientry++)
     {
       tree->GetEntry(ientry);
       bsdapply->bmspill.push_back(bmbeaminfo->spillnum);
+
+      if(bmbeaminfo->spillnum < bmfirstspill && !firstcheck) continue;
+      else if(bmbeaminfo->spillnum == bmfirstspill) firstcheck=true;
+
+      bsdapply->bmgroup[subfile][0].push_back(bmbeaminfo->spillnum);
+      icount++;
+      if(icount%1000==999)
+	{
+	  subfile++;
+	  icount=0;
+	}
+      /*
       if(ientry<bsdapply->nsubdata*(subfile+1) && ientry>=bsdapply->nsubdata*subfile)
         bsdapply->bmgroup[subfile][0].push_back(bmbeaminfo->spillnum);
-
       if(ientry==bsdapply->nsubdata*(subfile+1)-1)
         subfile++;
+      */
     }
 
   cout << "BMSpillSize= " << tree->GetEntries() << " subfile= " << subfile+1  << '\n';
-  bsdapply->ReadBSDfile();
-  bsdapply->FindFirstSpill(bmfirstspill, bmmon, bmdate, bmhour);
+
   for(int isub=0; isub<subfile+1; isub++)
     {
       bsdapply->MakeBeamGroup(isub);

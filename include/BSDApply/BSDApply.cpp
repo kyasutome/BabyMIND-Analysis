@@ -9,10 +9,11 @@ using namespace std;
 
 BSDApply::BSDApply()
 {
-  bsddir.Form("./bsd/t2krun10");
+  //bsddir.Form("./bsd/t2krun10"); // BSD
+  bsddir.Form("./qsd/t2krun10"); // QSD
   bsdchain = new TChain("bsd", "bsd");
   startrun = 830115;
-  endrun = 830295;
+  endrun = 830493;
   startsub = 0;
   endsub = 50;
 
@@ -35,7 +36,8 @@ void BSDApply::ReadBSDfile()
     {
       for(int isub=startsub; isub<endsub; isub++)
         {
-          filename.Form("%s/bsd_run%07d_%02dv01.root", bsddir.Data(), irun, isub);
+	  //filename.Form("%s/bsd_run%07d_%02dv01.root", bsddir.Data(), irun, isub);//BSD
+          filename.Form("%s/bsd_run%07d_%02dp06.root", bsddir.Data(), irun, isub); // QSD
           if (gSystem->GetPathInfo(filename.Data(), info)!=0)
             {
               //cout << "File" << filename << " does not exist" << '\n'; 
@@ -62,11 +64,17 @@ void BSDApply::GetMonDateHour(time_t unixtime, int* Mon, int* Date, int* Hour)
   //cout << *Mon << " " << *Date << " " << *Hour << '\n';
 }
 
-void BSDApply::FindFirstSpill(int bmfirstspill, int bmmon, int bmdate, int bmhour)
+void BSDApply::FindFirstSpill(int *bmfirstspill, int bmmon, int bmdate, int bmhour)
 {
   bool firstcheck = false;
   bool finish = false;
   int Mon, Date, Hour;
+
+  if(bmmon==12 && bmdate==4) 
+    {
+      *bmfirstspill = 12347;
+      firstcheck = true;
+    }
     
   for(int ibsd=0; ibsd<bsdchain->GetEntries(); ibsd++)
     {
@@ -80,8 +88,8 @@ void BSDApply::FindFirstSpill(int bmfirstspill, int bmmon, int bmdate, int bmhou
 	firstcheck = true;
       else if(firstcheck && Mon==bmmon && Date==bmdate && Hour==bmhour)
 	{
-	  cout << "bmspill= " << thebeamspill << '\n';
-	  if(CheckBMSpill(bmfirstspill, thebeamspill))
+	  cout << "beamspill= " << thebeamspill << '\n';
+	  if(CheckBMSpill(*bmfirstspill, thebeamspill))
 	    {
 	      firstmatchspillentry = ibsd;
 	      finish = true;
@@ -91,7 +99,7 @@ void BSDApply::FindFirstSpill(int bmfirstspill, int bmmon, int bmdate, int bmhou
 	}
     }
   cout << "firstmatchspillentry= " << firstmatchspillentry << '\n';
-  cout << "FirstMatchSpill= " << thebeamspill << " = " << bmfirstspill << '\n';
+  cout << "FirstMatchSpill= " << thebeamspill << " = " << *bmfirstspill << '\n';
 }
 
 void BSDApply::MakeBeamGroup(int isub)

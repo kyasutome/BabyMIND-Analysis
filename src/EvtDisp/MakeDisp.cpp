@@ -31,7 +31,7 @@ int main( int argc, char **argv )
   TFile* file = new TFile(filepath, "read");
   TTree* tree = (TTree*)file->Get("tree");
   tree->SetBranchAddress("BMDisp",&bmdisp);
-  MakeMonitor *makemonitor = new MakeMonitor();  
+  MakeMonitor *makemonitor = new MakeMonitor();
 
   for(int ientry=0; ientry<tree->GetEntries(); ientry++)
     {

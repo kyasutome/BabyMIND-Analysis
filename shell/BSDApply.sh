@@ -4,7 +4,7 @@ if [ $# -ne 6 ] ; then
   echo ""
   echo "  !!! ./BSDApply.sh [date] [month] [run] [bmmon] [bmdate] [bmhour] !!!"
   echo "example)"
-  echo "./BSDApply.sh 5 Dec 2 32321 3 5 5 12 22"
+  echo "./BSDApply.sh 5 Dec 2 5 12 22"
   exit 1
 fi
 
@@ -18,7 +18,8 @@ bmhour=$6
 anadir=${PWD}
 datadir=$anadir/process
 
-filename=$(find  $datadir -type f -name "*BMCalib*$date$month*$run*")
+#filename=$(find  $datadir -type f -name "*BMCalib*$date$month*$run*")
+filename=$(find  $datadir -type f -name "*BMCalib_$date$month*$run*")
 if [ $? -eq 0 ] ; then
     echo "Found a file"
     else
