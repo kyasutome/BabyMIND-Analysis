@@ -1,38 +1,37 @@
-#ifndef _INC_WGDATA
-#define _INC_WGDATA
+#ifndef _INC_WMDATA
+#define _INC_WMDATA
 
 #include <iostream>
 #include <vector>
 
 #include "BMConst.hpp"
 
-class WGdata
+class WMdata
 {
   
-private:
-  
+private:  
 
 public:
   
-  //WAGASCI DATA STRUCTURE
+  //WallMRDs DATA STRUCTURE
   int spill_number;
   int spill_mode;
   int spill_count;
   
-  int chipid[20];
+  int chipid[3];
   int chanid[36];
   int colid[16];
-  int charge[20][36][16];
-  int time[20][36][16];
-  int bcid[20][16];
-  int hit[20][36][16];
+  int charge[3][36][16];
+  int time[3][36][16];
+  int bcid[3][16];
+  int hit[3][36][16];
   int gs[3][36][16];
-  int debug_chip[20][7];
+  int debug_chip[3][7];
   int debug_spill[7];  
   
 
-  WGdata();
-  ~WGdata();
+  WMdata();
+  ~WMdata();
  
 };
 

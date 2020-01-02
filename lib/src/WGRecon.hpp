@@ -13,12 +13,21 @@ private:
 
 public:
 
+  /*
   vector<double> *mod;
   vector<double> *view;
   vector<double> *pln;
   vector<double> *channel;
   vector<double> *time;
   vector<double> *bunch;  
+  */
+
+  vector<double> mod;
+  vector<double> view;
+  vector<double> pln;
+  vector<double> channel;
+  vector<double> time;
+  vector<double> bunch;  
 
   int spill;
   int unixtime;

@@ -9,8 +9,6 @@ using namespace std;
 
 WGChannelMap::WGChannelMap()
 {
-  
-
 }
 
 WGChannelMap::~WGChannelMap()

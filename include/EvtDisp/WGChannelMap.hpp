@@ -11,23 +11,19 @@
 #include <TSystem.h>
 #include <TChain.h>
 
-#include "BMConst.hh"
+#include "BMConst.hpp"
 
 class WGChannelMap
 {
-  //parameter
 private:
-  const int wgChannelMap::DifView[2] = {TopView,SideView};
+  //const int DifView[2] = {TopView,SideView};
 
-
-  //vector<int>* mod;
 
   
 public:
 
 
 
-  //function
 public:
   WGChannelMap();
   ~WGChannelMap();

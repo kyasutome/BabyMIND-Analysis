@@ -35,5 +35,15 @@ if    (ROOT_FOUND)
   							${PROJECT_SOURCE_DIR}/include/EvtDisp	
   							${PROJECT_SOURCE_DIR}/lib/src)
 
+  ADD_EXECUTABLE(MakeWGClass	MakeWGClass.cpp)
+  TARGET_LINK_LIBRARIES(MakeWGClass	${PROJECT_SOURCE_DIR}/lib/library/BMBasicRecon.so
+  					${PROJECT_SOURCE_DIR}/lib/library/BMBeaminfo.so
+					${PROJECT_SOURCE_DIR}/lib/library/BMDisp.so
+					${PROJECT_SOURCE_DIR}/lib/library/WGRecon.so
+					${ROOT_LIBRARIES})
+  TARGET_INCLUDE_DIRECTORIES(MakeWGClass	PUBLIC	${PROJECT_SOURCE_DIR}/include/MakeCalib
+  							${PROJECT_SOURCE_DIR}/include/EvtDisp	
+  							${PROJECT_SOURCE_DIR}/lib/src)
+
 
 endif (ROOT_FOUND)

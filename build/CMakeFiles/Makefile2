@@ -58,6 +58,7 @@ all: src/EvtDisp/all
 all: src/DataSanity/all
 all: src/BSDApply/all
 all: src/YASUTracker/all
+all: src/Recon/all
 
 .PHONY : all
 
@@ -67,6 +68,7 @@ clean: src/EvtDisp/clean
 clean: src/DataSanity/clean
 clean: src/BSDApply/clean
 clean: src/YASUTracker/clean
+clean: src/Recon/clean
 
 .PHONY : clean
 
@@ -76,6 +78,7 @@ preinstall: src/EvtDisp/preinstall
 preinstall: src/DataSanity/preinstall
 preinstall: src/BSDApply/preinstall
 preinstall: src/YASUTracker/preinstall
+preinstall: src/Recon/preinstall
 
 .PHONY : preinstall
 
@@ -128,6 +131,7 @@ src/MakeCalib/CMakeFiles/MakeCalib.dir/clean:
 # Directory level rules for directory src/EvtDisp
 
 # Recursive "all" directory target.
+src/EvtDisp/all: src/EvtDisp/CMakeFiles/MakeWGClass.dir/all
 src/EvtDisp/all: src/EvtDisp/CMakeFiles/MakePMClass.dir/all
 src/EvtDisp/all: src/EvtDisp/CMakeFiles/MakeDisp.dir/all
 src/EvtDisp/all: src/EvtDisp/CMakeFiles/MakeEvt.dir/all
@@ -135,6 +139,7 @@ src/EvtDisp/all: src/EvtDisp/CMakeFiles/MakeEvt.dir/all
 .PHONY : src/EvtDisp/all
 
 # Recursive "clean" directory target.
+src/EvtDisp/clean: src/EvtDisp/CMakeFiles/MakeWGClass.dir/clean
 src/EvtDisp/clean: src/EvtDisp/CMakeFiles/MakePMClass.dir/clean
 src/EvtDisp/clean: src/EvtDisp/CMakeFiles/MakeDisp.dir/clean
 src/EvtDisp/clean: src/EvtDisp/CMakeFiles/MakeEvt.dir/clean
@@ -145,6 +150,33 @@ src/EvtDisp/clean: src/EvtDisp/CMakeFiles/MakeEvt.dir/clean
 src/EvtDisp/preinstall:
 
 .PHONY : src/EvtDisp/preinstall
+
+#=============================================================================
+# Target rules for target src/EvtDisp/CMakeFiles/MakeWGClass.dir
+
+# All Build rule for target.
+src/EvtDisp/CMakeFiles/MakeWGClass.dir/all:
+	$(MAKE) -f src/EvtDisp/CMakeFiles/MakeWGClass.dir/build.make src/EvtDisp/CMakeFiles/MakeWGClass.dir/depend
+	$(MAKE) -f src/EvtDisp/CMakeFiles/MakeWGClass.dir/build.make src/EvtDisp/CMakeFiles/MakeWGClass.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=13,14 "Built target MakeWGClass"
+.PHONY : src/EvtDisp/CMakeFiles/MakeWGClass.dir/all
+
+# Build rule for subdir invocation for target.
+src/EvtDisp/CMakeFiles/MakeWGClass.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 src/EvtDisp/CMakeFiles/MakeWGClass.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles 0
+.PHONY : src/EvtDisp/CMakeFiles/MakeWGClass.dir/rule
+
+# Convenience name for target.
+MakeWGClass: src/EvtDisp/CMakeFiles/MakeWGClass.dir/rule
+
+.PHONY : MakeWGClass
+
+# clean rule for target.
+src/EvtDisp/CMakeFiles/MakeWGClass.dir/clean:
+	$(MAKE) -f src/EvtDisp/CMakeFiles/MakeWGClass.dir/build.make src/EvtDisp/CMakeFiles/MakeWGClass.dir/clean
+.PHONY : src/EvtDisp/CMakeFiles/MakeWGClass.dir/clean
 
 #=============================================================================
 # Target rules for target src/EvtDisp/CMakeFiles/MakePMClass.dir
@@ -342,7 +374,7 @@ src/YASUTracker/preinstall:
 src/YASUTracker/CMakeFiles/YASUTracker.dir/all:
 	$(MAKE) -f src/YASUTracker/CMakeFiles/YASUTracker.dir/build.make src/YASUTracker/CMakeFiles/YASUTracker.dir/depend
 	$(MAKE) -f src/YASUTracker/CMakeFiles/YASUTracker.dir/build.make src/YASUTracker/CMakeFiles/YASUTracker.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=13,14 "Built target YASUTracker"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=17,18 "Built target YASUTracker"
 .PHONY : src/YASUTracker/CMakeFiles/YASUTracker.dir/all
 
 # Build rule for subdir invocation for target.
@@ -361,6 +393,51 @@ YASUTracker: src/YASUTracker/CMakeFiles/YASUTracker.dir/rule
 src/YASUTracker/CMakeFiles/YASUTracker.dir/clean:
 	$(MAKE) -f src/YASUTracker/CMakeFiles/YASUTracker.dir/build.make src/YASUTracker/CMakeFiles/YASUTracker.dir/clean
 .PHONY : src/YASUTracker/CMakeFiles/YASUTracker.dir/clean
+
+#=============================================================================
+# Directory level rules for directory src/Recon
+
+# Recursive "all" directory target.
+src/Recon/all: src/Recon/CMakeFiles/TrackRecon.dir/all
+
+.PHONY : src/Recon/all
+
+# Recursive "clean" directory target.
+src/Recon/clean: src/Recon/CMakeFiles/TrackRecon.dir/clean
+
+.PHONY : src/Recon/clean
+
+# Recursive "preinstall" directory target.
+src/Recon/preinstall:
+
+.PHONY : src/Recon/preinstall
+
+#=============================================================================
+# Target rules for target src/Recon/CMakeFiles/TrackRecon.dir
+
+# All Build rule for target.
+src/Recon/CMakeFiles/TrackRecon.dir/all:
+	$(MAKE) -f src/Recon/CMakeFiles/TrackRecon.dir/build.make src/Recon/CMakeFiles/TrackRecon.dir/depend
+	$(MAKE) -f src/Recon/CMakeFiles/TrackRecon.dir/build.make src/Recon/CMakeFiles/TrackRecon.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=15,16 "Built target TrackRecon"
+.PHONY : src/Recon/CMakeFiles/TrackRecon.dir/all
+
+# Build rule for subdir invocation for target.
+src/Recon/CMakeFiles/TrackRecon.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 src/Recon/CMakeFiles/TrackRecon.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles 0
+.PHONY : src/Recon/CMakeFiles/TrackRecon.dir/rule
+
+# Convenience name for target.
+TrackRecon: src/Recon/CMakeFiles/TrackRecon.dir/rule
+
+.PHONY : TrackRecon
+
+# clean rule for target.
+src/Recon/CMakeFiles/TrackRecon.dir/clean:
+	$(MAKE) -f src/Recon/CMakeFiles/TrackRecon.dir/build.make src/Recon/CMakeFiles/TrackRecon.dir/clean
+.PHONY : src/Recon/CMakeFiles/TrackRecon.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

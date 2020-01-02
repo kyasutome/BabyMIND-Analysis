@@ -16,8 +16,7 @@ entry=$4
 anadir=${PWD}
 datadir=$anadir/process
 
-#filename=$(find  $datadir -type f -name "*BMCalib_$date$month_$run*")
-filename=$(find  $datadir -type f -name "*BMEvt_8Nov_0*")
+filename=$(find  $datadir -type f -name "*BMEvt_${date}${month}_${run}*")
 if [ $? -eq 0 ] ; then
     echo "Found a file"
     else

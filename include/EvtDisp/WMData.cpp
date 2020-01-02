@@ -1,16 +1,16 @@
 #include <iostream>
 #include <stdio.h>
 
-#include "WGData.hpp"
+#include "WMData.hpp"
 
 using namespace std;
 
-WGdata::WGdata()
-{
-  
+WMdata::WMdata()
+{  
 }
 
 
-WGdata::~WGdata()
+WMdata::~WMdata()
 {
 }
+

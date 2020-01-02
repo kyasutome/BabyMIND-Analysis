@@ -31,4 +31,5 @@ add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/src/EvtDisp)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/src/DataSanity)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/src/BSDApply)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/src/YASUTracker)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/src/Recon)
 

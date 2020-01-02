@@ -124,6 +124,19 @@ MakeCalib/fast:
 .PHONY : MakeCalib/fast
 
 #=============================================================================
+# Target rules for targets named MakeWGClass
+
+# Build rule for target.
+MakeWGClass: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 MakeWGClass
+.PHONY : MakeWGClass
+
+# fast build rule for target.
+MakeWGClass/fast:
+	$(MAKE) -f src/EvtDisp/CMakeFiles/MakeWGClass.dir/build.make src/EvtDisp/CMakeFiles/MakeWGClass.dir/build
+.PHONY : MakeWGClass/fast
+
+#=============================================================================
 # Target rules for targets named MakePMClass
 
 # Build rule for target.
@@ -201,6 +214,19 @@ YASUTracker/fast:
 	$(MAKE) -f src/YASUTracker/CMakeFiles/YASUTracker.dir/build.make src/YASUTracker/CMakeFiles/YASUTracker.dir/build
 .PHONY : YASUTracker/fast
 
+#=============================================================================
+# Target rules for targets named TrackRecon
+
+# Build rule for target.
+TrackRecon: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TrackRecon
+.PHONY : TrackRecon
+
+# fast build rule for target.
+TrackRecon/fast:
+	$(MAKE) -f src/Recon/CMakeFiles/TrackRecon.dir/build.make src/Recon/CMakeFiles/TrackRecon.dir/build
+.PHONY : TrackRecon/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -210,12 +236,14 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... MakeCalib"
+	@echo "... MakeWGClass"
 	@echo "... MakePMClass"
 	@echo "... MakeDisp"
 	@echo "... MakeEvt"
 	@echo "... DataSanity"
 	@echo "... BSDApply"
 	@echo "... YASUTracker"
+	@echo "... TrackRecon"
 .PHONY : help
 
 
