@@ -117,6 +117,49 @@ bool Dimension::get_pos_bm_FC(int mod, int view, int pln, double ch, double *pos
   return true;
 }     
 
+bool Dimension::get_pos_pm_FC(int mod, int view, int pln, double ch, double *posx, double *posy, double *posz)
+{
+
+  double X, Y;
+  double offsetx[2] = {-2000, -2000};
+  double offsety[2] = {-550, -1500};
+
+  if(view==0)
+    {
+      if(pln==0)X=28;
+      else X=46*pln+32;
+      if(pln==0)Y=ch*50+25;
+      else{
+	if(ch<8)Y=ch*50+25;
+	else if(ch<24)Y=412.5+(ch-8)*25;
+	else Y=(ch-8)*50+25;
+      }
+
+      *posx = -1;
+      *posz = X+offsetx[view];
+      *posy = Y+offsety[view];
+    }
+
+  if(view==1)
+    {
+      if(pln==0)X=5;
+      else X=46*pln+9;
+      if(pln==0)Y=ch*50+25;
+      else{
+	if(ch<8)Y=ch*50+25;
+	else if(ch<24)Y=412.5+(ch-8)*25;
+	else Y=(ch-8)*50+25;
+      }
+
+      *posy = -1;
+      *posz = X+offsetx[view];
+      *posx = Y+offsety[view];
+    }
+
+
+  return true;
+}     
+
 
 
 

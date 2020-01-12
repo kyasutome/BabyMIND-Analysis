@@ -24,6 +24,14 @@ BMDisp:
 	rootcint -f $(@)Dict.cc -c $(@).hpp $(@)LinkDef.hh
 	$(CXX) `root-config --cflags --libs` -shared $(@)Dict.cc $(@).cpp -o ${MAKEDIR}/$(@).so
 
+BMCluster:
+	rootcint -f $(@)Dict.cc -c $(@).hpp $(@)LinkDef.hh
+	$(CXX) `root-config --cflags --libs` -shared $(@)Dict.cc $(@).cpp -o ${MAKEDIR}/$(@).so
+
+BMHitCluster:
+	rootcint -f $(@)Dict.cc -c $(@).hpp $(@)LinkDef.hh
+	$(CXX) `root-config --cflags --libs` -shared $(@)Dict.cc $(@).cpp -o ${MAKEDIR}/$(@).so
+
 PMRecon:
 	rootcint -f $(@)Dict.cc -c $(@).hpp $(@)LinkDef.hh
 	$(CXX) `root-config --cflags --libs` -shared $(@)Dict.cc $(@).cpp -o ${MAKEDIR}/$(@).so

@@ -26,6 +26,8 @@ public:
 private:
 public:
   bool get_pos_bm_FC(int mod, int view, int pln, double ch, double *posx, double *posy, double *posz);
+  bool get_pos_pm_FC(int mod, int view, int pln, double ch, double *posx, double *posy, double *posz);
+
   Dimension();
   ~Dimension();
   

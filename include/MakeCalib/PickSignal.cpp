@@ -18,14 +18,51 @@ PickSignal::PickSignal()
   rightindex[1] = 0;
   topindex[0] = 0;
   topindex[1] = 0;
+  yasuindex[0] = 0;
+  yasuindex[1] = 0;
 }
 
 PickSignal::~PickSignal()
 {
 }
 
+
+void PickSignal::YASUSignalCreation(int ientry, BMdata* bmbranch[NUMBEROFFEB], BMBasicRecon* bmbasicrecon, DataReader* dreader,
+				    vector<double> commonspill)
+{  
+  for(int ifeb=0; ifeb<2; ifeb++)
+    {
+      spillnum = commonspill.at(ientry);
+      auto spillit = find(dreader->febspill[yasufeb[ifeb]].begin(), dreader->febspill[yasufeb[ifeb]].end(), spillnum);
+      spillnum = spillit - dreader->febspill[yasufeb[ifeb]].begin();
+      dreader->FEBtree[yasufeb[ifeb]]->GetEntry(spillnum);
+
+      MakeGTrigCoins(bmbranch[yasufeb[ifeb]], &GTrigTagCoins, 0);
+
+      for(int index=0; index<GTrigTagCoins.size(); index++)
+        {
+	  auto boundyasu = equal_range(bmbranch[yasufeb[ifeb]]->GTrigTag->begin(), bmbranch[yasufeb[ifeb]]->GTrigTag->end(), 
+				       GTrigTagCoins.at(index));
+	  yasuindex[0] = boundyasu.first - bmbranch[yasufeb[ifeb]]->GTrigTag->begin();
+	  yasuindex[1] = boundyasu.second - bmbranch[yasufeb[ifeb]]->GTrigTag->begin();
+
+          for(int Coinsyasu=yasuindex[0]; Coinsyasu<yasuindex[1]; Coinsyasu++)
+            {
+              bool firstfill=true;
+	      if(CheckYASUCoincidence(Coinsyasu, bmbranch[yasufeb[ifeb]], &yasumod))
+	      //Fill to BasicRecon Class		
+		FillYASUBasicReconClass(yasumod, ifeb, firstfill, Coinsyasu, bmbasicrecon, bmbranch[yasufeb[ifeb]]);
+	      firstfill = false;
+	      
+	    }//Coinsyasu loop 
+	}//index
+
+    }//ifeb loop
+
+}
+
 void PickSignal::SignalCreation(int ientry, BMdata* bmbranch[NUMBEROFFEB], BMBasicRecon* bmbasicrecon, DataReader* dreader, 
-				vector<double> commonspill)
+				vector<double> commonspill) 
 {
   for(int imod=1; imod<NUMBEROFMODULE; imod++)
   //for(int imod=1; imod<5; imod++)
@@ -40,7 +77,7 @@ void PickSignal::SignalCreation(int ientry, BMdata* bmbranch[NUMBEROFFEB], BMBas
 	}//ifeb loop
       
       topch = dreader->MapCon[4][imod];
-      MakeGTrigCoins(bmbranch[0], &GTrigTagCoins);
+      MakeGTrigCoins(bmbranch[0], &GTrigTagCoins, 2);
       
       for(int index=0; index<GTrigTagCoins.size(); index++)
 	{
@@ -67,7 +104,7 @@ void PickSignal::SignalCreation(int ientry, BMdata* bmbranch[NUMBEROFFEB], BMBas
     }//imod loop    
 }
 
-void PickSignal::MakeGTrigCoins(BMdata* bmbranch, vector<double>* GTrigTagCoins)
+void PickSignal::MakeGTrigCoins(BMdata* bmbranch, vector<double>* GTrigTagCoins, int range)
 {
   GTrigTagCoins->clear();
   Ndata = bmbranch->GTrigTag->size();
@@ -76,11 +113,11 @@ void PickSignal::MakeGTrigCoins(BMdata* bmbranch, vector<double>* GTrigTagCoins)
   cout << "Ndata= " << Ndata << '\n';
 #endif 
 
-  if(Ndata>2)
+  if(Ndata>1)
     {
-      for(int icoin=0; icoin<Ndata-2; icoin++)
+      for(int icoin=0; icoin<Ndata-range; icoin++)
 	{
-	  if(bmbranch->GTrigTag->at(icoin) == bmbranch->GTrigTag->at(icoin+2))
+	  if(bmbranch->GTrigTag->at(icoin) == bmbranch->GTrigTag->at(icoin+range))
 	    GTrigTagCoins->push_back(bmbranch->GTrigTag->at(icoin));
 	}
     }
@@ -95,7 +132,6 @@ void PickSignal::MakeGTrigCoins(BMdata* bmbranch, vector<double>* GTrigTagCoins)
 void PickSignal::MakeThreeBounds(int ACoin, BMdata* bmbranch_l, BMdata* bmbranch_r, BMdata* bmbranch_t)
 {
   auto boundleft = equal_range(bmbranch_l->GTrigTag->begin(), bmbranch_l->GTrigTag->end(), ACoin);
-
   leftindex[0] = boundleft.first - bmbranch_l->GTrigTag->begin();
   leftindex[1] = boundleft.second - bmbranch_l->GTrigTag->begin();
  
@@ -129,20 +165,34 @@ bool PickSignal::CheckHorCoincidence(int CoinsLeft, int CoinsRight, BMdata* bmbr
     
 }
 
-bool PickSignal::CheckVerCoincidence(int topch, int CoinsLeft, int CoinsTop, BMdata* bmbranch_l, BMdata* bmbranch_t)
+ bool PickSignal::CheckVerCoincidence(int topch, int CoinsLeft, int CoinsTop, BMdata* bmbranch_l, BMdata* bmbranch_t)
+ {
+   bool coincidencecheck = false;
+   double timecut = 30;
+   double timedifcut= 5;
+   if(bmbranch_t->hitsChannel->at(CoinsTop)>=32*topch && bmbranch_t->hitsChannel->at(CoinsTop)<32*(1+topch))
+     if(fabs(bmbranch_l->hitLeadTime->at(CoinsLeft) - bmbranch_t->hitLeadTime->at(CoinsTop))<timecut)	
+       if(bmbranch_t->hitTimeDif->at(CoinsTop)>timedifcut)
+	 coincidencecheck = true;
+   
+   return coincidencecheck;    
+ }
+ 
+bool PickSignal::CheckYASUCoincidence(int Coinsyasu, BMdata* bmbranch, int* yasumod)
 {
   bool coincidencecheck = false;
-  double timecut = 30;
-  double timedifcut= 5;
-  if(bmbranch_t->hitsChannel->at(CoinsTop)>=32*topch && bmbranch_t->hitsChannel->at(CoinsTop)<32*(1+topch))
-    if(fabs(bmbranch_l->hitLeadTime->at(CoinsLeft) - bmbranch_t->hitLeadTime->at(CoinsTop))<timecut)	
-      if(bmbranch_t->hitTimeDif->at(CoinsTop)>timedifcut)
-	coincidencecheck = true;
+  double timedifcut= 0;
+  
+  if(bmbranch->hitTimeDif->at(Coinsyasu)>timedifcut)
+    coincidencecheck = true;
 
-  return coincidencecheck;
-    
+  if(bmbranch->hitsChannel->at(Coinsyasu) < 10) *yasumod=19;
+  if(bmbranch->hitsChannel->at(Coinsyasu) > 30) *yasumod=20;
+  
+  return coincidencecheck;    
+  
 }
-
+ 
 double PickSignal::Findbunch(double hittime)
 {
   double bunch;
@@ -217,6 +267,49 @@ void PickSignal::FillBasicReconClass(int imod, bool firstfill, int CoinsLeft, in
       bmbasicrecon->timedif.push_back(bmbranch_t->hitTimeDif->at(CoinsTop));      
     }
 
+}
+
+void PickSignal::FillYASUBasicReconClass(int imod, int ifeb, 
+					 bool firstfill, int Coinsyasu, BMBasicRecon* bmbasicrecon, BMdata* bmbranch)
+{
+  if(firstfill)
+    {
+      beambunch = Findbunch(bmbranch->hitTimefromSpill->at(Coinsyasu));
+      bmbasicrecon->mod.push_back(6); // PM:0, WG1:1, WG2:2, WMS:3, WMN:4, BM:5, BM-Y:6
+      bmbasicrecon->view.push_back(1);
+      bmbasicrecon->pln.push_back(imod);
+
+      if(imod==19 && ifeb==0)
+	bmbasicrecon->channel.push_back(ChannelCorr(bmbranch->hitsChannel->at(Coinsyasu)));
+      if(imod==19 && ifeb==1)
+	bmbasicrecon->channel.push_back(ChannelCorr(bmbranch->hitsChannel->at(Coinsyasu))+7);
+
+      if(imod==20 && ifeb==0)
+	bmbasicrecon->channel.push_back(ChannelCorr(bmbranch->hitsChannel->at(Coinsyasu))-7);
+      if(imod==20 && ifeb==1)
+	bmbasicrecon->channel.push_back(ChannelCorr(bmbranch->hitsChannel->at(Coinsyasu)));
+
+      bmbasicrecon->HG.push_back(bmbranch->hitAmpl->at(Coinsyasu));
+      bmbasicrecon->LG.push_back(bmbranch->hitLGAmpl->at(Coinsyasu));
+      bmbasicrecon->Ltime.push_back(bmbranch->hitLeadTime->at(Coinsyasu));
+      bmbasicrecon->Ftime.push_back(bmbranch->hitTrailTime->at(Coinsyasu));
+      bmbasicrecon->Htime.push_back(bmbranch->hitTimefromSpill->at(Coinsyasu)*2.5);
+      bmbasicrecon->bunch.push_back(beambunch);
+      bmbasicrecon->timedif.push_back(bmbranch->hitTimeDif->at(Coinsyasu));
+    }
+}
+
+double PickSignal::ChannelCorr(double channel)
+{
+  double corrchannel;
+  if(channel<=2)
+    corrchannel = channel;
+  if(channel>=4 && channel<=7)
+    corrchannel = channel-1;
+  if(channel>=32)
+    corrchannel = channel-25;
+    
+  return corrchannel;
 }
 
 void PickSignal::Error(int error)

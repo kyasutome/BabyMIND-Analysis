@@ -29,6 +29,8 @@ public:
   BMDisp();
   ~BMDisp(); 
 
+  void Clear();
+
 };
 
 #endif

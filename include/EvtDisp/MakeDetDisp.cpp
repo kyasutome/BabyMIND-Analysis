@@ -52,7 +52,7 @@ void MakeDetDisp::IngSci(double x,double y,double x1,double y1,int view){
   double offsety;
 
   if(view==0)  offsety= -550;
-  if(view==1)  offsety= -1050;
+  if(view==1)  offsety= -1500;
 
   TBox *b1=new TBox(x+offsetx,y+offsety,x1+offsetx,y1+offsety);
   b1->SetLineColor(kGreen);
@@ -68,7 +68,7 @@ void MakeDetDisp::ParSci(double x,double y,double x1,double y1,int view){
   double offsety;
 
   if(view==0)  offsety= -550;
-  if(view==1)  offsety= -1050;
+  if(view==1)  offsety= -1500;
 
   TBox *b1=new TBox(x+offsetx,y+offsety,x1+offsetx,y1+offsety);
   b1->SetLineColor(kYellow);
@@ -83,7 +83,7 @@ void MakeDetDisp::SciSci(double x,double y,double x1,double y1,int view){
   double offsety;
 
   if(view==0)  offsety= -550;
-  if(view==1)  offsety= -1050;
+  if(view==1)  offsety= -1500;
 
   TBox *b1=new TBox(x+offsetx,y+offsety,x1+offsetx,y1+offsety);
   b1->SetLineColor(kGreen+2);
@@ -98,7 +98,7 @@ void MakeDetDisp::VetoSci(double x,double y,double x1,double y1, int view){
   double offsety;
 
   if(view==0)  offsety= -550;
-  if(view==1)  offsety= -1050;
+  if(view==1)  offsety= -1500;
 
   TBox *b1=new TBox(x+offsetx,y+offsety,x1+offsetx,y1+offsety);
 

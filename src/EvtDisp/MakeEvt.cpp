@@ -20,7 +20,7 @@ int main( int argc, char **argv )
   if(argc < 5)
     {
       cout << "usage" << '\n';
-      cout << "MakeCalib [filepath][date][month][run]" << '\n';
+      cout << "MakeEvt [filepath][date][month][run]" << '\n';
       exit(0);
     }
 

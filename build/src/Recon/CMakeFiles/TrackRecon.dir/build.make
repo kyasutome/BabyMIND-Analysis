@@ -80,6 +80,8 @@ TrackRecon_EXTERNAL_OBJECTS =
 ../bin/TrackRecon: src/Recon/CMakeFiles/TrackRecon.dir/trackrecon.cpp.o
 ../bin/TrackRecon: src/Recon/CMakeFiles/TrackRecon.dir/build.make
 ../bin/TrackRecon: ../lib/library/BMDisp.so
+../bin/TrackRecon: ../lib/library/BMCluster.so
+../bin/TrackRecon: ../lib/library/BMHitCluster.so
 ../bin/TrackRecon: src/Recon/CMakeFiles/TrackRecon.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../../bin/TrackRecon"
 	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/src/Recon && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TrackRecon.dir/link.txt --verbose=$(VERBOSE)

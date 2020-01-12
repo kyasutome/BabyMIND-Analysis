@@ -61,6 +61,19 @@ void EvtFormat::FillEvtClass(int ientry, vector<int> commonspill,
 
 }
 
+void EvtFormat::ReadBMChain(TString filepath, BMBasicRecon* bmbasicrecon, BMBeaminfo* bmbeaminfo, TChain* bmchain)
+{
+  cout << "Start reading BM chain..." << '\n';
+  bmchain->Add(Form("%s/*.root",filepath.Data()));
+  bmchain->SetBranchAddress("BMBasicRecon", &bmbasicrecon);
+  bmchain->SetBranchAddress("BMBeaminfo", &bmbeaminfo);
+
+  nbmdata = bmchain->GetEntries();  
+  cout << "******* Information for Baby MIND *******" << '\n';
+  cout << "total entry = " << nbmdata << '\n';
+
+}
+
 void EvtFormat::ReadBMTree(TString filepath, BMBasicRecon* bmbasicrecon, BMBeaminfo* bmbeaminfo)
 {
   cout << "Start reading BM tree..." << '\n';
@@ -79,7 +92,6 @@ void EvtFormat::ReadBMTree(TString filepath, BMBasicRecon* bmbasicrecon, BMBeami
   cout << "******* Information for Baby MIND *******" << '\n';
   cout << "total entry = " << nbmdata << '\n';
   cout << "Spill from = " << bmspill.at(0)  << " to " << bmspill.at(nbmdata-1) << '\n';
-
 }
 
 void EvtFormat::ReadPMTree(TString filepath, PMRecon *pmrecon)

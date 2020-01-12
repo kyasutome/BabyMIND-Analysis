@@ -24,11 +24,10 @@ private:
   FileStat_t info;
   TString pmfilename;
   TString pathtopm; 
-  int npmdata;
   time_t pmfirsttime;
   time_t pmlasttime;
+  int npmdata;
   int thepmspill;
-
   int nbmdata;
   int thebmspill;
 
@@ -40,6 +39,7 @@ public:
   TTree* pmtree;
   vector<int> bmspill;
   vector<int> pmspill;
+  TChain* bmchain;
 
   //function
 public:
@@ -49,6 +49,7 @@ public:
   void FillEvtClass(int ientry, vector<int> commonspill,
 		    BMBasicRecon* bmbasicrecon, BMBeaminfo* bmbeaminfo, BMDisp* bmdisp, PMRecon* pmrcon);
   void ReadBMTree(TString filepath, BMBasicRecon* bmbasicrecon, BMBeaminfo* bmbeaminfo);
+  void ReadBMChain(TString filepath, BMBasicRecon* bmbasicrecon, BMBeaminfo* bmbeaminfo, TChain* bmchain);
   void ReadPMTree(TString filepath, PMRecon *pmrecon);
   void PrintTime(time_t unixtime);
   void SpillMatch(vector<int>* commonspill, vector<int> vec1, vector<int> vec2);

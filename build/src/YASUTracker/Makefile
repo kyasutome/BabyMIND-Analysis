@@ -111,46 +111,46 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-src/YASUTracker/CMakeFiles/YASUTracker.dir/rule:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/YASUTracker/CMakeFiles/YASUTracker.dir/rule
-.PHONY : src/YASUTracker/CMakeFiles/YASUTracker.dir/rule
+src/YASUTracker/CMakeFiles/BasicDist.dir/rule:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/YASUTracker/CMakeFiles/BasicDist.dir/rule
+.PHONY : src/YASUTracker/CMakeFiles/BasicDist.dir/rule
 
 # Convenience name for target.
-YASUTracker: src/YASUTracker/CMakeFiles/YASUTracker.dir/rule
+BasicDist: src/YASUTracker/CMakeFiles/BasicDist.dir/rule
 
-.PHONY : YASUTracker
+.PHONY : BasicDist
 
 # fast build rule for target.
-YASUTracker/fast:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/YASUTracker/CMakeFiles/YASUTracker.dir/build.make src/YASUTracker/CMakeFiles/YASUTracker.dir/build
-.PHONY : YASUTracker/fast
+BasicDist/fast:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/YASUTracker/CMakeFiles/BasicDist.dir/build.make src/YASUTracker/CMakeFiles/BasicDist.dir/build
+.PHONY : BasicDist/fast
 
-main.o: main.cpp.o
+basicdist.o: basicdist.cpp.o
 
-.PHONY : main.o
+.PHONY : basicdist.o
 
 # target to build an object file
-main.cpp.o:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/YASUTracker/CMakeFiles/YASUTracker.dir/build.make src/YASUTracker/CMakeFiles/YASUTracker.dir/main.cpp.o
-.PHONY : main.cpp.o
+basicdist.cpp.o:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/YASUTracker/CMakeFiles/BasicDist.dir/build.make src/YASUTracker/CMakeFiles/BasicDist.dir/basicdist.cpp.o
+.PHONY : basicdist.cpp.o
 
-main.i: main.cpp.i
+basicdist.i: basicdist.cpp.i
 
-.PHONY : main.i
+.PHONY : basicdist.i
 
 # target to preprocess a source file
-main.cpp.i:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/YASUTracker/CMakeFiles/YASUTracker.dir/build.make src/YASUTracker/CMakeFiles/YASUTracker.dir/main.cpp.i
-.PHONY : main.cpp.i
+basicdist.cpp.i:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/YASUTracker/CMakeFiles/BasicDist.dir/build.make src/YASUTracker/CMakeFiles/BasicDist.dir/basicdist.cpp.i
+.PHONY : basicdist.cpp.i
 
-main.s: main.cpp.s
+basicdist.s: basicdist.cpp.s
 
-.PHONY : main.s
+.PHONY : basicdist.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/YASUTracker/CMakeFiles/YASUTracker.dir/build.make src/YASUTracker/CMakeFiles/YASUTracker.dir/main.cpp.s
-.PHONY : main.cpp.s
+basicdist.cpp.s:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/YASUTracker/CMakeFiles/BasicDist.dir/build.make src/YASUTracker/CMakeFiles/BasicDist.dir/basicdist.cpp.s
+.PHONY : basicdist.cpp.s
 
 # Help Target
 help:
@@ -160,10 +160,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... YASUTracker"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... BasicDist"
+	@echo "... basicdist.o"
+	@echo "... basicdist.i"
+	@echo "... basicdist.s"
 .PHONY : help
 
 

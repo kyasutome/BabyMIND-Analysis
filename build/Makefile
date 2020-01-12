@@ -202,17 +202,17 @@ BSDApply/fast:
 .PHONY : BSDApply/fast
 
 #=============================================================================
-# Target rules for targets named YASUTracker
+# Target rules for targets named BasicDist
 
 # Build rule for target.
-YASUTracker: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 YASUTracker
-.PHONY : YASUTracker
+BasicDist: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 BasicDist
+.PHONY : BasicDist
 
 # fast build rule for target.
-YASUTracker/fast:
-	$(MAKE) -f src/YASUTracker/CMakeFiles/YASUTracker.dir/build.make src/YASUTracker/CMakeFiles/YASUTracker.dir/build
-.PHONY : YASUTracker/fast
+BasicDist/fast:
+	$(MAKE) -f src/YASUTracker/CMakeFiles/BasicDist.dir/build.make src/YASUTracker/CMakeFiles/BasicDist.dir/build
+.PHONY : BasicDist/fast
 
 #=============================================================================
 # Target rules for targets named TrackRecon
@@ -242,7 +242,7 @@ help:
 	@echo "... MakeEvt"
 	@echo "... DataSanity"
 	@echo "... BSDApply"
-	@echo "... YASUTracker"
+	@echo "... BasicDist"
 	@echo "... TrackRecon"
 .PHONY : help
 

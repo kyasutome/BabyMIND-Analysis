@@ -14,6 +14,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../lib"
   "/Users/kenji/local/root/root-6.18.02/built/include"
   "../include/Recon"
+  "../include/EvtDisp"
   "../lib/src"
   )
 

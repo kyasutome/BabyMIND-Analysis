@@ -26,3 +26,18 @@ BMDisp::~BMDisp()
 {
 }
 
+void BMDisp::Clear()
+{
+  mod.clear();
+  view.clear();
+  pln.clear();
+  channel.clear();
+  Htime.clear();
+  timedif.clear();
+  bunch.clear();
+
+  bm_event=-1;
+  entry=-1;
+  spillnum=-1;
+
+}

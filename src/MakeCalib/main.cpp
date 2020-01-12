@@ -42,7 +42,7 @@ int main( int argc, char **argv )
   BMBeaminfo *bmbeaminfo = new BMBeaminfo();
 
   //Set output file
-  outputfilename.Form("./process/1-BMCalib/BMCalib_%s%s_%s.root", date.c_str(), month.c_str(), run.c_str());
+  outputfilename.Form("./process/6-YASU/BMCalib_%s%s_%s.root", date.c_str(), month.c_str(), run.c_str());
   TFile *fout = new TFile(outputfilename, "recreate");
   TTree *tree = new TTree("tree", "tree");
   tree->Branch("BMBasicRecon","BMBasicRecon", &bmbasicrecon, 32000, 2);
@@ -57,10 +57,12 @@ int main( int argc, char **argv )
   dreader->BMSpillMatch(&commonspill);
 
   for(int ientry=0; ientry<commonspill.size(); ientry++)
+  //for(int ientry=0; ientry<100; ientry++)
     {
       bmbasicrecon->Clear();
       bmbasicrecon->bm_event = ientry;
       picksignal->SignalCreation(ientry, bmbranch, bmbasicrecon, dreader, commonspill);
+      picksignal->YASUSignalCreation(ientry, bmbranch, bmbasicrecon, dreader, commonspill);
       bmbeaminfo->spillnum = (int)(bmbranch[0]->SpillTag->at(0))&0x7fff;
       //bmbeaminfo->spillnum = (int)(bmbranch[49]->SpillTag->at(0))&0x7fff;
       tree->Fill();

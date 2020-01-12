@@ -74,7 +74,7 @@ void MakeHitDisp::yasuyhit(double view, double pln, double ch, double r, double 
 void MakeHitDisp::pmxhit(double pln, double ch, double r, double bunch){
   double X,Y,R;
   double offsetx = -2000;
-  double offsety = -1050;
+  double offsety = -1500;
 
   if(pln==0)X=5;
   else X=46*pln+9;
@@ -130,10 +130,10 @@ void MakeHitDisp::pmvhit(double pln, double ch, double view, double r, double bu
   double offsetx = -2000;
   double offsety;
   if(view==0)
-      offsety= -500;
+      offsety= -550;
 
   if(view==1)
-      offsety= -1000;
+      offsety= -1500;
 
   if(pln==0)Y=-55;
   else Y=1255;

@@ -57,7 +57,7 @@ namespace ROOT {
       ::BMBasicRecon *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(::BMBasicRecon));
       static ::ROOT::TGenericClassInfo 
-         instance("BMBasicRecon", "BMBasicRecon.hpp", 10,
+         instance("BMBasicRecon", "BMBasicRecon.hpp", 9,
                   typeid(::BMBasicRecon), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &BMBasicRecon_Dictionary, isa_proxy, 0,
                   sizeof(::BMBasicRecon) );

@@ -1,4 +1,3 @@
-
 #ifndef _INC_BMBASICRECON
 #define _INC_BMBASICRECON
 

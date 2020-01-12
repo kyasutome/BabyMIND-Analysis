@@ -69,6 +69,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "src/EvtDisp/CMakeFiles/MakeEvt.dir/DependInfo.cmake"
   "src/DataSanity/CMakeFiles/DataSanity.dir/DependInfo.cmake"
   "src/BSDApply/CMakeFiles/BSDApply.dir/DependInfo.cmake"
-  "src/YASUTracker/CMakeFiles/YASUTracker.dir/DependInfo.cmake"
+  "src/YASUTracker/CMakeFiles/BasicDist.dir/DependInfo.cmake"
   "src/Recon/CMakeFiles/TrackRecon.dir/DependInfo.cmake"
   )
