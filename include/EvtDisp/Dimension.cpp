@@ -119,14 +119,14 @@ bool Dimension::get_pos_bm_FC(int mod, int view, int pln, double ch, double *pos
 {
   double epsilon = 0.1;
 
-  if(pln==19 || pln==20)
+  if(mod==6)
     {
       *posx = yasuposx[view][7*(pln-19)+(int)ch];
       *posy = yasuposy[view][7*(pln-19)+(int)ch];
       *posz = yasuposz[view][7*(pln-19)+(int)ch];
     }
 
-  else if(pln!=19 && pln!=20)
+  else if(mod==5)
     {      
       if(view==0)
 	{

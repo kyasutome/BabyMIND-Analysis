@@ -150,6 +150,19 @@ MakeWGClass/fast:
 .PHONY : MakeWGClass/fast
 
 #=============================================================================
+# Target rules for targets named MakeEachDisp
+
+# Build rule for target.
+MakeEachDisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 MakeEachDisp
+.PHONY : MakeEachDisp
+
+# fast build rule for target.
+MakeEachDisp/fast:
+	$(MAKE) -f src/EvtDisp/CMakeFiles/MakeEachDisp.dir/build.make src/EvtDisp/CMakeFiles/MakeEachDisp.dir/build
+.PHONY : MakeEachDisp/fast
+
+#=============================================================================
 # Target rules for targets named MakeWMClass
 
 # Build rule for target.
@@ -277,6 +290,7 @@ help:
 	@echo "... MakeCalib"
 	@echo "... MakeWGWMClass"
 	@echo "... MakeWGClass"
+	@echo "... MakeEachDisp"
 	@echo "... MakeWMClass"
 	@echo "... MakePMClass"
 	@echo "... MakeDisp"

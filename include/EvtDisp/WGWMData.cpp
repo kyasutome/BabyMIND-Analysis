@@ -87,7 +87,6 @@ void WGWMdata::ReadTree(TString filename, int dif)
 
 }
 
-
 bool WGWMdata::SignalCreation(int eachentry[8], WGRecon* wgrecon)
 {
   bool fillflag = false;
@@ -117,7 +116,7 @@ bool WGWMdata::SignalCreation(int eachentry[8], WGRecon* wgrecon)
 			    thehit=hit_wm[difid][ichip][ich][icol];
 			    thecharge=charge_wm[difid][ichip][ich][icol];
 			    
-			    if(HitCheck(thehit))
+			    if(HitCheck(thehit) && thecharge>600)
 			      {
 				thetime=time_wm[difid][ichip][ich][icol];		   
 				wgrecon->mod.push_back(idif/2+3);
@@ -165,7 +164,7 @@ bool WGWMdata::SignalCreation(int eachentry[8], WGRecon* wgrecon)
 			    thehit=hit_wg[difid][ichip][ich][icol];
 			    thecharge=charge_wg[difid][ichip][ich][icol];
 			    
-			    if(HitCheck(thehit))
+			    if(HitCheck(thehit) && thecharge>600)
 			      {
 				thetime=time_wg[difid][ichip][ich][icol];		   
 				wgrecon->mod.push_back(idif/2-1);
@@ -230,7 +229,7 @@ bool WGWMdata::ModeCheck(int spill_mode)
 bool WGWMdata::BCIDCheck(int bcid)
 {
   bool bcidchecker = false;
-  if(bcid!=-1)
+  if(bcid>=24 && bcid<=31)
     bcidchecker = true;
 
   return bcidchecker;

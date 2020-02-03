@@ -13,6 +13,9 @@
 #include "PMRecon.hpp"
 #include "WGRecon.hpp"
 
+//#define PM_BM
+#define PM_BM_WGWM
+
 
 using namespace std;
 
@@ -40,6 +43,8 @@ int main( int argc, char **argv )
 		  ,pmrun, pmssub, pmesub);
   wgwmfilepath.Form("./process/9-WGWMClass/WGWMClass.root");
 
+  int detector=0;
+
   BMBasicRecon *bmbasicrecon = new BMBasicRecon();
   BMBeaminfo *bmbeaminfo = new BMBeaminfo();
   BMDisp *bmdisp = new BMDisp();
@@ -58,21 +63,37 @@ int main( int argc, char **argv )
   evtformat->ReadBMTree(bmfilepath, bmbasicrecon, bmbeaminfo);
   evtformat->ReadPMTree(pmfilepath, pmrecon);
   evtformat->ReadWGWMTree(wgwmfilepath, wgwmrecon);
+
+#ifdef PM_BM
+  detector=1;
   evtformat->SpillMatch(&commonspill_pm_bm, evtformat->bmspill_match, evtformat->pmspill_match);
-  evtformat->SpillMatch(&commonspill_pm_bm_wgwm, commonspill_pm_bm, evtformat->wgwmspill_match);
 
   cout << "first spill= " << commonspill_pm_bm.at(0) << " : end spill= " 
        << commonspill_pm_bm.at(commonspill_pm_bm.size()-1) << '\n';
+  for(int ientry=0; ientry<commonspill_pm_bm.size(); ientry++)
+    { 
+      evtformat->FillEvtClass(ientry, commonspill_pm_bm, bmbasicrecon, bmbeaminfo, bmdisp, pmrecon,
+			      wgwmrecon, detector);
+      bmdisp->entry = ientry;
+      otree->Fill();
+    }
+#endif
+
+#ifdef PM_BM_WGWM
+  detector=2;
+  evtformat->SpillMatch(&commonspill_pm_bm, evtformat->bmspill_match, evtformat->pmspill_match);
+  evtformat->SpillMatch(&commonspill_pm_bm_wgwm, commonspill_pm_bm, evtformat->wgwmspill_match);
 
   cout << "first spill= " << commonspill_pm_bm_wgwm.at(0) << " : end spill= " 
        << commonspill_pm_bm_wgwm.at(commonspill_pm_bm_wgwm.size()-1) << '\n';
   for(int ientry=0; ientry<commonspill_pm_bm_wgwm.size(); ientry++)
     { 
       evtformat->FillEvtClass(ientry, commonspill_pm_bm_wgwm, bmbasicrecon, bmbeaminfo, bmdisp, pmrecon,
-			      wgwmrecon);
+			      wgwmrecon, detector);
       bmdisp->entry = ientry;
       otree->Fill();
     }
+#endif
 
   fout->cd();
   otree->Write();

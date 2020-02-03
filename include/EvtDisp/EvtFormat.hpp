@@ -57,7 +57,7 @@ public:
 
   void FillEvtClass(int ientry, vector<int> commonspill,
 		    BMBasicRecon* bmbasicrecon, BMBeaminfo* bmbeaminfo, BMDisp* bmdisp, PMRecon* pmrcon,
-		    WGRecon* wgwmrecon);
+		    WGRecon* wgwmrecon, int detector);
   void ReadBMTree(TString filepath, BMBasicRecon* bmbasicrecon, BMBeaminfo* bmbeaminfo);
   void ReadBMChain(TString filepath, BMBasicRecon* bmbasicrecon, BMBeaminfo* bmbeaminfo, TChain* bmchain);
   void ReadPMTree(TString filepath, PMRecon *pmrecon);

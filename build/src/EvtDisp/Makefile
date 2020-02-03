@@ -141,6 +141,21 @@ MakeWGClass/fast:
 .PHONY : MakeWGClass/fast
 
 # Convenience name for target.
+src/EvtDisp/CMakeFiles/MakeEachDisp.dir/rule:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/EvtDisp/CMakeFiles/MakeEachDisp.dir/rule
+.PHONY : src/EvtDisp/CMakeFiles/MakeEachDisp.dir/rule
+
+# Convenience name for target.
+MakeEachDisp: src/EvtDisp/CMakeFiles/MakeEachDisp.dir/rule
+
+.PHONY : MakeEachDisp
+
+# fast build rule for target.
+MakeEachDisp/fast:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/EvtDisp/CMakeFiles/MakeEachDisp.dir/build.make src/EvtDisp/CMakeFiles/MakeEachDisp.dir/build
+.PHONY : MakeEachDisp/fast
+
+# Convenience name for target.
 src/EvtDisp/CMakeFiles/MakeWMClass.dir/rule:
 	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/EvtDisp/CMakeFiles/MakeWMClass.dir/rule
 .PHONY : src/EvtDisp/CMakeFiles/MakeWMClass.dir/rule
@@ -226,6 +241,33 @@ MakeDisp.s: MakeDisp.cpp.s
 MakeDisp.cpp.s:
 	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/EvtDisp/CMakeFiles/MakeDisp.dir/build.make src/EvtDisp/CMakeFiles/MakeDisp.dir/MakeDisp.cpp.s
 .PHONY : MakeDisp.cpp.s
+
+MakeEachDisp.o: MakeEachDisp.cpp.o
+
+.PHONY : MakeEachDisp.o
+
+# target to build an object file
+MakeEachDisp.cpp.o:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/EvtDisp/CMakeFiles/MakeEachDisp.dir/build.make src/EvtDisp/CMakeFiles/MakeEachDisp.dir/MakeEachDisp.cpp.o
+.PHONY : MakeEachDisp.cpp.o
+
+MakeEachDisp.i: MakeEachDisp.cpp.i
+
+.PHONY : MakeEachDisp.i
+
+# target to preprocess a source file
+MakeEachDisp.cpp.i:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/EvtDisp/CMakeFiles/MakeEachDisp.dir/build.make src/EvtDisp/CMakeFiles/MakeEachDisp.dir/MakeEachDisp.cpp.i
+.PHONY : MakeEachDisp.cpp.i
+
+MakeEachDisp.s: MakeEachDisp.cpp.s
+
+.PHONY : MakeEachDisp.s
+
+# target to generate assembly for a file
+MakeEachDisp.cpp.s:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/EvtDisp/CMakeFiles/MakeEachDisp.dir/build.make src/EvtDisp/CMakeFiles/MakeEachDisp.dir/MakeEachDisp.cpp.s
+.PHONY : MakeEachDisp.cpp.s
 
 MakeEvt.o: MakeEvt.cpp.o
 
@@ -372,6 +414,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... MakeWGWMClass"
 	@echo "... MakeWGClass"
+	@echo "... MakeEachDisp"
 	@echo "... MakeWMClass"
 	@echo "... MakePMClass"
 	@echo "... MakeDisp"
@@ -379,6 +422,9 @@ help:
 	@echo "... MakeDisp.o"
 	@echo "... MakeDisp.i"
 	@echo "... MakeDisp.s"
+	@echo "... MakeEachDisp.o"
+	@echo "... MakeEachDisp.i"
+	@echo "... MakeEachDisp.s"
 	@echo "... MakeEvt.o"
 	@echo "... MakeEvt.i"
 	@echo "... MakeEvt.s"

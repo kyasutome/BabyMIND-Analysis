@@ -21,7 +21,7 @@ EvtFormat::~EvtFormat()
 
 void EvtFormat::FillEvtClass(int ientry, vector<int> commonspill,
 			     BMBasicRecon* bmbasicrecon, BMBeaminfo* bmbeaminfo, BMDisp* bmdisp, PMRecon* pmrecon,
-			     WGRecon* wgwmrecon)
+			     WGRecon* wgwmrecon, int detector)
 {
 
   //for Baby MIND
@@ -52,19 +52,32 @@ void EvtFormat::FillEvtClass(int ientry, vector<int> commonspill,
   thewgwmspill = thespillit - wgwmspill.begin();
   wgwmtree->GetEntry(thewgwmspill);
 
-  (bmbasicrecon->mod).insert(bmbasicrecon->mod.end(), pmrecon->mod->begin(), pmrecon->mod->end());
-  (bmbasicrecon->view).insert(bmbasicrecon->view.end(), pmrecon->view->begin(), pmrecon->view->end());
-  (bmbasicrecon->pln).insert(bmbasicrecon->pln.end(), pmrecon->pln->begin(), pmrecon->pln->end());
-  (bmbasicrecon->channel).insert(bmbasicrecon->channel.end(), pmrecon->channel->begin(), pmrecon->channel->end());
-  (bmbasicrecon->Htime).insert(bmbasicrecon->Htime.end(), pmrecon->time->begin(), pmrecon->time->end());
-  (bmbasicrecon->bunch).insert(bmbasicrecon->bunch.end(), pmrecon->bunch->begin(), pmrecon->bunch->end());
+  if(detector==1)//PM-BM
+    {
+      (bmbasicrecon->mod).insert(bmbasicrecon->mod.end(), pmrecon->mod->begin(), pmrecon->mod->end());
+      (bmbasicrecon->view).insert(bmbasicrecon->view.end(), pmrecon->view->begin(), pmrecon->view->end());
+      (bmbasicrecon->pln).insert(bmbasicrecon->pln.end(), pmrecon->pln->begin(), pmrecon->pln->end());
+      (bmbasicrecon->channel).insert(bmbasicrecon->channel.end(), pmrecon->channel->begin(), pmrecon->channel->end());
+      (bmbasicrecon->Htime).insert(bmbasicrecon->Htime.end(), pmrecon->time->begin(), pmrecon->time->end());
+      (bmbasicrecon->bunch).insert(bmbasicrecon->bunch.end(), pmrecon->bunch->begin(), pmrecon->bunch->end());
+    }
 
-  (bmbasicrecon->mod).insert(bmbasicrecon->mod.end(), wgwmrecon->mod.begin(), wgwmrecon->mod.end());
-  (bmbasicrecon->view).insert(bmbasicrecon->view.end(), wgwmrecon->view.begin(), wgwmrecon->view.end());
-  (bmbasicrecon->pln).insert(bmbasicrecon->pln.end(), wgwmrecon->pln.begin(), wgwmrecon->pln.end());
-  (bmbasicrecon->channel).insert(bmbasicrecon->channel.end(), wgwmrecon->channel.begin(), wgwmrecon->channel.end());
-  (bmbasicrecon->Htime).insert(bmbasicrecon->Htime.end(), wgwmrecon->time.begin(), wgwmrecon->time.end());
-  (bmbasicrecon->bunch).insert(bmbasicrecon->bunch.end(), wgwmrecon->bunch.begin(), wgwmrecon->bunch.end());
+  if(detector==2)//PM-BM-WGWM
+    {
+      (bmbasicrecon->mod).insert(bmbasicrecon->mod.end(), pmrecon->mod->begin(), pmrecon->mod->end());
+      (bmbasicrecon->view).insert(bmbasicrecon->view.end(), pmrecon->view->begin(), pmrecon->view->end());
+      (bmbasicrecon->pln).insert(bmbasicrecon->pln.end(), pmrecon->pln->begin(), pmrecon->pln->end());
+      (bmbasicrecon->channel).insert(bmbasicrecon->channel.end(), pmrecon->channel->begin(), pmrecon->channel->end());
+      (bmbasicrecon->Htime).insert(bmbasicrecon->Htime.end(), pmrecon->time->begin(), pmrecon->time->end());
+      (bmbasicrecon->bunch).insert(bmbasicrecon->bunch.end(), pmrecon->bunch->begin(), pmrecon->bunch->end());
+
+      (bmbasicrecon->mod).insert(bmbasicrecon->mod.end(), wgwmrecon->mod.begin(), wgwmrecon->mod.end());
+      (bmbasicrecon->view).insert(bmbasicrecon->view.end(), wgwmrecon->view.begin(), wgwmrecon->view.end());
+      (bmbasicrecon->pln).insert(bmbasicrecon->pln.end(), wgwmrecon->pln.begin(), wgwmrecon->pln.end());
+      (bmbasicrecon->channel).insert(bmbasicrecon->channel.end(),wgwmrecon->channel.begin(),wgwmrecon->channel.end());
+      (bmbasicrecon->Htime).insert(bmbasicrecon->Htime.end(), wgwmrecon->time.begin(), wgwmrecon->time.end());
+      (bmbasicrecon->bunch).insert(bmbasicrecon->bunch.end(), wgwmrecon->bunch.begin(), wgwmrecon->bunch.end());
+    }
 
   bmdisp->mod = bmbasicrecon->mod;
   bmdisp->view = bmbasicrecon->view;

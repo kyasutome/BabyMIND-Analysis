@@ -50,7 +50,7 @@ void MakeHitDisp::yasuxhit(double view, double pln, double ch, double r, double 
   double x, y, z;
   int offsety = 0;
   int offsetz = 0;
-  dimension->get_pos_bm_FC(5, view, pln, ch, &x, &y, &z);
+  dimension->get_pos_bm_FC(6, view, pln, ch, &x, &y, &z);
   TArc *arc = new TArc(z+offsetz,x+offsety,r);
   ColorScale(&color, (int)bunch);
   arc->SetFillColor(color);
@@ -63,7 +63,7 @@ void MakeHitDisp::yasuyhit(double view, double pln, double ch, double r, double 
   double x, y, z;
   int offsety = 0;
   int offsetz = 0;
-  dimension->get_pos_bm_FC(5, view, pln, ch, &x, &y, &z);
+  dimension->get_pos_bm_FC(6, view, pln, ch, &x, &y, &z);
   TArc *arc = new TArc(z+offsetz,y+offsety,r);
   ColorScale(&color, (int)bunch);
   arc->SetFillColor(color);
@@ -156,6 +156,7 @@ void MakeHitDisp::wgyhit(double dif, double chip, double chan, double r, double 
   double offsetx[2][2]={{-2300,-2300},{-350,-350}};//{{mod0view0, mod0view1}, {mod1view0, mod1view1}}
   double offsety[2][2]={{-100,-900},{-100,-600}};//{{mod0view0, mod0view1}, {mod1view0, mod1view1}}
   dimension->get_pos_wg_FC(dif, chip, chan, &x, &y, &z);
+  cout << dif << " " << chip << " " << chan << " " << x << " " << y << " " << z << '\n';
   TArc *arc = new TArc(z+offsetx[modid][0],y+offsety[modid][0],r);
   ColorScale(&color, (int)bunch);
   arc->SetFillColor(color);
@@ -170,6 +171,7 @@ void MakeHitDisp::wgxhit(double dif, double chip, double chan, double r, double 
   double offsetx[2][2]={{-2300,-2300},{-350,-350}};//{{mod0view0, mod0view1}, {mod1view0, mod1view1}}
   double offsety[2][2]={{-100,-900},{-100,-600}};//{{mod0view0, mod0view1}, {mod1view0, mod1view1}}
   dimension->get_pos_wg_FC(dif, chip, chan, &x, &y, &z);
+  cout << dif << " " << chip << " " << chan << " " << x << " " << y << " " << z << '\n';
   TArc *arc = new TArc(z+offsetx[modid][1],x+offsety[modid][1],r);
   ColorScale(&color, (int)bunch);
   arc->SetFillColor(color);
@@ -212,15 +214,28 @@ void MakeHitDisp::DrawBMHit(BMDisp* bmdisp, int VIEW)
 	  if(view==VIEW && view==0)
 	    {
 	      bmyhit(pln, ch, r, bunch);
-	      yasuyhit(view, pln, ch, r, bunch);
 	    }
 	  
 	  if(view==VIEW && view==1)
 	    {
 	      bmxhit(pln, ch, r, bunch);
+	    }
+	}
+
+      
+      if(mod==6)
+	{
+	  if(view==VIEW && view==0)
+	    {
+	      yasuyhit(view, pln, ch, r, bunch);
+	    }
+	  
+	  if(view==VIEW && view==1)
+	    {
 	      yasuxhit(view, pln, ch, r, bunch);
 	    }
 	}
+      
     }//ihit loop
 }
 
@@ -249,7 +264,7 @@ void MakeHitDisp::DrawPMHit(BMDisp* bmdisp, int VIEW)
     }//ihit loop
 }
 
-void MakeHitDisp::DrawWGHit(BMDisp* bmdisp, int MOD)
+void MakeHitDisp::DrawWGHit(BMDisp* bmdisp, int VIEW, int MOD)
 {
   nhit = bmdisp->pln.size();
   for(int ihit=0; ihit<nhit; ihit++)
@@ -259,25 +274,31 @@ void MakeHitDisp::DrawWGHit(BMDisp* bmdisp, int MOD)
       chip = bmdisp->pln.at(ihit);
       chan = bmdisp->channel.at(ihit);
       bunch = bmdisp->bunch.at(ihit);
-
-      cout << "mod:" << mod << " view:" << view << " pln:" << pln << " ch:" << ch << " bunch:" << bunch << '\n';
       
       if(mod==MOD && mod==1)
 	{
-	  if(dif==4)
-	    wgxhit(dif, chip, chan, r, bunch);
+	  if(VIEW==1 && dif==4)
+	    {
+	      wgxhit(dif, chip, chan, r, bunch);
+	    }
 	  
-	  if(dif==5)
-	    wgyhit(dif, chip, chan, r, bunch);
+	  if(VIEW==0 && dif==5)
+	    {
+	      wgyhit(dif, chip, chan, r, bunch);
+	    }
 	}
 
       if(mod==MOD && mod==2)
 	{
-	  if(dif==6)
-	    wgxhit(dif, chip, chan, r, bunch);
+	  if(VIEW==1 && dif==6)
+	    {
+	      wgxhit(dif, chip, chan, r, bunch);
+	    }
 	  
-	  if(dif==7)
-	    wgyhit(dif, chip, chan, r, bunch);
+	  if(VIEW==0 && dif==7)
+	    {
+	      wgyhit(dif, chip, chan, r, bunch);
+	    }
 	}
 
     }//ihit loop
@@ -293,20 +314,24 @@ void MakeHitDisp::DrawWMHit(BMDisp* bmdisp, int MOD)
       chip = bmdisp->pln.at(ihit);
       chan = bmdisp->channel.at(ihit);
       bunch = bmdisp->bunch.at(ihit);
-
-      cout << "mod:" << mod << " view:" << view << " pln:" << pln << " ch:" << ch << " bunch:" << bunch << '\n';
       
       if(mod==MOD && mod==3)
 	{
 	  if(dif==0 || dif==1)
-	    wgxhit(dif, chip, chan, r, bunch);
+	    wmhit(dif, chip, chan, r, bunch);
+
+	  cout << "mod:" << mod << " dif:" << dif << " chip:" << chip << " chan:" 
+	       << chan << " bunch:" << bunch << '\n';
 	  
 	}
 
       if(mod==MOD && mod==4)
 	{
 	  if(dif==2 || dif==3)
-	    wgxhit(dif, chip, chan, r, bunch);
+	    wmhit(dif, chip, chan, r, bunch);
+
+	  cout << "mod:" << mod << " dif:" << dif << " chip:" << chip << " chan:" 
+	       << chan << " bunch:" << bunch << '\n';
 	  
 	}
 
