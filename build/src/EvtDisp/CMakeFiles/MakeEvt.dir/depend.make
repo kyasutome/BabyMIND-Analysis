@@ -13,6 +13,7 @@ src/EvtDisp/CMakeFiles/MakeEvt.dir/MakeEvt.cpp.o: ../lib/src/BMBeaminfo.hpp
 src/EvtDisp/CMakeFiles/MakeEvt.dir/MakeEvt.cpp.o: ../lib/src/BMConst.hpp
 src/EvtDisp/CMakeFiles/MakeEvt.dir/MakeEvt.cpp.o: ../lib/src/BMDisp.hpp
 src/EvtDisp/CMakeFiles/MakeEvt.dir/MakeEvt.cpp.o: ../lib/src/PMRecon.hpp
+src/EvtDisp/CMakeFiles/MakeEvt.dir/MakeEvt.cpp.o: ../lib/src/WGRecon.hpp
 src/EvtDisp/CMakeFiles/MakeEvt.dir/MakeEvt.cpp.o: ../src/EvtDisp/MakeEvt.cpp
 src/EvtDisp/CMakeFiles/MakeEvt.dir/MakeEvt.cpp.o: /Users/kenji/local/root/root-6.18.02/built/include/Bytes.h
 src/EvtDisp/CMakeFiles/MakeEvt.dir/MakeEvt.cpp.o: /Users/kenji/local/root/root-6.18.02/built/include/Byteswap.h

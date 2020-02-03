@@ -18,6 +18,7 @@ src/YASUTracker/CMakeFiles/BasicDist.dir/basicdist.cpp.o
  ../lib/src/BMConst.hpp
  ../lib/src/BMDisp.hpp
  ../lib/src/PMRecon.hpp
+ ../lib/src/WGRecon.hpp
  /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/src/YASUTracker/basicdist.cpp
  /Users/kenji/local/root/root-6.18.02/built/include/Buttons.h
  /Users/kenji/local/root/root-6.18.02/built/include/Bytes.h

@@ -15,6 +15,8 @@ vector
 -
 Dimension.hpp
 ../include/EvtDisp/Dimension.hpp
+WGChannelMap.cpp
+../include/EvtDisp/WGChannelMap.cpp
 
 ../include/EvtDisp/Dimension.hpp
 iostream
@@ -25,6 +27,38 @@ vector
 -
 time.h
 -
+WGChannelMap.hpp
+../include/EvtDisp/WGChannelMap.hpp
+
+../include/EvtDisp/WGChannelMap.cpp
+iostream
+-
+fstream
+-
+vector
+-
+WGChannelMap.hpp
+../include/EvtDisp/WGChannelMap.hpp
+
+../include/EvtDisp/WGChannelMap.hpp
+iostream
+-
+vector
+-
+time.h
+-
+TFile.h
+-
+TTree.h
+-
+TString.h
+-
+TSystem.h
+-
+TChain.h
+-
+BMConst.hpp
+../include/EvtDisp/BMConst.hpp
 
 ../include/Recon/TrackMatching.cpp
 iostream
@@ -639,6 +673,12 @@ TCanvasImp.h
 /Users/kenji/local/root/root-6.18.02/built/include/TCanvasImp.h
 Rtypes.h
 /Users/kenji/local/root/root-6.18.02/built/include/Rtypes.h
+
+/Users/kenji/local/root/root-6.18.02/built/include/TChain.h
+TTree.h
+/Users/kenji/local/root/root-6.18.02/built/include/TTree.h
+iosfwd
+-
 
 /Users/kenji/local/root/root-6.18.02/built/include/TClass.h
 TDictionary.h

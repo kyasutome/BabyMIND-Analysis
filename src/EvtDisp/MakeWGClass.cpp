@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 //include
-#include "WGChannelMap.cpp"
+//#include "WGChannelMap.cpp"
 #include "WGData.cpp"
-#include "WMData.cpp"
+//#include "WMData.cpp"
 
 //library
 #include "WGRecon.hpp"
@@ -23,32 +23,40 @@ int main( int argc, char **argv )
     }
 
   std::string name = string(argv[1]);
-  TString filepath(name);
+  TString filedir(name);
+  TString filepath;
 
   WGRecon *wgrecon = new WGRecon();
   //WGChannelMap *wgchannelmap = new WGChannelMap();
   WGdata *wgdata = new WGdata();
   //WMdata *wmdata = new WMdata();
   
-  TFile *fout = new TFile(Form("./process/5-WGClass/WGClass.root"), "recreate");
-  TTree *otree = new TTree("tree","tree");
-  otree->Branch("WGRecon","WGRecon",&wgrecon,32000,2);
+  TFile *fout[4];
+  TTree *otree[4];
 
-  //TEST CODES
-  wgdata->ReadTree(filepath, 4);
-  for(int ientry=0; ientry<wgdata->GetTEntry(4); ientry++)
+  for(int idif=0; idif<4; idif++)
     {
-      wgrecon->Clear();
-      if(wgdata->SignalCreation(ientry, 4, wgrecon))
-	otree->Fill();
+      int DIF=idif+4;
+      filepath.Form("%s/physics_run_2020-01-29_18-30-08_92_ecal_dif_%d_tree.root", filedir.Data(), DIF);
+      fout[idif] = new TFile(Form("./process/5-WGClass/WGClass_dif%d.root",DIF), "recreate");
+      otree[idif] = new TTree("tree","tree");
+      otree[idif]->Branch("WGRecon","WGRecon",&wgrecon,32000,2);
+      wgdata->ReadTree(filepath, DIF);
+      for(int ientry=0; ientry<wgdata->GetTEntry(DIF); ientry++)
+      //for(int ientry=0; ientry<100; ientry++)
+	{
+	  wgrecon->Clear(); 
+	  if(wgdata->SignalCreation(ientry, DIF, wgrecon))
+	    otree[idif]->Fill();
+
+	  if(ientry%10000==0)
+	    cout << "ientry= " << ientry << '\n'; 
+	}
+      fout[idif]->cd();
+      otree[idif]->Write();
+      fout[idif]->Close();
     }
-
-  fout->cd();
-  otree->Write();
-  for(int ihist=0; ihist<4; ihist++)
-    wgdata->bcid_hist[ihist]->Write();
-  fout->Close();
-
+ 
 
   return 0;
 }

@@ -3,12 +3,14 @@
 #include <vector>
 
 #include "Dimension.hpp"
+#include "WGChannelMap.cpp"
 
 using namespace std;
 //#define debug
 
 inline Dimension::Dimension()
 {
+
   double temp[5];
   fin[0].open("./data/v1_horizontal_from_center.txt");
   fin[1].open("./data/v1_vertical_from_center.txt");
@@ -16,7 +18,12 @@ inline Dimension::Dimension()
   fin[3].open("./data/Iron_Mod_position.txt");
   fin[4].open("./data/correction.txt");
   fin[5].open("./data/YASU_position.txt");
-  nfile = 6;
+  fin[6].open("./data/udwagasci_xy_side.txt");
+  fin[7].open("./data/udwagasci_z_side.txt");
+  fin[8].open("./data/udwagasci_xy_top.txt");
+  fin[9].open("./data/udwagasci_z_top.txt");
+
+  nfile = 10;
 
   for(int i=0; i<95; i++)
     {
@@ -59,6 +66,44 @@ inline Dimension::Dimension()
     }
 
   cout << "Read Dimension Files for Baby MIND" << '\n';
+
+  for(int idif=0; idif<8; idif++)
+    {
+      if(idif<4) NCHIPS = 3;
+      if(idif>=4) NCHIPS = 20;
+      mapping[idif] = load_mapping(file, NCHIPS, NCHANNELS, idif);
+    }
+
+  int count_grid=0;
+  int count_pln=0;
+
+  for(int i=0; i<60; i++)
+    {
+      if(i%3==1)
+        {
+          fin[6] >> uwgposy_grid[count_grid] >> dwgposy_grid[count_grid];
+          fin[8] >> uwgposx_grid[count_grid] >> dwgposx_grid[count_grid];
+          count_grid++;
+        }
+
+      if(i%3!=1)
+        {
+          fin[6] >> uwgposy_pln[count_pln] >> dwgposy_pln[count_pln];
+          fin[8] >> uwgposx_pln[count_pln] >> dwgposx_pln[count_pln];
+          count_pln++;
+        }
+    }
+
+  for(int i=0; i<24; i++)
+    {
+      fin[7] >> uwgpossz[i] >> dwgpossz[i];
+      fin[9] >> uwgpostz[i] >> dwgpostz[i];
+    }
+
+  cout << "Read Dimension Files for WAGASCI&WallMRD" << '\n';
+
+  
+
   for(int ifile=0; ifile<nfile; ifile++)
     {
       fin[ifile].close();
@@ -156,10 +201,95 @@ bool Dimension::get_pos_pm_FC(int mod, int view, int pln, double ch, double *pos
       *posx = Y+offsety[view];
     }
 
+  return true;
+}
+
+bool Dimension::get_pos_wm_FC(int dif, int chip, int chan, double *posx, double *posy, double *posz)
+{
+  *posx = mapping[dif][chip][chan].x;
+  *posy = mapping[dif][chip][chan].y;
+  *posz = mapping[dif][chip][chan].z;
 
   return true;
-}     
+}
 
+bool Dimension::get_pos_wg_FC(int dif, int chip, int chan, double *posx, double *posy, double *posz)
+{
+  *posx = mapping[dif][chip][chan].x;
+  *posy = mapping[dif][chip][chan].y;
+  *posz = mapping[dif][chip][chan].z;
+
+  return true;
+}
+
+bool Dimension::get_wgdet_pos(int ud, int view, int zid, int xyid, double *posxy, double *posz)
+{
+  if(ud==0)
+    {
+      if(view==0)
+        {
+          if(zid%3==1||zid%3==2)
+            {
+              *posxy = uwgposy_grid[xyid];
+              *posz = uwgpossz[zid];
+            }
+          if(zid%3==0)
+            {
+              *posxy = uwgposy_pln[xyid];
+              *posz = uwgpossz[zid];
+            }
+        }
+      if(view==1)
+        {
+          if(zid%3==0||zid%3==2)
+            {
+              *posxy = uwgposx_grid[xyid];
+              *posz = uwgpostz[zid];
+            }
+          if(zid%3==1)
+            {
+              *posxy = uwgposx_pln[xyid];
+              *posz = uwgpostz[zid];
+            }
+        }
+    }
+
+  if(ud==1)
+    {
+
+      if(view==0)
+        {
+          if(zid%3==1||zid%3==2)
+            {
+              *posxy = dwgposy_grid[xyid];
+              *posz = dwgpossz[zid];
+            }
+          if(zid%3==0)
+            {
+              *posxy = dwgposy_pln[xyid];
+              *posz = dwgpossz[zid];
+            }
+        }
+      if(view==1)
+        {
+          if(zid%3==0||zid%3==2)
+            {
+              *posxy = dwgposx_grid[xyid];
+              *posz = dwgpostz[zid];
+            }
+          if(zid%3==1)
+            {
+              *posxy = dwgposx_pln[xyid];
+              *posz = dwgpostz[zid];
+            }
+
+        }
+
+    }
+
+  return true;
+
+}
 
 
 

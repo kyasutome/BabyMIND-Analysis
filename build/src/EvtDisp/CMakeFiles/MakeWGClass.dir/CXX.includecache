@@ -6,6 +6,30 @@
 
 #IncludeRegexTransform: 
 
+../include/EvtDisp/Dimension.cpp
+iostream
+-
+fstream
+-
+vector
+-
+Dimension.hpp
+../include/EvtDisp/Dimension.hpp
+WGChannelMap.cpp
+../include/EvtDisp/WGChannelMap.cpp
+
+../include/EvtDisp/Dimension.hpp
+iostream
+-
+fstream
+-
+vector
+-
+time.h
+-
+WGChannelMap.hpp
+../include/EvtDisp/WGChannelMap.hpp
+
 ../include/EvtDisp/WGChannelMap.cpp
 iostream
 -
@@ -43,6 +67,8 @@ stdio.h
 -
 WGData.hpp
 ../include/EvtDisp/WGData.hpp
+Dimension.cpp
+../include/EvtDisp/Dimension.cpp
 
 ../include/EvtDisp/WGData.hpp
 iostream
@@ -68,22 +94,6 @@ WGRecon.hpp
 WGChannelMap.hpp
 ../include/EvtDisp/WGChannelMap.hpp
 
-../include/EvtDisp/WMData.cpp
-iostream
--
-stdio.h
--
-WMData.hpp
-../include/EvtDisp/WMData.hpp
-
-../include/EvtDisp/WMData.hpp
-iostream
--
-vector
--
-BMConst.hpp
-../include/EvtDisp/BMConst.hpp
-
 ../lib/src/BMConst.hpp
 
 ../lib/src/WGRecon.hpp
@@ -99,12 +109,8 @@ iostream
 -
 stdio.h
 -
-WGChannelMap.cpp
-/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/src/EvtDisp/WGChannelMap.cpp
 WGData.cpp
 /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/src/EvtDisp/WGData.cpp
-WMData.cpp
-/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/src/EvtDisp/WMData.cpp
 WGRecon.hpp
 /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/src/EvtDisp/WGRecon.hpp
 

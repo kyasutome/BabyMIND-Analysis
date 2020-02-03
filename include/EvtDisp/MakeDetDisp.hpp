@@ -30,6 +30,9 @@ public:
   double uhorr[47], dhorr[47];
   double uverl[8], dverl[8];
   double uverr[8], dverr[8];
+  
+  double nch;
+  double tempz, tempxy;
 
   //function
 public:
@@ -48,6 +51,16 @@ public:
   void ParSci(double pln, double ch,double x1,double y1,int view); 
   void SciSci(double pln, double ch,double x1,double y1,int view); //Sciber scintillator
   void VetoSci(double pln, double ch,double x1,double y1,int view);
+
+  //for WAGASCI
+  void DrawWAGASCI(int mod, int view);
+  void PlnSci(int mod, int view, double x, double v);
+  void GridSci(int mod, int view, double x, double y);
+
+  //for WallMRD
+  void DrawWallMRD(int mod);
+  void SciModule(int mod, double x1, double y1, double x2, double y2);
+  void IronModule(int mod, double x1, double y1, double x2, double y2);
   
 };
 

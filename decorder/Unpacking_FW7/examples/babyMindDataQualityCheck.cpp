@@ -86,9 +86,8 @@ struct vectorsTree
   vector<double> *BoardHumidity;
 };
 
-int main()
+int main ()
 {
-    
     int NumberOfFEB=64;
     
     vector<string> vFileNames;
@@ -198,7 +197,7 @@ int main()
   	NumberOfSpills->Write();
     NumberOfSpills->Delete();
 
-    TCanvas *c = new TCanvas("Channel Check summary","Channel Check summary",1500,1000);
+    TCanvas *c = new TCanvas("Channels Check summary","Channels Check summary",1500,1000);
     //c->Divide(2,2);
     TH1I *ChannelsCheck[FEBnumbers.size()];
     TH1I *SpillTimeGTrigFEB[FEBnumbers.size()];
@@ -212,10 +211,10 @@ int main()
     TH1I *HitTimefromSpillStart[FEBnumbers.size()];
     TH1I *HitTimefromSpillStartHG[FEBnumbers.size()];
 
-    TH1I *TotalNumberOfEvents = new TH1I( "Total number of events per FEB", "Total number of events per FEB",NumberOfFEB,0,NumberOfFEB);
-    TotalNumberOfEvents->GetYaxis()->SetTitle("Number of events");
-    TotalNumberOfEvents->GetXaxis()->SetTitle("FEB");
-    TotalNumberOfEvents->SetOption("hist");
+    TH1I *TotallNumberOfEvents = new TH1I( "Total number of events per FEB", "Total number of events per FEB",NumberOfFEB,0,NumberOfFEB);
+    TotallNumberOfEvents->GetYaxis()->SetTitle("Number of events");
+    TotallNumberOfEvents->GetXaxis()->SetTitle("FEB");
+    TotallNumberOfEvents->SetOption("hist");
 
     TH1F *AverageNumberOfEventsFEB = new TH1F( "Average number of events at FEB per Spill", "Average number of events per FEB at spill",NumberOfFEB,0,NumberOfFEB);
     AverageNumberOfEventsFEB->GetYaxis()->SetTitle("Number of events");
@@ -247,12 +246,12 @@ int main()
     PercentOfEventsRunWithHG->GetXaxis()->SetTitle("FEB");
     PercentOfEventsRunWithHG->SetOption("hist");
 
-    TH2F *HitTimefromSpillStartFEBs = new TH2F("Hit Time from Spill Start", "Hit Time from Spill Start",NumberOfFEB,0,NumberOfFEB,4000,0,80100);
+    TH2F *HitTimefromSpillStartFEBs = new TH2F("Hit's Time from Spill Start", "Hit's Time from Spill Start",NumberOfFEB,0,NumberOfFEB,4000,0,80100);
     HitTimefromSpillStartFEBs->GetYaxis()->SetTitle("Time from spill start, [2.5 ns]");
     HitTimefromSpillStartFEBs->GetXaxis()->SetTitle("FEB");
     HitTimefromSpillStartFEBs->SetOption("colz");
 
-    TH2F *HitTimefromSpillStartHGFEBs = new TH2F("Hit Time from Spill Start With HG", "Hit Time from Spill Start With HG",NumberOfFEB,0,NumberOfFEB,4000,0,80100);
+    TH2F *HitTimefromSpillStartHGFEBs = new TH2F("Hit's Time from Spill Start With HG", "Hit's Time from Spill Start With HG",NumberOfFEB,0,NumberOfFEB,4000,0,80100);
     HitTimefromSpillStartHGFEBs->GetYaxis()->SetTitle("Time from spill start, [2.5 ns]");
     HitTimefromSpillStartHGFEBs->GetXaxis()->SetTitle("FEB");
     HitTimefromSpillStartHGFEBs->SetOption("colz");
@@ -285,8 +284,8 @@ int main()
             ("FEB_" + sFEB +"Total number of hits at Channel").c_str(),1001,0,100000);
         NumOfHitsPerFEBWithHG[FEBnumbers.at(iFEB)] = new TH1I(("FEB_" + sFEB +"Total number of hits with HG at Channel").c_str(),
             ("FEB_" + sFEB +"Total number of hits with HG at Channel").c_str(),1001,0,100000);
-        HitTimefromSpillStart[FEBnumbers.at(iFEB)] = new TH1I(("FEB_" + sFEB +"Hit Time from Spill Start").c_str(), ("FEB_" + sFEB +"Hit Time from Spill Start").c_str(), 80100,0,80100);
-        HitTimefromSpillStartHG[FEBnumbers.at(iFEB)] = new TH1I( ("FEB_" + sFEB +"Hit Time from Spill Start with HG").c_str(), ("FEB_" + sFEB +"Hit Time from Spill Start with HG").c_str(), 80100,0,80100);
+        HitTimefromSpillStart[FEBnumbers.at(iFEB)] = new TH1I(("FEB_" + sFEB +"Hit's Time from Spill Start").c_str(), ("FEB_" + sFEB +"Hit's Time from Spill Start").c_str(), 80100,0,80100);
+        HitTimefromSpillStartHG[FEBnumbers.at(iFEB)] = new TH1I( ("FEB_" + sFEB +"Hit's Time from Spill Start with HG").c_str(), ("FEB_" + sFEB +"Hit's Time from Spill Start with HG").c_str(), 80100,0,80100);
 
     	//cout<<"FEB "<<FEBnumbers.at(iFEB)<<" is in process."<<endl;
     	SpillTimeGTrigCheck[FEBnumbers.at(iFEB)].clear();
@@ -310,7 +309,7 @@ int main()
             SpillTimeGTrigFEB[FEBnumbers.at(iFEB)]->Fill(FEB[FEBnumbers.at(iFEB)].SpillTimeGTrig->front());
 
             if (FEB[FEBnumbers.at(iFEB)].hitsChannel->back()!=-1) {
-                TotalNumberOfEvents->Fill(FEBnumbers.at(iFEB),FEB[FEBnumbers.at(iFEB)].hitsChannel->size());
+                TotallNumberOfEvents->Fill(FEBnumbers.at(iFEB),FEB[FEBnumbers.at(iFEB)].hitsChannel->size());
                 AverageNumHitsFebRun[FEBnumbers.at(iFEB)]->Fill(FEB[FEBnumbers.at(iFEB)].hitsChannel->size(),1);
                 AvNumEventsRun.at(iFEB)+=FEB[FEBnumbers.at(iFEB)].hitsChannel->size();
             } else {
@@ -503,22 +502,22 @@ int main()
         AverageNumberOfEventsRunWithHG->Fill(FEBnumbers.at(iFEB),AvNumEventsRunWithHG.at(iFEB));
 
         for (int ch=0;ch<96;ch++){
-            int TotalNumOfHitsCh = 0;
+            int TotallNumOfHitsCh = 0;
             for (int i=0; i< NumberOfEventsCh[FEBnumbers.at(iFEB)][ch].size();i++) {
-                TotalNumOfHitsCh +=NumberOfEventsCh[FEBnumbers.at(iFEB)][ch].at(i);
+                TotallNumOfHitsCh +=NumberOfEventsCh[FEBnumbers.at(iFEB)][ch].at(i);
             }
-            if (TotalNumOfHitsCh > 4*AvNumEventsRun.at(iFEB)) {
-                cout <<"Noisy channel: FEB_"<< FEBnumbers.at(iFEB)<< " channel " <<ch<< " Total Number of events "<<TotalNumOfHitsCh<<endl;
+            if (TotallNumOfHitsCh > 4*AvNumEventsRun.at(iFEB)) {
+                cout <<"Noisy channel: FEB_"<< FEBnumbers.at(iFEB)<< " channel " <<ch<< " Total Number of events "<<TotallNumOfHitsCh<<endl;
                 oSummaryText.str("");
                 oSummaryText<< "FEB_"<< FEBnumbers.at(iFEB)<< " channel " <<ch;
                 SummaryTextNoisy.push_back(oSummaryText.str());
-            } else if ((TotalNumOfHitsCh < 0.25 * AvNumEventsRun.at(iFEB)) && (TotalNumOfHitsCh > 0.3 * AvNumEventsRun.at(iFEB)) && ChannelExist(FEBnumbers.at(iFEB),ch)){
-                cout <<"Less noisy channel: FEB_"<< FEBnumbers.at(iFEB)<< " channel " <<ch<< " Total Number of events "<<TotalNumOfHitsCh<<endl;
+            } else if ((TotallNumOfHitsCh < 0.25 * AvNumEventsRun.at(iFEB)) && (TotallNumOfHitsCh > 0.3 * AvNumEventsRun.at(iFEB)) && ChannelExist(FEBnumbers.at(iFEB),ch)){
+                cout <<"Less noisy channel: FEB_"<< FEBnumbers.at(iFEB)<< " channel " <<ch<< " Total Number of events "<<TotallNumOfHitsCh<<endl;
                 oSummaryText.str("");
                 oSummaryText<< "FEB_"<< FEBnumbers.at(iFEB)<< " channel " <<ch;
                 SummaryTextLessNoisy.push_back(oSummaryText.str());
-            } else if ((TotalNumOfHitsCh < 0.1 * AvNumEventsRun.at(iFEB)) && ChannelExist(FEBnumbers.at(iFEB),ch)) {
-                cout <<"Dead channel: FEB_"<< FEBnumbers.at(iFEB)<< " channel " <<ch<< " Total Number of events "<<TotalNumOfHitsCh<<endl;
+            } else if ((TotallNumOfHitsCh < 0.1 * AvNumEventsRun.at(iFEB)) && ChannelExist(FEBnumbers.at(iFEB),ch)) {
+                cout <<"Dead channel: FEB_"<< FEBnumbers.at(iFEB)<< " channel " <<ch<< " Total Number of events "<<TotallNumOfHitsCh<<endl;
                 oSummaryText.str("");
                 oSummaryText<< "FEB_"<< FEBnumbers.at(iFEB)<< " channel " <<ch;
                 SummaryTextDead.push_back(oSummaryText.str());
@@ -550,7 +549,7 @@ int main()
     SummaryPlots->cd();
 
     TPaveText *ptS = new TPaveText(.01,0.8,0.99,0.99);
-    ptS->AddText("Channel check summary:");
+    ptS->AddText("Channels check summary:");
     ptS->AddText("Total Number of channels - 4024");
 
     //c->cd(1);
@@ -597,20 +596,20 @@ int main()
 
     c->Delete();
 
-    NumMissedSpills->Write(); 
+    NumMissedSpills->Write();
     TCanvas *c1 = new TCanvas("Missed Spills","Missed Spills",1250,1200);
     NumMissedSpills->Draw();
     c1->SaveAs("./MissedSpills.png");
     NumMissedSpills->Delete();
     c1->Delete();
 
-    TotalNumberOfEvents->Write(); 
+    TotallNumberOfEvents->Write();
     TCanvas *c2 = new TCanvas("Total Number of Events","Total Number of Events",1550,1200);
-    TotalNumberOfEvents->Draw();
+    TotallNumberOfEvents->Draw();
     c2->SaveAs("./TotalEvents.png");
-    TotalNumberOfEvents->Delete();
+    TotallNumberOfEvents->Delete();
     c2->Delete();
-    
+
     AverageNumberOfEventsFEB->Write();
     AverageNumberOfEventsFEB->Delete();
     AverageNumberOfEventsFEBWithHG->Write();
@@ -622,15 +621,14 @@ int main()
     PercentOfEventsRunWithHG->Write();
     PercentOfEventsRunWithHG->Delete();
     
-    HitTimefromSpillStartFEBs->Write(); 
+    HitTimefromSpillStartFEBs->Write();
     TCanvas *c3 = new TCanvas("Hit Time from Spill Start","Hit Time from Spill Start",1250,1200);
     HitTimefromSpillStartFEBs->Draw();
-    HitTimefromSpillStartFEBs->SetAxisRange(10000.,18000.,"Y");
-
+    HitTimefromSpillStartFEBs->SetAxisRange(14000.,21000.,"Y");
     c3->SaveAs("./HitTimeFromSpillStart.png");
     HitTimefromSpillStartFEBs->Delete();
     c3->Delete();
-
+    
     HitTimefromSpillStartHGFEBs->Write();
     HitTimefromSpillStartHGFEBs->Delete();
 

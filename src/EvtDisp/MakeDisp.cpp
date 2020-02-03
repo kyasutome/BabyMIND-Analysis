@@ -15,7 +15,7 @@ int main( int argc, char **argv )
   if(argc < 5)
     {
       cout << "usage" << '\n';
-      cout << "MakeDisp [filepath][date][month][run][ientry]" << '\n';
+      cout << "MakeDisp [filepath][date][month][run][subrun][ientry]" << '\n';
       exit(0);
     }
 
@@ -23,7 +23,8 @@ int main( int argc, char **argv )
   std::string date = string(argv[2]);
   std::string month = string(argv[3]);
   std::string run = string(argv[4]);
-  int targetentry = atoi(argv[5]);
+  std::string subrun = string(argv[5]);
+  int targetentry = atoi(argv[6]);
   TString filepath(name);
 
   TApplication app("app", 0, 0, 0, 0);

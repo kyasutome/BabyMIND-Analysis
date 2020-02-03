@@ -4,6 +4,8 @@
 src/Recon/CMakeFiles/TrackRecon.dir/trackrecon.cpp.o
  ../include/EvtDisp/Dimension.cpp
  ../include/EvtDisp/Dimension.hpp
+ ../include/EvtDisp/WGChannelMap.cpp
+ ../include/EvtDisp/WGChannelMap.hpp
  ../include/Recon/TrackMatching.cpp
  ../include/Recon/cellautomation.cpp
  ../include/Recon/cellautomation.hpp
@@ -71,6 +73,7 @@ src/Recon/CMakeFiles/TrackRecon.dir/trackrecon.cpp.o
  /Users/kenji/local/root/root-6.18.02/built/include/TBuffer.h
  /Users/kenji/local/root/root-6.18.02/built/include/TCanvas.h
  /Users/kenji/local/root/root-6.18.02/built/include/TCanvasImp.h
+ /Users/kenji/local/root/root-6.18.02/built/include/TChain.h
  /Users/kenji/local/root/root-6.18.02/built/include/TClass.h
  /Users/kenji/local/root/root-6.18.02/built/include/TCollection.h
  /Users/kenji/local/root/root-6.18.02/built/include/TDataType.h

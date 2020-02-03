@@ -2,8 +2,7 @@
 #include <stdio.h>
 
 //include
-#include "WGChannelMap.cpp"
-#include "WGData.cpp"
+//#include "WGChannelMap.cpp"
 #include "WMData.cpp"
 
 //library
@@ -13,8 +12,6 @@ using namespace std;
 
 int main( int argc, char **argv )
 {
-  
-  
   if(argc < 2)
     {
       cout << "usage" << '\n';
@@ -23,31 +20,45 @@ int main( int argc, char **argv )
     }
 
   std::string name = string(argv[1]);
-  TString filepath(name);
+  TString filedir(name);
+  TString filepath;
 
-  WGRecon *wmrecon = new WMRecon();
+  WGRecon *wmrecon = new WGRecon();
   //WGChannelMap *wgchannelmap = new WGChannelMap();
-  WGdata *wmdata = new WMdata();
+  WMdata *wmdata = new WMdata();
   //WMdata *wmdata = new WMdata();
   
-  TFile *fout = new TFile(Form("./process/7-WMClass/WMClass.root"), "recreate");
-  TTree *otree = new TTree("tree","tree");
-  otree->Branch("WMRecon","WMRecon",&wmrecon,32000,2);
+  TFile *fout[4];
+  TTree *otree[4];
 
-  //TEST CODES
-  wmdata->ReadTree(filepath, 4);
-  for(int ientry=0; ientry<wmdata->GetTEntry(4); ientry++)
+  for(int idif=0; idif<4; idif++)
     {
-      wmrecon->Clear();
-      if(wmdata->SignalCreation(ientry, 4, wmrecon))
-	otree->Fill();
+      int DIF=idif;
+      filepath.Form("%s/physics_run_2020-01-29_18-30-08_92_ecal_dif_%d_tree.root", filedir.Data(), DIF);
+      fout[idif] = new TFile(Form("./process/7-WMClass/WMClass_dif%d.root",DIF), "recreate");
+      otree[idif] = new TTree("tree","tree");
+      otree[idif]->Branch("WGRecon","WGRecon",&wmrecon,32000,2);
+
+      wmdata->ReadTree(filepath, DIF);
+      for(int ientry=0; ientry<wmdata->GetTEntry(DIF); ientry++)
+      //for(int ientry=0; ientry<100; ientry++)
+	{
+	  wmrecon->Clear();
+	  if(wmdata->SignalCreation(ientry, DIF, wmrecon))
+	    otree[idif]->Fill();
+
+	  if(ientry%10000==0)
+	    cout << "ientry= " << ientry << '\n';
+	  
+	}
+      fout[idif]->cd();
+      otree[idif]->Write();
+      fout[idif]->Close();
     }
 
-  fout->cd();
-  otree->Write();
-  for(int ihist=0; ihist<4; ihist++)
-    wmdata->bcid_hist[ihist]->Write();
-  fout->Close();
+
+  //for(int ihist=0; ihist<0; ihist++)
+  //wmdata->bcid_hist[ihist]->Write();
 
 
   return 0;

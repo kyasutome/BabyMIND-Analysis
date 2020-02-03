@@ -13,6 +13,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.15.3/CMakeSystem.cmake"
   "FindROOT.cmake"
   "../src/BSDApply/CMakeLists.txt"
+  "../src/DataQuality/CMakeLists.txt"
   "../src/DataSanity/CMakeLists.txt"
   "../src/EvtDisp/CMakeLists.txt"
   "../src/MakeCalib/CMakeLists.txt"
@@ -58,12 +59,15 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "src/BSDApply/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/YASUTracker/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/Recon/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/DataQuality/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "src/MakeCalib/CMakeFiles/MakeCalib.dir/DependInfo.cmake"
+  "src/EvtDisp/CMakeFiles/MakeWGWMClass.dir/DependInfo.cmake"
   "src/EvtDisp/CMakeFiles/MakeWGClass.dir/DependInfo.cmake"
+  "src/EvtDisp/CMakeFiles/MakeWMClass.dir/DependInfo.cmake"
   "src/EvtDisp/CMakeFiles/MakePMClass.dir/DependInfo.cmake"
   "src/EvtDisp/CMakeFiles/MakeDisp.dir/DependInfo.cmake"
   "src/EvtDisp/CMakeFiles/MakeEvt.dir/DependInfo.cmake"
@@ -71,4 +75,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "src/BSDApply/CMakeFiles/BSDApply.dir/DependInfo.cmake"
   "src/YASUTracker/CMakeFiles/BasicDist.dir/DependInfo.cmake"
   "src/Recon/CMakeFiles/TrackRecon.dir/DependInfo.cmake"
+  "src/DataQuality/CMakeFiles/WMDataQuality.dir/DependInfo.cmake"
   )

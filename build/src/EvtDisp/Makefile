@@ -111,6 +111,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+src/EvtDisp/CMakeFiles/MakeWGWMClass.dir/rule:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/EvtDisp/CMakeFiles/MakeWGWMClass.dir/rule
+.PHONY : src/EvtDisp/CMakeFiles/MakeWGWMClass.dir/rule
+
+# Convenience name for target.
+MakeWGWMClass: src/EvtDisp/CMakeFiles/MakeWGWMClass.dir/rule
+
+.PHONY : MakeWGWMClass
+
+# fast build rule for target.
+MakeWGWMClass/fast:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/EvtDisp/CMakeFiles/MakeWGWMClass.dir/build.make src/EvtDisp/CMakeFiles/MakeWGWMClass.dir/build
+.PHONY : MakeWGWMClass/fast
+
+# Convenience name for target.
 src/EvtDisp/CMakeFiles/MakeWGClass.dir/rule:
 	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/EvtDisp/CMakeFiles/MakeWGClass.dir/rule
 .PHONY : src/EvtDisp/CMakeFiles/MakeWGClass.dir/rule
@@ -124,6 +139,21 @@ MakeWGClass: src/EvtDisp/CMakeFiles/MakeWGClass.dir/rule
 MakeWGClass/fast:
 	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/EvtDisp/CMakeFiles/MakeWGClass.dir/build.make src/EvtDisp/CMakeFiles/MakeWGClass.dir/build
 .PHONY : MakeWGClass/fast
+
+# Convenience name for target.
+src/EvtDisp/CMakeFiles/MakeWMClass.dir/rule:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/EvtDisp/CMakeFiles/MakeWMClass.dir/rule
+.PHONY : src/EvtDisp/CMakeFiles/MakeWMClass.dir/rule
+
+# Convenience name for target.
+MakeWMClass: src/EvtDisp/CMakeFiles/MakeWMClass.dir/rule
+
+.PHONY : MakeWMClass
+
+# fast build rule for target.
+MakeWMClass/fast:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/EvtDisp/CMakeFiles/MakeWMClass.dir/build.make src/EvtDisp/CMakeFiles/MakeWMClass.dir/build
+.PHONY : MakeWMClass/fast
 
 # Convenience name for target.
 src/EvtDisp/CMakeFiles/MakePMClass.dir/rule:
@@ -278,6 +308,60 @@ MakeWGClass.cpp.s:
 	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/EvtDisp/CMakeFiles/MakeWGClass.dir/build.make src/EvtDisp/CMakeFiles/MakeWGClass.dir/MakeWGClass.cpp.s
 .PHONY : MakeWGClass.cpp.s
 
+MakeWGWMClass.o: MakeWGWMClass.cpp.o
+
+.PHONY : MakeWGWMClass.o
+
+# target to build an object file
+MakeWGWMClass.cpp.o:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/EvtDisp/CMakeFiles/MakeWGWMClass.dir/build.make src/EvtDisp/CMakeFiles/MakeWGWMClass.dir/MakeWGWMClass.cpp.o
+.PHONY : MakeWGWMClass.cpp.o
+
+MakeWGWMClass.i: MakeWGWMClass.cpp.i
+
+.PHONY : MakeWGWMClass.i
+
+# target to preprocess a source file
+MakeWGWMClass.cpp.i:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/EvtDisp/CMakeFiles/MakeWGWMClass.dir/build.make src/EvtDisp/CMakeFiles/MakeWGWMClass.dir/MakeWGWMClass.cpp.i
+.PHONY : MakeWGWMClass.cpp.i
+
+MakeWGWMClass.s: MakeWGWMClass.cpp.s
+
+.PHONY : MakeWGWMClass.s
+
+# target to generate assembly for a file
+MakeWGWMClass.cpp.s:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/EvtDisp/CMakeFiles/MakeWGWMClass.dir/build.make src/EvtDisp/CMakeFiles/MakeWGWMClass.dir/MakeWGWMClass.cpp.s
+.PHONY : MakeWGWMClass.cpp.s
+
+MakeWMClass.o: MakeWMClass.cpp.o
+
+.PHONY : MakeWMClass.o
+
+# target to build an object file
+MakeWMClass.cpp.o:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/EvtDisp/CMakeFiles/MakeWMClass.dir/build.make src/EvtDisp/CMakeFiles/MakeWMClass.dir/MakeWMClass.cpp.o
+.PHONY : MakeWMClass.cpp.o
+
+MakeWMClass.i: MakeWMClass.cpp.i
+
+.PHONY : MakeWMClass.i
+
+# target to preprocess a source file
+MakeWMClass.cpp.i:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/EvtDisp/CMakeFiles/MakeWMClass.dir/build.make src/EvtDisp/CMakeFiles/MakeWMClass.dir/MakeWMClass.cpp.i
+.PHONY : MakeWMClass.cpp.i
+
+MakeWMClass.s: MakeWMClass.cpp.s
+
+.PHONY : MakeWMClass.s
+
+# target to generate assembly for a file
+MakeWMClass.cpp.s:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/EvtDisp/CMakeFiles/MakeWMClass.dir/build.make src/EvtDisp/CMakeFiles/MakeWMClass.dir/MakeWMClass.cpp.s
+.PHONY : MakeWMClass.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -286,7 +370,9 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... MakeWGWMClass"
 	@echo "... MakeWGClass"
+	@echo "... MakeWMClass"
 	@echo "... MakePMClass"
 	@echo "... MakeDisp"
 	@echo "... MakeEvt"
@@ -302,6 +388,12 @@ help:
 	@echo "... MakeWGClass.o"
 	@echo "... MakeWGClass.i"
 	@echo "... MakeWGClass.s"
+	@echo "... MakeWGWMClass.o"
+	@echo "... MakeWGWMClass.i"
+	@echo "... MakeWGWMClass.s"
+	@echo "... MakeWMClass.o"
+	@echo "... MakeWMClass.i"
+	@echo "... MakeWMClass.s"
 .PHONY : help
 
 

@@ -124,6 +124,19 @@ MakeCalib/fast:
 .PHONY : MakeCalib/fast
 
 #=============================================================================
+# Target rules for targets named MakeWGWMClass
+
+# Build rule for target.
+MakeWGWMClass: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 MakeWGWMClass
+.PHONY : MakeWGWMClass
+
+# fast build rule for target.
+MakeWGWMClass/fast:
+	$(MAKE) -f src/EvtDisp/CMakeFiles/MakeWGWMClass.dir/build.make src/EvtDisp/CMakeFiles/MakeWGWMClass.dir/build
+.PHONY : MakeWGWMClass/fast
+
+#=============================================================================
 # Target rules for targets named MakeWGClass
 
 # Build rule for target.
@@ -135,6 +148,19 @@ MakeWGClass: cmake_check_build_system
 MakeWGClass/fast:
 	$(MAKE) -f src/EvtDisp/CMakeFiles/MakeWGClass.dir/build.make src/EvtDisp/CMakeFiles/MakeWGClass.dir/build
 .PHONY : MakeWGClass/fast
+
+#=============================================================================
+# Target rules for targets named MakeWMClass
+
+# Build rule for target.
+MakeWMClass: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 MakeWMClass
+.PHONY : MakeWMClass
+
+# fast build rule for target.
+MakeWMClass/fast:
+	$(MAKE) -f src/EvtDisp/CMakeFiles/MakeWMClass.dir/build.make src/EvtDisp/CMakeFiles/MakeWMClass.dir/build
+.PHONY : MakeWMClass/fast
 
 #=============================================================================
 # Target rules for targets named MakePMClass
@@ -227,6 +253,19 @@ TrackRecon/fast:
 	$(MAKE) -f src/Recon/CMakeFiles/TrackRecon.dir/build.make src/Recon/CMakeFiles/TrackRecon.dir/build
 .PHONY : TrackRecon/fast
 
+#=============================================================================
+# Target rules for targets named WMDataQuality
+
+# Build rule for target.
+WMDataQuality: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 WMDataQuality
+.PHONY : WMDataQuality
+
+# fast build rule for target.
+WMDataQuality/fast:
+	$(MAKE) -f src/DataQuality/CMakeFiles/WMDataQuality.dir/build.make src/DataQuality/CMakeFiles/WMDataQuality.dir/build
+.PHONY : WMDataQuality/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -236,7 +275,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... MakeCalib"
+	@echo "... MakeWGWMClass"
 	@echo "... MakeWGClass"
+	@echo "... MakeWMClass"
 	@echo "... MakePMClass"
 	@echo "... MakeDisp"
 	@echo "... MakeEvt"
@@ -244,6 +285,7 @@ help:
 	@echo "... BSDApply"
 	@echo "... BasicDist"
 	@echo "... TrackRecon"
+	@echo "... WMDataQuality"
 .PHONY : help
 
 

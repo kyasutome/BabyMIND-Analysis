@@ -36,7 +36,7 @@ void MakeMonitor::Display(BMDisp* bmdisp)
   h->GetXaxis()->SetNdivisions(0);
   h->GetYaxis()->SetNdivisions(0);
 
-  v = new TH2F("","Top View", 7200, -3000, 4200, 3700, -1850, 1850 );
+  v = new TH2F("","Top View", 7200, -3000, 4200, 5000, -2500, 2500 );
   v->GetXaxis()->SetLabelSize(0);
   v->GetYaxis()->SetLabelSize(0);
   v->SetStats(0);
@@ -47,20 +47,32 @@ void MakeMonitor::Display(BMDisp* bmdisp)
   h->Draw();
   makedetdisp->DrawBabyMIND(0);
   makedetdisp->DrawProtonModule(0);
+  makedetdisp->DrawWAGASCI(0,0);
+  makedetdisp->DrawWAGASCI(1,0);
   makehitdisp->DrawBMHit(bmdisp, 0);
   makehitdisp->DrawPMHit(bmdisp, 0);
+  //makehitdisp->DrawWGHit(bmdisp, 1);
+  //makehitdisp->DrawWGHit(bmdisp, 2);
   monitor->Update();
 
   monitor2->cd();
   v->Draw();
   makedetdisp->DrawBabyMIND(1);
   makedetdisp->DrawProtonModule(1);
+  makedetdisp->DrawWAGASCI(0,1);
+  makedetdisp->DrawWAGASCI(1,1);
+  makedetdisp->DrawWallMRD(0);
+  makedetdisp->DrawWallMRD(1);
   makehitdisp->DrawBMHit(bmdisp, 1);
   makehitdisp->DrawPMHit(bmdisp, 1);
+  //makehitdisp->DrawWGHit(bmdisp, 1);
+  //makehitdisp->DrawWGHit(bmdisp, 2);
+  //makehitdiso->DrawWMHit(bmdisp, 3);
+  //makehitdiso->DrawWMHit(bmdisp, 4);
   monitor2->Update();
 
 #ifdef debug
-  double r = 20;
+  double r = 10;
   monitor->cd();
   for(int ipln=1; ipln<19; ipln++)
       for(int ich=0; ich<96; ich++)
@@ -84,6 +96,13 @@ void MakeMonitor::Display(BMDisp* bmdisp)
 	  makehitdisp->pmyhit(ipln, ich, r, 1);
     }
 
+    for(int ichip=0; ichip<20; ichip++)	
+      for(int ichan=0; ichan<32; ichan++)
+	{
+	  makehitdisp->wgyhit(5, ichip, ichan, r, 1);	    
+	  makehitdisp->wgyhit(7, ichip, ichan, r, 1); 
+	}
+  
   monitor->Update();
 
   monitor2->cd();
@@ -108,6 +127,22 @@ void MakeMonitor::Display(BMDisp* bmdisp)
 	for(int ich=0; ich<32; ich++)
 	  makehitdisp->pmxhit(ipln, ich, r,1);
     }
+
+    for(int ichip=0; ichip<20; ichip++)	
+      for(int ichan=0; ichan<32; ichan++)
+	{
+	  makehitdisp->wgxhit(4, ichip, ichan, r, 1);	    
+	  makehitdisp->wgxhit(6, ichip, ichan, r, 1);
+	}
+
+    for(int ichip=0; ichip<3; ichip++)	
+      for(int ichan=0; ichan<32; ichan++)
+	{
+	  makehitdisp->wmhit(0, ichip, ichan, r, 1);	    
+	  makehitdisp->wmhit(1, ichip, ichan, r, 1); 
+	  makehitdisp->wmhit(2, ichip, ichan, r, 1);	    
+	  makehitdisp->wmhit(3, ichip, ichan, r, 1); 
+	}
 
   monitor2->Update();
 

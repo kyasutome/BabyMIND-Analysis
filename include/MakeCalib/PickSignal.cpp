@@ -196,8 +196,8 @@ bool PickSignal::CheckYASUCoincidence(int Coinsyasu, BMdata* bmbranch, int* yasu
 double PickSignal::Findbunch(double hittime)
 {
   double bunch;
-  int lbound[8] = {30700, 31350, 31950, 32500, 33050, 33600, 34300, 34800};
-  int ubound[8] = {31000, 31650, 32200, 32750, 33400, 34000, 34500, 35100};
+  int lbound[8] = {40700, 41350, 41950, 42500, 43050, 43600, 44300, 44800};
+  int ubound[8] = {41000, 41650, 42200, 42750, 43400, 44000, 44500, 45100};
   bool beambunch = false;
 
   for(int i=0; i<8; i++)

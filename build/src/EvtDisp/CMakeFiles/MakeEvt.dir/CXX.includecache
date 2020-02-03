@@ -47,6 +47,8 @@ BMDisp.hpp
 ../include/EvtDisp/BMDisp.hpp
 PMRecon.hpp
 ../include/EvtDisp/PMRecon.hpp
+WGRecon.hpp
+../include/EvtDisp/WGRecon.hpp
 
 ../include/MakeCalib/BMData.cpp
 iostream
@@ -136,6 +138,14 @@ vector
 BMConst.hpp
 ../lib/src/BMConst.hpp
 
+../lib/src/WGRecon.hpp
+iostream
+-
+vector
+-
+BMConst.hpp
+../lib/src/BMConst.hpp
+
 /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/src/EvtDisp/MakeEvt.cpp
 iostream
 -
@@ -155,6 +165,8 @@ BMDisp.hpp
 /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/src/EvtDisp/BMDisp.hpp
 PMRecon.hpp
 /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/src/EvtDisp/PMRecon.hpp
+WGRecon.hpp
+/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/src/EvtDisp/WGRecon.hpp
 
 /Users/kenji/local/root/root-6.18.02/built/include/Bytes.h
 Rtypes.h

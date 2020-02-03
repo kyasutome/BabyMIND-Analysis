@@ -13,23 +13,15 @@
 
 #include "BMConst.hpp"
 
-class WGChannelMap
-{
-private:
-  //const int DifView[2] = {TopView,SideView};
+struct map_cell {
+  int plane;
+  int channel;
+  float x;
+  float y;
+  float z;
+} mapcell;
 
-
-  
-public:
-
-
-
-public:
-  WGChannelMap();
-  ~WGChannelMap();
-
-  
-  
-};
+struct map_cell **load_mapping(char *filename,int nb_chips,int nb_chans,int dif);
+void free_mapping(struct map_cell **mapping,int nb_chips);
 
 #endif

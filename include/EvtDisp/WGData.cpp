@@ -2,8 +2,11 @@
 #include <stdio.h>
 
 #include "WGData.hpp"
+#include "Dimension.cpp"
 
 using namespace std;
+
+//#define debug
 
 WGdata::WGdata()
 { 
@@ -14,10 +17,11 @@ WGdata::WGdata()
     }
 }
 
-
 WGdata::~WGdata()
 {
 }
+
+Dimension *fdimension = new Dimension();
 
 void WGdata::ReadTree(TString filename, int dif)
 {
@@ -46,7 +50,6 @@ void WGdata::ReadTree(TString filename, int dif)
 	wgtree[difid]->SetBranchAddress("gs", gs[difid]);
 	wgtree[difid]->SetBranchAddress("debug_chip", debug_chip[difid]);
 	wgtree[difid]->SetBranchAddress("debug_spill", debug_spill[difid]);
-
 
 	Nentry = wgtree[difid]->GetEntries();
 	cout << "Nentry= "  << Nentry << '\n';
@@ -79,25 +82,33 @@ bool WGdata::SignalCreation(int ientry, int dif, WGRecon* wgrecon)
 		    thecharge=charge[difid][ichip][ich][icol];
 		    
 		    if(HitCheck(thehit))
-		      thetime=time[difid][ichip][ich][icol];
-		   
-		    wgrecon->mod.push_back(dif/2-1);
-		    wgrecon->view.push_back(abs(dif%2-1));
-		    wgrecon->time.push_back(thetime);
-		    wgrecon->bunch.push_back(GetBunch(thebcid));
-		    wgrecon->spill=thespill;
-		    wgrecon->unixtime=-1;
+		      {
+			thetime=time[difid][ichip][ich][icol];		   
+			wgrecon->mod.push_back(dif/2-1);
+			//wgrecon->view.push_back(abs(dif%2-1));
+			wgrecon->view.push_back(dif);
+			wgrecon->pln.push_back(thechip);
+			wgrecon->channel.push_back(thechan);
+			wgrecon->time.push_back(thetime);
+			wgrecon->bunch.push_back(GetBunch(thebcid));
+			wgrecon->spill=thespill;
+			wgrecon->unixtime=-1;
 
-		    bcid_hist[difid]->Fill(thebcid);
-		    
-		    fillflag = true;
+			bcid_hist[difid]->Fill(thebcid);			
+			fillflag = true;
+
+#ifdef debug
+                        double posx, posy, posz;
+                        fdimension->get_pos_wg_FC(dif, thechip, thechan, &posx, &posy, &posz);
+                        cout << posx << " " << posy << " " << posz << '\n';
+#endif
+
+		      }
 		  
 		  }//ich loop
 	  }//icol loop
       }//ichip loop
-
   return fillflag;
-
 }
 
 bool WGdata::ModeCheck(int spill_mode)

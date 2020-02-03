@@ -17,6 +17,7 @@ src/YASUTracker/CMakeFiles/BasicDist.dir/basicdist.cpp.o: ../lib/src/BMCluster.h
 src/YASUTracker/CMakeFiles/BasicDist.dir/basicdist.cpp.o: ../lib/src/BMConst.hpp
 src/YASUTracker/CMakeFiles/BasicDist.dir/basicdist.cpp.o: ../lib/src/BMDisp.hpp
 src/YASUTracker/CMakeFiles/BasicDist.dir/basicdist.cpp.o: ../lib/src/PMRecon.hpp
+src/YASUTracker/CMakeFiles/BasicDist.dir/basicdist.cpp.o: ../lib/src/WGRecon.hpp
 src/YASUTracker/CMakeFiles/BasicDist.dir/basicdist.cpp.o: ../src/YASUTracker/basicdist.cpp
 src/YASUTracker/CMakeFiles/BasicDist.dir/basicdist.cpp.o: /Users/kenji/local/root/root-6.18.02/built/include/Buttons.h
 src/YASUTracker/CMakeFiles/BasicDist.dir/basicdist.cpp.o: /Users/kenji/local/root/root-6.18.02/built/include/Bytes.h

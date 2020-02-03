@@ -3,6 +3,7 @@
 #include <vector>
 
 #include "MakeDetDisp.hpp"
+//#include "Dimension.cpp"
 
 using namespace std;
 
@@ -13,6 +14,8 @@ MakeDetDisp::MakeDetDisp()
 MakeDetDisp::~MakeDetDisp()
 {
 }
+
+Dimension *fdimension = new Dimension();
 
 void MakeDetDisp::DetModule(double x1, double y1, double x2, double y2)
 {
@@ -103,6 +106,73 @@ void MakeDetDisp::VetoSci(double x,double y,double x1,double y1, int view){
   TBox *b1=new TBox(x+offsetx,y+offsety,x1+offsetx,y1+offsety);
 
   b1->SetLineColor(kBlue);
+  b1->SetLineWidth(2);
+  b1->SetFillStyle(0);
+  b1->Draw("SAME");
+}
+
+void MakeDetDisp::PlnSci(int mod, int view, double x, double y){
+  double x1, x2, y1, y2;
+  double planey = 24.5/2;
+  double planez = 3.0/2;
+  double offsetx[2][2]={{-2300,-2300},{-350,-350}};//{{mod0view0, mod0view1}, {mod1view0, mod1view1}}
+  double offsety[2][2]={{-100,-900},{-100,-600}};//{{mod0view0, mod0view1}, {mod1view0, mod1view1}}
+  x1 = x-planez+offsetx[mod][view];
+  x2 = x+planez+offsetx[mod][view];
+  y1 = y-planey+offsety[mod][view];
+  y2 = y+planey+offsety[mod][view];
+
+  TBox *b1 = new TBox(x1, y1, x2, y2);
+  Int_t trans_blue = TColor::GetColorTransparent(kBlue, 0.8);
+  b1->SetLineColor(trans_blue);
+  b1->SetFillColor(trans_blue);
+  b1->SetLineWidth(2);
+  b1->SetFillStyle(1001);
+  b1->Draw("SAME");
+};
+
+void MakeDetDisp::GridSci(int mod, int view, double x, double y){
+  double x1, x2, y1, y2;
+  double gridy = 3.0/2;
+  double gridz = 24.5/2;
+  double offsetx[2][2]={{-2300,-2300},{-350,-350}};//{{mod0view0, mod0view1}, {mod1view0, mod1view1}}
+  double offsety[2][2]={{-100,-900},{-100,-600}};//{{mod0view0, mod0view1}, {mod1view0, mod1view1}}
+
+  x1 = x-gridz+offsetx[mod][view];
+  x2 = x+gridz+offsetx[mod][view];
+  y1 = y-gridy+offsety[mod][view];
+  y2 = y+gridy+offsety[mod][view];
+
+  TBox *b1 = new TBox(x1, y1, x2, y2);
+  Int_t trans_blue = TColor::GetColorTransparent(kBlue, 0.6);
+  b1->SetLineColor(trans_blue);
+  b1->SetFillColor(trans_blue);
+  b1->SetLineWidth(2);
+  b1->SetFillStyle(1001);
+  b1->Draw("SAME");
+};
+
+void MakeDetDisp::SciModule(int mod, double x1, double y1, double x2, double y2)
+{
+  double offsetx[2] = {-2000, -1700};
+  double offsety[2] = {-2200, +700};
+
+  TBox *b1=new TBox(x1+offsetx[mod],y1+offsety[mod],x2+offsetx[mod],y2+offsety[mod]);
+
+  b1->SetLineColor(kBlue);
+  b1->SetLineWidth(2);
+  b1->SetFillStyle(0);
+  b1->Draw("SAME");
+}
+
+void MakeDetDisp::IronModule(int mod, double x1, double y1, double x2, double y2)
+{
+  double offsetx[2] = {-2000, -2000};
+  double offsety[2] = {-1500, +500};
+  
+  TBox *b1=new TBox(x1+offsetx[mod],y1+offsety[mod],x2+offsetx[mod],y2+offsety[mod]);
+
+  b1->SetLineColor(kRed);
   b1->SetLineWidth(2);
   b1->SetFillStyle(0);
   b1->Draw("SAME");
@@ -259,7 +329,105 @@ void MakeDetDisp::DrawProtonModule(int view)
 
 }
 
+void MakeDetDisp::DrawWAGASCI(int mod, int view)
+{
+  if(mod==0 && view==0)
+    for(int pln=0; pln<24; pln++)
+      {
+	if(pln%3==1 || pln%3==2) nch = 20;
+	if(pln%3==0) nch = 40;
+	
+	for(int ch=0; ch<nch; ch++)
+	  {
+	    fdimension->get_wgdet_pos(mod, view, pln, ch, &tempz, &tempxy);
+	    if(pln%3==1 || pln%3==2)
+	      {
+		GridSci(mod, view, tempxy, tempz);
+	      }
+	    if(pln%3==0)
+	      {
+		PlnSci(mod, view, tempxy, tempz);
+	      }
+	  }
+      }
 
+  if(mod==0 && view==1)
+    for(int pln=0; pln<24; pln++)
+      {
+	if(pln%3==0 || pln%3==2) nch = 20;
+	if(pln%3==1) nch = 40;
+	
+	for(int ch=0; ch<nch; ch++)
+	  {
+	    fdimension->get_wgdet_pos(mod, view, pln, ch, &tempz, &tempxy);
+	    if(pln%3==0 || pln%3==2)
+	      {
+		GridSci(mod, view, tempxy, tempz);
+	      }
+	    if(pln%3==1)
+	      {
+		PlnSci(mod, view, tempxy, tempz);
+	      }
+	  }
+      }
+
+  if(mod==1 && view==0)
+    for(int pln=0; pln<24; pln++)
+      {
+	if(pln%3==1 || pln%3==2) nch = 20;
+	if(pln%3==0) nch = 40;
+	
+	for(int ch=0; ch<nch; ch++)
+	  {
+	    fdimension->get_wgdet_pos(mod, view, pln, ch, &tempz, &tempxy);
+	    if(pln%3==1 || pln%3==2)
+	      {
+		GridSci(mod, view, tempxy, tempz);
+	      }
+	    if(pln%3==0)
+	      {
+		PlnSci(mod, view, tempxy, tempz);
+	      }
+	  }
+      }
+
+  if(mod==1 && view==1)
+    for(int pln=0; pln<24; pln++)
+      {
+	if(pln%3==0 || pln%3==2) nch = 20;
+	if(pln%3==1) nch = 40;
+	
+	for(int ch=0; ch<nch; ch++)
+	  {
+	    fdimension->get_wgdet_pos(mod, view, pln, ch, &tempz, &tempxy);
+	    if(pln%3==0 || pln%3==2)
+	      {
+		GridSci(mod, view, tempxy, tempz);
+	      }
+	    if(pln%3==1)
+	      {
+		PlnSci(mod, view, tempxy, tempz);
+	      }
+	  }
+      }
+
+}
+
+void MakeDetDisp::DrawWallMRD(int mod)
+{
+  double centerz[8]={100, 300, 500, 700, 900, 1100, 1300, 1500};
+  double centerx[10]={36.5, 79.5, 122.5, 165.5, 208.5, 251.5, 294.5, 337.5, 380.5, 423.5};
+  double zwidth = 100;
+  double xwidth = 7;
+
+  for(int iz=0; iz<8; iz++)
+    for(int ix=0; ix<10; ix++)
+      {
+	SciModule(mod, centerz[iz]-zwidth, centerx[ix]-xwidth, centerz[iz]+zwidth, centerx[ix]+xwidth);
+      }
+  
+
+}
 
 
 

@@ -40,6 +40,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/src/BSDApply/cmake_install.cmake")
   include("/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/src/YASUTracker/cmake_install.cmake")
   include("/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/src/Recon/cmake_install.cmake")
+  include("/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/src/DataQuality/cmake_install.cmake")
 
 endif()
 

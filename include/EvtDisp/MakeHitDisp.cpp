@@ -149,6 +149,49 @@ void MakeHitDisp::pmvhit(double pln, double ch, double view, double r, double bu
   arc->Draw("SAME");
 }
 
+void MakeHitDisp::wgyhit(double dif, double chip, double chan, double r, double bunch)
+{
+  double x, y, z;
+  int modid = dif/2-2;
+  double offsetx[2][2]={{-2300,-2300},{-350,-350}};//{{mod0view0, mod0view1}, {mod1view0, mod1view1}}
+  double offsety[2][2]={{-100,-900},{-100,-600}};//{{mod0view0, mod0view1}, {mod1view0, mod1view1}}
+  dimension->get_pos_wg_FC(dif, chip, chan, &x, &y, &z);
+  TArc *arc = new TArc(z+offsetx[modid][0],y+offsety[modid][0],r);
+  ColorScale(&color, (int)bunch);
+  arc->SetFillColor(color);
+  arc->SetLineColor(2);
+  arc->Draw("SAME");
+}
+
+void MakeHitDisp::wgxhit(double dif, double chip, double chan, double r, double bunch)
+{
+  double x, y, z;
+  int modid = dif/2-2;
+  double offsetx[2][2]={{-2300,-2300},{-350,-350}};//{{mod0view0, mod0view1}, {mod1view0, mod1view1}}
+  double offsety[2][2]={{-100,-900},{-100,-600}};//{{mod0view0, mod0view1}, {mod1view0, mod1view1}}
+  dimension->get_pos_wg_FC(dif, chip, chan, &x, &y, &z);
+  TArc *arc = new TArc(z+offsetx[modid][1],x+offsety[modid][1],r);
+  ColorScale(&color, (int)bunch);
+  arc->SetFillColor(color);
+  arc->SetLineColor(2);
+  arc->Draw("SAME");
+}
+
+void MakeHitDisp::wmhit(double dif, double chip, double chan, double r, double bunch)
+{
+  double x, y, z;
+  int modid = dif/2;
+  double offsetx[2]={-2000,-1700};//{{mod0view0, mod0view1}, {mod1view0, mod1view1}}
+  double offsety[2]={-2200,+700};//{{mod0view0, mod0view1}, {mod1view0, mod1view1}}
+  dimension->get_pos_wm_FC(dif, chip, chan, &x, &y, &z);
+  cout << dif << " " << chip << " " << chan << " " << x << " " << y << " " << z << '\n';
+  TArc *arc = new TArc(z+offsetx[modid],x+offsety[modid], r);
+  ColorScale(&color, (int)bunch);
+  arc->SetFillColor(color);
+  arc->SetLineColor(2);
+  arc->Draw("SAME");
+}
+
 
 void MakeHitDisp::DrawBMHit(BMDisp* bmdisp, int VIEW)
 {
@@ -205,6 +248,71 @@ void MakeHitDisp::DrawPMHit(BMDisp* bmdisp, int VIEW)
 	}
     }//ihit loop
 }
+
+void MakeHitDisp::DrawWGHit(BMDisp* bmdisp, int MOD)
+{
+  nhit = bmdisp->pln.size();
+  for(int ihit=0; ihit<nhit; ihit++)
+    {
+      mod = bmdisp->mod.at(ihit);
+      dif = bmdisp->view.at(ihit);
+      chip = bmdisp->pln.at(ihit);
+      chan = bmdisp->channel.at(ihit);
+      bunch = bmdisp->bunch.at(ihit);
+
+      cout << "mod:" << mod << " view:" << view << " pln:" << pln << " ch:" << ch << " bunch:" << bunch << '\n';
+      
+      if(mod==MOD && mod==1)
+	{
+	  if(dif==4)
+	    wgxhit(dif, chip, chan, r, bunch);
+	  
+	  if(dif==5)
+	    wgyhit(dif, chip, chan, r, bunch);
+	}
+
+      if(mod==MOD && mod==2)
+	{
+	  if(dif==6)
+	    wgxhit(dif, chip, chan, r, bunch);
+	  
+	  if(dif==7)
+	    wgyhit(dif, chip, chan, r, bunch);
+	}
+
+    }//ihit loop
+}
+
+void MakeHitDisp::DrawWMHit(BMDisp* bmdisp, int MOD)
+{
+  nhit = bmdisp->pln.size();
+  for(int ihit=0; ihit<nhit; ihit++)
+    {
+      mod = bmdisp->mod.at(ihit);
+      dif = bmdisp->view.at(ihit);
+      chip = bmdisp->pln.at(ihit);
+      chan = bmdisp->channel.at(ihit);
+      bunch = bmdisp->bunch.at(ihit);
+
+      cout << "mod:" << mod << " view:" << view << " pln:" << pln << " ch:" << ch << " bunch:" << bunch << '\n';
+      
+      if(mod==MOD && mod==3)
+	{
+	  if(dif==0 || dif==1)
+	    wgxhit(dif, chip, chan, r, bunch);
+	  
+	}
+
+      if(mod==MOD && mod==4)
+	{
+	  if(dif==2 || dif==3)
+	    wgxhit(dif, chip, chan, r, bunch);
+	  
+	}
+
+    }//ihit loop
+}
+
 
 void MakeHitDisp::ColorScale(int *color, int bunch)
 {

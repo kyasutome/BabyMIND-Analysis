@@ -83,6 +83,7 @@ MakeEvt_EXTERNAL_OBJECTS =
 ../bin/MakeEvt: ../lib/library/BMBeaminfo.so
 ../bin/MakeEvt: ../lib/library/BMDisp.so
 ../bin/MakeEvt: ../lib/library/PMRecon.so
+../bin/MakeEvt: ../lib/library/WGRecon.so
 ../bin/MakeEvt: src/EvtDisp/CMakeFiles/MakeEvt.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../../bin/MakeEvt"
 	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/src/EvtDisp && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MakeEvt.dir/link.txt --verbose=$(VERBOSE)

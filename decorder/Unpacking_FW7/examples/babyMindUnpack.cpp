@@ -248,12 +248,8 @@ int main( int argc, char **argv ) {
                   FEB[spill.GetBoardId()].HoldTimeStop.push_back(event->GetHoldTimeStop());
                   FEB[spill.GetBoardId()].hitsChannel.push_back(ich);
                   FEB[spill.GetBoardId()].hitLeadTime.push_back(event->GetLeadingTime(ih, ich));
-                   if (FEB[spill.GetBoardId()].SpillTimeGTrig.back() > 643){
-                        FEB[spill.GetBoardId()].hitTimefromSpill.push_back(-4 * FEB[spill.GetBoardId()].SpillTimeGTrig.back() + 4000* (1+ FEB[spill.GetBoardId()].GTrigTime.back()) + event->GetLeadingTime(ih, ich));
-                   }
-                   else {
-                        FEB[spill.GetBoardId()].hitTimefromSpill.push_back(-4 * FEB[spill.GetBoardId()].SpillTimeGTrig.back() + 4000* ( FEB[spill.GetBoardId()].GTrigTime.back()) + event->GetLeadingTime(ih, ich));
-                   }
+                  FEB[spill.GetBoardId()].hitTimefromSpill.push_back(-4 * FEB[spill.GetBoardId()].SpillTimeGTrig.back() + 4000* ( FEB[spill.GetBoardId()].GTrigTime.back()) + event->GetLeadingTime(ih, ich));
+                   
                   FEB[spill.GetBoardId()].SpillTrailTime.push_back(spill.GetSpillTrailTime() );
                   //FEB[spill.GetBoardId()].SpillTemperature.push_back(spill.GetSpillTrailTemp());
                   

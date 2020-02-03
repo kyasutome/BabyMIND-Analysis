@@ -10,6 +10,8 @@ src/EvtDisp/CMakeFiles/MakeDisp.dir/MakeDisp.cpp.o
  ../include/EvtDisp/MakeHitDisp.hpp
  ../include/EvtDisp/MakeMonitor.cpp
  ../include/EvtDisp/MakeMonitor.hpp
+ ../include/EvtDisp/WGChannelMap.cpp
+ ../include/EvtDisp/WGChannelMap.hpp
  ../lib/src/BMConst.hpp
  ../lib/src/BMDisp.hpp
  /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/src/EvtDisp/MakeDisp.cpp
@@ -65,6 +67,7 @@ src/EvtDisp/CMakeFiles/MakeDisp.dir/MakeDisp.cpp.o
  /Users/kenji/local/root/root-6.18.02/built/include/TBuffer.h
  /Users/kenji/local/root/root-6.18.02/built/include/TCanvas.h
  /Users/kenji/local/root/root-6.18.02/built/include/TCanvasImp.h
+ /Users/kenji/local/root/root-6.18.02/built/include/TChain.h
  /Users/kenji/local/root/root-6.18.02/built/include/TClass.h
  /Users/kenji/local/root/root-6.18.02/built/include/TCollection.h
  /Users/kenji/local/root/root-6.18.02/built/include/TColor.h

@@ -9,6 +9,8 @@ src/EvtDisp/CMakeFiles/MakeDisp.dir/MakeDisp.cpp.o: ../include/EvtDisp/MakeHitDi
 src/EvtDisp/CMakeFiles/MakeDisp.dir/MakeDisp.cpp.o: ../include/EvtDisp/MakeHitDisp.hpp
 src/EvtDisp/CMakeFiles/MakeDisp.dir/MakeDisp.cpp.o: ../include/EvtDisp/MakeMonitor.cpp
 src/EvtDisp/CMakeFiles/MakeDisp.dir/MakeDisp.cpp.o: ../include/EvtDisp/MakeMonitor.hpp
+src/EvtDisp/CMakeFiles/MakeDisp.dir/MakeDisp.cpp.o: ../include/EvtDisp/WGChannelMap.cpp
+src/EvtDisp/CMakeFiles/MakeDisp.dir/MakeDisp.cpp.o: ../include/EvtDisp/WGChannelMap.hpp
 src/EvtDisp/CMakeFiles/MakeDisp.dir/MakeDisp.cpp.o: ../lib/src/BMConst.hpp
 src/EvtDisp/CMakeFiles/MakeDisp.dir/MakeDisp.cpp.o: ../lib/src/BMDisp.hpp
 src/EvtDisp/CMakeFiles/MakeDisp.dir/MakeDisp.cpp.o: ../src/EvtDisp/MakeDisp.cpp
@@ -64,6 +66,7 @@ src/EvtDisp/CMakeFiles/MakeDisp.dir/MakeDisp.cpp.o: /Users/kenji/local/root/root
 src/EvtDisp/CMakeFiles/MakeDisp.dir/MakeDisp.cpp.o: /Users/kenji/local/root/root-6.18.02/built/include/TBuffer.h
 src/EvtDisp/CMakeFiles/MakeDisp.dir/MakeDisp.cpp.o: /Users/kenji/local/root/root-6.18.02/built/include/TCanvas.h
 src/EvtDisp/CMakeFiles/MakeDisp.dir/MakeDisp.cpp.o: /Users/kenji/local/root/root-6.18.02/built/include/TCanvasImp.h
+src/EvtDisp/CMakeFiles/MakeDisp.dir/MakeDisp.cpp.o: /Users/kenji/local/root/root-6.18.02/built/include/TChain.h
 src/EvtDisp/CMakeFiles/MakeDisp.dir/MakeDisp.cpp.o: /Users/kenji/local/root/root-6.18.02/built/include/TClass.h
 src/EvtDisp/CMakeFiles/MakeDisp.dir/MakeDisp.cpp.o: /Users/kenji/local/root/root-6.18.02/built/include/TCollection.h
 src/EvtDisp/CMakeFiles/MakeDisp.dir/MakeDisp.cpp.o: /Users/kenji/local/root/root-6.18.02/built/include/TColor.h

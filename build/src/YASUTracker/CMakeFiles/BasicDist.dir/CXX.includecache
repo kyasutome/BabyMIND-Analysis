@@ -47,6 +47,8 @@ BMDisp.hpp
 ../include/EvtDisp/BMDisp.hpp
 PMRecon.hpp
 ../include/EvtDisp/PMRecon.hpp
+WGRecon.hpp
+../include/EvtDisp/WGRecon.hpp
 
 ../include/MakeCalib/BMData.hpp
 iostream
@@ -201,6 +203,14 @@ BMConst.hpp
 ../lib/src/BMConst.hpp
 
 ../lib/src/PMRecon.hpp
+iostream
+-
+vector
+-
+BMConst.hpp
+../lib/src/BMConst.hpp
+
+../lib/src/WGRecon.hpp
 iostream
 -
 vector

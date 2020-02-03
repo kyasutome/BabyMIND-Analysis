@@ -9,7 +9,8 @@ if    (ROOT_FOUND)
   TARGET_LINK_LIBRARIES(MakeEvt		${PROJECT_SOURCE_DIR}/lib/library/BMBasicRecon.so
   					${PROJECT_SOURCE_DIR}/lib/library/BMBeaminfo.so
 					${PROJECT_SOURCE_DIR}/lib/library/BMDisp.so	
-					${PROJECT_SOURCE_DIR}/lib/library/PMRecon.so	
+					${PROJECT_SOURCE_DIR}/lib/library/PMRecon.so
+					${PROJECT_SOURCE_DIR}/lib/library/WGRecon.so		
 					${ROOT_LIBRARIES})
   TARGET_INCLUDE_DIRECTORIES(MakeEvt	PUBLIC	${PROJECT_SOURCE_DIR}/include/MakeCalib
   						${PROJECT_SOURCE_DIR}/include/EvtDisp	
@@ -52,6 +53,16 @@ if    (ROOT_FOUND)
 					${PROJECT_SOURCE_DIR}/lib/library/WGRecon.so
 					${ROOT_LIBRARIES})
   TARGET_INCLUDE_DIRECTORIES(MakeWMClass	PUBLIC	${PROJECT_SOURCE_DIR}/include/MakeCalib
+  							${PROJECT_SOURCE_DIR}/include/EvtDisp	
+  							${PROJECT_SOURCE_DIR}/lib/src)
+
+  ADD_EXECUTABLE(MakeWGWMClass	MakeWGWMClass.cpp)
+  TARGET_LINK_LIBRARIES(MakeWGWMClass	${PROJECT_SOURCE_DIR}/lib/library/BMBasicRecon.so
+  					${PROJECT_SOURCE_DIR}/lib/library/BMBeaminfo.so
+					${PROJECT_SOURCE_DIR}/lib/library/BMDisp.so
+					${PROJECT_SOURCE_DIR}/lib/library/WGRecon.so
+					${ROOT_LIBRARIES})
+  TARGET_INCLUDE_DIRECTORIES(MakeWGWMClass	PUBLIC	${PROJECT_SOURCE_DIR}/include/MakeCalib
   							${PROJECT_SOURCE_DIR}/include/EvtDisp	
   							${PROJECT_SOURCE_DIR}/lib/src)
 

@@ -32,6 +32,8 @@ private:
   double bunch;
   double nhit;
   
+  double dif, chip, chan;
+  
   double r;
   int color;
 
@@ -55,9 +57,14 @@ public:
   void pmyhit(double pln, double ch, double r, double bunch);
   void pmvhit(double pln, double ch, double view, double r, double bunch);
 
-  //for WAGASCI
+  //for WAGASCIs
+  void DrawWGHit(BMDisp* bmdisp, int MOD);
+  void wgxhit(double dif, double chip, double chan, double r, double bunch);
+  void wgyhit(double dif, double chip, double chan, double r, double bunch);
 
-  //for Wall MRDs  
+  //for WallMRDs
+  void DrawWMHit(BMDisp* bmdisp, int MOD);
+  void wmhit(double dif, double chip, double chan, double r, double bunch);
 
   void ColorScale(int *color, int bunch);
   
