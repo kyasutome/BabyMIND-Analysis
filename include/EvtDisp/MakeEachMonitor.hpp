@@ -18,7 +18,7 @@
 #include <TH2.h>
 
 #include "BMConst.hpp"
-#include "BMDisp.hpp"
+#include "EVTCluster.hpp"
 #include "WGRecon.hpp"
 
 class MakeEachMonitor
@@ -38,7 +38,7 @@ public:
   MakeEachMonitor();
   ~MakeEachMonitor();
 
-  void Display(BMDisp* bmdisp);
+  void Display(EVTCluster* evtcluster);
   
 };
 

@@ -1,0 +1,366 @@
+#include <iostream>
+#include <fstream>
+#include <vector>
+
+#include "Dimension.cpp"
+
+#include "PickSignal.hpp"
+#include "DataReader.hpp"
+#include "EvtFormat.hpp"
+
+using namespace std;
+//#define debug
+
+EvtFormat::EvtFormat()
+{
+  bmchain = new TChain("tree", "tree");
+  pmchain = new TChain("tree", "tree");
+  for(int idif=0; idif<8; idif++)
+    wgchain[idif] = new TChain("tree", "tree");
+}
+
+EvtFormat::~EvtFormat()
+{
+}
+
+Dimension *fdimension = new Dimension();
+
+void EvtFormat::ReadBMChain(TString filepath, BMBasicRecon* bmbasicrecon, BMBeaminfo* bmbeaminfo, 
+			    BMBSD* bmbsd, int *sunixtime, int *eunixtime)
+{
+  cout << "Start reading BM chain..." << '\n';
+  bmchain->Add(Form("%s/BMBSD_BM*.root",filepath.Data()));
+  bmchain->SetBranchAddress("BMBasicRecon", &bmbasicrecon);
+  bmchain->SetBranchAddress("BMBeaminfo", &bmbeaminfo);
+  bmchain->SetBranchAddress("BMBSD", &bmbsd);
+  nbmdata = bmchain->GetEntries();  
+
+  bmchain->GetEntry(0);
+  *sunixtime=bmbsd->unixtime;
+  bmchain->GetEntry(nbmdata-1);
+  *eunixtime=bmbsd->unixtime;
+
+  for(int ientry=0; ientry<nbmdata; ientry++)
+    {
+      bmchain->GetEntry(ientry);
+      bmunix.push_back(bmbsd->unixtime);
+    }
+
+  cout << "******* Information for Baby MIND *******" << '\n';
+  cout << "total entry = " << nbmdata << '\n';
+
+}
+
+void EvtFormat::ReadPMChain(TString filepath, PMRecon* pmrecon,  BMBSD* bmbsd, int *sunixtime, int *eunixtime)
+{
+  cout << "Start reading PM chain..." << '\n';
+  pmchain->Add(Form("%s/BMBSD_PM*.root",filepath.Data()));
+  pmchain->SetBranchAddress("PMRecon", &pmrecon);
+  pmchain->SetBranchAddress("BMBSD", &bmbsd);
+  npmdata = pmchain->GetEntries();  
+
+  pmchain->GetEntry(0);
+  *sunixtime=bmbsd->unixtime;
+  pmchain->GetEntry(npmdata-1);
+  *eunixtime=bmbsd->unixtime;
+
+  for(int ientry=0; ientry<npmdata; ientry++)
+    {
+      pmchain->GetEntry(ientry);
+      pmunix.push_back(bmbsd->unixtime);
+    }
+
+  cout << "******* Information for Proton Module *******" << '\n';
+  cout << "total entry = " << npmdata << '\n';
+}
+
+void EvtFormat::ReadWGChain(TString filepath, WGRecon* wgrecon[],  BMBSD* bmbsd[], int *sunixtime, int *eunixtime)
+{
+  cout << "Start reading WG chain..." << '\n';
+
+  for(int idif=0; idif<8; idif++)
+    {
+      wgchain[idif]->Add(Form("%s/BMBSD_WG_*_dif%d.root",filepath.Data(), idif));
+      wgchain[idif]->SetBranchAddress("WGRecon", &wgrecon[idif]);
+      wgchain[idif]->SetBranchAddress("BMBSD", &bmbsd[idif]);
+      nwgdata[idif] = wgchain[idif]->GetEntries();  
+
+      if(idif==4)
+	{
+	  wgchain[idif]->GetEntry(0);
+	  *sunixtime=bmbsd[idif]->unixtime;
+	  wgchain[idif]->GetEntry(nwgdata[idif]-1);
+	  *eunixtime=bmbsd[idif]->unixtime;
+	}
+
+      for(int ientry=0; ientry<nwgdata[idif]; ientry++)
+	{
+	  wgchain[idif]->GetEntry(ientry);
+	  wgunix[idif].push_back(bmbsd[idif]->unixtime);
+	}
+
+      cout << "******* Information for WAGASCI & WallMRDs *******" << '\n';
+      cout << "total entry = " << nwgdata[idif] << '\n';
+    }
+  
+}
+
+bool EvtFormat::FillEvtClass(TTree *otree, int sunixtimeentry, vector<int> baseunixtime, vector<double> basepot, 
+			     BMBasicRecon* bmbasicrecon, PMRecon* pmrecon,
+			     WGRecon* wgrecon[8], EVTCluster* evtcluster, TString filepath)
+{
+  evtcluster->Clear();
+  bmchain->Reset();
+  bmchain->Add(Form("%s/BMBSD_BM*.root",filepath.Data()));
+  bmchain->SetBranchAddress("BMBasicRecon", &bmbasicrecon);
+  
+  pmchain->Reset();
+  pmchain->Add(Form("%s/BMBSD_PM*.root",filepath.Data()));
+  pmchain->SetBranchAddress("PMRecon", &pmrecon);
+
+  for(int idif=0; idif<8; idif++)
+    {
+      wgchain[idif]->Reset();
+      wgchain[idif]->Add(Form("%s/BMBSD_WG_*_dif%d.root",filepath.Data(), idif));
+      wgchain[idif]->SetBranchAddress("WGRecon", &wgrecon[idif]);
+    }
+
+  //for(int ientry=0; ientry<20; ientry++)
+  for(int ientry=0; ientry<pmchain->GetEntries(); ientry++)
+    {
+      evtcluster->Clear();
+      bmbasicrecon->Clear();
+      pmrecon->Clear();
+      bmfillflag=false;
+      pmfillflag=false;
+      for(int idif=0; idif<8; idif++)
+	{
+	  wgfillflag[idif]=false;
+	  wgrecon[idif]->Clear();
+	}
+
+      theunixtimeentry = sunixtimeentry + ientry;
+      theunixtime = baseunixtime.at(theunixtimeentry);
+      thepot = basepot.at(theunixtimeentry);
+
+      //BabyMIND check                                                                                                 
+      auto bmunixit = find(bmunix.begin(), bmunix.end(), theunixtime);
+      //cout << "bm theunixit= " << *bmunixit << '\n';
+      if(*bmunixit==theunixtime)
+        {
+          bmentry=bmunixit-bmunix.begin();
+          bmfillflag=true;
+        }
+      //Proton Module check                                                                                            
+      auto pmunixit = find(pmunix.begin(), pmunix.end(), theunixtime);
+      //cout << "pm theunixit= " << *pmunixit << '\n';
+      if(*pmunixit==theunixtime)
+        {
+          pmentry=pmunixit-pmunix.begin();
+          pmfillflag=true;
+        }
+
+      //WAGASCI WallMRD check                                                                                          
+      for(int idif=0; idif<8; idif++)
+        {
+          auto wgunixit = find(wgunix[idif].begin(), wgunix[idif].end(), theunixtime);
+          //cout << "wgdif" << idif << " theunixit= " << *wgunixit << '\n';
+          if(*wgunixit==theunixtime)
+            {
+              wgentry[idif]=wgunixit-wgunix[idif].begin();
+              wgfillflag[idif]=true;
+            }
+        }
+      
+      bool fillflag = false;
+      
+      if(bmfillflag)
+	{	  
+	  bmchain->GetEntry(bmentry);
+	  
+	  for(int i=0; i<bmbasicrecon->mod.size(); i++)
+	    {
+	      posx=-1;
+	      posy=-1;
+	      posz=-1;
+
+	      mod = bmbasicrecon->mod.at(i);
+	      view = bmbasicrecon->view.at(i);
+	      pln = bmbasicrecon->pln.at(i);
+	      channel = bmbasicrecon->channel.at(i);
+	      
+	      fdimension->get_pos_bm_FC(mod, view, pln, channel, &dposx, &dposy, &dposz);
+	      if(view==0)
+		{
+		  posz = dposz+fdimension->offset[(int)view][0][(int)mod];
+		  posy = dposy+fdimension->offset[(int)view][1][(int)mod];
+		}
+
+	      if(view==1)
+		{
+		  posz = dposz+fdimension->offset[(int)view][0][(int)mod];
+		  posx = dposx+fdimension->offset[(int)view][1][(int)mod];
+		}
+	      evtcluster->posx.push_back(posx);
+	      evtcluster->posy.push_back(posy);
+	      evtcluster->posz.push_back(posz);
+	      evtcluster->dposx.push_back(dposx);
+	      evtcluster->dposy.push_back(dposy);
+	      evtcluster->dposz.push_back(dposz);
+	    }
+	  
+	  (evtcluster->mod).insert(evtcluster->mod.end(), 
+				   bmbasicrecon->mod.begin(), bmbasicrecon->mod.end());                 
+	  (evtcluster->view).insert(evtcluster->view.end(), 
+				    bmbasicrecon->view.begin(), bmbasicrecon->view.end());             
+	  (evtcluster->pln).insert(evtcluster->pln.end(), 
+				   bmbasicrecon->pln.begin(), bmbasicrecon->pln.end());                 
+	  (evtcluster->channel).insert(evtcluster->channel.end(), 
+				       bmbasicrecon->channel.begin(),bmbasicrecon->channel.end());
+	  (evtcluster->charge).insert(evtcluster->charge.end(), 
+				       bmbasicrecon->HG.begin(),bmbasicrecon->HG.end());
+	  (evtcluster->Htime).insert(evtcluster->Htime.end(), 
+				     bmbasicrecon->Htime.begin(), bmbasicrecon->Htime.end());         
+	  (evtcluster->bunch).insert(evtcluster->bunch.end(), 
+				     bmbasicrecon->bunch.begin(), bmbasicrecon->bunch.end());
+	}
+      
+      if(pmfillflag)
+	{	  
+	  pmchain->GetEntry(pmentry);
+
+	  for(int i=0; i<pmrecon->mod->size(); i++)
+	    {
+	      posx=-1;
+	      posy=-1;
+	      posz=-1;
+
+	      mod = pmrecon->mod->at(i);
+	      view = pmrecon->view->at(i);
+	      pln = pmrecon->pln->at(i);
+	      channel = pmrecon->channel->at(i);
+	      
+	      fdimension->get_pos_pm_FC(mod, view, pln, channel, &dposx, &dposy, &dposz);
+	      if(view==0)
+		{
+		  posz = dposz+fdimension->offset[(int)view][0][(int)mod];
+		  posy = dposy+fdimension->offset[(int)view][1][(int)mod];
+		}
+
+	      if(view==1)
+		{
+		  posz = dposz+fdimension->offset[(int)view][0][(int)mod];
+		  posx = dposx+fdimension->offset[(int)view][1][(int)mod];
+		}
+	      evtcluster->posx.push_back(posx);
+	      evtcluster->posy.push_back(posy);
+	      evtcluster->posz.push_back(posz);
+	      evtcluster->dposx.push_back(dposx);
+	      evtcluster->dposy.push_back(dposy);
+	      evtcluster->dposz.push_back(dposz);
+	    }
+
+	  (evtcluster->mod).insert(evtcluster->mod.end(), pmrecon->mod->begin(), pmrecon->mod->end());         
+	  (evtcluster->view).insert(evtcluster->view.end(), pmrecon->view->begin(), pmrecon->view->end());             
+	  (evtcluster->pln).insert(evtcluster->pln.end(), pmrecon->pln->begin(), pmrecon->pln->end());                 
+	  (evtcluster->channel).insert(evtcluster->channel.end(), pmrecon->channel->begin(),              
+				   pmrecon->channel->end());                                  
+	  (evtcluster->charge).insert(evtcluster->charge.end(), pmrecon->charge->begin(),              
+				       pmrecon->charge->end());                                  
+	  (evtcluster->Htime).insert(evtcluster->Htime.end(), pmrecon->time->begin(), pmrecon->time->end());         
+	  (evtcluster->bunch).insert(evtcluster->bunch.end(), pmrecon->bunch->begin(), pmrecon->bunch->end());
+	}
+      
+      for(int idif=0; idif<8; idif++)
+	{
+	  if(wgfillflag[idif])
+	    {
+	      wgchain[idif]->GetEntry(wgentry[idif]);	      
+
+	      for(int i=0; i<wgrecon[idif]->mod.size(); i++)
+		{
+		  posx=-1;
+		  posy=-1;
+		  posz=-1;
+		  
+		  mod = wgrecon[idif]->mod.at(i);
+		  view = wgrecon[idif]->view.at(i);
+		  pln = wgrecon[idif]->pln.at(i);
+		  channel = wgrecon[idif]->channel.at(i);
+		  
+		  fdimension->get_pos_wg_FC(view, pln, channel, &dposx, &dposy, &dposz);
+		  if(view%2==1 && (mod==1||mod==2))
+		    {
+		      posz = dposz+fdimension->offset[view%2][0][mod];
+		      posy = dposy+fdimension->offset[view%2][1][mod];
+		    }
+		  
+		  if(view%2==0 && (mod==1||mod==2))
+		    {
+		      posz = dposz+fdimension->offset[view%2][0][mod];
+		      posx = dposx+fdimension->offset[view%2][1][mod];
+		    }
+
+		  if(mod==3||mod==4)
+		    {
+		      posz = dposz+fdimension->offset[1][0][mod];
+		      posx = dposx+fdimension->offset[1][1][mod];
+		    }
+
+		  evtcluster->posx.push_back(posx);
+		  evtcluster->posy.push_back(posy);
+		  evtcluster->posz.push_back(posz);
+		  evtcluster->dposx.push_back(dposx);
+		  evtcluster->dposy.push_back(dposy);
+		  evtcluster->dposz.push_back(dposz);
+		}
+
+	      (evtcluster->mod).insert(evtcluster->mod.end(), wgrecon[idif]->mod.begin(), wgrecon[idif]->mod.end());         
+	      (evtcluster->view).insert(evtcluster->view.end(), wgrecon[idif]->view.begin(), wgrecon[idif]->view.end()); 
+	      (evtcluster->pln).insert(evtcluster->pln.end(), wgrecon[idif]->pln.begin(), wgrecon[idif]->pln.end());
+	      (evtcluster->channel).insert(evtcluster->channel.end(), 
+				       wgrecon[idif]->channel.begin(), wgrecon[idif]->channel.end()); 
+	      (evtcluster->charge).insert(evtcluster->charge.end(), 
+				       wgrecon[idif]->charge.begin(), wgrecon[idif]->charge.end()); 
+	      (evtcluster->Htime).insert(evtcluster->Htime.end(), wgrecon[idif]->time.begin(), wgrecon[idif]->time.end());
+	      (evtcluster->bunch).insert(evtcluster->bunch.end(), wgrecon[idif]->bunch.begin(), wgrecon[idif]->bunch.end());
+	    }
+	}
+      
+      if(bmfillflag || pmfillflag)
+	fillflag = true;
+      
+      for(int idif=0; idif<8; idif++)
+	if(wgfillflag[idif]) fillflag = true;
+      
+      if(fillflag)
+	{
+	  evtcluster->unixtime=theunixtime;
+	  evtcluster->pot=thepot;
+	  otree->Fill();
+	}
+
+      if(ientry%500==0)
+	cout << "analyzed events: " << ientry << '\n';
+    }//ientry
+}
+
+void EvtFormat::PrintTime(time_t unixtime)
+{
+  struct tm *ptm;
+  char buf[128];
+  ptm = localtime(&unixtime);
+  strftime(buf, sizeof(buf), "%Y/%m/%d %H:%M:%S ", ptm);
+  cout << buf;
+}
+
+void EvtFormat::DeleteChain()
+{
+  bmchain->Delete();
+  pmchain->Delete();
+
+  for(int idif=0; idif<8; idif++)
+    wgchain[idif]->Delete();
+  
+}
+

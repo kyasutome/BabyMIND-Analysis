@@ -119,8 +119,8 @@ TH2.h
 -
 BMConst.hpp
 ../include/EvtDisp/BMConst.hpp
-BMDisp.hpp
-../include/EvtDisp/BMDisp.hpp
+EVTCluster.hpp
+../include/EvtDisp/EVTCluster.hpp
 WGRecon.hpp
 ../include/EvtDisp/WGRecon.hpp
 
@@ -167,8 +167,8 @@ TH2.h
 -
 BMConst.hpp
 ../include/EvtDisp/BMConst.hpp
-BMDisp.hpp
-../include/EvtDisp/BMDisp.hpp
+EVTCluster.hpp
+../include/EvtDisp/EVTCluster.hpp
 Dimension.hpp
 ../include/EvtDisp/Dimension.hpp
 
@@ -212,6 +212,14 @@ vector
 BMConst.hpp
 ../lib/src/BMConst.hpp
 
+../lib/src/EVTCluster.hpp
+iostream
+-
+vector
+-
+BMConst.hpp
+../lib/src/BMConst.hpp
+
 ../lib/src/WGRecon.hpp
 iostream
 -
@@ -231,8 +239,8 @@ WGRecon.hpp
 /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/src/EvtDisp/WGRecon.hpp
 TApplication.h
 /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/src/EvtDisp/TApplication.h
-BMDisp.hpp
-/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/src/EvtDisp/BMDisp.hpp
+EVTCluster.hpp
+/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/src/EvtDisp/EVTCluster.hpp
 
 /Users/kenji/local/root/root-6.18.02/built/include/Buttons.h
 

@@ -117,8 +117,8 @@ TH2.h
 -
 BMConst.hpp
 ../include/EvtDisp/BMConst.hpp
-BMDisp.hpp
-../include/EvtDisp/BMDisp.hpp
+EVTCluster.hpp
+../include/EvtDisp/EVTCluster.hpp
 Dimension.hpp
 ../include/EvtDisp/Dimension.hpp
 
@@ -135,6 +135,8 @@ MakeHitDisp.cpp
 ../include/EvtDisp/MakeHitDisp.cpp
 MakeDetDisp.cpp
 ../include/EvtDisp/MakeDetDisp.cpp
+TText.h
+../include/EvtDisp/TText.h
 
 ../include/EvtDisp/MakeMonitor.hpp
 iostream
@@ -165,10 +167,12 @@ TColor.h
 -
 TH2.h
 -
+TText.h
+-
 BMConst.hpp
 ../include/EvtDisp/BMConst.hpp
-BMDisp.hpp
-../include/EvtDisp/BMDisp.hpp
+EVTCluster.hpp
+../include/EvtDisp/EVTCluster.hpp
 
 ../include/EvtDisp/WGChannelMap.cpp
 iostream
@@ -210,6 +214,14 @@ vector
 BMConst.hpp
 ../lib/src/BMConst.hpp
 
+../lib/src/EVTCluster.hpp
+iostream
+-
+vector
+-
+BMConst.hpp
+../lib/src/BMConst.hpp
+
 /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/src/EvtDisp/MakeDisp.cpp
 iostream
 -
@@ -217,8 +229,8 @@ stdio.h
 -
 TString.h
 -
-BMDisp.hpp
-/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/src/EvtDisp/BMDisp.hpp
+EVTCluster.hpp
+/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/src/EvtDisp/EVTCluster.hpp
 MakeMonitor.cpp
 /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/src/EvtDisp/MakeMonitor.cpp
 
@@ -993,6 +1005,18 @@ TTimer.h
 /Users/kenji/local/root/root-6.18.02/built/include/TTimer.h
 ThreadLocalStorage.h
 /Users/kenji/local/root/root-6.18.02/built/include/ThreadLocalStorage.h
+
+/Users/kenji/local/root/root-6.18.02/built/include/TText.h
+TAttText.h
+/Users/kenji/local/root/root-6.18.02/built/include/TAttText.h
+TNamed.h
+/Users/kenji/local/root/root-6.18.02/built/include/TNamed.h
+TAttBBox2D.h
+/Users/kenji/local/root/root-6.18.02/built/include/TAttBBox2D.h
+TPoint.h
+/Users/kenji/local/root/root-6.18.02/built/include/TPoint.h
+GuiTypes.h
+/Users/kenji/local/root/root-6.18.02/built/include/GuiTypes.h
 
 /Users/kenji/local/root/root-6.18.02/built/include/TTime.h
 Rtypes.h

@@ -16,7 +16,9 @@ private:
   ifstream fin[10];
   int nfile;
   double correction[19];
-  char file[300] = "./data/wagasci_mapping_table_2020_0130.txt";
+  //char file[300] = "./data/wagasci_mapping_table_2020_0130.txt";
+  //char file[300] = "./data/wagasci_mapping_table_2020_0204.txt";
+  char file[300] = "./data/wagasci_mapping_table_2020_0208.txt";
   const unsigned NDIFS      = 8;
   unsigned NCHIPS     = 20;
   const unsigned NCHANNELS  = 32;
@@ -37,6 +39,7 @@ public:
   double uwgpossz[24], dwgpossz[24];
   double uwgpostz[24], dwgpostz[24];
 
+  double offset[2][2][8];
   map_cell **mapping[8];
 
 private:

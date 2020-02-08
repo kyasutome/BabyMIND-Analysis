@@ -14,17 +14,17 @@ MakeHitDisp::MakeHitDisp()
 }
 
 MakeHitDisp::~MakeHitDisp()
-{
+{ 
 }
 
-Dimension *dimension = new Dimension();
+Dimension *fdimension = new Dimension();
 
 void MakeHitDisp::bmxhit(double pln, double ch, double r, double bunch)
 {
   double x, y, z;
   int offsety = 0;
   int offsetz = -15;
-  dimension->get_pos_bm_FC(5, 1, pln-1, ch, &x, &y, &z);
+  fdimension->get_pos_bm_FC(5, 1, pln-1, ch, &x, &y, &z);
   TArc *arc = new TArc(z+offsetz,x+offsety,r);
   ColorScale(&color, (int)bunch);
   arc->SetFillColor(color);
@@ -37,7 +37,7 @@ void MakeHitDisp::bmyhit(double pln, double ch, double r, double bunch)
   double x, y, z;
   int offsety = 0;
   int offsetz = -20;
-  dimension->get_pos_bm_FC(5, 0, pln-1, ch, &x, &y, &z);
+  fdimension->get_pos_bm_FC(5, 0, pln-1, ch, &x, &y, &z);
   TArc *arc = new TArc(z+offsetz,y+offsety,r);
   ColorScale(&color, (int)bunch);
   arc->SetFillColor(color);
@@ -50,7 +50,7 @@ void MakeHitDisp::yasuxhit(double view, double pln, double ch, double r, double 
   double x, y, z;
   int offsety = 0;
   int offsetz = 0;
-  dimension->get_pos_bm_FC(6, view, pln, ch, &x, &y, &z);
+  fdimension->get_pos_bm_FC(6, view, pln, ch, &x, &y, &z);
   TArc *arc = new TArc(z+offsetz,x+offsety,r);
   ColorScale(&color, (int)bunch);
   arc->SetFillColor(color);
@@ -63,7 +63,7 @@ void MakeHitDisp::yasuyhit(double view, double pln, double ch, double r, double 
   double x, y, z;
   int offsety = 0;
   int offsetz = 0;
-  dimension->get_pos_bm_FC(6, view, pln, ch, &x, &y, &z);
+  fdimension->get_pos_bm_FC(6, view, pln, ch, &x, &y, &z);
   TArc *arc = new TArc(z+offsetz,y+offsety,r);
   ColorScale(&color, (int)bunch);
   arc->SetFillColor(color);
@@ -73,8 +73,6 @@ void MakeHitDisp::yasuyhit(double view, double pln, double ch, double r, double 
 
 void MakeHitDisp::pmxhit(double pln, double ch, double r, double bunch){
   double X,Y,R;
-  double offsetx = -2000;
-  double offsety = -1500;
 
   if(pln==0)X=5;
   else X=46*pln+9;
@@ -87,8 +85,8 @@ void MakeHitDisp::pmxhit(double pln, double ch, double r, double bunch){
   if(r<2)R=0;
   else R=sqrt(r-2)*3;
 
-  X = X+offsetx;
-  Y = Y+offsety;
+  X = X+fdimension->offset[1][0][0];
+  Y = Y+fdimension->offset[1][1][0];
 
   TArc *arc=new TArc(X,Y,R);
   ColorScale(&color, (int)bunch);
@@ -100,8 +98,6 @@ void MakeHitDisp::pmxhit(double pln, double ch, double r, double bunch){
 
 void MakeHitDisp::pmyhit(double pln, double ch, double r, double bunch){
   double X,Y,R;
-  double offsetx = -2000;
-  double offsety = -550;
 
   if(pln==0)X=28;
   else X=46*pln+32;
@@ -114,8 +110,8 @@ void MakeHitDisp::pmyhit(double pln, double ch, double r, double bunch){
   if(r<2)R=0;
   else R=sqrt(r-2)*3;
 
-  X = X+offsetx;
-  Y = Y+offsety;
+  X = X+fdimension->offset[0][0][0];
+  Y = Y+fdimension->offset[0][1][0];
 
   TArc *arc=new TArc(X,Y,R);
   ColorScale(&color, (int)bunch);
@@ -127,21 +123,14 @@ void MakeHitDisp::pmyhit(double pln, double ch, double r, double bunch){
 void MakeHitDisp::pmvhit(double pln, double ch, double view, double r, double bunch)
 {
   double X,Y,R;
-  double offsetx = -2000;
-  double offsety;
-  if(view==0)
-      offsety= -550;
-
-  if(view==1)
-      offsety= -1500;
 
   if(pln==0)Y=-55;
   else Y=1255;
   X=5+9.5+ch*50;
   if(r<2)R=0;
   else R=sqrt(r-2)*3;
-  X = X+offsetx;
-  Y = Y+offsety;
+  X = X+fdimension->offset[(int)view][0][0];
+  Y = Y+fdimension->offset[(int)view][1][0];
   TArc *arc=new TArc(X,Y,R);
   ColorScale(&color, (int)bunch);
   arc->SetFillColor(color);
@@ -152,12 +141,10 @@ void MakeHitDisp::pmvhit(double pln, double ch, double view, double r, double bu
 void MakeHitDisp::wgyhit(double dif, double chip, double chan, double r, double bunch)
 {
   double x, y, z;
-  int modid = dif/2-2;
-  double offsetx[2][2]={{-2300,-2300},{-350,-350}};//{{mod0view0, mod0view1}, {mod1view0, mod1view1}}
-  double offsety[2][2]={{-100,-900},{-100,-600}};//{{mod0view0, mod0view1}, {mod1view0, mod1view1}}
-  dimension->get_pos_wg_FC(dif, chip, chan, &x, &y, &z);
-  cout << dif << " " << chip << " " << chan << " " << x << " " << y << " " << z << '\n';
-  TArc *arc = new TArc(z+offsetx[modid][0],y+offsety[modid][0],r);
+  int modid = dif/2-1;
+  fdimension->get_pos_wg_FC(dif, chip, chan, &x, &y, &z);
+  //cout << dif << " " << chip << " " << chan << " " << x << " " << y << " " << z << '\n';
+  TArc *arc = new TArc(z+fdimension->offset[0][0][modid],y+fdimension->offset[0][1][modid],r);
   ColorScale(&color, (int)bunch);
   arc->SetFillColor(color);
   arc->SetLineColor(2);
@@ -167,12 +154,10 @@ void MakeHitDisp::wgyhit(double dif, double chip, double chan, double r, double 
 void MakeHitDisp::wgxhit(double dif, double chip, double chan, double r, double bunch)
 {
   double x, y, z;
-  int modid = dif/2-2;
-  double offsetx[2][2]={{-2300,-2300},{-350,-350}};//{{mod0view0, mod0view1}, {mod1view0, mod1view1}}
-  double offsety[2][2]={{-100,-900},{-100,-600}};//{{mod0view0, mod0view1}, {mod1view0, mod1view1}}
-  dimension->get_pos_wg_FC(dif, chip, chan, &x, &y, &z);
+  int modid = dif/2-1;
+  fdimension->get_pos_wg_FC(dif, chip, chan, &x, &y, &z);
   cout << dif << " " << chip << " " << chan << " " << x << " " << y << " " << z << '\n';
-  TArc *arc = new TArc(z+offsetx[modid][1],x+offsety[modid][1],r);
+  TArc *arc = new TArc(z+fdimension->offset[1][0][modid],x+fdimension->offset[1][1][modid],r);
   ColorScale(&color, (int)bunch);
   arc->SetFillColor(color);
   arc->SetLineColor(2);
@@ -182,12 +167,11 @@ void MakeHitDisp::wgxhit(double dif, double chip, double chan, double r, double 
 void MakeHitDisp::wmhit(double dif, double chip, double chan, double r, double bunch)
 {
   double x, y, z;
-  int modid = dif/2;
-  double offsetx[2]={-2000,-1700};//{{mod0view0, mod0view1}, {mod1view0, mod1view1}}
-  double offsety[2]={-2200,+700};//{{mod0view0, mod0view1}, {mod1view0, mod1view1}}
-  dimension->get_pos_wm_FC(dif, chip, chan, &x, &y, &z);
+  int modid = dif/2+3;
+  fdimension->get_pos_wm_FC(dif, chip, chan, &x, &y, &z);
   cout << dif << " " << chip << " " << chan << " " << x << " " << y << " " << z << '\n';
-  TArc *arc = new TArc(z+offsetx[modid],x+offsety[modid], r);
+  TArc *arc = new TArc(z+fdimension->offset[1][0][modid],x+fdimension->offset[1][1][modid],r);
+
   ColorScale(&color, (int)bunch);
   arc->SetFillColor(color);
   arc->SetLineColor(2);
@@ -195,17 +179,17 @@ void MakeHitDisp::wmhit(double dif, double chip, double chan, double r, double b
 }
 
 
-void MakeHitDisp::DrawBMHit(BMDisp* bmdisp, int VIEW)
+void MakeHitDisp::DrawBMHit(EVTCluster* evtcluster, int VIEW)
 {
-  nhit = bmdisp->pln.size();  
+  nhit = evtcluster->pln.size();  
   cout << "hitsize= " << nhit << '\n';
   for(int ihit=0; ihit<nhit; ihit++)
     {
-      mod = bmdisp->mod.at(ihit);
-      view = bmdisp->view.at(ihit);
-      pln = bmdisp->pln.at(ihit);
-      ch = bmdisp->channel.at(ihit);
-      bunch = bmdisp->bunch.at(ihit);
+      mod = evtcluster->mod.at(ihit);
+      view = evtcluster->view.at(ihit);
+      pln = evtcluster->pln.at(ihit);
+      ch = evtcluster->channel.at(ihit);
+      bunch = evtcluster->bunch.at(ihit);
 
       cout << "mod:" << mod << " view:" << view << " pln:" << pln << " ch:" << ch << " bunch:" << bunch << '\n';
        
@@ -239,17 +223,17 @@ void MakeHitDisp::DrawBMHit(BMDisp* bmdisp, int VIEW)
     }//ihit loop
 }
 
-void MakeHitDisp::DrawPMHit(BMDisp* bmdisp, int VIEW)
+void MakeHitDisp::DrawPMHit(EVTCluster* evtcluster, int VIEW)
 {
-  nhit = bmdisp->pln.size();
+  nhit = evtcluster->pln.size();
   
   for(int ihit=0; ihit<nhit; ihit++)
     {
-      mod = bmdisp->mod.at(ihit);
-      view = bmdisp->view.at(ihit);
-      pln = bmdisp->pln.at(ihit);
-      ch = bmdisp->channel.at(ihit);
-      bunch = bmdisp->bunch.at(ihit);
+      mod = evtcluster->mod.at(ihit);
+      view = evtcluster->view.at(ihit);
+      pln = evtcluster->pln.at(ihit);
+      ch = evtcluster->channel.at(ihit);
+      bunch = evtcluster->bunch.at(ihit);
 
       cout << "mod:" << mod << " view:" << view << " pln:" << pln << " ch:" << ch << " bunch:" << bunch << '\n';
       
@@ -264,16 +248,16 @@ void MakeHitDisp::DrawPMHit(BMDisp* bmdisp, int VIEW)
     }//ihit loop
 }
 
-void MakeHitDisp::DrawWGHit(BMDisp* bmdisp, int VIEW, int MOD)
+void MakeHitDisp::DrawWGHit(EVTCluster* evtcluster, int VIEW, int MOD)
 {
-  nhit = bmdisp->pln.size();
+  nhit = evtcluster->pln.size();
   for(int ihit=0; ihit<nhit; ihit++)
     {
-      mod = bmdisp->mod.at(ihit);
-      dif = bmdisp->view.at(ihit);
-      chip = bmdisp->pln.at(ihit);
-      chan = bmdisp->channel.at(ihit);
-      bunch = bmdisp->bunch.at(ihit);
+      mod = evtcluster->mod.at(ihit);
+      dif = evtcluster->view.at(ihit);
+      chip = evtcluster->pln.at(ihit);
+      chan = evtcluster->channel.at(ihit);
+      bunch = evtcluster->bunch.at(ihit);
       
       if(mod==MOD && mod==1)
 	{
@@ -304,20 +288,21 @@ void MakeHitDisp::DrawWGHit(BMDisp* bmdisp, int VIEW, int MOD)
     }//ihit loop
 }
 
-void MakeHitDisp::DrawWMHit(BMDisp* bmdisp, int MOD)
+void MakeHitDisp::DrawWMHit(EVTCluster* evtcluster, int MOD)
 {
-  nhit = bmdisp->pln.size();
+  nhit = evtcluster->pln.size();
   for(int ihit=0; ihit<nhit; ihit++)
     {
-      mod = bmdisp->mod.at(ihit);
-      dif = bmdisp->view.at(ihit);
-      chip = bmdisp->pln.at(ihit);
-      chan = bmdisp->channel.at(ihit);
-      bunch = bmdisp->bunch.at(ihit);
+      mod = evtcluster->mod.at(ihit);
+      dif = evtcluster->view.at(ihit);
+      chip = evtcluster->pln.at(ihit);
+      chan = evtcluster->channel.at(ihit);
+      bunch = evtcluster->bunch.at(ihit);
       
       if(mod==MOD && mod==3)
 	{
 	  if(dif==0 || dif==1)
+	  //if(dif==1)
 	    wmhit(dif, chip, chan, r, bunch);
 
 	  cout << "mod:" << mod << " dif:" << dif << " chip:" << chip << " chan:" 
@@ -328,6 +313,7 @@ void MakeHitDisp::DrawWMHit(BMDisp* bmdisp, int MOD)
       if(mod==MOD && mod==4)
 	{
 	  if(dif==2 || dif==3)
+	  //if(dif==3)
 	    wmhit(dif, chip, chan, r, bunch);
 
 	  cout << "mod:" << mod << " dif:" << dif << " chip:" << chip << " chan:" 

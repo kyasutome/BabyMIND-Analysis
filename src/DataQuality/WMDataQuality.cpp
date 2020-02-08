@@ -229,7 +229,8 @@ int main( int argc, char **argv )
   TTree *otree = new TTree("tree","tree");
   otree->Branch("WMDQData","WMDQData",&wmdqdata,32000,2);
 
-  int DIF=1;
+  int DIF=0;
+  int ID=0;
 
   //TEST CODES
   wmdqcheck->ReadTree(filepath, DIF);
@@ -246,8 +247,6 @@ int main( int argc, char **argv )
   otree->Write();
   fout->Close();
 
-  //int CHIP=2;
-  int ID = 0;
 
   c1->cd();  
   pad11->cd();

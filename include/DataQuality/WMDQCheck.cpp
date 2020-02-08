@@ -149,7 +149,7 @@ bool WMDQCheck::SignalCreation(int ientry, int dif, WMDQData* wmdqdata)
 bool WMDQCheck::ModeCheck(int spill_mode)
 {
   bool modechecker = false;
-  if(spill_mode==0)
+  if(spill_mode==1)
     modechecker = true;
 
   return modechecker;

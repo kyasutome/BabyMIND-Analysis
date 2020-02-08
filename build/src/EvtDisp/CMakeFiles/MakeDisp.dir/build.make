@@ -81,7 +81,7 @@ MakeDisp_EXTERNAL_OBJECTS =
 ../bin/MakeDisp: src/EvtDisp/CMakeFiles/MakeDisp.dir/build.make
 ../bin/MakeDisp: ../lib/library/BMBasicRecon.so
 ../bin/MakeDisp: ../lib/library/BMBeaminfo.so
-../bin/MakeDisp: ../lib/library/BMDisp.so
+../bin/MakeDisp: ../lib/library/EVTCluster.so
 ../bin/MakeDisp: ../lib/library/PMRecon.so
 ../bin/MakeDisp: src/EvtDisp/CMakeFiles/MakeDisp.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../../bin/MakeDisp"

@@ -42,7 +42,7 @@ void DataSanity::ReadBMfile()
   cout << "Baby MIND entries = " << bmchain->GetEntries() <<'\n';
 }
 
-void DataSanity::SetHistLabel(TH2D* h, const char* title, char* ytitle)
+void DataSanity::SetHistLabel(TH2F* h, const char* title, char* ytitle)
 {
   h->GetXaxis()->SetLabelSize(0.04);
   h->GetYaxis()->SetLabelSize(0.04);

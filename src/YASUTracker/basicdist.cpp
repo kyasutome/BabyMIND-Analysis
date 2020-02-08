@@ -4,7 +4,6 @@
 
 //MyInc
 #include "DataReader.cpp"
-#include "EvtFormat.cpp"
 #include "Calibration.cpp"
 #include "Efficiency.cpp"
 
@@ -15,6 +14,7 @@
 
 #include <TApplication.h>
 #include <TCanvas.h>
+#include <TChain.h>
 
 using namespace std;
 
@@ -31,7 +31,6 @@ int main( int argc, char **argv )
   //Set Classes
   BMBasicRecon* bmbasicrecon = new BMBasicRecon();
   BMBeaminfo* bmbeaminfo = new BMBeaminfo();
-  EvtFormat* evtformat = new EvtFormat();
   Calibration* calibration = new Calibration();
   Efficiency* efficiency = new Efficiency();
   

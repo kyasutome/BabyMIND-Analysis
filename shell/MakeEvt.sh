@@ -1,10 +1,10 @@
 #!/bin/sh
 
-if [ $# -ne 7 ] ; then
+if [ $# -ne 8 ] ; then
   echo ""
-  echo "  !!! ./MakeEvt.sh [date] [month] [run] [subrun] [pmrun] [pmstartsub] [pmendsub] !!!"
+  echo "  !!! ./MakeEvt.sh [date] [month] [run] [subrun] [pmrun] [pmstartsub] [pmendsub] [wgrun] !!!"
   echo "example)"
-  echo "./MakeEvt.sh 5 Dec 2 0 32321 3 5"
+  echo "./MakeEvt.sh 5 Dec 2 0 32321 3 5 92"
   exit 1
 fi
 
@@ -15,6 +15,7 @@ subrun=$4
 pmrun=$5
 pmssub=$6
 pmesub=$7
+wgrun=$8
 
 anadir=${PWD}
 datadir=$anadir/process/6-YASU/
@@ -30,4 +31,4 @@ echo "Filename="$filename
 echo "Analyze the file..."
 
 cd $anadir
-./bin/MakeEvt $filename $date $month $run $subrun $pmrun $pmssub $pmesub
+./bin/MakeEvt $filename $date $month $run $subrun $pmrun $pmssub $pmesub $wgrun

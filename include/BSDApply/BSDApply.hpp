@@ -32,6 +32,8 @@ private:
   int dayspill = 10000;
   int thebeamspill;
   int thebmspill;
+  int thewgspill;
+  int thepmspill;
 
 
 public:
@@ -43,8 +45,15 @@ public:
 
   vector<double> bmspill;
   vector<double> bmgroup[100][2];
+  vector<double> wgspill;
+  vector<double> wggroup[100][2];
+  vector<double> pmspill;
+  vector<double> pmgroup[100][2];
+
+  vector<int> baseunixtime;
   vector<double> beamgroup[3];
   vector<double> matchingspill;
+  
 
   //function
 public:
@@ -53,14 +62,15 @@ public:
 
   void ReadBSDfile();
   void GetMonDateHour(time_t unixtime, int* Mon, int* Date, int* Hour);
-  void FindFirstSpill(int *bmfirstspill, int bmmon, int bmdate, int bmhour);
+  void FindFirstSpill(int *detfirstspill, int detmon, int detdate, int dethour, int mod);
   void MakeBeamGroup(int isub);
-  void SpillMatch(int isub);
-  void FillBSD(TTree* tree, TTree* otree, BMBSD* bmbsd);
+  void SpillMatch(int isub, int mod);
+  void FillBSD(TTree* tree, TTree* otree, BMBSD* bmbsd, int mod);
   void KillAll();
 
-  bool CheckBMTime(time_t unixtime, int mon, int date, int hour);
-  bool CheckBMSpill(int bmspill, int beamspill);
+  bool CheckDetTime(time_t unixtime, int mon, int date, int hour);
+  bool CheckDetSpill(int detspill, int beamspill);
+  bool CheckMainteDay(int Mon, int Date, int *detfirstspill, int mod);
 
   
   

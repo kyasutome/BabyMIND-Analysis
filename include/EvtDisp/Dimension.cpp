@@ -11,6 +11,23 @@ using namespace std;
 inline Dimension::Dimension()
 {
 
+  offset[0][0][0]=-2200, offset[0][1][0]=-550;
+  offset[1][0][0]=-2200, offset[1][1][0]=-1400;
+  offset[0][0][1]=-2500, offset[0][1][1]=+50;
+  offset[1][0][1]=-2500, offset[1][1][1]=-800;
+  offset[0][0][2]=-350, offset[0][1][2]=+50;
+  offset[1][0][2]=-350, offset[1][1][2]=-600;
+  offset[0][0][6]=-2800, offset[0][1][6]=-500;
+  offset[1][0][6]=-2750, offset[1][1][6]=-1350;
+  offset[0][0][7]=-640, offset[0][1][7]=-500;
+  offset[1][0][7]=-640, offset[1][1][7]=-1150;
+  offset[0][0][3]=-1, offset[0][1][3]=-1;
+  offset[1][0][3]=-2000, offset[1][1][3]=-2200;
+  offset[0][0][4]=-1, offset[0][1][4]=-1;
+  offset[1][0][4]=-1700, offset[1][1][4]=+500;
+  offset[0][0][5]=0, offset[0][1][5]=0;
+  offset[1][0][5]=0, offset[1][1][5]=0;
+
   double temp[5];
   fin[0].open("./data/v1_horizontal_from_center.txt");
   fin[1].open("./data/v1_vertical_from_center.txt");
@@ -92,6 +109,7 @@ inline Dimension::Dimension()
           fin[8] >> uwgposx_pln[count_pln] >> dwgposx_pln[count_pln];
           count_pln++;
         }
+      sciposz[0] = -20;
     }
 
   for(int i=0; i<24; i++)
@@ -145,17 +163,18 @@ bool Dimension::get_pos_bm_FC(int mod, int view, int pln, double ch, double *pos
       
       if(view==1)
 	{
-	  int minch = ch;
-	  if(fabs(minch-ch)<epsilon)
-	    {
-	      *posz = sciposz[pln] + (minch%2)*30 +5;
-	      *posx = sciposx[minch];
-	    }
+	  int minch = (int)ch/2;
+
+	  *posz = sciposz[pln] + (minch%2)*30 +5;
+	  *posx = sciposx[minch];
+	    
+	  /*
 	  if(fabs(minch-ch)>=epsilon)
 	    {
 	      *posz = sciposz[pln] + 20;
 	      *posx = (sciposx[minch] + sciposx[minch+1])/2;
 	    }
+	  */
 	}
     }
 
@@ -224,7 +243,7 @@ bool Dimension::get_pos_wg_FC(int dif, int chip, int chan, double *posx, double 
 
 bool Dimension::get_wgdet_pos(int ud, int view, int zid, int xyid, double *posxy, double *posz)
 {
-  if(ud==0)
+  if(ud==1)
     {
       if(view==0)
         {
@@ -254,7 +273,7 @@ bool Dimension::get_wgdet_pos(int ud, int view, int zid, int xyid, double *posxy
         }
     }
 
-  if(ud==1)
+  if(ud==2)
     {
 
       if(view==0)

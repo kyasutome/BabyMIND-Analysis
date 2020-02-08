@@ -22,7 +22,7 @@ MakeEachMonitor::~MakeEachMonitor()
 MakeHitDisp* makehitdisp = new MakeHitDisp();
 MakeDetDisp* makedetdisp = new MakeDetDisp();
 
-void MakeEachMonitor::Display(BMDisp* bmdisp)
+void MakeEachMonitor::Display(EVTCluster* evtcluster)
 {
   if(firstdraw)
     {
@@ -53,8 +53,8 @@ void MakeEachMonitor::Display(BMDisp* bmdisp)
   v->Draw();
   makedetdisp->DrawWallMRD(0);
   makedetdisp->DrawWallMRD(1);
-  makehitdisp->DrawWMHit(bmdisp, 3);
-  makehitdisp->DrawWMHit(bmdisp, 4);
+  makehitdisp->DrawWMHit(evtcluster, 3);
+  makehitdisp->DrawWMHit(evtcluster, 4);
   monitor2->Update();
 #endif
 
@@ -63,23 +63,23 @@ void MakeEachMonitor::Display(BMDisp* bmdisp)
   h->Draw();
   makedetdisp->DrawWAGASCI(0,0);
   makedetdisp->DrawWAGASCI(1,0);
-  makehitdisp->DrawWGHit(bmdisp, 0, 1);
-  makehitdisp->DrawWGHit(bmdisp, 0, 2);
+  makehitdisp->DrawWGHit(evtcluster, 0, 1);
+  makehitdisp->DrawWGHit(evtcluster, 0, 2);
   monitor->Update();
 
   monitor2->cd();
   v->Draw();
   makedetdisp->DrawWAGASCI(0,1);
   makedetdisp->DrawWAGASCI(1,1);
-  makehitdisp->DrawWGHit(bmdisp, 1, 1);
-  makehitdisp->DrawWGHit(bmdisp, 1, 2);
+  makehitdisp->DrawWGHit(evtcluster, 1, 1);
+  makehitdisp->DrawWGHit(evtcluster, 1, 2);
   monitor2->Update();
 #endif
 
   //makedetdisp->DrawBabyMIND(0);
   //makedetdisp->DrawProtonModule(0);
-  //makehitdisp->DrawBMHit(bmdisp, 0);
-  //makehitdisp->DrawPMHit(bmdisp, 0);
+  //makehitdisp->DrawBMHit(evtcluster, 0);
+  //makehitdisp->DrawPMHit(evtcluster, 0);
 
   //makedetdisp->DrawBabyMIND(1);
   //makedetdisp->DrawProtonModule(1);
@@ -87,12 +87,12 @@ void MakeEachMonitor::Display(BMDisp* bmdisp)
   //makedetdisp->DrawWAGASCI(1,1);
   //makedetdisp->DrawWallMRD(0);
   //makedetdisp->DrawWallMRD(1);
-  //makehitdisp->DrawBMHit(bmdisp, 1);
-  //makehitdisp->DrawPMHit(bmdisp, 1);
-  //makehitdisp->DrawWGHit(bmdisp, 1);
-  //makehitdisp->DrawWGHit(bmdisp, 2);
-  //makehitdisp->DrawWMHit(bmdisp, 3);
-  //makehitdisp->DrawWMHit(bmdisp, 4);
+  //makehitdisp->DrawBMHit(evtcluster, 1);
+  //makehitdisp->DrawPMHit(evtcluster, 1);
+  //makehitdisp->DrawWGHit(evtcluster, 1);
+  //makehitdisp->DrawWGHit(evtcluster, 2);
+  //makehitdisp->DrawWMHit(evtcluster, 3);
+  //makehitdisp->DrawWMHit(evtcluster, 4);
 
 #ifdef debug
   double r = 10;

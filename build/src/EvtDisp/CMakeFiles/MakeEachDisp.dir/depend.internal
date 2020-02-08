@@ -14,6 +14,7 @@ src/EvtDisp/CMakeFiles/MakeEachDisp.dir/MakeEachDisp.cpp.o
  ../include/EvtDisp/WGChannelMap.hpp
  ../lib/src/BMConst.hpp
  ../lib/src/BMDisp.hpp
+ ../lib/src/EVTCluster.hpp
  ../lib/src/WGRecon.hpp
  /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/src/EvtDisp/MakeEachDisp.cpp
  /Users/kenji/local/root/root-6.18.02/built/include/Buttons.h

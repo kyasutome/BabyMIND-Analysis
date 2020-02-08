@@ -6,6 +6,8 @@
 #include "MakeHitDisp.cpp" // should include HitDisp before DetDisp
 #include "MakeDetDisp.cpp"
 
+#include "TText.h"
+
 using namespace std;
 //#define debug
 
@@ -20,23 +22,45 @@ MakeMonitor::~MakeMonitor()
 MakeHitDisp* makehitdisp = new MakeHitDisp();
 MakeDetDisp* makedetdisp = new MakeDetDisp();
 
-void MakeMonitor::Display(BMDisp* bmdisp)
+void MakeMonitor::Display(EVTCluster* evtcluster)
 {
   if(firstdraw)
     {
       monitor = new TCanvas("monitor", "monitor", 2000, 1600);
-      monitor2 = new TCanvas("monitor2", "monitor2", 2000, 1600);
+      pad_side = new TPad("pad_side","This is Side View",0.03,0.23,0.51,0.97);
+      pad_top = new TPad("pad_top","This is Top View",0.53,0.23,0.97,0.97);
+      pad_bottom = new TPad("pad_bottom","This is Text",0.03,0.03,0.97,0.23);
+
+      pad_side->SetFillColor(11);
+      pad_side->Draw();
+      pad_top->SetFillColor(11);
+      pad_top->Draw();
+      pad_bottom->SetFillColor(0);
+      pad_bottom->Draw();
       firstdraw=false;
     }
 
-  h = new TH2F("","Side View", 6700, -2500, 4200, 2300, -1150, 1150);
+  string dayofweek[] = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
+  spillnumber = evtcluster->spillnum;
+  unixtime = evtcluster->unixtime;
+  timer = localtime(&unixtime);
+  year = timer->tm_year+1900;
+  mon = timer->tm_mon+1;
+  day = timer->tm_mday;
+  hour = timer->tm_hour;
+  min = timer->tm_min;
+  sec = timer->tm_sec;
+  TIME.Form("%04d/%02d/%02d %s %02d:%02d:%02d", year, mon, day, dayofweek[timer->tm_wday].c_str(), hour, min, sec);
+  SPILL.Form("WAGASCI spill number%5d", spillnumber);
+
+  h = new TH2F("","Side View", 7200, -3000, 4200, 7200, -3000, 4200);
   h->GetXaxis()->SetLabelSize(0);
   h->GetYaxis()->SetLabelSize(0);
   h->SetStats(0);
   h->GetXaxis()->SetNdivisions(0);
   h->GetYaxis()->SetNdivisions(0);
 
-  v = new TH2F("","Top View", 7200, -3000, 4200, 5000, -2500, 2500 );
+  v = new TH2F("","Top View", 7200, -3000, 4200, 7200, -3000, 4200 );
   v->GetXaxis()->SetLabelSize(0);
   v->GetYaxis()->SetLabelSize(0);
   v->SetStats(0);
@@ -44,32 +68,43 @@ void MakeMonitor::Display(BMDisp* bmdisp)
   v->GetYaxis()->SetNdivisions(0);
 
   monitor->cd();
+  pad_side->cd();
   h->Draw();
   makedetdisp->DrawBabyMIND(0);
   makedetdisp->DrawProtonModule(0);
-  makedetdisp->DrawWAGASCI(0,0);
   makedetdisp->DrawWAGASCI(1,0);
-  makehitdisp->DrawBMHit(bmdisp, 0);
-  makehitdisp->DrawPMHit(bmdisp, 0);
-  //makehitdisp->DrawWGHit(bmdisp, 1);
-  //makehitdisp->DrawWGHit(bmdisp, 2);
-  monitor->Update();
+  makedetdisp->DrawWAGASCI(2,0);
+  makehitdisp->DrawBMHit(evtcluster, 0);
+  makehitdisp->DrawPMHit(evtcluster, 0);
+  makehitdisp->DrawWGHit(evtcluster, 0, 1);
+  makehitdisp->DrawWGHit(evtcluster, 0, 2);
 
-  monitor2->cd();
+  pad_top->cd();
   v->Draw();
   makedetdisp->DrawBabyMIND(1);
   makedetdisp->DrawProtonModule(1);
-  makedetdisp->DrawWAGASCI(0,1);
   makedetdisp->DrawWAGASCI(1,1);
-  makedetdisp->DrawWallMRD(0);
-  makedetdisp->DrawWallMRD(1);
-  makehitdisp->DrawBMHit(bmdisp, 1);
-  makehitdisp->DrawPMHit(bmdisp, 1);
-  //makehitdisp->DrawWGHit(bmdisp, 1);
-  //makehitdisp->DrawWGHit(bmdisp, 2);
-  //makehitdiso->DrawWMHit(bmdisp, 3);
-  //makehitdiso->DrawWMHit(bmdisp, 4);
-  monitor2->Update();
+  makedetdisp->DrawWAGASCI(2,1);
+  makedetdisp->DrawWallMRD(3);
+  makedetdisp->DrawWallMRD(4);
+  makehitdisp->DrawBMHit(evtcluster, 1);
+  makehitdisp->DrawPMHit(evtcluster, 1);
+  makehitdisp->DrawWGHit(evtcluster, 1, 1);
+  makehitdisp->DrawWGHit(evtcluster, 1, 2);
+  makehitdisp->DrawWMHit(evtcluster, 3);
+  makehitdisp->DrawWMHit(evtcluster, 4);
+
+  cout << TIME.Data() << '\n';
+
+  pad_bottom->cd();
+  timeinfo = new TText(0.3, 0.6, TIME);
+  timeinfo->SetTextSize(0.3);
+  spillinfo = new TText(0.27, 0.2, SPILL);
+  spillinfo->SetTextSize(0.3);
+
+  timeinfo->Draw("");
+  spillinfo->Draw("");
+  monitor->Update();
 
 #ifdef debug
   double r = 10;

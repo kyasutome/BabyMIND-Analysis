@@ -64,7 +64,7 @@ void PickSignal::YASUSignalCreation(int ientry, BMdata* bmbranch[NUMBEROFFEB], B
 void PickSignal::SignalCreation(int ientry, BMdata* bmbranch[NUMBEROFFEB], BMBasicRecon* bmbasicrecon, DataReader* dreader, 
 				vector<double> commonspill) 
 {
-  for(int imod=1; imod<NUMBEROFMODULE; imod++)
+  for(int imod=1; imod<NUMBEROFMODULE+1; imod++)
   //for(int imod=1; imod<5; imod++)
     {
       for(int ifeb=0; ifeb<3; ifeb++)
@@ -235,7 +235,7 @@ void PickSignal::FillBasicReconClass(int imod, bool firstfill, int CoinsLeft, in
     }
   //for vertical
   int verch = (int)(bmbranch_t->hitsChannel->at(CoinsTop))%32;
-  verch = verch/2;
+  //verch = verch/2;
   beambunch = Findbunch(bmbranch_t->hitTimefromSpill->at(CoinsTop));
   if(imod==2 || imod==11 || imod==13 || imod==17 || imod==18)
     {
@@ -257,7 +257,7 @@ void PickSignal::FillBasicReconClass(int imod, bool firstfill, int CoinsLeft, in
       bmbasicrecon->mod.push_back(5); // PM:0, WG1:1, WG2:2, WMS:3, WMN:4, BM:5, BM-Y:6
       bmbasicrecon->view.push_back(1);
       bmbasicrecon->pln.push_back(imod);
-      bmbasicrecon->channel.push_back(15-verch);
+      bmbasicrecon->channel.push_back(31-verch);
       bmbasicrecon->HG.push_back(bmbranch_t->hitAmpl->at(CoinsTop));
       bmbasicrecon->LG.push_back(bmbranch_t->hitLGAmpl->at(CoinsTop));
       bmbasicrecon->Ltime.push_back(bmbranch_t->hitLeadTime->at(CoinsTop));

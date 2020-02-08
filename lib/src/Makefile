@@ -48,6 +48,10 @@ WMDQData:
 	rootcint -f $(@)Dict.cc -c $(@).hpp $(@)LinkDef.hh
 	$(CXX) `root-config --cflags --libs` -shared $(@)Dict.cc $(@).cpp -o ${MAKEDIR}/$(@).so
 
+EVTCluster:
+	rootcint -f $(@)Dict.cc -c $(@).hpp $(@)LinkDef.hh
+	$(CXX) `root-config --cflags --libs` -shared $(@)Dict.cc $(@).cpp -o ${MAKEDIR}/$(@).so
+
 move:
 	mv ./*pcm ${MAKEDIR}/
 

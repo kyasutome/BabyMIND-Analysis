@@ -10,20 +10,31 @@ using namespace std;
 BSDApply::BSDApply()
 {
   //bsddir.Form("./bsd/t2krun10"); // BSD
-  bsddir.Form("./qsd/t2krun10"); // QSD
+  bsddir.Form("../Beamdata/qsd/t2krun10"); // QSD
   bsdchain = new TChain("bsd", "bsd");
-  startrun = 830115;
-  endrun = 830493;
+  //startrun = 830115;
+  //endrun = 830493;
+  startrun = 840003;
+  endrun = 840162;
   startsub = 0;
   endsub = 50;
 
   for(int i=0; i<2; i++)
     for(int j=0; j<100; j++)
-      bmgroup[j][i].clear();
+      {
+	bmgroup[j][i].clear();
+	pmgroup[j][i].clear();
+	wggroup[j][i].clear();
+      }
+  
   for(int i=0; i<3; i++)
     beamgroup[i].clear();
-  matchingspill.clear();
+
+  baseunixtime.clear();
+  matchingspill.clear(); 
   bmspill.clear();
+  pmspill.clear();
+  wgspill.clear();
 }
 
 BSDApply::~BSDApply()
@@ -40,7 +51,6 @@ void BSDApply::ReadBSDfile()
           filename.Form("%s/bsd_run%07d_%02dp06.root", bsddir.Data(), irun, isub); // QSD
           if (gSystem->GetPathInfo(filename.Data(), info)!=0)
             {
-              //cout << "File" << filename << " does not exist" << '\n'; 
               continue;
             }else{
             bsdchain->Add(filename);
@@ -64,17 +74,13 @@ void BSDApply::GetMonDateHour(time_t unixtime, int* Mon, int* Date, int* Hour)
   //cout << *Mon << " " << *Date << " " << *Hour << '\n';
 }
 
-void BSDApply::FindFirstSpill(int *bmfirstspill, int bmmon, int bmdate, int bmhour)
+void BSDApply::FindFirstSpill(int *detfirstspill, int detmon, int detdate, int dethour, int mod)
 {
   bool firstcheck = false;
   bool finish = false;
   int Mon, Date, Hour;
 
-  if(bmmon==12 && bmdate==4) 
-    {
-      *bmfirstspill = 12347;
-      firstcheck = true;
-    }
+  firstcheck = CheckMainteDay(detmon, detdate, detfirstspill, mod);
     
   for(int ibsd=0; ibsd<bsdchain->GetEntries(); ibsd++)
     {
@@ -82,14 +88,14 @@ void BSDApply::FindFirstSpill(int *bmfirstspill, int bmmon, int bmdate, int bmho
       thebeamtime = trg_sec[2];
       thebeamspill = spillnum & 0x7fff;
       GetMonDateHour(thebeamtime, &Mon, &Date, &Hour);
-      if(Mon!=bmmon || Date!=bmdate || Hour!=bmhour)
+      if(Mon!=detmon || Date!=detdate || Hour!=dethour)
 	continue;
-      else if(!firstcheck && Mon==bmmon && Date==bmdate && Hour==bmhour)
+      else if(!firstcheck && Mon==detmon && Date==detdate && Hour==dethour)
 	firstcheck = true;
-      else if(firstcheck && Mon==bmmon && Date==bmdate && Hour==bmhour)
+      else if(firstcheck && Mon==detmon && Date==detdate && Hour==dethour)
 	{
 	  cout << "beamspill= " << thebeamspill << '\n';
-	  if(CheckBMSpill(*bmfirstspill, thebeamspill))
+	  if(CheckDetSpill(*detfirstspill, thebeamspill))
 	    {
 	      firstmatchspillentry = ibsd;
 	      finish = true;
@@ -99,7 +105,7 @@ void BSDApply::FindFirstSpill(int *bmfirstspill, int bmmon, int bmdate, int bmho
 	}
     }
   cout << "firstmatchspillentry= " << firstmatchspillentry << '\n';
-  cout << "FirstMatchSpill= " << thebeamspill << " = " << *bmfirstspill << '\n';
+  cout << "FirstMatchSpill= " << thebeamspill << " = " << *detfirstspill << '\n';
 }
 
 void BSDApply::MakeBeamGroup(int isub)
@@ -119,22 +125,25 @@ void BSDApply::MakeBeamGroup(int isub)
     }
 }
 
-void BSDApply::SpillMatch(int isub)
+void BSDApply::SpillMatch(int isub, int mod)
 {
   matchingspill.clear();
   vector<double> beamgroup_s = beamgroup[0];
-  vector<double> bmgroup_s = bmgroup[isub][0];
-  
-  sort(beamgroup_s.begin(), beamgroup_s.end());
-  sort(bmgroup_s.begin(), bmgroup_s.end());
+  vector<double> detgroup_s;
 
-  set_intersection(bmgroup_s.begin(), bmgroup_s.end(),
+  if(mod==0) detgroup_s = pmgroup[isub][0];  
+  if(mod==1) detgroup_s = wggroup[isub][0];  
+  if(mod==5) detgroup_s = bmgroup[isub][0];
+
+  sort(beamgroup_s.begin(), beamgroup_s.end());
+  sort(detgroup_s.begin(), detgroup_s.end());
+  set_intersection(detgroup_s.begin(), detgroup_s.end(),
                    beamgroup_s.begin(), beamgroup_s.end(),
                    inserter(matchingspill, matchingspill.end()));
 
 }
 
-void BSDApply::FillBSD(TTree* tree, TTree* otree, BMBSD* bmbsd)
+void BSDApply::FillBSD(TTree* tree, TTree* otree, BMBSD* bmbsd, int mod)
 {
   for(int ispill=0; ispill<matchingspill.size(); ispill++)
     {
@@ -144,17 +153,37 @@ void BSDApply::FillBSD(TTree* tree, TTree* otree, BMBSD* bmbsd)
       bmbsd->unixtime = beamgroup[1].at(thebeamspill);
       bmbsd->pot = beamgroup[2].at(thebeamspill);   
 
-      thebeamspill = matchingspill.at(ispill);
-      thespillit = find(bmspill.begin(), bmspill.end(), thebeamspill);
-      thebmspill = thespillit - bmspill.begin();
-      tree->GetEntry(thebmspill);
+      if(mod==0)
+	{
+	  thebeamspill = matchingspill.at(ispill);
+	  thespillit = find(pmspill.begin(), pmspill.end(), thebeamspill);
+	  thepmspill = thespillit - pmspill.begin();
+	  tree->GetEntry(thepmspill);
+	}
+
+      if(mod==1)
+	{
+	  thebeamspill = matchingspill.at(ispill);
+	  thespillit = find(wgspill.begin(), wgspill.end(), thebeamspill);
+	  thewgspill = thespillit - wgspill.begin();
+	  tree->GetEntry(thewgspill);
+	}
+
+      if(mod==5)
+	{
+	  thebeamspill = matchingspill.at(ispill);
+	  thespillit = find(bmspill.begin(), bmspill.end(), thebeamspill);
+	  thebmspill = thespillit - bmspill.begin();
+	  tree->GetEntry(thebmspill);
+	}
 
       otree->Fill();
     }
+
 }
 
 
-bool BSDApply::CheckBMTime(time_t unixtime, int mon, int date, int hour)
+bool BSDApply::CheckDetTime(time_t unixtime, int mon, int date, int hour)
 {
   bool matching = false;
 
@@ -167,13 +196,33 @@ bool BSDApply::CheckBMTime(time_t unixtime, int mon, int date, int hour)
 }
 
 
-bool BSDApply::CheckBMSpill(int babymindspill, int beamspill)
+bool BSDApply::CheckDetSpill(int detectorspill, int beamspill)
 {
   bool matching = false;
-  if(babymindspill == beamspill)
+  if(detectorspill == beamspill)
     matching = true;
 
   return matching;
+}
+
+bool BSDApply::CheckMainteDay(int Mon, int Date, int *detfirstspill, int mod)
+{
+  bool maintecheck = false;
+  
+  if(Mon==12 && Date==4) 
+    {
+      *detfirstspill = 12347;
+      maintecheck = true;
+    }
+
+  if(Mon==1 && Date==29 && mod==5) 
+    {
+      *detfirstspill = 20350;
+      maintecheck = true;
+    }
+
+  return maintecheck;
+
 }
 
 void BSDApply::KillAll()

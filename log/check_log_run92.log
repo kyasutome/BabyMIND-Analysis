@@ -1,0 +1,193 @@
+Found a file
+Filename=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/process/3-EVT/Evt_92.root
+Analyze the file...
+ientry= 0
+DIF0
+DIF1
+chip:1 chan:8bunch:6 posx:337 posz:700
+chip:0 chan:7bunch:6 posx:251 posz:300
+chip:0 chan:9bunch:6 posx:251 posz:100
+chip:0 chan:29bunch:6 posx:294 posz:500
+chip:0 chan:4bunch:8 posx:122 posz:300
+chip:0 chan:5bunch:8 posx:165 posz:300
+chip:0 chan:6bunch:8 posx:208 posz:300
+chip:0 chan:9bunch:8 posx:251 posz:100
+chip:0 chan:12bunch:8 posx:294 posz:100
+chip:0 chan:13bunch:8 posx:208 posz:100
+chip:0 chan:21bunch:8 posx:79 posz:500
+chip:0 chan:25bunch:8 posx:36 posz:500
+ientry= 1
+DIF0
+chip:2 chan:4 bunch:6 posx:337 posz:1300
+DIF1
+ientry= 2
+DIF0
+DIF1
+ientry= 3
+DIF0
+chip:0 chan:1 bunch:2 posx:36 posz:100
+chip:0 chan:6 bunch:2 posx:251 posz:300
+chip:0 chan:7 bunch:2 posx:208 posz:300
+chip:0 chan:9 bunch:2 posx:208 posz:100
+chip:0 chan:10 bunch:2 posx:294 posz:100
+chip:0 chan:13 bunch:2 posx:251 posz:100
+chip:0 chan:14 bunch:2 posx:337 posz:100
+chip:0 chan:22 bunch:2 posx:36 posz:300
+chip:0 chan:30 bunch:2 posx:79 posz:500
+chip:0 chan:20 bunch:6 posx:294 posz:500
+DIF1
+chip:0 chan:2bunch:2 posx:36 posz:300
+chip:0 chan:6bunch:2 posx:208 posz:300
+chip:0 chan:7bunch:2 posx:251 posz:300
+chip:0 chan:8bunch:2 posx:337 posz:100
+chip:0 chan:12bunch:2 posx:294 posz:100
+chip:0 chan:13bunch:2 posx:208 posz:100
+chip:0 chan:15bunch:2 posx:36 posz:100
+chip:0 chan:26bunch:2 posx:294 posz:300
+ientry= 4
+DIF0
+chip:2 chan:9 bunch:1 posx:208 posz:1100
+chip:2 chan:10 bunch:1 posx:294 posz:1100
+chip:2 chan:13 bunch:1 posx:251 posz:1100
+chip:2 chan:17 bunch:1 posx:36 posz:1500
+chip:2 chan:23 bunch:1 posx:122 posz:1300
+chip:2 chan:26 bunch:1 posx:165 posz:1300
+chip:2 chan:27 bunch:1 posx:79 posz:1300
+chip:2 chan:6 bunch:2 posx:251 posz:1300
+chip:2 chan:8 bunch:2 posx:122 posz:1100
+chip:2 chan:9 bunch:2 posx:208 posz:1100
+chip:2 chan:12 bunch:2 posx:165 posz:1100
+chip:2 chan:13 bunch:2 posx:251 posz:1100
+chip:1 chan:2 bunch:1 posx:423 posz:900
+chip:1 chan:3 bunch:1 posx:380 posz:900
+chip:1 chan:4 bunch:1 posx:337 posz:900
+chip:1 chan:5 bunch:2 posx:294 posz:900
+chip:1 chan:6 bunch:2 posx:251 posz:900
+DIF1
+chip:2 chan:9bunch:1 posx:251 posz:1100
+chip:2 chan:12bunch:1 posx:294 posz:1100
+chip:2 chan:13bunch:1 posx:208 posz:1100
+chip:2 chan:14bunch:1 posx:122 posz:1100
+chip:2 chan:25bunch:1 posx:423 posz:1500
+chip:2 chan:9bunch:2 posx:251 posz:1100
+chip:2 chan:10bunch:2 posx:165 posz:1100
+chip:2 chan:13bunch:2 posx:208 posz:1100
+chip:2 chan:14bunch:2 posx:122 posz:1100
+chip:1 chan:19bunch:1 posx:165 posz:1300
+chip:1 chan:20bunch:1 posx:79 posz:1300
+chip:1 chan:22bunch:1 posx:423 posz:900
+chip:1 chan:23bunch:1 posx:337 posz:900
+chip:1 chan:27bunch:1 posx:380 posz:900
+chip:1 chan:28bunch:1 posx:122 posz:1300
+chip:1 chan:7bunch:2 posx:251 posz:900
+chip:1 chan:26bunch:2 posx:294 posz:900
+ientry= 5
+DIF0
+chip:2 chan:4 bunch:1 posx:337 posz:1300
+chip:2 chan:19 bunch:1 posx:208 posz:1500
+chip:2 chan:20 bunch:1 posx:294 posz:1500
+chip:2 chan:28 bunch:1 posx:251 posz:1500
+chip:2 chan:28 bunch:5 posx:251 posz:1500
+chip:2 chan:6 bunch:8 posx:251 posz:1300
+chip:1 chan:6 bunch:8 posx:251 posz:900
+chip:1 chan:7 bunch:8 posx:208 posz:900
+DIF1
+chip:2 chan:18bunch:1 posx:122 posz:1500
+chip:2 chan:19bunch:1 posx:208 posz:1500
+chip:2 chan:21bunch:1 posx:380 posz:1500
+chip:2 chan:24bunch:1 posx:337 posz:1500
+chip:2 chan:28bunch:1 posx:251 posz:1500
+chip:2 chan:19bunch:3 posx:208 posz:1500
+chip:2 chan:9bunch:8 posx:251 posz:1100
+chip:1 chan:6bunch:8 posx:208 posz:900
+ientry= 6
+DIF0
+chip:1 chan:10 bunch:5 posx:294 posz:700
+chip:1 chan:11 bunch:5 posx:380 posz:700
+chip:1 chan:13 bunch:5 posx:251 posz:700
+chip:1 chan:14 bunch:5 posx:337 posz:700
+chip:0 chan:25 bunch:5 posx:423 posz:500
+chip:0 chan:0 bunch:6 posx:79 posz:100
+chip:0 chan:8 bunch:6 posx:122 posz:100
+DIF1
+chip:1 chan:0bunch:5 posx:380 posz:700
+chip:1 chan:8bunch:5 posx:337 posz:700
+chip:1 chan:9bunch:5 posx:251 posz:700
+chip:1 chan:12bunch:5 posx:294 posz:700
+chip:0 chan:23bunch:4 posx:337 posz:300
+chip:0 chan:17bunch:5 posx:423 posz:500
+chip:0 chan:11bunch:6 posx:79 posz:100
+chip:0 chan:14bunch:6 posx:122 posz:100
+ientry= 7
+DIF0
+chip:0 chan:11 bunch:7 posx:380 posz:100
+DIF1
+chip:0 chan:0bunch:7 posx:380 posz:100
+ientry= 8
+DIF0
+chip:2 chan:22 bunch:6 posx:36 posz:1300
+DIF1
+ientry= 9
+DIF0
+DIF1
+ientry= 10
+DIF0
+chip:2 chan:0 bunch:3 posx:79 posz:1100
+chip:2 chan:10 bunch:3 posx:294 posz:1100
+chip:2 chan:15 bunch:3 posx:423 posz:1100
+chip:2 chan:23 bunch:3 posx:122 posz:1300
+chip:2 chan:26 bunch:3 posx:165 posz:1300
+chip:1 chan:5 bunch:3 posx:294 posz:900
+chip:1 chan:11 bunch:3 posx:380 posz:700
+chip:1 chan:15 bunch:3 posx:423 posz:700
+DIF1
+chip:1 chan:0bunch:3 posx:380 posz:700
+chip:1 chan:1bunch:3 posx:423 posz:700
+chip:1 chan:28bunch:3 posx:122 posz:1300
+ientry= 11
+DIF0
+chip:2 chan:21 bunch:1 posx:380 posz:1500
+DIF1
+chip:2 chan:30bunch:1 posx:79 posz:1500
+ientry= 12
+DIF0
+chip:2 chan:4 bunch:4 posx:337 posz:1300
+DIF1
+ientry= 13
+DIF0
+DIF1
+ientry= 14
+DIF0
+chip:2 chan:22 bunch:2 posx:36 posz:1300
+chip:1 chan:10 bunch:8 posx:294 posz:700
+chip:0 chan:3 bunch:8 posx:380 posz:300
+chip:0 chan:4 bunch:8 posx:337 posz:300
+chip:0 chan:11 bunch:8 posx:380 posz:100
+chip:0 chan:20 bunch:8 posx:294 posz:500
+DIF1
+chip:1 chan:12bunch:8 posx:294 posz:700
+chip:0 chan:15bunch:5 posx:36 posz:100
+chip:0 chan:29bunch:8 posx:294 posz:500
+ientry= 15
+DIF0
+DIF1
+ientry= 16
+DIF0
+chip:2 chan:2 bunch:8 posx:423 posz:1300
+DIF1
+chip:2 chan:22bunch:8 posx:423 posz:1300
+ientry= 17
+DIF0
+chip:0 chan:24 bunch:1 posx:337 posz:500
+DIF1
+ientry= 18
+DIF0
+chip:2 chan:24 bunch:1 posx:337 posz:1500
+chip:2 chan:15 bunch:6 posx:423 posz:1100
+chip:0 chan:15 bunch:1 posx:423 posz:100
+DIF1
+chip:1 chan:21bunch:6 posx:423 posz:1100
+chip:0 chan:1bunch:1 posx:423 posz:100
+ientry= 19
+DIF0
+DIF1

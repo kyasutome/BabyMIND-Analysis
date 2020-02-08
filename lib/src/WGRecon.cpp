@@ -20,6 +20,7 @@ WGRecon::WGRecon()
   view.clear();
   pln.clear();
   channel.clear();
+  charge.clear();
   time.clear();
   bunch.clear();
   
@@ -47,6 +48,7 @@ void WGRecon::Clear()
   view.clear();
   pln.clear();
   channel.clear();
+  charge.clear();
   time.clear();
   bunch.clear();
   

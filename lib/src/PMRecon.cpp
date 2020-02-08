@@ -11,6 +11,7 @@ PMRecon::PMRecon()
   view=0;
   pln=0;
   channel=0;
+  charge=0;
   time=0;
   bunch=0;
   
@@ -29,6 +30,7 @@ void PMRecon::Clear()
   view=0;
   pln=0;
   channel=0;
+  charge=0;
   time=0;
   bunch=0;
   

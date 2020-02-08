@@ -26,6 +26,7 @@ public:
   vector<double> view;
   vector<double> pln;
   vector<double> channel;
+  vector<double> charge;
   vector<double> time;
   vector<double> bunch;  
 

@@ -111,43 +111,43 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named MakeCalib
+# Target rules for targets named WGCalib
 
 # Build rule for target.
-MakeCalib: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 MakeCalib
-.PHONY : MakeCalib
+WGCalib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 WGCalib
+.PHONY : WGCalib
 
 # fast build rule for target.
-MakeCalib/fast:
-	$(MAKE) -f src/MakeCalib/CMakeFiles/MakeCalib.dir/build.make src/MakeCalib/CMakeFiles/MakeCalib.dir/build
-.PHONY : MakeCalib/fast
+WGCalib/fast:
+	$(MAKE) -f src/MakeCalib/CMakeFiles/WGCalib.dir/build.make src/MakeCalib/CMakeFiles/WGCalib.dir/build
+.PHONY : WGCalib/fast
 
 #=============================================================================
-# Target rules for targets named MakeWGWMClass
+# Target rules for targets named PMCalib
 
 # Build rule for target.
-MakeWGWMClass: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 MakeWGWMClass
-.PHONY : MakeWGWMClass
+PMCalib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 PMCalib
+.PHONY : PMCalib
 
 # fast build rule for target.
-MakeWGWMClass/fast:
-	$(MAKE) -f src/EvtDisp/CMakeFiles/MakeWGWMClass.dir/build.make src/EvtDisp/CMakeFiles/MakeWGWMClass.dir/build
-.PHONY : MakeWGWMClass/fast
+PMCalib/fast:
+	$(MAKE) -f src/MakeCalib/CMakeFiles/PMCalib.dir/build.make src/MakeCalib/CMakeFiles/PMCalib.dir/build
+.PHONY : PMCalib/fast
 
 #=============================================================================
-# Target rules for targets named MakeWGClass
+# Target rules for targets named BMCalib
 
 # Build rule for target.
-MakeWGClass: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 MakeWGClass
-.PHONY : MakeWGClass
+BMCalib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 BMCalib
+.PHONY : BMCalib
 
 # fast build rule for target.
-MakeWGClass/fast:
-	$(MAKE) -f src/EvtDisp/CMakeFiles/MakeWGClass.dir/build.make src/EvtDisp/CMakeFiles/MakeWGClass.dir/build
-.PHONY : MakeWGClass/fast
+BMCalib/fast:
+	$(MAKE) -f src/MakeCalib/CMakeFiles/BMCalib.dir/build.make src/MakeCalib/CMakeFiles/BMCalib.dir/build
+.PHONY : BMCalib/fast
 
 #=============================================================================
 # Target rules for targets named MakeEachDisp
@@ -163,32 +163,6 @@ MakeEachDisp/fast:
 .PHONY : MakeEachDisp/fast
 
 #=============================================================================
-# Target rules for targets named MakeWMClass
-
-# Build rule for target.
-MakeWMClass: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 MakeWMClass
-.PHONY : MakeWMClass
-
-# fast build rule for target.
-MakeWMClass/fast:
-	$(MAKE) -f src/EvtDisp/CMakeFiles/MakeWMClass.dir/build.make src/EvtDisp/CMakeFiles/MakeWMClass.dir/build
-.PHONY : MakeWMClass/fast
-
-#=============================================================================
-# Target rules for targets named MakePMClass
-
-# Build rule for target.
-MakePMClass: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 MakePMClass
-.PHONY : MakePMClass
-
-# fast build rule for target.
-MakePMClass/fast:
-	$(MAKE) -f src/EvtDisp/CMakeFiles/MakePMClass.dir/build.make src/EvtDisp/CMakeFiles/MakePMClass.dir/build
-.PHONY : MakePMClass/fast
-
-#=============================================================================
 # Target rules for targets named MakeDisp
 
 # Build rule for target.
@@ -202,43 +176,69 @@ MakeDisp/fast:
 .PHONY : MakeDisp/fast
 
 #=============================================================================
-# Target rules for targets named MakeEvt
+# Target rules for targets named WGDataSanity
 
 # Build rule for target.
-MakeEvt: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 MakeEvt
-.PHONY : MakeEvt
+WGDataSanity: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 WGDataSanity
+.PHONY : WGDataSanity
 
 # fast build rule for target.
-MakeEvt/fast:
-	$(MAKE) -f src/EvtDisp/CMakeFiles/MakeEvt.dir/build.make src/EvtDisp/CMakeFiles/MakeEvt.dir/build
-.PHONY : MakeEvt/fast
+WGDataSanity/fast:
+	$(MAKE) -f src/DataSanity/CMakeFiles/WGDataSanity.dir/build.make src/DataSanity/CMakeFiles/WGDataSanity.dir/build
+.PHONY : WGDataSanity/fast
 
 #=============================================================================
-# Target rules for targets named DataSanity
+# Target rules for targets named BSDApply_WGnocut
 
 # Build rule for target.
-DataSanity: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 DataSanity
-.PHONY : DataSanity
+BSDApply_WGnocut: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 BSDApply_WGnocut
+.PHONY : BSDApply_WGnocut
 
 # fast build rule for target.
-DataSanity/fast:
-	$(MAKE) -f src/DataSanity/CMakeFiles/DataSanity.dir/build.make src/DataSanity/CMakeFiles/DataSanity.dir/build
-.PHONY : DataSanity/fast
+BSDApply_WGnocut/fast:
+	$(MAKE) -f src/BSDApply/CMakeFiles/BSDApply_WGnocut.dir/build.make src/BSDApply/CMakeFiles/BSDApply_WGnocut.dir/build
+.PHONY : BSDApply_WGnocut/fast
 
 #=============================================================================
-# Target rules for targets named BSDApply
+# Target rules for targets named BSDApply_WG
 
 # Build rule for target.
-BSDApply: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 BSDApply
-.PHONY : BSDApply
+BSDApply_WG: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 BSDApply_WG
+.PHONY : BSDApply_WG
 
 # fast build rule for target.
-BSDApply/fast:
-	$(MAKE) -f src/BSDApply/CMakeFiles/BSDApply.dir/build.make src/BSDApply/CMakeFiles/BSDApply.dir/build
-.PHONY : BSDApply/fast
+BSDApply_WG/fast:
+	$(MAKE) -f src/BSDApply/CMakeFiles/BSDApply_WG.dir/build.make src/BSDApply/CMakeFiles/BSDApply_WG.dir/build
+.PHONY : BSDApply_WG/fast
+
+#=============================================================================
+# Target rules for targets named BSDApply_PM
+
+# Build rule for target.
+BSDApply_PM: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 BSDApply_PM
+.PHONY : BSDApply_PM
+
+# fast build rule for target.
+BSDApply_PM/fast:
+	$(MAKE) -f src/BSDApply/CMakeFiles/BSDApply_PM.dir/build.make src/BSDApply/CMakeFiles/BSDApply_PM.dir/build
+.PHONY : BSDApply_PM/fast
+
+#=============================================================================
+# Target rules for targets named BSDApply_BM
+
+# Build rule for target.
+BSDApply_BM: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 BSDApply_BM
+.PHONY : BSDApply_BM
+
+# fast build rule for target.
+BSDApply_BM/fast:
+	$(MAKE) -f src/BSDApply/CMakeFiles/BSDApply_BM.dir/build.make src/BSDApply/CMakeFiles/BSDApply_BM.dir/build
+.PHONY : BSDApply_BM/fast
 
 #=============================================================================
 # Target rules for targets named BasicDist
@@ -279,6 +279,32 @@ WMDataQuality/fast:
 	$(MAKE) -f src/DataQuality/CMakeFiles/WMDataQuality.dir/build.make src/DataQuality/CMakeFiles/WMDataQuality.dir/build
 .PHONY : WMDataQuality/fast
 
+#=============================================================================
+# Target rules for targets named MakeEvent
+
+# Build rule for target.
+MakeEvent: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 MakeEvent
+.PHONY : MakeEvent
+
+# fast build rule for target.
+MakeEvent/fast:
+	$(MAKE) -f src/MakeEvent/CMakeFiles/MakeEvent.dir/build.make src/MakeEvent/CMakeFiles/MakeEvent.dir/build
+.PHONY : MakeEvent/fast
+
+#=============================================================================
+# Target rules for targets named wmcoincheck
+
+# Build rule for target.
+wmcoincheck: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 wmcoincheck
+.PHONY : wmcoincheck
+
+# fast build rule for target.
+wmcoincheck/fast:
+	$(MAKE) -f src/DetPerform/CMakeFiles/wmcoincheck.dir/build.make src/DetPerform/CMakeFiles/wmcoincheck.dir/build
+.PHONY : wmcoincheck/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -287,19 +313,21 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... MakeCalib"
-	@echo "... MakeWGWMClass"
-	@echo "... MakeWGClass"
+	@echo "... WGCalib"
+	@echo "... PMCalib"
+	@echo "... BMCalib"
 	@echo "... MakeEachDisp"
-	@echo "... MakeWMClass"
-	@echo "... MakePMClass"
 	@echo "... MakeDisp"
-	@echo "... MakeEvt"
-	@echo "... DataSanity"
-	@echo "... BSDApply"
+	@echo "... WGDataSanity"
+	@echo "... BSDApply_WGnocut"
+	@echo "... BSDApply_WG"
+	@echo "... BSDApply_PM"
+	@echo "... BSDApply_BM"
 	@echo "... BasicDist"
 	@echo "... TrackRecon"
 	@echo "... WMDataQuality"
+	@echo "... MakeEvent"
+	@echo "... wmcoincheck"
 .PHONY : help
 
 

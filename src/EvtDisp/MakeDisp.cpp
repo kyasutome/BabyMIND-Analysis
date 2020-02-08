@@ -5,43 +5,47 @@
 #include <TString.h>
 
 //library
-#include "BMDisp.hpp"
+#include "EVTCluster.hpp"
 #include "MakeMonitor.cpp"
 
 using namespace std;
 
 int main( int argc, char **argv )
 {
-  if(argc < 5)
+  if(argc < 4)
     {
       cout << "usage" << '\n';
-      cout << "MakeDisp [filepath][date][month][run][subrun][ientry]" << '\n';
+      cout << "MakeDisp [filepath][wgrun][ientry]" << '\n';
       exit(0);
     }
 
   std::string name = string(argv[1]);
-  std::string date = string(argv[2]);
-  std::string month = string(argv[3]);
-  std::string run = string(argv[4]);
-  std::string subrun = string(argv[5]);
-  int targetentry = atoi(argv[6]);
+  std::string run = string(argv[2]);
+  int targetentry = atoi(argv[3]);
   TString filepath(name);
+  TString CanvasName;
 
   TApplication app("app", 0, 0, 0, 0);
-  BMDisp *bmdisp = new BMDisp();
+  EVTCluster *evtcluster = new EVTCluster();
   TFile* file = new TFile(filepath, "read");
   TTree* tree = (TTree*)file->Get("tree");
-  tree->SetBranchAddress("BMDisp",&bmdisp);
+  tree->SetBranchAddress("EVTCluster",&evtcluster);
   MakeMonitor *makemonitor = new MakeMonitor();
-
+  
   for(int ientry=0; ientry<tree->GetEntries(); ientry++)
     {
       if(ientry!=targetentry) continue;
-      tree->GetEntry(targetentry);
-      cout << "size= " << bmdisp->pln.size() << '\n';
-      makemonitor->Display(bmdisp);
+      {
+	tree->GetEntry(targetentry);
+	cout << "size= " << evtcluster->pln.size() << '\n';
+	makemonitor->Display(evtcluster);
+	//CanvasName.Form("./plots/EvtDisp/EvtDisp_spill_%d.pdf", bmdisp->spillnum);
+	//makemonitor->monitor->Print(CanvasName);
+	makemonitor->timeinfo->Delete();
+	makemonitor->spillinfo->Delete();
+      }
     }
-
+  
   app.Run();
   return 0;
   

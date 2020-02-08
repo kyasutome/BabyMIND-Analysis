@@ -111,46 +111,46 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-src/DataSanity/CMakeFiles/DataSanity.dir/rule:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/DataSanity/CMakeFiles/DataSanity.dir/rule
-.PHONY : src/DataSanity/CMakeFiles/DataSanity.dir/rule
+src/DataSanity/CMakeFiles/WGDataSanity.dir/rule:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/DataSanity/CMakeFiles/WGDataSanity.dir/rule
+.PHONY : src/DataSanity/CMakeFiles/WGDataSanity.dir/rule
 
 # Convenience name for target.
-DataSanity: src/DataSanity/CMakeFiles/DataSanity.dir/rule
+WGDataSanity: src/DataSanity/CMakeFiles/WGDataSanity.dir/rule
 
-.PHONY : DataSanity
+.PHONY : WGDataSanity
 
 # fast build rule for target.
-DataSanity/fast:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DataSanity/CMakeFiles/DataSanity.dir/build.make src/DataSanity/CMakeFiles/DataSanity.dir/build
-.PHONY : DataSanity/fast
+WGDataSanity/fast:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DataSanity/CMakeFiles/WGDataSanity.dir/build.make src/DataSanity/CMakeFiles/WGDataSanity.dir/build
+.PHONY : WGDataSanity/fast
 
-main.o: main.cpp.o
+wgdatasanity.o: wgdatasanity.cpp.o
 
-.PHONY : main.o
+.PHONY : wgdatasanity.o
 
 # target to build an object file
-main.cpp.o:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DataSanity/CMakeFiles/DataSanity.dir/build.make src/DataSanity/CMakeFiles/DataSanity.dir/main.cpp.o
-.PHONY : main.cpp.o
+wgdatasanity.cpp.o:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DataSanity/CMakeFiles/WGDataSanity.dir/build.make src/DataSanity/CMakeFiles/WGDataSanity.dir/wgdatasanity.cpp.o
+.PHONY : wgdatasanity.cpp.o
 
-main.i: main.cpp.i
+wgdatasanity.i: wgdatasanity.cpp.i
 
-.PHONY : main.i
+.PHONY : wgdatasanity.i
 
 # target to preprocess a source file
-main.cpp.i:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DataSanity/CMakeFiles/DataSanity.dir/build.make src/DataSanity/CMakeFiles/DataSanity.dir/main.cpp.i
-.PHONY : main.cpp.i
+wgdatasanity.cpp.i:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DataSanity/CMakeFiles/WGDataSanity.dir/build.make src/DataSanity/CMakeFiles/WGDataSanity.dir/wgdatasanity.cpp.i
+.PHONY : wgdatasanity.cpp.i
 
-main.s: main.cpp.s
+wgdatasanity.s: wgdatasanity.cpp.s
 
-.PHONY : main.s
+.PHONY : wgdatasanity.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DataSanity/CMakeFiles/DataSanity.dir/build.make src/DataSanity/CMakeFiles/DataSanity.dir/main.cpp.s
-.PHONY : main.cpp.s
+wgdatasanity.cpp.s:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DataSanity/CMakeFiles/WGDataSanity.dir/build.make src/DataSanity/CMakeFiles/WGDataSanity.dir/wgdatasanity.cpp.s
+.PHONY : wgdatasanity.cpp.s
 
 # Help Target
 help:
@@ -160,10 +160,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... DataSanity"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... WGDataSanity"
+	@echo "... wgdatasanity.o"
+	@echo "... wgdatasanity.i"
+	@echo "... wgdatasanity.s"
 .PHONY : help
 
 

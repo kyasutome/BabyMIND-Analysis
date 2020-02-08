@@ -6,50 +6,6 @@
 
 #IncludeRegexTransform: 
 
-../include/EvtDisp/EvtFormat.cpp
-iostream
--
-fstream
--
-vector
--
-PickSignal.hpp
-../include/EvtDisp/PickSignal.hpp
-DataReader.hpp
-../include/EvtDisp/DataReader.hpp
-EvtFormat.hpp
-../include/EvtDisp/EvtFormat.hpp
-
-../include/EvtDisp/EvtFormat.hpp
-iostream
--
-vector
--
-time.h
--
-TFile.h
--
-TTree.h
--
-TString.h
--
-TSystem.h
--
-TChain.h
--
-BMData.hpp
-../include/EvtDisp/BMData.hpp
-BMBasicRecon.hpp
-../include/EvtDisp/BMBasicRecon.hpp
-BMBeaminfo.hpp
-../include/EvtDisp/BMBeaminfo.hpp
-BMDisp.hpp
-../include/EvtDisp/BMDisp.hpp
-PMRecon.hpp
-../include/EvtDisp/PMRecon.hpp
-WGRecon.hpp
-../include/EvtDisp/WGRecon.hpp
-
 ../include/MakeCalib/BMData.hpp
 iostream
 -
@@ -85,16 +41,6 @@ BMConst.hpp
 ../include/MakeCalib/BMConst.hpp
 BMData.hpp
 ../include/MakeCalib/BMData.hpp
-
-../include/MakeCalib/PickSignal.hpp
-iostream
--
-vector
--
-BMData.hpp
-../include/MakeCalib/BMData.hpp
-BMBasicRecon.hpp
-../include/MakeCalib/BMBasicRecon.hpp
 
 ../include/YASUTracker/Calibration.cpp
 iostream
@@ -194,30 +140,6 @@ BMConst.hpp
 
 ../lib/src/BMConst.hpp
 
-../lib/src/BMDisp.hpp
-iostream
--
-vector
--
-BMConst.hpp
-../lib/src/BMConst.hpp
-
-../lib/src/PMRecon.hpp
-iostream
--
-vector
--
-BMConst.hpp
-../lib/src/BMConst.hpp
-
-../lib/src/WGRecon.hpp
-iostream
--
-vector
--
-BMConst.hpp
-../lib/src/BMConst.hpp
-
 /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/src/YASUTracker/basicdist.cpp
 iostream
 -
@@ -225,8 +147,6 @@ stdio.h
 -
 DataReader.cpp
 /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/src/YASUTracker/DataReader.cpp
-EvtFormat.cpp
-/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/src/YASUTracker/EvtFormat.cpp
 Calibration.cpp
 /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/src/YASUTracker/Calibration.cpp
 Efficiency.cpp
@@ -240,6 +160,8 @@ BMCluster.hpp
 TApplication.h
 -
 TCanvas.h
+-
+TChain.h
 -
 
 /Users/kenji/local/root/root-6.18.02/built/include/Buttons.h

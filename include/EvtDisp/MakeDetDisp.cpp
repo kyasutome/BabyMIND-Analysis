@@ -15,12 +15,12 @@ MakeDetDisp::~MakeDetDisp()
 {
 }
 
-Dimension *fdimension = new Dimension();
+//Dimension *fdimension = new Dimension();
 
 void MakeDetDisp::DetModule(double x1, double y1, double x2, double y2)
 {
   TBox *b1 = new TBox(x1, y1, x2, y2);
-  Int_t trans_blue = TColor::GetColorTransparent(kBlue, 0.6);
+  Int_t trans_blue = TColor::GetColorTransparent(kBlue, 0.8);
   b1->SetLineColor(1);
   b1->SetFillColor(trans_blue);
   b1->SetLineWidth(3);
@@ -30,7 +30,7 @@ void MakeDetDisp::DetModule(double x1, double y1, double x2, double y2)
 
 void MakeDetDisp::MagModule(double x1, double y1, double x2, double y2){
   TBox *b1 = new TBox(x1, y1, x2, y2);
-  Int_t trans_orange = TColor::GetColorTransparent(kOrange, 0.6);
+  Int_t trans_orange = TColor::GetColorTransparent(kOrange, 0.8);
   b1->SetLineColor(trans_orange);
   b1->SetFillColor(trans_orange);
   b1->SetLineWidth(2);
@@ -40,9 +40,9 @@ void MakeDetDisp::MagModule(double x1, double y1, double x2, double y2){
 
 void MakeDetDisp::YASUModule(double x1, double y1, double x2, double y2){
   TBox *b1 = new TBox(x1, y1, x2, y2);
-  Int_t trans_green = TColor::GetColorTransparent(kGreen, 0.6);
+  Int_t trans_blue = TColor::GetColorTransparent(kBlue, 0.6);
   b1->SetLineColor(1);
-  b1->SetFillColor(trans_green);
+  b1->SetFillColor(trans_blue);
   b1->SetLineWidth(3);
   b1->SetFillStyle(1001);
   b1->Draw("SAME");
@@ -51,15 +51,16 @@ void MakeDetDisp::YASUModule(double x1, double y1, double x2, double y2){
 
 void MakeDetDisp::IngSci(double x,double y,double x1,double y1,int view){
 
-  double offsetx = -2000;
-  double offsety;
+  double posx1, posx2, posy1, posy2;
+  posx1 = x+fdimension->offset[view][0][0];
+  posx2 = x1+fdimension->offset[view][0][0];
+  posy1 = y+fdimension->offset[view][1][0];
+  posy2 = y1+fdimension->offset[view][1][0];
 
-  if(view==0)  offsety= -550;
-  if(view==1)  offsety= -1500;
-
-  TBox *b1=new TBox(x+offsetx,y+offsety,x1+offsetx,y1+offsety);
-  b1->SetLineColor(kGreen);
-  b1->SetLineWidth(2);
+  TBox *b1=new TBox(posx1,posy1,posx2,posy2);
+  Int_t trans_blue = TColor::GetColorTransparent(kBlue, 0.05);
+  b1->SetLineColor(trans_blue);
+  b1->SetLineWidth(0.5);
   b1->SetFillStyle(0);
   b1->Draw("SAME");
 }
@@ -67,62 +68,63 @@ void MakeDetDisp::IngSci(double x,double y,double x1,double y1,int view){
 
 void MakeDetDisp::ParSci(double x,double y,double x1,double y1,int view){
 
-  double offsetx = -2000;
-  double offsety;
+  double posx1, posx2, posy1, posy2;
+  posx1 = x+fdimension->offset[view][0][0];
+  posx2 = x1+fdimension->offset[view][0][0];
+  posy1 = y+fdimension->offset[view][1][0];
+  posy2 = y1+fdimension->offset[view][1][0];
 
-  if(view==0)  offsety= -550;
-  if(view==1)  offsety= -1500;
-
-  TBox *b1=new TBox(x+offsetx,y+offsety,x1+offsetx,y1+offsety);
-  b1->SetLineColor(kYellow);
-  b1->SetLineWidth(2);
+  TBox *b1=new TBox(posx1,posy1,posx2,posy2);
+  Int_t trans_blue = TColor::GetColorTransparent(kBlue, 0.05);
+  b1->SetLineColor(trans_blue);
+  b1->SetLineWidth(1);
   b1->SetFillStyle(0);
   b1->Draw("SAME");
 }
 
 void MakeDetDisp::SciSci(double x,double y,double x1,double y1,int view){
 
-  double offsetx = -2000;
-  double offsety;
+  double posx1, posx2, posy1, posy2;
+  posx1 = x+fdimension->offset[view][0][0];
+  posx2 = x1+fdimension->offset[view][0][0];
+  posy1 = y+fdimension->offset[view][1][0];
+  posy2 = y1+fdimension->offset[view][1][0];
 
-  if(view==0)  offsety= -550;
-  if(view==1)  offsety= -1500;
-
-  TBox *b1=new TBox(x+offsetx,y+offsety,x1+offsetx,y1+offsety);
-  b1->SetLineColor(kGreen+2);
-  b1->SetLineWidth(2);
+  Int_t trans_blue = TColor::GetColorTransparent(kBlue, 0.3);
+  TBox *b1=new TBox(posx1,posy1,posx2,posy2);
+  b1->SetLineColor(trans_blue);
+  b1->SetLineWidth(1);
   b1->SetFillStyle(0);
   b1->Draw("SAME");
 }
 
 void MakeDetDisp::VetoSci(double x,double y,double x1,double y1, int view){
 
-  double offsetx = -2000;
-  double offsety;
+  double posx1, posx2, posy1, posy2;
+  posx1 = x+fdimension->offset[view][0][0];
+  posx2 = x1+fdimension->offset[view][0][0];
+  posy1 = y+fdimension->offset[view][1][0];
+  posy2 = y1+fdimension->offset[view][1][0];
 
-  if(view==0)  offsety= -550;
-  if(view==1)  offsety= -1500;
-
-  TBox *b1=new TBox(x+offsetx,y+offsety,x1+offsetx,y1+offsety);
-
-  b1->SetLineColor(kBlue);
+  TBox *b1=new TBox(posx1,posy1,posx2,posy2);
+  Int_t trans_blue = TColor::GetColorTransparent(kBlue, 0.8);
+  b1->SetLineColor(trans_blue);
   b1->SetLineWidth(2);
   b1->SetFillStyle(0);
   b1->Draw("SAME");
 }
 
 void MakeDetDisp::PlnSci(int mod, int view, double x, double y){
-  double x1, x2, y1, y2;
   double planey = 24.5/2;
   double planez = 3.0/2;
-  double offsetx[2][2]={{-2300,-2300},{-350,-350}};//{{mod0view0, mod0view1}, {mod1view0, mod1view1}}
-  double offsety[2][2]={{-100,-900},{-100,-600}};//{{mod0view0, mod0view1}, {mod1view0, mod1view1}}
-  x1 = x-planez+offsetx[mod][view];
-  x2 = x+planez+offsetx[mod][view];
-  y1 = y-planey+offsety[mod][view];
-  y2 = y+planey+offsety[mod][view];
+  double posx1, posx2, posy1, posy2;
 
-  TBox *b1 = new TBox(x1, y1, x2, y2);
+  posx1 = x-planez+fdimension->offset[view][0][mod];
+  posx2 = x+planez+fdimension->offset[view][0][mod];
+  posy1 = y-planey+fdimension->offset[view][1][mod];
+  posy2 = y+planey+fdimension->offset[view][1][mod];
+
+  TBox *b1 = new TBox(posx1, posy1, posx2, posy2);
   Int_t trans_blue = TColor::GetColorTransparent(kBlue, 0.8);
   b1->SetLineColor(trans_blue);
   b1->SetFillColor(trans_blue);
@@ -132,18 +134,17 @@ void MakeDetDisp::PlnSci(int mod, int view, double x, double y){
 };
 
 void MakeDetDisp::GridSci(int mod, int view, double x, double y){
-  double x1, x2, y1, y2;
   double gridy = 3.0/2;
   double gridz = 24.5/2;
-  double offsetx[2][2]={{-2300,-2300},{-350,-350}};//{{mod0view0, mod0view1}, {mod1view0, mod1view1}}
-  double offsety[2][2]={{-100,-900},{-100,-600}};//{{mod0view0, mod0view1}, {mod1view0, mod1view1}}
 
-  x1 = x-gridz+offsetx[mod][view];
-  x2 = x+gridz+offsetx[mod][view];
-  y1 = y-gridy+offsety[mod][view];
-  y2 = y+gridy+offsety[mod][view];
+  double posx1, posx2, posy1, posy2;
 
-  TBox *b1 = new TBox(x1, y1, x2, y2);
+  posx1 = x-gridz+fdimension->offset[view][0][mod];
+  posx2 = x+gridz+fdimension->offset[view][0][mod];
+  posy1 = y-gridy+fdimension->offset[view][1][mod];
+  posy2 = y+gridy+fdimension->offset[view][1][mod];
+
+  TBox *b1 = new TBox(posx1, posy1, posx2, posy2);
   Int_t trans_blue = TColor::GetColorTransparent(kBlue, 0.6);
   b1->SetLineColor(trans_blue);
   b1->SetFillColor(trans_blue);
@@ -152,14 +153,36 @@ void MakeDetDisp::GridSci(int mod, int view, double x, double y){
   b1->Draw("SAME");
 };
 
+void MakeDetDisp::WaterTank(int mod, int view)
+{
+  double posx1, posx2, posy1, posy2;
+  double size_yoko = 550;
+  double size_tate = 1100;
+  posx1 = fdimension->offset[view][0][mod];
+  posy1 = fdimension->offset[view][1][mod];
+  posx2 = fdimension->offset[view][0][mod]+size_yoko;
+  posy2 = fdimension->offset[view][1][mod]+size_tate;
+  TBox *b1 = new TBox(posx1, posy1, posx2, posy2);
+  Int_t trans_blue = TColor::GetColorTransparent(kCyan, 0.3);
+  b1->SetLineColor(kBlack);
+  b1->SetFillColor(trans_blue);
+  b1->SetLineWidth(1);
+  b1->SetFillStyle(1001);
+  b1->Draw("SAME");
+}
+
 void MakeDetDisp::SciModule(int mod, double x1, double y1, double x2, double y2)
 {
-  double offsetx[2] = {-2000, -1700};
-  double offsety[2] = {-2200, +700};
+  double posx1, posx2, posy1, posy2;
+  posx1 = x1+fdimension->offset[1][0][mod];
+  posx2 = x2+fdimension->offset[1][0][mod];
+  posy1 = y1+fdimension->offset[1][1][mod];
+  posy2 = y2+fdimension->offset[1][1][mod];
 
-  TBox *b1=new TBox(x1+offsetx[mod],y1+offsety[mod],x2+offsetx[mod],y2+offsety[mod]);
+  TBox *b1=new TBox(posx1, posy1, posx2, posy2);
 
-  b1->SetLineColor(kBlue);
+  Int_t trans_blue = TColor::GetColorTransparent(kBlue, 0.6);
+  b1->SetLineColor(trans_blue);
   b1->SetLineWidth(2);
   b1->SetFillStyle(0);
   b1->Draw("SAME");
@@ -167,12 +190,16 @@ void MakeDetDisp::SciModule(int mod, double x1, double y1, double x2, double y2)
 
 void MakeDetDisp::IronModule(int mod, double x1, double y1, double x2, double y2)
 {
-  double offsetx[2] = {-2000, -2000};
-  double offsety[2] = {-1500, +500};
+  double posx1, posx2, posy1, posy2;
+  posx1 = x1+fdimension->offset[1][0][mod];
+  posx2 = x2+fdimension->offset[1][0][mod];
+  posy1 = y1+fdimension->offset[1][1][mod];
+  posy2 = y2+fdimension->offset[1][1][mod];
   
-  TBox *b1=new TBox(x1+offsetx[mod],y1+offsety[mod],x2+offsetx[mod],y2+offsety[mod]);
+  TBox *b1=new TBox(posx1, posy1, posx2, posy2);
 
-  b1->SetLineColor(kRed);
+  Int_t trans_orange = TColor::GetColorTransparent(kOrange, 0.6);
+  b1->SetLineColor(trans_orange);
   b1->SetLineWidth(2);
   b1->SetFillStyle(0);
   b1->Draw("SAME");
@@ -192,34 +219,34 @@ void MakeDetDisp::DrawBabyMIND(int view)
 	{
 	  if(i%2==0)
 	    {
-	      dhorl[i/2] = dimension->sciposy[i]-15;
-	      uhorl[i/2] = dimension->sciposy[i]+15;
+	      dhorl[i/2] = fdimension->sciposy[i]-15;
+	      uhorl[i/2] = fdimension->sciposy[i]+15;
 	    }
 	  if(i%2==1)
 	    {
-	      dhorr[i/2] = dimension->sciposy[i]-15;
-	      uhorr[i/2] = dimension->sciposy[i]+15;
+	      dhorr[i/2] = fdimension->sciposy[i]-15;
+	      uhorr[i/2] = fdimension->sciposy[i]+15;
 	    }
 	}
 
       for(int i=0; i<NUMBEROFMODULE; i++)
 	{
 	  for(int j=0; j<48; j++)
-	    DetModule(dimension->sciposz[i]-10, dhorl[j], dimension->sciposz[i], uhorl[j]);
+	    DetModule(fdimension->sciposz[i]-10, dhorl[j], fdimension->sciposz[i], uhorl[j]);
 	  for(int j=0; j<47; j++)
-	    DetModule(dimension->sciposz[i], dhorr[j], dimension->sciposz[i]+10, uhorr[j]);
+	    DetModule(fdimension->sciposz[i], dhorr[j], fdimension->sciposz[i]+10, uhorr[j]);
 	}
 	  
       for(int i=0; i<33; i++)
-	MagModule(dimension->ironposz[i]-Iron_thickness/2-130, -986.2, 
-		  dimension->ironposz[i]+Iron_thickness/2-130, 986.2);
+	MagModule(fdimension->ironposz[i]-Iron_thickness/2-130, -986.2, 
+		  fdimension->ironposz[i]+Iron_thickness/2-130, 986.2);
 
 
       //YASU Trackers
       for(int i=0; i<14; i++)
 	{
-	  YASUModule(dimension->yasuposz[0][i]-YASU_thick/2.,dimension->yasuposy[0][i]-YASU_height/2.,
-		     dimension->yasuposz[0][i]+YASU_thick/2.,dimension->yasuposy[0][i]+YASU_height/2.);
+	  YASUModule(fdimension->yasuposz[0][i]-YASU_thick/2.,fdimension->yasuposy[0][i]-YASU_height/2.,
+		     fdimension->yasuposz[0][i]+YASU_thick/2.,fdimension->yasuposy[0][i]+YASU_height/2.);
 	}      
     }//view==0
 
@@ -229,39 +256,39 @@ void MakeDetDisp::DrawBabyMIND(int view)
 	{
 	  if(i%2==0)
 	    {
-	      dverl[i/2] = dimension->sciposx[i]-100;
-	      uverl[i/2] = dimension->sciposx[i]+100;
+	      dverl[i/2] = fdimension->sciposx[i]-100;
+	      uverl[i/2] = fdimension->sciposx[i]+100;
 	    }
 	  if(i%2==1)
 	    {
-	      dverr[i/2] = dimension->sciposx[i]-100;
-	      uverr[i/2] = dimension->sciposx[i]+100;
+	      dverr[i/2] = fdimension->sciposx[i]-100;
+	      uverr[i/2] = fdimension->sciposx[i]+100;
 	    }
 	}
 
       for(int i=0; i<18; i++)
 	{
 	  for(int j=0; j<8; j++)
-	    DetModule(dimension->sciposz[i]-20, dverl[j], dimension->sciposz[i]-10, uverl[j]);
+	    DetModule(fdimension->sciposz[i]-35, dverl[j], fdimension->sciposz[i]-15, uverl[j]);
 	  for(int j=0; j<8; j++)
-	    DetModule(dimension->sciposz[i]+10, dverr[j], dimension->sciposz[i]+20, uverr[j]);
+	    DetModule(fdimension->sciposz[i]-5, dverr[j], fdimension->sciposz[i]+15, uverr[j]);
 	}
 
       for(int i=0; i<33; i++)
-	MagModule(dimension->ironposz[i]-Iron_thickness/2-130, -1750, 
-		  dimension->ironposz[i]+Iron_thickness/2-130, 1750);
+	MagModule(fdimension->ironposz[i]-Iron_thickness/2-130, -1750, 
+		  fdimension->ironposz[i]+Iron_thickness/2-130, 1750);
 
-      YASUModule(dimension->yasuposz[0][0]-YASU_thick/2.,dimension->yasuposx[0][0]-YASU_width/2.,
-		 dimension->yasuposz[0][0]+YASU_thick/2.,dimension->yasuposx[0][0]+YASU_width/2.);
+      YASUModule(fdimension->yasuposz[0][0]-YASU_thick/2.,fdimension->yasuposx[0][0]-YASU_width/2.,
+		 fdimension->yasuposz[0][0]+YASU_thick/2.,fdimension->yasuposx[0][0]+YASU_width/2.);
 
-      YASUModule(dimension->yasuposz[0][0]-YASU_thick/2.,dimension->yasuposx[1][0]-YASU_width/2.,
-		 dimension->yasuposz[0][0]+YASU_thick/2.,dimension->yasuposx[1][0]+YASU_width/2.);
+      YASUModule(fdimension->yasuposz[0][0]-YASU_thick/2.,fdimension->yasuposx[1][0]-YASU_width/2.,
+		 fdimension->yasuposz[0][0]+YASU_thick/2.,fdimension->yasuposx[1][0]+YASU_width/2.);
 
-      YASUModule(dimension->yasuposz[0][7]-YASU_thick/2.,dimension->yasuposx[0][0]-YASU_width/2.,
-		 dimension->yasuposz[0][7]+YASU_thick/2.,dimension->yasuposx[0][0]+YASU_width/2.);
+      YASUModule(fdimension->yasuposz[0][7]-YASU_thick/2.,fdimension->yasuposx[0][0]-YASU_width/2.,
+		 fdimension->yasuposz[0][7]+YASU_thick/2.,fdimension->yasuposx[0][0]+YASU_width/2.);
 
-      YASUModule(dimension->yasuposz[0][7]-YASU_thick/2.,dimension->yasuposx[1][0]-YASU_width/2.,
-		 dimension->yasuposz[0][7]+YASU_thick/2.,dimension->yasuposx[1][0]+YASU_width/2.);
+      YASUModule(fdimension->yasuposz[0][7]-YASU_thick/2.,fdimension->yasuposx[1][0]-YASU_width/2.,
+		 fdimension->yasuposz[0][7]+YASU_thick/2.,fdimension->yasuposx[1][0]+YASU_width/2.);
 
     }//view==1
 
@@ -331,45 +358,8 @@ void MakeDetDisp::DrawProtonModule(int view)
 
 void MakeDetDisp::DrawWAGASCI(int mod, int view)
 {
-  if(mod==0 && view==0)
-    for(int pln=0; pln<24; pln++)
-      {
-	if(pln%3==1 || pln%3==2) nch = 20;
-	if(pln%3==0) nch = 40;
-	
-	for(int ch=0; ch<nch; ch++)
-	  {
-	    fdimension->get_wgdet_pos(mod, view, pln, ch, &tempz, &tempxy);
-	    if(pln%3==1 || pln%3==2)
-	      {
-		GridSci(mod, view, tempxy, tempz);
-	      }
-	    if(pln%3==0)
-	      {
-		PlnSci(mod, view, tempxy, tempz);
-	      }
-	  }
-      }
 
-  if(mod==0 && view==1)
-    for(int pln=0; pln<24; pln++)
-      {
-	if(pln%3==0 || pln%3==2) nch = 20;
-	if(pln%3==1) nch = 40;
-	
-	for(int ch=0; ch<nch; ch++)
-	  {
-	    fdimension->get_wgdet_pos(mod, view, pln, ch, &tempz, &tempxy);
-	    if(pln%3==0 || pln%3==2)
-	      {
-		GridSci(mod, view, tempxy, tempz);
-	      }
-	    if(pln%3==1)
-	      {
-		PlnSci(mod, view, tempxy, tempz);
-	      }
-	  }
-      }
+  WaterTank(mod+5, view);
 
   if(mod==1 && view==0)
     for(int pln=0; pln<24; pln++)
@@ -411,6 +401,46 @@ void MakeDetDisp::DrawWAGASCI(int mod, int view)
 	  }
       }
 
+  if(mod==2 && view==0)
+    for(int pln=0; pln<24; pln++)
+      {
+	if(pln%3==1 || pln%3==2) nch = 20;
+	if(pln%3==0) nch = 40;
+	
+	for(int ch=0; ch<nch; ch++)
+	  {
+	    fdimension->get_wgdet_pos(mod, view, pln, ch, &tempz, &tempxy);
+	    if(pln%3==1 || pln%3==2)
+	      {
+		GridSci(mod, view, tempxy, tempz);
+	      }
+	    if(pln%3==0)
+	      {
+		PlnSci(mod, view, tempxy, tempz);
+	      }
+	  }
+      }
+
+  if(mod==2 && view==1)
+    for(int pln=0; pln<24; pln++)
+      {
+	if(pln%3==0 || pln%3==2) nch = 20;
+	if(pln%3==1) nch = 40;
+	
+	for(int ch=0; ch<nch; ch++)
+	  {
+	    fdimension->get_wgdet_pos(mod, view, pln, ch, &tempz, &tempxy);
+	    if(pln%3==0 || pln%3==2)
+	      {
+		GridSci(mod, view, tempxy, tempz);
+	      }
+	    if(pln%3==1)
+	      {
+		PlnSci(mod, view, tempxy, tempz);
+	      }
+	  }
+      }
+
 }
 
 void MakeDetDisp::DrawWallMRD(int mod)
@@ -419,13 +449,17 @@ void MakeDetDisp::DrawWallMRD(int mod)
   double centerx[10]={36.5, 79.5, 122.5, 165.5, 208.5, 251.5, 294.5, 337.5, 380.5, 423.5};
   double zwidth = 100;
   double xwidth = 7;
+  double ironoffset = 20;
 
   for(int iz=0; iz<8; iz++)
     for(int ix=0; ix<10; ix++)
       {
 	SciModule(mod, centerz[iz]-zwidth, centerx[ix]-xwidth, centerz[iz]+zwidth, centerx[ix]+xwidth);
+	IronModule(mod, centerz[iz]-zwidth+ironoffset, centerx[ix]-xwidth+ironoffset,
+		   centerz[iz]+zwidth+ironoffset, centerx[ix]+xwidth+ironoffset);
       }
   
+
 
 }
 

@@ -1,23 +1,21 @@
 #!/bin/sh
 
-if [ $# -ne 5 ] ; then
+if [ $# -ne 2 ] ; then
   echo ""
-  echo "  !!! ./MakeDisp.sh [date] [month] [run] [subrun] [ientry] !!!"
+  echo "  !!! ./MakeDisp.sh [run] [ientry] !!!"
   echo "example)"
-  echo "./MakeDisp.sh 8 Nov 0 0 1"
+  echo "./MakeDisp.sh 29 1"
   exit 1
 fi
 
-date=$1
-month=$2
-run=$3
-subrun=$4
-entry=$5
+run=$1
+entry=$2
 
 anadir=${PWD}
-datadir=$anadir/process
+#datadir=$anadir/process/TEST
+datadir=$anadir/process/3-EVT
 
-filename=$(find  $datadir -type f -name "*BMEvt_${date}${month}_${run}-${subrun}*")
+filename=$(find  $datadir -type f -name "Evt_${run}.root")
 if [ $? -eq 0 ] ; then
     echo "Found a file"
     else
@@ -28,4 +26,4 @@ echo "Filename="$filename
 echo "Analyze the file..."
 
 cd $anadir
-./bin/MakeDisp $filename $date $month $run $subrun $entry
+./bin/MakeDisp $filename $run $entry

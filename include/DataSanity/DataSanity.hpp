@@ -9,7 +9,7 @@
 #include <TChain.h>
 #include <TString.h>
 #include <TSystem.h>
-#include <TH2D.h>
+#include <TH2F.h>
 
 #include "BMConst.hpp"
 #include "BMBasicRecon.hpp"
@@ -40,7 +40,7 @@ public:
   ~DataSanity();
 
   void ReadBMfile();
-  void SetHistLabel(TH2D* h, const char* title, char* ytitle);
+  void SetHistLabel(TH2F* h, const char* title, char* ytitle);
   void KillAll();
 
   

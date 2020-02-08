@@ -16,9 +16,10 @@
 #include <TCanvas.h>
 #include <TColor.h>
 #include <TH2.h>
+#include <TText.h>
 
 #include "BMConst.hpp"
-#include "BMDisp.hpp"
+#include "EVTCluster.hpp"
 
 class MakeMonitor
 {
@@ -27,17 +28,27 @@ private:
   bool firstdraw = true;
   TH2F *h;
   TH2F *v;
-  
+  int spillnumber;
+  time_t unixtime;
+  struct tm* timer;
+  int year, mon, day,hour, min, sec;
+  TString TIME;
+  TString SPILL;
 public:
   TCanvas *monitor;
-  TCanvas *monitor2;
+  TPad *pad_side;
+  TPad *pad_top;
+  TPad *pad_bottom;
+
+  TText *timeinfo;
+  TText *spillinfo;
 
   //function
 public:
   MakeMonitor();
   ~MakeMonitor();
 
-  void Display(BMDisp* bmdisp);
+  void Display(EVTCluster* evtcluster);
   
 };
 

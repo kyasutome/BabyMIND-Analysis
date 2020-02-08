@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analy
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/local/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/local/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,46 +111,172 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-src/BSDApply/CMakeFiles/BSDApply.dir/rule:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/BSDApply/CMakeFiles/BSDApply.dir/rule
-.PHONY : src/BSDApply/CMakeFiles/BSDApply.dir/rule
+src/BSDApply/CMakeFiles/BSDApply_WGnocut.dir/rule:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/BSDApply/CMakeFiles/BSDApply_WGnocut.dir/rule
+.PHONY : src/BSDApply/CMakeFiles/BSDApply_WGnocut.dir/rule
 
 # Convenience name for target.
-BSDApply: src/BSDApply/CMakeFiles/BSDApply.dir/rule
+BSDApply_WGnocut: src/BSDApply/CMakeFiles/BSDApply_WGnocut.dir/rule
 
-.PHONY : BSDApply
+.PHONY : BSDApply_WGnocut
 
 # fast build rule for target.
-BSDApply/fast:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/BSDApply/CMakeFiles/BSDApply.dir/build.make src/BSDApply/CMakeFiles/BSDApply.dir/build
-.PHONY : BSDApply/fast
+BSDApply_WGnocut/fast:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/BSDApply/CMakeFiles/BSDApply_WGnocut.dir/build.make src/BSDApply/CMakeFiles/BSDApply_WGnocut.dir/build
+.PHONY : BSDApply_WGnocut/fast
 
-main.o: main.cpp.o
+# Convenience name for target.
+src/BSDApply/CMakeFiles/BSDApply_WG.dir/rule:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/BSDApply/CMakeFiles/BSDApply_WG.dir/rule
+.PHONY : src/BSDApply/CMakeFiles/BSDApply_WG.dir/rule
 
-.PHONY : main.o
+# Convenience name for target.
+BSDApply_WG: src/BSDApply/CMakeFiles/BSDApply_WG.dir/rule
+
+.PHONY : BSDApply_WG
+
+# fast build rule for target.
+BSDApply_WG/fast:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/BSDApply/CMakeFiles/BSDApply_WG.dir/build.make src/BSDApply/CMakeFiles/BSDApply_WG.dir/build
+.PHONY : BSDApply_WG/fast
+
+# Convenience name for target.
+src/BSDApply/CMakeFiles/BSDApply_PM.dir/rule:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/BSDApply/CMakeFiles/BSDApply_PM.dir/rule
+.PHONY : src/BSDApply/CMakeFiles/BSDApply_PM.dir/rule
+
+# Convenience name for target.
+BSDApply_PM: src/BSDApply/CMakeFiles/BSDApply_PM.dir/rule
+
+.PHONY : BSDApply_PM
+
+# fast build rule for target.
+BSDApply_PM/fast:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/BSDApply/CMakeFiles/BSDApply_PM.dir/build.make src/BSDApply/CMakeFiles/BSDApply_PM.dir/build
+.PHONY : BSDApply_PM/fast
+
+# Convenience name for target.
+src/BSDApply/CMakeFiles/BSDApply_BM.dir/rule:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/BSDApply/CMakeFiles/BSDApply_BM.dir/rule
+.PHONY : src/BSDApply/CMakeFiles/BSDApply_BM.dir/rule
+
+# Convenience name for target.
+BSDApply_BM: src/BSDApply/CMakeFiles/BSDApply_BM.dir/rule
+
+.PHONY : BSDApply_BM
+
+# fast build rule for target.
+BSDApply_BM/fast:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/BSDApply/CMakeFiles/BSDApply_BM.dir/build.make src/BSDApply/CMakeFiles/BSDApply_BM.dir/build
+.PHONY : BSDApply_BM/fast
+
+BSDApply_BM.o: BSDApply_BM.cpp.o
+
+.PHONY : BSDApply_BM.o
 
 # target to build an object file
-main.cpp.o:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/BSDApply/CMakeFiles/BSDApply.dir/build.make src/BSDApply/CMakeFiles/BSDApply.dir/main.cpp.o
-.PHONY : main.cpp.o
+BSDApply_BM.cpp.o:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/BSDApply/CMakeFiles/BSDApply_BM.dir/build.make src/BSDApply/CMakeFiles/BSDApply_BM.dir/BSDApply_BM.cpp.o
+.PHONY : BSDApply_BM.cpp.o
 
-main.i: main.cpp.i
+BSDApply_BM.i: BSDApply_BM.cpp.i
 
-.PHONY : main.i
+.PHONY : BSDApply_BM.i
 
 # target to preprocess a source file
-main.cpp.i:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/BSDApply/CMakeFiles/BSDApply.dir/build.make src/BSDApply/CMakeFiles/BSDApply.dir/main.cpp.i
-.PHONY : main.cpp.i
+BSDApply_BM.cpp.i:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/BSDApply/CMakeFiles/BSDApply_BM.dir/build.make src/BSDApply/CMakeFiles/BSDApply_BM.dir/BSDApply_BM.cpp.i
+.PHONY : BSDApply_BM.cpp.i
 
-main.s: main.cpp.s
+BSDApply_BM.s: BSDApply_BM.cpp.s
 
-.PHONY : main.s
+.PHONY : BSDApply_BM.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/BSDApply/CMakeFiles/BSDApply.dir/build.make src/BSDApply/CMakeFiles/BSDApply.dir/main.cpp.s
-.PHONY : main.cpp.s
+BSDApply_BM.cpp.s:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/BSDApply/CMakeFiles/BSDApply_BM.dir/build.make src/BSDApply/CMakeFiles/BSDApply_BM.dir/BSDApply_BM.cpp.s
+.PHONY : BSDApply_BM.cpp.s
+
+BSDApply_PM.o: BSDApply_PM.cpp.o
+
+.PHONY : BSDApply_PM.o
+
+# target to build an object file
+BSDApply_PM.cpp.o:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/BSDApply/CMakeFiles/BSDApply_PM.dir/build.make src/BSDApply/CMakeFiles/BSDApply_PM.dir/BSDApply_PM.cpp.o
+.PHONY : BSDApply_PM.cpp.o
+
+BSDApply_PM.i: BSDApply_PM.cpp.i
+
+.PHONY : BSDApply_PM.i
+
+# target to preprocess a source file
+BSDApply_PM.cpp.i:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/BSDApply/CMakeFiles/BSDApply_PM.dir/build.make src/BSDApply/CMakeFiles/BSDApply_PM.dir/BSDApply_PM.cpp.i
+.PHONY : BSDApply_PM.cpp.i
+
+BSDApply_PM.s: BSDApply_PM.cpp.s
+
+.PHONY : BSDApply_PM.s
+
+# target to generate assembly for a file
+BSDApply_PM.cpp.s:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/BSDApply/CMakeFiles/BSDApply_PM.dir/build.make src/BSDApply/CMakeFiles/BSDApply_PM.dir/BSDApply_PM.cpp.s
+.PHONY : BSDApply_PM.cpp.s
+
+BSDApply_WG.o: BSDApply_WG.cpp.o
+
+.PHONY : BSDApply_WG.o
+
+# target to build an object file
+BSDApply_WG.cpp.o:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/BSDApply/CMakeFiles/BSDApply_WG.dir/build.make src/BSDApply/CMakeFiles/BSDApply_WG.dir/BSDApply_WG.cpp.o
+.PHONY : BSDApply_WG.cpp.o
+
+BSDApply_WG.i: BSDApply_WG.cpp.i
+
+.PHONY : BSDApply_WG.i
+
+# target to preprocess a source file
+BSDApply_WG.cpp.i:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/BSDApply/CMakeFiles/BSDApply_WG.dir/build.make src/BSDApply/CMakeFiles/BSDApply_WG.dir/BSDApply_WG.cpp.i
+.PHONY : BSDApply_WG.cpp.i
+
+BSDApply_WG.s: BSDApply_WG.cpp.s
+
+.PHONY : BSDApply_WG.s
+
+# target to generate assembly for a file
+BSDApply_WG.cpp.s:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/BSDApply/CMakeFiles/BSDApply_WG.dir/build.make src/BSDApply/CMakeFiles/BSDApply_WG.dir/BSDApply_WG.cpp.s
+.PHONY : BSDApply_WG.cpp.s
+
+BSDApply_WGnocut.o: BSDApply_WGnocut.cpp.o
+
+.PHONY : BSDApply_WGnocut.o
+
+# target to build an object file
+BSDApply_WGnocut.cpp.o:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/BSDApply/CMakeFiles/BSDApply_WGnocut.dir/build.make src/BSDApply/CMakeFiles/BSDApply_WGnocut.dir/BSDApply_WGnocut.cpp.o
+.PHONY : BSDApply_WGnocut.cpp.o
+
+BSDApply_WGnocut.i: BSDApply_WGnocut.cpp.i
+
+.PHONY : BSDApply_WGnocut.i
+
+# target to preprocess a source file
+BSDApply_WGnocut.cpp.i:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/BSDApply/CMakeFiles/BSDApply_WGnocut.dir/build.make src/BSDApply/CMakeFiles/BSDApply_WGnocut.dir/BSDApply_WGnocut.cpp.i
+.PHONY : BSDApply_WGnocut.cpp.i
+
+BSDApply_WGnocut.s: BSDApply_WGnocut.cpp.s
+
+.PHONY : BSDApply_WGnocut.s
+
+# target to generate assembly for a file
+BSDApply_WGnocut.cpp.s:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/BSDApply/CMakeFiles/BSDApply_WGnocut.dir/build.make src/BSDApply/CMakeFiles/BSDApply_WGnocut.dir/BSDApply_WGnocut.cpp.s
+.PHONY : BSDApply_WGnocut.cpp.s
 
 # Help Target
 help:
@@ -158,12 +284,24 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... BSDApply"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... BSDApply_WGnocut"
+	@echo "... BSDApply_WG"
+	@echo "... BSDApply_PM"
+	@echo "... rebuild_cache"
+	@echo "... BSDApply_BM"
+	@echo "... BSDApply_BM.o"
+	@echo "... BSDApply_BM.i"
+	@echo "... BSDApply_BM.s"
+	@echo "... BSDApply_PM.o"
+	@echo "... BSDApply_PM.i"
+	@echo "... BSDApply_PM.s"
+	@echo "... BSDApply_WG.o"
+	@echo "... BSDApply_WG.i"
+	@echo "... BSDApply_WG.s"
+	@echo "... BSDApply_WGnocut.o"
+	@echo "... BSDApply_WGnocut.i"
+	@echo "... BSDApply_WGnocut.s"
 .PHONY : help
 
 

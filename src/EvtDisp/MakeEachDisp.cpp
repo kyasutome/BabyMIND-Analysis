@@ -9,7 +9,7 @@
 
 //ROOT
 #include "TApplication.h"
-#include "BMDisp.hpp"
+#include "EVTCluster.hpp"
 
 using namespace std;
 
@@ -32,7 +32,7 @@ int main( int argc, char **argv )
   TFile* fin;
   TTree* tree;
   WGRecon *wgrecon = new WGRecon();
-  BMDisp *bmdisp = new BMDisp();
+  EVTCluster *evtcluster = new EVTCluster();
   MakeEachMonitor *makeeachmonitor = new MakeEachMonitor();
   
   filepath.Form("./process/9-WGWMClass/WGWMClass.root");
@@ -47,14 +47,14 @@ int main( int argc, char **argv )
       tree->GetEntry(ientry);
       for(int idata=0; idata<wgrecon->mod.size(); idata++)
 	{
-	  bmdisp->mod.push_back(wgrecon->mod.at(idata));
-	  bmdisp->view.push_back(wgrecon->view.at(idata));
-	  bmdisp->pln.push_back(wgrecon->pln.at(idata));
-	  bmdisp->channel.push_back(wgrecon->channel.at(idata));
-	  bmdisp->bunch.push_back(wgrecon->bunch.at(idata));	  
+	  evtcluster->mod.push_back(wgrecon->mod.at(idata));
+	  evtcluster->view.push_back(wgrecon->view.at(idata));
+	  evtcluster->pln.push_back(wgrecon->pln.at(idata));
+	  evtcluster->channel.push_back(wgrecon->channel.at(idata));
+	  evtcluster->bunch.push_back(wgrecon->bunch.at(idata));	  
 	}
 
-      makeeachmonitor->Display(bmdisp);
+      makeeachmonitor->Display(evtcluster);
 
     }
 

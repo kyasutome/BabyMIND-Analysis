@@ -18,7 +18,7 @@
 #include <TH2.h>
 
 #include "BMConst.hpp"
-#include "BMDisp.hpp"
+#include "EVTCluster.hpp"
 #include "Dimension.hpp"
 
 class MakeHitDisp
@@ -45,25 +45,25 @@ public:
   ~MakeHitDisp();
 
   //for Baby MIND
-  void DrawBMHit(BMDisp* bmdisp, int VIEW);
+  void DrawBMHit(EVTCluster* evtcluster, int VIEW);
   void bmxhit(double pln, double ch, double r, double bunch);
   void bmyhit(double pln, double ch, double r, double bunch);
   void yasuxhit(double view, double pln, double ch, double r, double bunch);
   void yasuyhit(double view, double pln, double ch, double r, double bunch);
 
   //for Proton Module
-  void DrawPMHit(BMDisp* bmdisp, int VIEW);
+  void DrawPMHit(EVTCluster* evtcluster, int VIEW);
   void pmxhit(double pln, double ch, double r, double bunch);
   void pmyhit(double pln, double ch, double r, double bunch);
   void pmvhit(double pln, double ch, double view, double r, double bunch);
 
   //for WAGASCIs
-  void DrawWGHit(BMDisp* bmdisp, int VIEW, int MOD);
+  void DrawWGHit(EVTCluster* evtcluster, int VIEW, int MOD);
   void wgxhit(double dif, double chip, double chan, double r, double bunch);
   void wgyhit(double dif, double chip, double chan, double r, double bunch);
 
   //for WallMRDs
-  void DrawWMHit(BMDisp* bmdisp, int MOD);
+  void DrawWMHit(EVTCluster* evtcluster, int MOD);
   void wmhit(double dif, double chip, double chan, double r, double bunch);
 
   void ColorScale(int *color, int bunch);

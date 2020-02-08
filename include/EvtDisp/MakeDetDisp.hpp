@@ -54,6 +54,7 @@ public:
 
   //for WAGASCI
   void DrawWAGASCI(int mod, int view);
+  void WaterTank(int mod, int view);
   void PlnSci(int mod, int view, double x, double v);
   void GridSci(int mod, int view, double x, double y);
 
