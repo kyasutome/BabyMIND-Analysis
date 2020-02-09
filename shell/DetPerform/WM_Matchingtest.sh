@@ -2,9 +2,9 @@
 
 if [ $# -ne 1 ] ; then
   echo ""
-  echo "  !!! ./WMCoinCheck.sh [run]!!!"
+  echo "  !!! ./WM_Matchingtest.sh [run]!!!"
   echo "example)"
-  echo "./WMCoinCheck.sh 92"
+  echo "./WM_Matchingtest.sh 92"
   exit 1
 fi
 
@@ -25,4 +25,4 @@ echo "Filename="$filename
 echo "Analyze the file..."
 
 cd $anadir
-./bin/WMCoinCheck $filename $run
+./bin/wm_matchingtest $filename $run

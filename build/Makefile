@@ -293,6 +293,19 @@ MakeEvent/fast:
 .PHONY : MakeEvent/fast
 
 #=============================================================================
+# Target rules for targets named wm_matchingtest
+
+# Build rule for target.
+wm_matchingtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 wm_matchingtest
+.PHONY : wm_matchingtest
+
+# fast build rule for target.
+wm_matchingtest/fast:
+	$(MAKE) -f src/DetPerform/CMakeFiles/wm_matchingtest.dir/build.make src/DetPerform/CMakeFiles/wm_matchingtest.dir/build
+.PHONY : wm_matchingtest/fast
+
+#=============================================================================
 # Target rules for targets named wmcoincheck
 
 # Build rule for target.
@@ -327,6 +340,7 @@ help:
 	@echo "... TrackRecon"
 	@echo "... WMDataQuality"
 	@echo "... MakeEvent"
+	@echo "... wm_matchingtest"
 	@echo "... wmcoincheck"
 .PHONY : help
 

@@ -111,6 +111,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+src/DetPerform/CMakeFiles/wm_matchingtest.dir/rule:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/DetPerform/CMakeFiles/wm_matchingtest.dir/rule
+.PHONY : src/DetPerform/CMakeFiles/wm_matchingtest.dir/rule
+
+# Convenience name for target.
+wm_matchingtest: src/DetPerform/CMakeFiles/wm_matchingtest.dir/rule
+
+.PHONY : wm_matchingtest
+
+# fast build rule for target.
+wm_matchingtest/fast:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DetPerform/CMakeFiles/wm_matchingtest.dir/build.make src/DetPerform/CMakeFiles/wm_matchingtest.dir/build
+.PHONY : wm_matchingtest/fast
+
+# Convenience name for target.
 src/DetPerform/CMakeFiles/wmcoincheck.dir/rule:
 	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/DetPerform/CMakeFiles/wmcoincheck.dir/rule
 .PHONY : src/DetPerform/CMakeFiles/wmcoincheck.dir/rule
@@ -152,6 +167,33 @@ wm_coin.cpp.s:
 	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DetPerform/CMakeFiles/wmcoincheck.dir/build.make src/DetPerform/CMakeFiles/wmcoincheck.dir/wm_coin.cpp.s
 .PHONY : wm_coin.cpp.s
 
+wm_matchingtest.o: wm_matchingtest.cpp.o
+
+.PHONY : wm_matchingtest.o
+
+# target to build an object file
+wm_matchingtest.cpp.o:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DetPerform/CMakeFiles/wm_matchingtest.dir/build.make src/DetPerform/CMakeFiles/wm_matchingtest.dir/wm_matchingtest.cpp.o
+.PHONY : wm_matchingtest.cpp.o
+
+wm_matchingtest.i: wm_matchingtest.cpp.i
+
+.PHONY : wm_matchingtest.i
+
+# target to preprocess a source file
+wm_matchingtest.cpp.i:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DetPerform/CMakeFiles/wm_matchingtest.dir/build.make src/DetPerform/CMakeFiles/wm_matchingtest.dir/wm_matchingtest.cpp.i
+.PHONY : wm_matchingtest.cpp.i
+
+wm_matchingtest.s: wm_matchingtest.cpp.s
+
+.PHONY : wm_matchingtest.s
+
+# target to generate assembly for a file
+wm_matchingtest.cpp.s:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DetPerform/CMakeFiles/wm_matchingtest.dir/build.make src/DetPerform/CMakeFiles/wm_matchingtest.dir/wm_matchingtest.cpp.s
+.PHONY : wm_matchingtest.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -160,10 +202,14 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... wm_matchingtest"
 	@echo "... wmcoincheck"
 	@echo "... wm_coin.o"
 	@echo "... wm_coin.i"
 	@echo "... wm_coin.s"
+	@echo "... wm_matchingtest.o"
+	@echo "... wm_matchingtest.i"
+	@echo "... wm_matchingtest.s"
 .PHONY : help
 
 

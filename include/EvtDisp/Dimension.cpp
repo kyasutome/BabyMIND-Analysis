@@ -22,7 +22,7 @@ inline Dimension::Dimension()
   offset[0][0][7]=-640, offset[0][1][7]=-500;
   offset[1][0][7]=-640, offset[1][1][7]=-1150;
   offset[0][0][3]=-1, offset[0][1][3]=-1;
-  offset[1][0][3]=-2000, offset[1][1][3]=-2200;
+  offset[1][0][3]=-2200, offset[1][1][3]=-2200;
   offset[0][0][4]=-1, offset[0][1][4]=-1;
   offset[1][0][4]=-1700, offset[1][1][4]=+500;
   offset[0][0][5]=0, offset[0][1][5]=0;

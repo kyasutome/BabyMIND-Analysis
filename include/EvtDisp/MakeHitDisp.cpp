@@ -10,7 +10,7 @@ using namespace std;
 
 MakeHitDisp::MakeHitDisp()
 {
-  r = 20;
+  r = 100;
 }
 
 MakeHitDisp::~MakeHitDisp()

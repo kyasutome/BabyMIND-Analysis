@@ -32,4 +32,5 @@
 /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/src/MakeEvent/CMakeFiles/MakeEvent.dir
 /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/src/DetPerform/CMakeFiles/rebuild_cache.dir
 /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/src/DetPerform/CMakeFiles/edit_cache.dir
+/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/src/DetPerform/CMakeFiles/wm_matchingtest.dir
 /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/src/DetPerform/CMakeFiles/wmcoincheck.dir
