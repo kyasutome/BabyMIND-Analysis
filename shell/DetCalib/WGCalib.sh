@@ -9,7 +9,8 @@ if [ $# -ne 1 ] ; then
 fi
 
 runnumber=$1
-filepath="/Users/kenji/Dropbox/wagasci/wagasci/physdata/beam/run${runnumber}"
+#filepath="/Users/kenji/Dropbox/wagasci/wagasci/physdata/beam/run${runnumber}"
+filepath="/Volumes/HDPH-UT/NewG/Run10/wagasci/run${runnumber}"
 
 anadir=${PWD}
 datadir=$anadir/process

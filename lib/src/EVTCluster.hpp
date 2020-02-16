@@ -29,6 +29,7 @@ public:
   vector<double> dposz;
 
   double pot;
+  double totalpot;
   int unixtime;
   int spillnum;
   int bm_event;

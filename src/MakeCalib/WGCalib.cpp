@@ -45,7 +45,7 @@ int main( int argc, char **argv )
       otree_nocut[idif]->Branch("WGRecon","WGRecon",&wgrecon_nocut,32000,2);
 
       int DIF=idif;
-      filepath.Form("%s/physics_run_2020-01-29_18-30-08_92_ecal_dif_%d_tree.root", filedir.Data(), DIF);
+      filepath.Form("%s/physics_run_2020-02-08_15-28-22_%d_ecal_dif_%d_tree.root", filedir.Data(), runnumber, DIF);
       wgwmdata->ReadTree(filepath, DIF);
 
       for(int ientry=0; ientry<wgwmdata->wgtree[idif]->GetEntries(); ientry++)

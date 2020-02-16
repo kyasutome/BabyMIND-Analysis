@@ -293,6 +293,32 @@ MakeEvent/fast:
 .PHONY : MakeEvent/fast
 
 #=============================================================================
+# Target rules for targets named detect_eff
+
+# Build rule for target.
+detect_eff: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 detect_eff
+.PHONY : detect_eff
+
+# fast build rule for target.
+detect_eff/fast:
+	$(MAKE) -f src/DetPerform/CMakeFiles/detect_eff.dir/build.make src/DetPerform/CMakeFiles/detect_eff.dir/build
+.PHONY : detect_eff/fast
+
+#=============================================================================
+# Target rules for targets named det_eventrate
+
+# Build rule for target.
+det_eventrate: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 det_eventrate
+.PHONY : det_eventrate
+
+# fast build rule for target.
+det_eventrate/fast:
+	$(MAKE) -f src/DetPerform/CMakeFiles/det_eventrate.dir/build.make src/DetPerform/CMakeFiles/det_eventrate.dir/build
+.PHONY : det_eventrate/fast
+
+#=============================================================================
 # Target rules for targets named wm_matchingtest
 
 # Build rule for target.
@@ -340,6 +366,8 @@ help:
 	@echo "... TrackRecon"
 	@echo "... WMDataQuality"
 	@echo "... MakeEvent"
+	@echo "... detect_eff"
+	@echo "... det_eventrate"
 	@echo "... wm_matchingtest"
 	@echo "... wmcoincheck"
 .PHONY : help

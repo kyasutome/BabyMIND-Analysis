@@ -15,9 +15,10 @@ BSDApply::BSDApply()
   //startrun = 830115;
   //endrun = 830493;
   startrun = 840003;
-  endrun = 840162;
+  endrun = 840199;
   startsub = 0;
   endsub = 50;
+  spillshift = 1;
 
   for(int i=0; i<2; i++)
     for(int j=0; j<100; j++)
@@ -86,7 +87,7 @@ void BSDApply::FindFirstSpill(int *detfirstspill, int detmon, int detdate, int d
     {
       bsdchain->GetEntry(ibsd);
       thebeamtime = trg_sec[2];
-      thebeamspill = spillnum & 0x7fff;
+      thebeamspill = (spillnum+spillshift) & 0x7fff;
       GetMonDateHour(thebeamtime, &Mon, &Date, &Hour);
       if(Mon!=detmon || Date!=detdate || Hour!=dethour)
 	continue;
@@ -100,10 +101,10 @@ void BSDApply::FindFirstSpill(int *detfirstspill, int detmon, int detdate, int d
 	      firstmatchspillentry = ibsd;
 	      finish = true;
 	      break;
-	    }
-	  
+	    }  
 	}
     }
+
   cout << "firstmatchspillentry= " << firstmatchspillentry << '\n';
   cout << "FirstMatchSpill= " << thebeamspill << " = " << *detfirstspill << '\n';
 }
@@ -114,11 +115,11 @@ void BSDApply::MakeBeamGroup(int isub)
     beamgroup[i].clear();
 
   //int startentry = firstmatchspillentry + isub*nsubdata;
-  int startentry = firstmatchspillentry + isub*900;
+  int startentry = firstmatchspillentry + isub*950;
   for(int ibsd=startentry; ibsd<startentry+dayspill; ibsd++)
     {
       bsdchain->GetEntry(ibsd);
-      thebeamspill = spillnum & 0x7fff;
+      thebeamspill = (spillnum+spillshift) & 0x7fff;
       beamgroup[0].push_back(thebeamspill);
       beamgroup[1].push_back(trg_sec[2]);
       beamgroup[2].push_back(ct_np[4][0]);
@@ -159,6 +160,7 @@ void BSDApply::FillBSD(TTree* tree, TTree* otree, BMBSD* bmbsd, int mod)
 	  thespillit = find(pmspill.begin(), pmspill.end(), thebeamspill);
 	  thepmspill = thespillit - pmspill.begin();
 	  tree->GetEntry(thepmspill);
+	  cout << "pmspill= " << thepmspill << '\n';
 	}
 
       if(mod==1)
@@ -181,7 +183,6 @@ void BSDApply::FillBSD(TTree* tree, TTree* otree, BMBSD* bmbsd, int mod)
     }
 
 }
-
 
 bool BSDApply::CheckDetTime(time_t unixtime, int mon, int date, int hour)
 {
@@ -220,6 +221,34 @@ bool BSDApply::CheckMainteDay(int Mon, int Date, int *detfirstspill, int mod)
       *detfirstspill = 20350;
       maintecheck = true;
     }
+
+  
+  if(Mon==2 && Date==2 && mod==1) 
+    {
+      *detfirstspill = 31383;
+      maintecheck = true;
+    }
+
+  if(Mon==2 && Date==2 && mod==5) 
+    {
+      *detfirstspill = 31383;
+      maintecheck = true;
+    }
+  
+
+  
+  //if(Mon==2 && Date==6 && mod==5) 
+  //  {
+  //    *detfirstspill = 22890;
+  //    maintecheck = true;
+  //  }
+
+  if(Mon==2 && Date==6 && mod==1) 
+    {
+      *detfirstspill = 22890;
+      maintecheck = true;
+    }
+  
 
   return maintecheck;
 

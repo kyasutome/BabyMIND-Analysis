@@ -15,7 +15,13 @@ BasicRecon::BasicRecon()
 	  ipos[i][j]=-1;
 	  fpos[i][j]=-1;
 	}
+
+      for(int j=0; j<9; j++)
+	Nhit[i][j]=-1;
+
     }
+
+
 
 }
 
@@ -35,7 +41,12 @@ void BasicRecon::Clear()
 	  ipos[i][j]=-1;
 	  fpos[i][j]=-1;
 	}
+
+      for(int j=0; j<9; j++)
+	Nhit[i][j]=-1;
     }
+
+
 
 
 }

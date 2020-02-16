@@ -39,7 +39,7 @@ int main( int argc, char **argv )
 	tree->GetEntry(targetentry);
 	cout << "size= " << evtcluster->pln.size() << '\n';
 	makemonitor->Display(evtcluster);
-	//CanvasName.Form("./plots/EvtDisp/EvtDisp_spill_%d.pdf", bmdisp->spillnum);
+	//CanvasName.Form("./plots/EvtDisp_0213/EvtDisp_spill_%d.pdf", evtcluster->spillnum);
 	//makemonitor->monitor->Print(CanvasName);
 	makemonitor->timeinfo->Delete();
 	makemonitor->spillinfo->Delete();

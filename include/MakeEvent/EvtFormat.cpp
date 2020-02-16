@@ -29,10 +29,10 @@ void EvtFormat::ReadBMChain(TString filepath, BMBasicRecon* bmbasicrecon, BMBeam
 			    BMBSD* bmbsd, int *sunixtime, int *eunixtime)
 {
   cout << "Start reading BM chain..." << '\n';
-  bmchain->Add(Form("%s/BMBSD_BM*.root",filepath.Data()));
+  AddBMChain(filepath);
   bmchain->SetBranchAddress("BMBasicRecon", &bmbasicrecon);
   bmchain->SetBranchAddress("BMBeaminfo", &bmbeaminfo);
-  bmchain->SetBranchAddress("BMBSD", &bmbsd);
+  bmchain->SetBranchAddress("BMBSD", &bmbsd);  
   nbmdata = bmchain->GetEntries();  
 
   bmchain->GetEntry(0);
@@ -54,7 +54,8 @@ void EvtFormat::ReadBMChain(TString filepath, BMBasicRecon* bmbasicrecon, BMBeam
 void EvtFormat::ReadPMChain(TString filepath, PMRecon* pmrecon,  BMBSD* bmbsd, int *sunixtime, int *eunixtime)
 {
   cout << "Start reading PM chain..." << '\n';
-  pmchain->Add(Form("%s/BMBSD_PM*.root",filepath.Data()));
+  AddPMChain(filepath);
+
   pmchain->SetBranchAddress("PMRecon", &pmrecon);
   pmchain->SetBranchAddress("BMBSD", &bmbsd);
   npmdata = pmchain->GetEntries();  
@@ -80,7 +81,7 @@ void EvtFormat::ReadWGChain(TString filepath, WGRecon* wgrecon[],  BMBSD* bmbsd[
 
   for(int idif=0; idif<8; idif++)
     {
-      wgchain[idif]->Add(Form("%s/BMBSD_WG_*_dif%d.root",filepath.Data(), idif));
+      AddWGChain(filepath, idif);
       wgchain[idif]->SetBranchAddress("WGRecon", &wgrecon[idif]);
       wgchain[idif]->SetBranchAddress("BMBSD", &bmbsd[idif]);
       nwgdata[idif] = wgchain[idif]->GetEntries();  
@@ -105,34 +106,98 @@ void EvtFormat::ReadWGChain(TString filepath, WGRecon* wgrecon[],  BMBSD* bmbsd[
   
 }
 
-bool EvtFormat::FillEvtClass(TTree *otree, int sunixtimeentry, vector<int> baseunixtime, vector<double> basepot, 
-			     BMBasicRecon* bmbasicrecon, PMRecon* pmrecon,
+void EvtFormat::AddBMChain(TString filepath)
+{
+
+  bmchain->Add(Form("%s/BMBSD_BM_29_Jan*.root",filepath.Data()));
+  bmchain->Add(Form("%s/BMBSD_BM_30_Jan*.root",filepath.Data()));
+  bmchain->Add(Form("%s/BMBSD_BM_31_Jan*.root",filepath.Data()));
+  bmchain->Add(Form("%s/BMBSD_BM_1_Feb*.root",filepath.Data()));
+  bmchain->Add(Form("%s/BMBSD_BM_2_Feb*.root",filepath.Data()));
+  bmchain->Add(Form("%s/BMBSD_BM_3_Feb*.root",filepath.Data()));
+  bmchain->Add(Form("%s/BMBSD_BM_4_Feb*.root",filepath.Data()));
+  bmchain->Add(Form("%s/BMBSD_BM_5_Feb*.root",filepath.Data()));
+  bmchain->Add(Form("%s/BMBSD_BM_6_Feb*.root",filepath.Data()));
+  bmchain->Add(Form("%s/BMBSD_BM_7_Feb*.root",filepath.Data()));
+  bmchain->Add(Form("%s/BMBSD_BM_8_Feb*.root",filepath.Data()));
+  bmchain->Add(Form("%s/BMBSD_BM_9_Feb*.root",filepath.Data()));
+  
+}
+
+void EvtFormat::AddPMChain(TString filepath)
+{
+  pmchain->Add(Form("%s/BMBSD_PM_32462_10_20.root",filepath.Data()));
+  pmchain->Add(Form("%s/BMBSD_PM_32462_20_34.root",filepath.Data()));
+  pmchain->Add(Form("%s/BMBSD_PM_32462_34_50.root",filepath.Data()));
+  pmchain->Add(Form("%s/BMBSD_PM_32462_50_70.root",filepath.Data()));
+  pmchain->Add(Form("%s/BMBSD_PM_32462_70_90.root",filepath.Data()));
+  pmchain->Add(Form("%s/BMBSD_PM_32462_90_110.root",filepath.Data()));
+  pmchain->Add(Form("%s/BMBSD_PM_32462_110_128.root",filepath.Data()));
+  pmchain->Add(Form("%s/BMBSD_PM_32463_0_20.root",filepath.Data()));
+  pmchain->Add(Form("%s/BMBSD_PM_32463_20_40.root",filepath.Data()));
+  pmchain->Add(Form("%s/BMBSD_PM_32463_40_60.root",filepath.Data()));
+  pmchain->Add(Form("%s/BMBSD_PM_32463_60_77.root",filepath.Data()));
+  pmchain->Add(Form("%s/BMBSD_PM_32468_0_20.root",filepath.Data()));
+  pmchain->Add(Form("%s/BMBSD_PM_32468_20_40.root",filepath.Data()));
+  pmchain->Add(Form("%s/BMBSD_PM_32468_40_60.root",filepath.Data()));
+  pmchain->Add(Form("%s/BMBSD_PM_32468_60_81.root",filepath.Data()));
+  pmchain->Add(Form("%s/BMBSD_PM_32469_0_20.root",filepath.Data()));
+  pmchain->Add(Form("%s/BMBSD_PM_32469_20_34.root",filepath.Data()));
+  pmchain->Add(Form("%s/BMBSD_PM_32470_0_20.root",filepath.Data()));
+  pmchain->Add(Form("%s/BMBSD_PM_32470_20_32.root",filepath.Data()));
+}
+
+void EvtFormat::AddWGChain(TString filepath, int idif)
+{
+  wgchain[idif]->Add(Form("%s/BMBSD_WG_92_dif%d.root",filepath.Data(), idif));
+  wgchain[idif]->Add(Form("%s/BMBSD_WG_93_dif%d.root",filepath.Data(), idif));
+  wgchain[idif]->Add(Form("%s/BMBSD_WG_95_dif%d.root",filepath.Data(), idif));
+  wgchain[idif]->Add(Form("%s/BMBSD_WG_96_dif%d.root",filepath.Data(), idif));
+  wgchain[idif]->Add(Form("%s/BMBSD_WG_97_dif%d.root",filepath.Data(), idif));
+  wgchain[idif]->Add(Form("%s/BMBSD_WG_98_dif%d.root",filepath.Data(), idif));
+  wgchain[idif]->Add(Form("%s/BMBSD_WG_99_dif%d.root",filepath.Data(), idif));
+  wgchain[idif]->Add(Form("%s/BMBSD_WG_100_dif%d.root",filepath.Data(), idif));
+  wgchain[idif]->Add(Form("%s/BMBSD_WG_101_dif%d.root",filepath.Data(), idif));
+  wgchain[idif]->Add(Form("%s/BMBSD_WG_102_dif%d.root",filepath.Data(), idif));
+  wgchain[idif]->Add(Form("%s/BMBSD_WG_103_dif%d.root",filepath.Data(), idif));
+  wgchain[idif]->Add(Form("%s/BMBSD_WG_104_dif%d.root",filepath.Data(), idif));
+  //wgchain[idif]->Add(Form("%s/BMBSD_WG_*_dif%d.root",filepath.Data(), idif));  
+}
+
+
+bool EvtFormat::FillEvtClass(TTree *otree, int sunixtimeentry, int eunixtimeentry, vector<int> baseunixtime, vector<double> basepot, 
+			     BMBasicRecon* bmbasicrecon, BMBeaminfo* bmbeaminfo, PMRecon* pmrecon,
 			     WGRecon* wgrecon[8], EVTCluster* evtcluster, TString filepath)
 {
   evtcluster->Clear();
+  Nentry = eunixtimeentry - sunixtimeentry;
+
   bmchain->Reset();
-  bmchain->Add(Form("%s/BMBSD_BM*.root",filepath.Data()));
+  AddBMChain(filepath);
   bmchain->SetBranchAddress("BMBasicRecon", &bmbasicrecon);
+  bmchain->SetBranchAddress("BMBeaminfo", &bmbeaminfo);
   
   pmchain->Reset();
-  pmchain->Add(Form("%s/BMBSD_PM*.root",filepath.Data()));
+  AddPMChain(filepath);
   pmchain->SetBranchAddress("PMRecon", &pmrecon);
 
   for(int idif=0; idif<8; idif++)
     {
       wgchain[idif]->Reset();
-      wgchain[idif]->Add(Form("%s/BMBSD_WG_*_dif%d.root",filepath.Data(), idif));
+      AddWGChain(filepath, idif);
       wgchain[idif]->SetBranchAddress("WGRecon", &wgrecon[idif]);
     }
 
   //for(int ientry=0; ientry<20; ientry++)
-  for(int ientry=0; ientry<pmchain->GetEntries(); ientry++)
+  //for(int ientry=0; ientry<pmchain->GetEntries(); ientry++)
+  for(int ientry=0; ientry<=Nentry; ientry++)
     {
       evtcluster->Clear();
       bmbasicrecon->Clear();
       pmrecon->Clear();
       bmfillflag=false;
       pmfillflag=false;
+
       for(int idif=0; idif<8; idif++)
 	{
 	  wgfillflag[idif]=false;
@@ -142,6 +207,7 @@ bool EvtFormat::FillEvtClass(TTree *otree, int sunixtimeentry, vector<int> baseu
       theunixtimeentry = sunixtimeentry + ientry;
       theunixtime = baseunixtime.at(theunixtimeentry);
       thepot = basepot.at(theunixtimeentry);
+      totalpot += thepot;
 
       //BabyMIND check                                                                                                 
       auto bmunixit = find(bmunix.begin(), bmunix.end(), theunixtime);
@@ -177,7 +243,7 @@ bool EvtFormat::FillEvtClass(TTree *otree, int sunixtimeentry, vector<int> baseu
       if(bmfillflag)
 	{	  
 	  bmchain->GetEntry(bmentry);
-	  
+	  spillnum = bmbeaminfo->spillnum;
 	  for(int i=0; i<bmbasicrecon->mod.size(); i++)
 	    {
 	      posx=-1;
@@ -226,9 +292,8 @@ bool EvtFormat::FillEvtClass(TTree *otree, int sunixtimeentry, vector<int> baseu
 	}
       
       if(pmfillflag)
-	{	  
+	{
 	  pmchain->GetEntry(pmentry);
-
 	  for(int i=0; i<pmrecon->mod->size(); i++)
 	    {
 	      posx=-1;
@@ -276,6 +341,7 @@ bool EvtFormat::FillEvtClass(TTree *otree, int sunixtimeentry, vector<int> baseu
 	  if(wgfillflag[idif])
 	    {
 	      wgchain[idif]->GetEntry(wgentry[idif]);	      
+	      spillnum = wgrecon[idif]->spill;
 
 	      for(int i=0; i<wgrecon[idif]->mod.size(); i++)
 		{
@@ -335,8 +401,10 @@ bool EvtFormat::FillEvtClass(TTree *otree, int sunixtimeentry, vector<int> baseu
       
       if(fillflag)
 	{
+	  evtcluster->spillnum=spillnum;
 	  evtcluster->unixtime=theunixtime;
 	  evtcluster->pot=thepot;
+	  evtcluster->totalpot = totalpot;
 	  otree->Fill();
 	}
 

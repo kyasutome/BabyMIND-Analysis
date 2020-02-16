@@ -111,6 +111,36 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+src/DetPerform/CMakeFiles/detect_eff.dir/rule:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/DetPerform/CMakeFiles/detect_eff.dir/rule
+.PHONY : src/DetPerform/CMakeFiles/detect_eff.dir/rule
+
+# Convenience name for target.
+detect_eff: src/DetPerform/CMakeFiles/detect_eff.dir/rule
+
+.PHONY : detect_eff
+
+# fast build rule for target.
+detect_eff/fast:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DetPerform/CMakeFiles/detect_eff.dir/build.make src/DetPerform/CMakeFiles/detect_eff.dir/build
+.PHONY : detect_eff/fast
+
+# Convenience name for target.
+src/DetPerform/CMakeFiles/det_eventrate.dir/rule:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/DetPerform/CMakeFiles/det_eventrate.dir/rule
+.PHONY : src/DetPerform/CMakeFiles/det_eventrate.dir/rule
+
+# Convenience name for target.
+det_eventrate: src/DetPerform/CMakeFiles/det_eventrate.dir/rule
+
+.PHONY : det_eventrate
+
+# fast build rule for target.
+det_eventrate/fast:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DetPerform/CMakeFiles/det_eventrate.dir/build.make src/DetPerform/CMakeFiles/det_eventrate.dir/build
+.PHONY : det_eventrate/fast
+
+# Convenience name for target.
 src/DetPerform/CMakeFiles/wm_matchingtest.dir/rule:
 	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/DetPerform/CMakeFiles/wm_matchingtest.dir/rule
 .PHONY : src/DetPerform/CMakeFiles/wm_matchingtest.dir/rule
@@ -139,6 +169,60 @@ wmcoincheck: src/DetPerform/CMakeFiles/wmcoincheck.dir/rule
 wmcoincheck/fast:
 	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DetPerform/CMakeFiles/wmcoincheck.dir/build.make src/DetPerform/CMakeFiles/wmcoincheck.dir/build
 .PHONY : wmcoincheck/fast
+
+det_eventrate.o: det_eventrate.cpp.o
+
+.PHONY : det_eventrate.o
+
+# target to build an object file
+det_eventrate.cpp.o:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DetPerform/CMakeFiles/det_eventrate.dir/build.make src/DetPerform/CMakeFiles/det_eventrate.dir/det_eventrate.cpp.o
+.PHONY : det_eventrate.cpp.o
+
+det_eventrate.i: det_eventrate.cpp.i
+
+.PHONY : det_eventrate.i
+
+# target to preprocess a source file
+det_eventrate.cpp.i:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DetPerform/CMakeFiles/det_eventrate.dir/build.make src/DetPerform/CMakeFiles/det_eventrate.dir/det_eventrate.cpp.i
+.PHONY : det_eventrate.cpp.i
+
+det_eventrate.s: det_eventrate.cpp.s
+
+.PHONY : det_eventrate.s
+
+# target to generate assembly for a file
+det_eventrate.cpp.s:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DetPerform/CMakeFiles/det_eventrate.dir/build.make src/DetPerform/CMakeFiles/det_eventrate.dir/det_eventrate.cpp.s
+.PHONY : det_eventrate.cpp.s
+
+detect_eff.o: detect_eff.cpp.o
+
+.PHONY : detect_eff.o
+
+# target to build an object file
+detect_eff.cpp.o:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DetPerform/CMakeFiles/detect_eff.dir/build.make src/DetPerform/CMakeFiles/detect_eff.dir/detect_eff.cpp.o
+.PHONY : detect_eff.cpp.o
+
+detect_eff.i: detect_eff.cpp.i
+
+.PHONY : detect_eff.i
+
+# target to preprocess a source file
+detect_eff.cpp.i:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DetPerform/CMakeFiles/detect_eff.dir/build.make src/DetPerform/CMakeFiles/detect_eff.dir/detect_eff.cpp.i
+.PHONY : detect_eff.cpp.i
+
+detect_eff.s: detect_eff.cpp.s
+
+.PHONY : detect_eff.s
+
+# target to generate assembly for a file
+detect_eff.cpp.s:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DetPerform/CMakeFiles/detect_eff.dir/build.make src/DetPerform/CMakeFiles/detect_eff.dir/detect_eff.cpp.s
+.PHONY : detect_eff.cpp.s
 
 wm_coin.o: wm_coin.cpp.o
 
@@ -201,9 +285,17 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... detect_eff"
+	@echo "... det_eventrate"
 	@echo "... edit_cache"
 	@echo "... wm_matchingtest"
 	@echo "... wmcoincheck"
+	@echo "... det_eventrate.o"
+	@echo "... det_eventrate.i"
+	@echo "... det_eventrate.s"
+	@echo "... detect_eff.o"
+	@echo "... detect_eff.i"
+	@echo "... detect_eff.s"
 	@echo "... wm_coin.o"
 	@echo "... wm_coin.i"
 	@echo "... wm_coin.s"

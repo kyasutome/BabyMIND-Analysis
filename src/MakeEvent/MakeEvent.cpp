@@ -43,6 +43,7 @@ int main( int argc, char **argv )
   BSDApply *bsdapply = new BSDApply();
 
   int sunixtimeentry;
+  int eunixtimeentry;
   int theunixtimeentry;
   int thebaseunixtime;
 
@@ -76,8 +77,14 @@ int main( int argc, char **argv )
   auto theunixit = find(baseunixtime.begin(), baseunixtime.end(), detunixtime[0][1]);
   sunixtimeentry = theunixit - baseunixtime.begin();  
   
-  evtformat->FillEvtClass(otree, sunixtimeentry, baseunixtime, basepot, 
-			  bmbasicrecon, pmrecon, wgrecon, evtcluster, name);
+  theunixit = find(baseunixtime.begin(), baseunixtime.end(), detunixtime[1][1]);
+  eunixtimeentry = theunixit - baseunixtime.begin();
+
+  cout  << detunixtime[0][1] << " " << detunixtime[1][1] << '\n';
+
+  
+  evtformat->FillEvtClass(otree, sunixtimeentry, eunixtimeentry, baseunixtime, basepot, 
+			  bmbasicrecon, bmbeaminfo, pmrecon, wgrecon, evtcluster, name);
   
   
   fout->cd();

@@ -129,6 +129,7 @@ void Yasutomethod::ystmethod(BMDisp* bmdisp, BMCluster* bmcluster[100])
 			}
 		    }
 		}
+
 	      if(track[i_can].size()>=2)
 		{
 

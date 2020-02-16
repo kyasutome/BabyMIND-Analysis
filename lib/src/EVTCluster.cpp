@@ -23,6 +23,7 @@ EVTCluster::EVTCluster()
   dposz.clear();
 
   pot=-1.;
+  totalpot=-1.;
   unixtime=-1;
   spillnum=-1;
   bm_event=-1;
@@ -54,10 +55,10 @@ void EVTCluster::Clear()
   dposz.clear();
 
   pot=-1.;
+  totalpot=-1.;
   unixtime=-1;
   spillnum=-1;
   bm_event=-1;
   entry=-1;
-
 
 }

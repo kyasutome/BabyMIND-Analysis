@@ -16,37 +16,18 @@
 #include "EVTCluster.hpp"
 #include "BasicRecon.hpp"
 
-class ProtonModule
+class PROTONMODULE
 {
   //parameter
 private:
-  
-  int mod;
-  int view;
-  int pln;
-  int ch;
-  double posx, posy, posz;
 
-  TF1* linear; 
-  double fitpar[2];
-
-public:
-
-  vector<int> plane;
-  vector<int> channel;
-  vector<int> positionx;
-  vector<int> positionz;
-
-  TH2D* fithist;
-  
+public:  
 
   //function
 public:
-  ProtonModule();
-  ~ProtonModule();
+  PROTONMODULE();
+  ~PROTONMODULE();
 
-  void EasyRecon(EVTCluster* evtcluster, BasicRecon* basicrecon);  
-  void Fitting(TF1* function, vector<int> plane, vector<int> channel, double fitpar[]);
   
 };
 

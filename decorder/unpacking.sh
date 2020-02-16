@@ -43,8 +43,8 @@ while [ $i -le $MAX ]; do
 	mcr="7"
     fi
 
-directory="$date$mon/mode1pw1bw35_HG50vh_HG30yb_DAC10b220y240v260h_Tin_26.5_Tout_24_2"
-filename="beam_200us_MCR_"$mcr"_Run"$run"_2020_02_07_15_11_06.daq"
+directory="$date$mon/"
+filename="beam_200us_MCR_"$mcr"_Run"$run"_2020_02_08_18_51_28.daq"
 
 #beamdata
 ./$unpacking/bin/TDMunpack -f ~/Dropbox/wagasci/babymind/data/physdata/$directory/$filename  1>&2

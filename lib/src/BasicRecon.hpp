@@ -16,7 +16,7 @@ public:
   double angle[2];
   double ipos[2][3];
   double fpos[2][3];
-  
+  int Nhit[2][9];  
 
 
   BasicRecon();

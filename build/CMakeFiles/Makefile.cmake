@@ -82,6 +82,8 @@ set(CMAKE_DEPEND_INFO_FILES
   "src/Recon/CMakeFiles/TrackRecon.dir/DependInfo.cmake"
   "src/DataQuality/CMakeFiles/WMDataQuality.dir/DependInfo.cmake"
   "src/MakeEvent/CMakeFiles/MakeEvent.dir/DependInfo.cmake"
+  "src/DetPerform/CMakeFiles/detect_eff.dir/DependInfo.cmake"
+  "src/DetPerform/CMakeFiles/det_eventrate.dir/DependInfo.cmake"
   "src/DetPerform/CMakeFiles/wm_matchingtest.dir/DependInfo.cmake"
   "src/DetPerform/CMakeFiles/wmcoincheck.dir/DependInfo.cmake"
   )

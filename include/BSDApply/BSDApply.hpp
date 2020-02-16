@@ -29,11 +29,12 @@ private:
   int startsub;
   int endsub;
   int firstmatchspillentry=-1;
-  int dayspill = 10000;
+  int dayspill = 20000;
   int thebeamspill;
   int thebmspill;
   int thewgspill;
   int thepmspill;
+  int spillshift;
 
 
 public:

@@ -24,6 +24,7 @@ class EvtFormat
   //parameter
 private:
 
+  int Nentry;
 
 public:
   TChain* bmchain;
@@ -34,7 +35,9 @@ public:
   int nwgdata[8];
   int theunixtimeentry;
   int theunixtime;
+  int spillnum;
   double thepot;
+  double totalpot;
 
   bool bmfillflag;
   bool pmfillflag;
@@ -67,9 +70,13 @@ public:
 		   BMBSD* bmbsd, int *sunixtime, int *eunixtime);
   void ReadPMChain(TString filepath, PMRecon* pmrecon, BMBSD* bmbsd, int *sunixtime, int *eunixtime);
   void ReadWGChain(TString filepath, WGRecon* wgrecon[], BMBSD* bmbsd[], int *sunixtime, int *eunixtime);
-  bool FillEvtClass(TTree* otree, int sunixtimeentry, vector <int> baseunixtime, vector <double> basepot, 
-		    BMBasicRecon* bmbasicrecon, PMRecon* pmrecon,
+  bool FillEvtClass(TTree* otree, int sunixtimeentry, int eunixtimeentry, vector <int> baseunixtime, vector <double> basepot, 
+		    BMBasicRecon* bmbasicrecon, BMBeaminfo* bmbeaminfo, PMRecon* pmrecon,
 		    WGRecon* wgrecon[8], EVTCluster* evtcluster, TString filepath);
+
+  void AddBMChain(TString filepath);
+  void AddPMChain(TString filepath);
+  void AddWGChain(TString filepath, int idif);
 
   void PrintTime(time_t unixtime);
   void DeleteChain();
@@ -77,3 +84,4 @@ public:
 };
 
 #endif
+
