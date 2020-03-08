@@ -13,7 +13,8 @@ entry=$2
 
 anadir=${PWD}
 #datadir=$anadir/process/TEST
-datadir=$anadir/process/3-EVT
+#datadir=$anadir/process/3-EVT
+datadir=$anadir/process/3-MCEVT
 
 filename=$(find  $datadir -type f -name "Evt_${run}.root")
 if [ $? -eq 0 ] ; then

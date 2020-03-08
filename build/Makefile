@@ -124,6 +124,19 @@ WGCalib/fast:
 .PHONY : WGCalib/fast
 
 #=============================================================================
+# Target rules for targets named MCCalib
+
+# Build rule for target.
+MCCalib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 MCCalib
+.PHONY : MCCalib
+
+# fast build rule for target.
+MCCalib/fast:
+	$(MAKE) -f src/MakeCalib/CMakeFiles/MCCalib.dir/build.make src/MakeCalib/CMakeFiles/MCCalib.dir/build
+.PHONY : MCCalib/fast
+
+#=============================================================================
 # Target rules for targets named PMCalib
 
 # Build rule for target.
@@ -174,6 +187,19 @@ MakeDisp: cmake_check_build_system
 MakeDisp/fast:
 	$(MAKE) -f src/EvtDisp/CMakeFiles/MakeDisp.dir/build.make src/EvtDisp/CMakeFiles/MakeDisp.dir/build
 .PHONY : MakeDisp/fast
+
+#=============================================================================
+# Target rules for targets named BMDataSanity
+
+# Build rule for target.
+BMDataSanity: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 BMDataSanity
+.PHONY : BMDataSanity
+
+# fast build rule for target.
+BMDataSanity/fast:
+	$(MAKE) -f src/DataSanity/CMakeFiles/BMDataSanity.dir/build.make src/DataSanity/CMakeFiles/BMDataSanity.dir/build
+.PHONY : BMDataSanity/fast
 
 #=============================================================================
 # Target rules for targets named WGDataSanity
@@ -254,17 +280,30 @@ BasicDist/fast:
 .PHONY : BasicDist/fast
 
 #=============================================================================
-# Target rules for targets named TrackRecon
+# Target rules for targets named CheckRecon
 
 # Build rule for target.
-TrackRecon: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TrackRecon
-.PHONY : TrackRecon
+CheckRecon: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 CheckRecon
+.PHONY : CheckRecon
 
 # fast build rule for target.
-TrackRecon/fast:
-	$(MAKE) -f src/Recon/CMakeFiles/TrackRecon.dir/build.make src/Recon/CMakeFiles/TrackRecon.dir/build
-.PHONY : TrackRecon/fast
+CheckRecon/fast:
+	$(MAKE) -f src/Recon/CMakeFiles/CheckRecon.dir/build.make src/Recon/CMakeFiles/CheckRecon.dir/build
+.PHONY : CheckRecon/fast
+
+#=============================================================================
+# Target rules for targets named DetRecon
+
+# Build rule for target.
+DetRecon: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 DetRecon
+.PHONY : DetRecon
+
+# fast build rule for target.
+DetRecon/fast:
+	$(MAKE) -f src/Recon/CMakeFiles/DetRecon.dir/build.make src/Recon/CMakeFiles/DetRecon.dir/build
+.PHONY : DetRecon/fast
 
 #=============================================================================
 # Target rules for targets named WMDataQuality
@@ -280,6 +319,19 @@ WMDataQuality/fast:
 .PHONY : WMDataQuality/fast
 
 #=============================================================================
+# Target rules for targets named MakeMCEvent
+
+# Build rule for target.
+MakeMCEvent: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 MakeMCEvent
+.PHONY : MakeMCEvent
+
+# fast build rule for target.
+MakeMCEvent/fast:
+	$(MAKE) -f src/MakeEvent/CMakeFiles/MakeMCEvent.dir/build.make src/MakeEvent/CMakeFiles/MakeMCEvent.dir/build
+.PHONY : MakeMCEvent/fast
+
+#=============================================================================
 # Target rules for targets named MakeEvent
 
 # Build rule for target.
@@ -291,6 +343,45 @@ MakeEvent: cmake_check_build_system
 MakeEvent/fast:
 	$(MAKE) -f src/MakeEvent/CMakeFiles/MakeEvent.dir/build.make src/MakeEvent/CMakeFiles/MakeEvent.dir/build
 .PHONY : MakeEvent/fast
+
+#=============================================================================
+# Target rules for targets named find_neutrino
+
+# Build rule for target.
+find_neutrino: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 find_neutrino
+.PHONY : find_neutrino
+
+# fast build rule for target.
+find_neutrino/fast:
+	$(MAKE) -f src/DetPerform/CMakeFiles/find_neutrino.dir/build.make src/DetPerform/CMakeFiles/find_neutrino.dir/build
+.PHONY : find_neutrino/fast
+
+#=============================================================================
+# Target rules for targets named wm_matchingtest
+
+# Build rule for target.
+wm_matchingtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 wm_matchingtest
+.PHONY : wm_matchingtest
+
+# fast build rule for target.
+wm_matchingtest/fast:
+	$(MAKE) -f src/DetPerform/CMakeFiles/wm_matchingtest.dir/build.make src/DetPerform/CMakeFiles/wm_matchingtest.dir/build
+.PHONY : wm_matchingtest/fast
+
+#=============================================================================
+# Target rules for targets named pedist
+
+# Build rule for target.
+pedist: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pedist
+.PHONY : pedist
+
+# fast build rule for target.
+pedist/fast:
+	$(MAKE) -f src/DetPerform/CMakeFiles/pedist.dir/build.make src/DetPerform/CMakeFiles/pedist.dir/build
+.PHONY : pedist/fast
 
 #=============================================================================
 # Target rules for targets named detect_eff
@@ -306,6 +397,19 @@ detect_eff/fast:
 .PHONY : detect_eff/fast
 
 #=============================================================================
+# Target rules for targets named matching_eff
+
+# Build rule for target.
+matching_eff: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 matching_eff
+.PHONY : matching_eff
+
+# fast build rule for target.
+matching_eff/fast:
+	$(MAKE) -f src/DetPerform/CMakeFiles/matching_eff.dir/build.make src/DetPerform/CMakeFiles/matching_eff.dir/build
+.PHONY : matching_eff/fast
+
+#=============================================================================
 # Target rules for targets named det_eventrate
 
 # Build rule for target.
@@ -319,17 +423,17 @@ det_eventrate/fast:
 .PHONY : det_eventrate/fast
 
 #=============================================================================
-# Target rules for targets named wm_matchingtest
+# Target rules for targets named tracking_eff
 
 # Build rule for target.
-wm_matchingtest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 wm_matchingtest
-.PHONY : wm_matchingtest
+tracking_eff: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tracking_eff
+.PHONY : tracking_eff
 
 # fast build rule for target.
-wm_matchingtest/fast:
-	$(MAKE) -f src/DetPerform/CMakeFiles/wm_matchingtest.dir/build.make src/DetPerform/CMakeFiles/wm_matchingtest.dir/build
-.PHONY : wm_matchingtest/fast
+tracking_eff/fast:
+	$(MAKE) -f src/DetPerform/CMakeFiles/tracking_eff.dir/build.make src/DetPerform/CMakeFiles/tracking_eff.dir/build
+.PHONY : tracking_eff/fast
 
 #=============================================================================
 # Target rules for targets named wmcoincheck
@@ -353,22 +457,30 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... WGCalib"
+	@echo "... MCCalib"
 	@echo "... PMCalib"
 	@echo "... BMCalib"
 	@echo "... MakeEachDisp"
 	@echo "... MakeDisp"
+	@echo "... BMDataSanity"
 	@echo "... WGDataSanity"
 	@echo "... BSDApply_WGnocut"
 	@echo "... BSDApply_WG"
 	@echo "... BSDApply_PM"
 	@echo "... BSDApply_BM"
 	@echo "... BasicDist"
-	@echo "... TrackRecon"
+	@echo "... CheckRecon"
+	@echo "... DetRecon"
 	@echo "... WMDataQuality"
+	@echo "... MakeMCEvent"
 	@echo "... MakeEvent"
-	@echo "... detect_eff"
-	@echo "... det_eventrate"
+	@echo "... find_neutrino"
 	@echo "... wm_matchingtest"
+	@echo "... pedist"
+	@echo "... detect_eff"
+	@echo "... matching_eff"
+	@echo "... det_eventrate"
+	@echo "... tracking_eff"
 	@echo "... wmcoincheck"
 .PHONY : help
 

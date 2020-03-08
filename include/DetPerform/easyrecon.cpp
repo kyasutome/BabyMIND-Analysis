@@ -112,7 +112,7 @@ void EasyRecon::Fitting(TF1* function, vector<int> positionz, vector<int> positi
   linear->GetParameters(fitpar);
 }
 
-bool EasyRecon::NHCheck(int mod, int view, BasicRecon* basicrecon)
+bool EasyRecon::NHCheck(int mod, int view, BasicRecon* basicrecon, vector<int> *ataribunch)
 {
   bool nhcheck = false;
 
@@ -120,14 +120,23 @@ bool EasyRecon::NHCheck(int mod, int view, BasicRecon* basicrecon)
     {
       if(mod==0 || mod==1 || mod==2)
 	if(basicrecon->Nhit[view][ibunch]>6)
-	  nhcheck = true;
+	  {
+	    ataribunch->push_back(ibunch);
+	    nhcheck = true;
+	  }
       
       if((mod==3 || mod==4) && basicrecon->Nhit[view][ibunch]>12)
-	nhcheck = true;
+	{
+	  ataribunch->push_back(ibunch);
+	  nhcheck = true;
+	}
       
       if(mod==5)
 	if(basicrecon->Nhit[view][ibunch]>10)
-	  nhcheck = true;
+	  {
+	    ataribunch->push_back(ibunch);
+	    nhcheck = true;
+	  }
     }
 
   return nhcheck;
@@ -165,7 +174,6 @@ bool EasyRecon::FVCheck(int mod, int view)
   endx = sdposx[mod][view].at(sdposx[mod][view].size()-1);
   endy = sdposy[mod][view].at(sdposy[mod][view].size()-1);
   endz = sdposz[mod][view].at(sdposz[mod][view].size()-1);
-
 
   if(mod==0)
     {
@@ -248,6 +256,98 @@ bool EasyRecon::FVCheck(int mod, int view)
 	    fvcheck = false;
 	  
 	  if(endch>=30)
+	    fvcheck = false;
+	}
+    }
+
+  return fvcheck;
+}
+
+bool EasyRecon::SFVCheck(int mod, int view, double posxy[2], double posz[2])
+{
+  bool fvcheck = true;
+
+  if(mod==0)
+    {
+      if(view==0)
+	{
+	  if(posz[0]<=150)
+	    fvcheck = false;
+	  
+	  if(posxy[0]<=40 || posxy[1]>=1100)
+	    fvcheck = false;
+	}
+      
+      if(view==1)
+	{
+	  if(posz[0]<=150)
+	    fvcheck = false;
+	  
+	  if(posxy[0]<=40 || posxy[1]>=1100)
+	    fvcheck = false;
+	}
+    }
+
+  if(mod==1 || mod==2)
+    {
+      if(view==0)
+	{
+	  if(posz[0]<=-180)
+	    fvcheck = false;
+	  
+	  if(posxy[0]<=-400 || posxy[1]>=400)
+	    fvcheck = false;
+	}
+      
+      if(view==1)
+	{
+	  if(posz[0]<=-180)
+	    fvcheck = false;
+	  
+	  if(posxy[0]<=-400 || posxy[1]>=400)
+	    fvcheck = false;
+	}
+    }
+
+  if(mod==3 || mod==4)
+    {      
+      if(mod==3 && view==1)
+	{
+	  if(posz[0]<=150)
+	    fvcheck = false;
+	  
+	  if(posxy[1]>=400)
+	    fvcheck = false;
+	}
+
+      if(mod==4 && view==1)
+	{
+	  if(posz[0]<=150)
+	    fvcheck = false;
+	  
+	  if(posxy[1]<=50)
+	    fvcheck = false;
+	}
+
+    }
+
+  if(mod==5)
+    {      
+      if(view==0)
+	{
+	  if(posz[0]<=250)
+	    fvcheck = false;
+	  
+	  if(posxy[0]<=-900 || posxy[1]>=900)
+	    fvcheck = false;
+	}
+
+      if(view==1)
+	{
+	  if(posz[0]<=250)
+	    fvcheck = false;
+	  
+	  if(posxy[0]<=-1250 || posxy[1]>=1250)
 	    fvcheck = false;
 	}
     }

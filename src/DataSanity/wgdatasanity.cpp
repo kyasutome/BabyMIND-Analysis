@@ -67,8 +67,8 @@ int main( int argc, char **argv )
   cout << "sunix= " << sunix << " eunix= " << eunix << '\n';
 
   TFile* fout = new TFile("./result/BSD/WGAccumlated_pot.root", "recreate");
-  TH2F *bsd_accumlated_plot = new TH2F("bsd_accumlated_plot", "", 100, sunix, eunix, 100, 0, 4.0);
-  TH2F *wg_accumlated_plot = new TH2F("wg_accumlated_plot", "", 100, sunix, eunix, 100, 0, 4.0);
+  TH2F *bsd_accumlated_plot = new TH2F("bsd_accumlated_plot", "", 100, sunix, eunix, 100, 0, 30);
+  TH2F *wg_accumlated_plot = new TH2F("wg_accumlated_plot", "", 100, sunix, eunix, 100, 0, 30);
   char ytitle[128] = "Accumlated P.O.T (10^{19})";
   datasanity->SetHistLabel(bsd_accumlated_plot, "Data Taking Efficiency", ytitle);
   datasanity->SetHistLabel(wg_accumlated_plot, "Data Taking Efficiency", ytitle);
@@ -78,9 +78,7 @@ int main( int argc, char **argv )
     {
       wgchain->GetEntry(ientry);
       recorded_pot += bmbsd->pot/pow(10, 19);
-      //if(bmbsd->pot/pow(10,19) < 0.00001)
-      //if(recorded_pot>0.15 && recorded_pot<0.23)
-      //cout << recorded_pot << " " << bmbsd->pot/pow(10, 19) << " " << bmbsd->unixtime  << '\n';
+
       wg_accumlated_plot->Fill(bmbsd->unixtime, recorded_pot);
     }
 

@@ -12,6 +12,12 @@ BMBasicRecon::BMBasicRecon()
   pln.clear();
   channel.clear();
   HG.clear();
+  LHG.clear();
+  RHG.clear();
+  THG.clear();
+  Lgain.clear();
+  Rgain.clear();
+  Tgain.clear();
   LG.clear();
   Ltime.clear();
   Ftime.clear();
@@ -34,6 +40,12 @@ void BMBasicRecon::Clear()
   pln.clear();
   channel.clear();
   HG.clear();
+  LHG.clear();
+  RHG.clear();
+  THG.clear();
+  Lgain.clear();
+  Rgain.clear();
+  Tgain.clear();
   LG.clear();
   Ltime.clear();
   Ftime.clear();

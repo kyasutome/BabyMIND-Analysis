@@ -96,6 +96,7 @@ void DataReader::ReadTree(TString filename, BMdata* BMbranch[NUMBEROFFEB])
     for(int itree=0; itree<NUMBEROFFEB; itree++)
     //for(int itree=0; itree<10; itree++)
       {
+	int totalhits=0;
 	treename.Form("FEB_%d", itree);
 	if((TTree*)Fileinput->Get(treename))
 	  {
@@ -145,7 +146,11 @@ void DataReader::ReadTree(TString filename, BMdata* BMbranch[NUMBEROFFEB])
 		  {
 		    febspill[itree].push_back(BMbranch[itree]->SpillTag->at(idata));
 		  }		
+		totalhits += BMbranch[itree]->SpillTag->size();
 	      }
+
+	    //cout << "FEB:" << itree << " the number of FEB events= " << totalhits  << '\n';
+	    cout <<  totalhits  << '\n';
 	  }
 	DuplicateCut(&febspill[itree]);
       }

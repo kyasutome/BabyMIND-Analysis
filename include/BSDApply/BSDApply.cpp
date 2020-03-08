@@ -209,10 +209,17 @@ bool BSDApply::CheckDetSpill(int detectorspill, int beamspill)
 bool BSDApply::CheckMainteDay(int Mon, int Date, int *detfirstspill, int mod)
 {
   bool maintecheck = false;
+
+  if(Mon==11 && Date==25) 
+    {
+      *detfirstspill = 27740;
+      maintecheck = true;
+    }
+
   
   if(Mon==12 && Date==4) 
     {
-      *detfirstspill = 12347;
+      *detfirstspill = 13437;
       maintecheck = true;
     }
 
@@ -223,11 +230,13 @@ bool BSDApply::CheckMainteDay(int Mon, int Date, int *detfirstspill, int mod)
     }
 
   
+  
   if(Mon==2 && Date==2 && mod==1) 
     {
       *detfirstspill = 31383;
       maintecheck = true;
     }
+
 
   if(Mon==2 && Date==2 && mod==5) 
     {
@@ -235,7 +244,6 @@ bool BSDApply::CheckMainteDay(int Mon, int Date, int *detfirstspill, int mod)
       maintecheck = true;
     }
   
-
   
   //if(Mon==2 && Date==6 && mod==5) 
   //  {
@@ -243,11 +251,13 @@ bool BSDApply::CheckMainteDay(int Mon, int Date, int *detfirstspill, int mod)
   //    maintecheck = true;
   //  }
 
+  /*
   if(Mon==2 && Date==6 && mod==1) 
     {
       *detfirstspill = 22890;
       maintecheck = true;
     }
+  */
   
 
   return maintecheck;

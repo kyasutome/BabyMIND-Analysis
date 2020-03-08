@@ -111,6 +111,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+src/DataSanity/CMakeFiles/BMDataSanity.dir/rule:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/DataSanity/CMakeFiles/BMDataSanity.dir/rule
+.PHONY : src/DataSanity/CMakeFiles/BMDataSanity.dir/rule
+
+# Convenience name for target.
+BMDataSanity: src/DataSanity/CMakeFiles/BMDataSanity.dir/rule
+
+.PHONY : BMDataSanity
+
+# fast build rule for target.
+BMDataSanity/fast:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DataSanity/CMakeFiles/BMDataSanity.dir/build.make src/DataSanity/CMakeFiles/BMDataSanity.dir/build
+.PHONY : BMDataSanity/fast
+
+# Convenience name for target.
 src/DataSanity/CMakeFiles/WGDataSanity.dir/rule:
 	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/DataSanity/CMakeFiles/WGDataSanity.dir/rule
 .PHONY : src/DataSanity/CMakeFiles/WGDataSanity.dir/rule
@@ -124,6 +139,33 @@ WGDataSanity: src/DataSanity/CMakeFiles/WGDataSanity.dir/rule
 WGDataSanity/fast:
 	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DataSanity/CMakeFiles/WGDataSanity.dir/build.make src/DataSanity/CMakeFiles/WGDataSanity.dir/build
 .PHONY : WGDataSanity/fast
+
+bmdatasanity.o: bmdatasanity.cpp.o
+
+.PHONY : bmdatasanity.o
+
+# target to build an object file
+bmdatasanity.cpp.o:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DataSanity/CMakeFiles/BMDataSanity.dir/build.make src/DataSanity/CMakeFiles/BMDataSanity.dir/bmdatasanity.cpp.o
+.PHONY : bmdatasanity.cpp.o
+
+bmdatasanity.i: bmdatasanity.cpp.i
+
+.PHONY : bmdatasanity.i
+
+# target to preprocess a source file
+bmdatasanity.cpp.i:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DataSanity/CMakeFiles/BMDataSanity.dir/build.make src/DataSanity/CMakeFiles/BMDataSanity.dir/bmdatasanity.cpp.i
+.PHONY : bmdatasanity.cpp.i
+
+bmdatasanity.s: bmdatasanity.cpp.s
+
+.PHONY : bmdatasanity.s
+
+# target to generate assembly for a file
+bmdatasanity.cpp.s:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DataSanity/CMakeFiles/BMDataSanity.dir/build.make src/DataSanity/CMakeFiles/BMDataSanity.dir/bmdatasanity.cpp.s
+.PHONY : bmdatasanity.cpp.s
 
 wgdatasanity.o: wgdatasanity.cpp.o
 
@@ -158,9 +200,13 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... BMDataSanity"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... WGDataSanity"
+	@echo "... bmdatasanity.o"
+	@echo "... bmdatasanity.i"
+	@echo "... bmdatasanity.s"
 	@echo "... wgdatasanity.o"
 	@echo "... wgdatasanity.i"
 	@echo "... wgdatasanity.s"

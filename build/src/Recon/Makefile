@@ -111,46 +111,88 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-src/Recon/CMakeFiles/TrackRecon.dir/rule:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/Recon/CMakeFiles/TrackRecon.dir/rule
-.PHONY : src/Recon/CMakeFiles/TrackRecon.dir/rule
+src/Recon/CMakeFiles/CheckRecon.dir/rule:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/Recon/CMakeFiles/CheckRecon.dir/rule
+.PHONY : src/Recon/CMakeFiles/CheckRecon.dir/rule
 
 # Convenience name for target.
-TrackRecon: src/Recon/CMakeFiles/TrackRecon.dir/rule
+CheckRecon: src/Recon/CMakeFiles/CheckRecon.dir/rule
 
-.PHONY : TrackRecon
+.PHONY : CheckRecon
 
 # fast build rule for target.
-TrackRecon/fast:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/Recon/CMakeFiles/TrackRecon.dir/build.make src/Recon/CMakeFiles/TrackRecon.dir/build
-.PHONY : TrackRecon/fast
+CheckRecon/fast:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/Recon/CMakeFiles/CheckRecon.dir/build.make src/Recon/CMakeFiles/CheckRecon.dir/build
+.PHONY : CheckRecon/fast
 
-trackrecon.o: trackrecon.cpp.o
+# Convenience name for target.
+src/Recon/CMakeFiles/DetRecon.dir/rule:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/Recon/CMakeFiles/DetRecon.dir/rule
+.PHONY : src/Recon/CMakeFiles/DetRecon.dir/rule
 
-.PHONY : trackrecon.o
+# Convenience name for target.
+DetRecon: src/Recon/CMakeFiles/DetRecon.dir/rule
+
+.PHONY : DetRecon
+
+# fast build rule for target.
+DetRecon/fast:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/Recon/CMakeFiles/DetRecon.dir/build.make src/Recon/CMakeFiles/DetRecon.dir/build
+.PHONY : DetRecon/fast
+
+checkrecon.o: checkrecon.cpp.o
+
+.PHONY : checkrecon.o
 
 # target to build an object file
-trackrecon.cpp.o:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/Recon/CMakeFiles/TrackRecon.dir/build.make src/Recon/CMakeFiles/TrackRecon.dir/trackrecon.cpp.o
-.PHONY : trackrecon.cpp.o
+checkrecon.cpp.o:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/Recon/CMakeFiles/CheckRecon.dir/build.make src/Recon/CMakeFiles/CheckRecon.dir/checkrecon.cpp.o
+.PHONY : checkrecon.cpp.o
 
-trackrecon.i: trackrecon.cpp.i
+checkrecon.i: checkrecon.cpp.i
 
-.PHONY : trackrecon.i
+.PHONY : checkrecon.i
 
 # target to preprocess a source file
-trackrecon.cpp.i:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/Recon/CMakeFiles/TrackRecon.dir/build.make src/Recon/CMakeFiles/TrackRecon.dir/trackrecon.cpp.i
-.PHONY : trackrecon.cpp.i
+checkrecon.cpp.i:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/Recon/CMakeFiles/CheckRecon.dir/build.make src/Recon/CMakeFiles/CheckRecon.dir/checkrecon.cpp.i
+.PHONY : checkrecon.cpp.i
 
-trackrecon.s: trackrecon.cpp.s
+checkrecon.s: checkrecon.cpp.s
 
-.PHONY : trackrecon.s
+.PHONY : checkrecon.s
 
 # target to generate assembly for a file
-trackrecon.cpp.s:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/Recon/CMakeFiles/TrackRecon.dir/build.make src/Recon/CMakeFiles/TrackRecon.dir/trackrecon.cpp.s
-.PHONY : trackrecon.cpp.s
+checkrecon.cpp.s:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/Recon/CMakeFiles/CheckRecon.dir/build.make src/Recon/CMakeFiles/CheckRecon.dir/checkrecon.cpp.s
+.PHONY : checkrecon.cpp.s
+
+detrecon.o: detrecon.cpp.o
+
+.PHONY : detrecon.o
+
+# target to build an object file
+detrecon.cpp.o:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/Recon/CMakeFiles/DetRecon.dir/build.make src/Recon/CMakeFiles/DetRecon.dir/detrecon.cpp.o
+.PHONY : detrecon.cpp.o
+
+detrecon.i: detrecon.cpp.i
+
+.PHONY : detrecon.i
+
+# target to preprocess a source file
+detrecon.cpp.i:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/Recon/CMakeFiles/DetRecon.dir/build.make src/Recon/CMakeFiles/DetRecon.dir/detrecon.cpp.i
+.PHONY : detrecon.cpp.i
+
+detrecon.s: detrecon.cpp.s
+
+.PHONY : detrecon.s
+
+# target to generate assembly for a file
+detrecon.cpp.s:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/Recon/CMakeFiles/DetRecon.dir/build.make src/Recon/CMakeFiles/DetRecon.dir/detrecon.cpp.s
+.PHONY : detrecon.cpp.s
 
 # Help Target
 help:
@@ -158,12 +200,16 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... CheckRecon"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... TrackRecon"
-	@echo "... trackrecon.o"
-	@echo "... trackrecon.i"
-	@echo "... trackrecon.s"
+	@echo "... DetRecon"
+	@echo "... checkrecon.o"
+	@echo "... checkrecon.i"
+	@echo "... checkrecon.s"
+	@echo "... detrecon.o"
+	@echo "... detrecon.i"
+	@echo "... detrecon.s"
 .PHONY : help
 
 

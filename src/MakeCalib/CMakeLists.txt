@@ -32,5 +32,15 @@ if    (ROOT_FOUND)
                                                         ${PROJECT_SOURCE_DIR}/include/EvtDisp
                                                         ${PROJECT_SOURCE_DIR}/lib/src)
 
+  ADD_EXECUTABLE(MCCalib  	        MCCalib.cpp)
+  TARGET_LINK_LIBRARIES(MCCalib         ${PROJECT_SOURCE_DIR}/lib/library/EVTCluster.so
+					${PROJECT_SOURCE_DIR}/lib/library/MCRecon.so
+					${PROJECT_SOURCE_DIR}/lib/library/MCTrue.so
+                                        
+                                        ${ROOT_LIBRARIES})
+  TARGET_INCLUDE_DIRECTORIES(MCCalib    PUBLIC  ${PROJECT_SOURCE_DIR}/include/MakeCalib
+                                                        ${PROJECT_SOURCE_DIR}/include/EvtDisp
+                                                        ${PROJECT_SOURCE_DIR}/lib/src)
+
 
 endif (ROOT_FOUND)

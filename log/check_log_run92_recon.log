@@ -1,0 +1,3335 @@
+Found a file
+Filename=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/process/3-EVT/Evt_92.root
+Analyze the file...
+ientry= 7000
+ientry= 7001
+Clustering
+time 0.079000[ms]
+MakeCell
+cellcount= 1
+time 0.032000[ms]
+Search
+time 0.003000[ms]
+Update
+time 0.004000[ms]
+Recon
+maxstate= 0
+Ntrack= 0
+time 0.004000[ms]
+Clustering
+time 0.070000[ms]
+MakeCell
+cellcount= 4
+time 0.032000[ms]
+Search
+time 0.009000[ms]
+Update
+time 0.001000[ms]
+Recon
+maxstate= 0
+Ntrack= 0
+time 0.002000[ms]
+ientry= 7002
+Clustering
+time 0.079000[ms]
+MakeCell
+cellcount= 48
+time 0.035000[ms]
+Search
+time 41.201000[ms]
+Update
+time 0.031000[ms]
+Recon
+maxstate= 16
+maxstate= 0
+Ntrack= 1
+time 0.028000[ms]
+view=0
+bunch= 7 Ntrack[iview][thebunch] = 1
+posx= -1 posy= 662.5 posz= 814 bunch= 7charge= 6277 hittime= 6277
+posx= -1 posy= 662.5 posz= 768 bunch= 7charge= 6277 hittime= 6277
+posx= -1 posy= 662.5 posz= 722 bunch= 7charge= 6277 hittime= 6277
+posx= -1 posy= 662.5 posz= 676 bunch= 7charge= 6277 hittime= 6277
+posx= -1 posy= 662.5 posz= 630 bunch= 7charge= 6277 hittime= 6277
+posx= -1 posy= 662.5 posz= 584 bunch= 7charge= 6277 hittime= 6277
+posx= -1 posy= 662.5 posz= 538 bunch= 7charge= 6277 hittime= 6277
+posx= -1 posy= 662.5 posz= 492 bunch= 7charge= 6277 hittime= 6277
+posx= -1 posy= 662.5 posz= 446 bunch= 7charge= 6277 hittime= 6277
+posx= -1 posy= 687.5 posz= 400 bunch= 7charge= 6277 hittime= 6277
+posx= -1 posy= 687.5 posz= 354 bunch= 7charge= 6277 hittime= 6277
+posx= -1 posy= 687.5 posz= 308 bunch= 7charge= 6277 hittime= 6277
+posx= -1 posy= 687.5 posz= 262 bunch= 7charge= 6277 hittime= 6277
+posx= -1 posy= 687.5 posz= 216 bunch= 7charge= 6277 hittime= 6277
+posx= -1 posy= 687.5 posz= 170 bunch= 7charge= 6277 hittime= 6277
+posx= -1 posy= 687.5 posz= 124 bunch= 7charge= 6277 hittime= 6277
+posx= -1 posy= 687.5 posz= 78 bunch= 7charge= 6277 hittime= 6277
+posx= -1 posy= 675 posz= 28 bunch= 7charge= 6277 hittime= 6277
+Ntrack= 1
+Clustering
+time 0.080000[ms]
+MakeCell
+cellcount= 26
+time 0.027000[ms]
+Search
+time 2.870000[ms]
+Update
+time 0.011000[ms]
+Recon
+maxstate= 11
+maxstate= 0
+Ntrack= 1
+time 0.015000[ms]
+view=1
+bunch= 7 Ntrack[iview][thebunch] = 1
+posx= 275 posy= -1 posz= 791 bunch= 7charge= 6277 hittime= 6277
+posx= 275 posy= -1 posz= 745 bunch= 7charge= 6277 hittime= 6277
+posx= 275 posy= -1 posz= 653 bunch= 7charge= 6277 hittime= 6277
+posx= 275 posy= -1 posz= 607 bunch= 7charge= 6277 hittime= 6277
+posx= 275 posy= -1 posz= 561 bunch= 7charge= 6277 hittime= 6277
+posx= 275 posy= -1 posz= 515 bunch= 7charge= 6277 hittime= 6277
+posx= 275 posy= -1 posz= 469 bunch= 7charge= 6277 hittime= 6277
+posx= 275 posy= -1 posz= 423 bunch= 7charge= 6277 hittime= 6277
+posx= 275 posy= -1 posz= 377 bunch= 7charge= 6277 hittime= 6277
+posx= 275 posy= -1 posz= 331 bunch= 7charge= 6277 hittime= 6277
+posx= 275 posy= -1 posz= 239 bunch= 7charge= 6277 hittime= 6277
+posx= 275 posy= -1 posz= 101 bunch= 7charge= 6277 hittime= 6277
+posx= 275 posy= -1 posz= 55 bunch= 7charge= 6277 hittime= 6277
+Ntrack= 1
+Clustering
+time 0.096000[ms]
+MakeCell
+cellcount= 11
+time 0.061000[ms]
+Search
+time 1.048000[ms]
+Update
+time 0.003000[ms]
+Recon
+maxstate= 5
+maxstate= 0
+Ntrack= 1
+time 0.010000[ms]
+view=0
+bunch= 7 Ntrack[iview][thebunch] = 1
+posx= 0 posy= 112.5 posz= 115.5 bunch= 7charge= 1130 hittime= 2235
+posx= 0 posy= 112.5 posz= 58.5 bunch= 7charge= 2098 hittime= 2310
+posx= 0 posy= 112.5 posz= 1.5 bunch= 7charge= 1769 hittime= 2387
+posx= 0 posy= 112.5 posz= -55.5 bunch= 7charge= 1143 hittime= 2143
+posx= 0 posy= 112.5 posz= -112.5 bunch= 7charge= 1132 hittime= 2136
+posx= 0 posy= 125.1 posz= -126.9 bunch= 7charge= 761 hittime= 2083
+posx= 0 posy= 112.5 posz= -226.5 bunch= 7charge= 1124 hittime= 2378
+posx= 0 posy= 112.5 posz= -169.5 bunch= 7charge= 2497 hittime= 2213
+Ntrack= 1
+Clustering
+time 0.080000[ms]
+MakeCell
+cellcount= 15
+time 0.029000[ms]
+Search
+time 1.188000[ms]
+Update
+time 0.004000[ms]
+Recon
+maxstate= 6
+maxstate= 0
+Ntrack= 1
+time 0.010000[ms]
+view=1
+bunch= 7 Ntrack[iview][thebunch] = 1
+posx= -312.5 posy= 0 posz= 201 bunch= 7charge= 1240 hittime= 2666
+posx= -287.5 posy= 0 posz= 144 bunch= 7charge= 1379 hittime= 2457
+posx= -287.5 posy= 0 posz= 87 bunch= 7charge= 1008 hittime= 2665
+posx= -287.5 posy= 0 posz= 30 bunch= 7charge= 787 hittime= 2427
+posx= -287.5 posy= 0 posz= -27 bunch= 7charge= 1168 hittime= 2659
+posx= -287.5 posy= 0 posz= -84 bunch= 7charge= 1147 hittime= 2636
+posx= -287.5 posy= 0 posz= -141 bunch= 7charge= 1327 hittime= 2577
+posx= -287.5 posy= 0 posz= -198 bunch= 7charge= 755 hittime= 2644
+Ntrack= 1
+Clustering
+time 0.082000[ms]
+MakeCell
+cellcount= 13
+time 0.044000[ms]
+Search
+time 1.038000[ms]
+Update
+time 0.004000[ms]
+Recon
+maxstate= 6
+maxstate= 0
+Ntrack= 1
+time 0.010000[ms]
+view=0
+bunch= 1 Ntrack[iview][thebunch] = 1
+posx= 0 posy= 87.5 posz= 172.5 bunch= 1charge= 1825 hittime= 2222
+posx= 0 posy= 75.1 posz= 158.1 bunch= 1charge= 1238 hittime= 2269
+posx= 0 posy= 37.5 posz= 115.5 bunch= 1charge= 2270 hittime= 2215
+posx= 0 posy= 25.1 posz= 101.1 bunch= 1charge= 769 hittime= 2125
+posx= 0 posy= -12.5 posz= 58.5 bunch= 1charge= 1191 hittime= 2230
+posx= 0 posy= -24.9 posz= 44.1 bunch= 1charge= 1311 hittime= 2170
+posx= 0 posy= -62.5 posz= 1.5 bunch= 1charge= 1494 hittime= 2205
+posx= 0 posy= -74.9 posz= -12.9 bunch= 1charge= 1062 hittime= 2270
+posx= 0 posy= -112.5 posz= -55.5 bunch= 1charge= 1197 hittime= 2299
+posx= 0 posy= -124.9 posz= -69.9 bunch= 1charge= 905 hittime= 2301
+posx= 0 posy= -162.5 posz= -112.5 bunch= 1charge= 2257 hittime= 2201
+posx= 0 posy= -224.9 posz= -155.4 bunch= 1charge= 1057 hittime= 2472
+posx= 0 posy= -237.5 posz= -169.5 bunch= 1charge= 1267 hittime= 2372
+posx= 0 posy= -274.9 posz= -212.4 bunch= 1charge= 733 hittime= 2250
+posx= 0 posy= -287.5 posz= -226.5 bunch= 1charge= 850 hittime= 2397
+Ntrack= 1
+Clustering
+time 0.090000[ms]
+MakeCell
+cellcount= 13
+time 0.033000[ms]
+Search
+time 1.040000[ms]
+Update
+time 0.003000[ms]
+Recon
+maxstate= 6
+maxstate= 0
+Ntrack= 1
+time 0.009000[ms]
+view=1
+bunch= 1 Ntrack[iview][thebunch] = 1
+posx= 225.1 posy= 0 posz= 215.1 bunch= 1charge= 1568 hittime= 2365
+posx= 237.5 posy= 0 posz= 201 bunch= 1charge= 1910 hittime= 2291
+posx= 262.5 posy= 0 posz= 144 bunch= 1charge= 954 hittime= 2390
+posx= 262.5 posy= 0 posz= 87 bunch= 1charge= 1219 hittime= 2205
+posx= 275.1 posy= 0 posz= 72.6 bunch= 1charge= 2580 hittime= 2094
+posx= 287.5 posy= 0 posz= 30 bunch= 1charge= 1244 hittime= 2261
+posx= 312.5 posy= 0 posz= -27 bunch= 1charge= 3089 hittime= 1946
+posx= 337.5 posy= 0 posz= -84 bunch= 1charge= 941 hittime= 2139
+posx= 325.1 posy= 0 posz= -69.9 bunch= 1charge= 2175 hittime= 2009
+posx= 375.1 posy= 0 posz= -183.9 bunch= 1charge= 838 hittime= 1991
+posx= 387.5 posy= 0 posz= -198 bunch= 1charge= 1806 hittime= 2197
+posx= 375.1 posy= 0 posz= -212.4 bunch= 1charge= 1926 hittime= 2158
+posx= 362.5 posy= 0 posz= -141 bunch= 1charge= 2977 hittime= 2073
+Ntrack= 1
+ientry= 7003
+Clustering
+time 0.077000[ms]
+MakeCell
+cellcount= 3
+time 0.034000[ms]
+Search
+time 0.182000[ms]
+Update
+time 0.001000[ms]
+Recon
+maxstate= 0
+Ntrack= 0
+time 0.002000[ms]
+Clustering
+time 0.070000[ms]
+MakeCell
+cellcount= 2
+time 0.026000[ms]
+Search
+time 0.003000[ms]
+Update
+time 0.001000[ms]
+Recon
+maxstate= 0
+Ntrack= 0
+time 0.002000[ms]
+ientry= 7004
+ientry= 7005
+ientry= 7006
+ientry= 7007
+Clustering
+time 0.109000[ms]
+MakeCell
+cellcount= 15
+time 0.035000[ms]
+Search
+time 1.677000[ms]
+Update
+time 0.005000[ms]
+Recon
+maxstate= 5
+maxstate= 0
+Ntrack= 1
+time 0.013000[ms]
+view=0
+bunch= 3 Ntrack[iview][thebunch] = 1
+posx= -1 posy= 25 posz= 308 bunch= 3charge= 4022 hittime= 4022
+posx= -1 posy= 25 posz= 262 bunch= 3charge= 4022 hittime= 4022
+posx= -1 posy= 75 posz= 216 bunch= 3charge= 4022 hittime= 4022
+posx= -1 posy= 75 posz= 170 bunch= 3charge= 4022 hittime= 4022
+posx= -1 posy= 125 posz= 124 bunch= 3charge= 4022 hittime= 4022
+posx= -1 posy= 175 posz= 28 bunch= 3charge= 4022 hittime= 4022
+posx= -1 posy= 175 posz= 78 bunch= 3charge= 4022 hittime= 4022
+Ntrack= 1
+Clustering
+time 0.088000[ms]
+MakeCell
+cellcount= 12
+time 0.033000[ms]
+Search
+time 1.105000[ms]
+Update
+time 0.004000[ms]
+Recon
+maxstate= 4
+maxstate= 0
+Ntrack= 1
+time 0.010000[ms]
+view=1
+bunch= 3 Ntrack[iview][thebunch] = 1
+posx= 612.5 posy= -1 posz= 239 bunch= 3charge= 4022 hittime= 4022
+posx= 637.5 posy= -1 posz= 193 bunch= 3charge= 4022 hittime= 4022
+posx= 637.5 posy= -1 posz= 147 bunch= 3charge= 4022 hittime= 4022
+posx= 637.5 posy= -1 posz= 101 bunch= 3charge= 4022 hittime= 4022
+posx= 662.5 posy= -1 posz= 55 bunch= 3charge= 4022 hittime= 4022
+posx= 675 posy= -1 posz= 5 bunch= 3charge= 4022 hittime= 4022
+Ntrack= 1
+Clustering
+time 0.084000[ms]
+MakeCell
+cellcount= 9
+time 0.033000[ms]
+Search
+time 0.641000[ms]
+Update
+time 0.003000[ms]
+Recon
+maxstate= 5
+maxstate= 0
+Ntrack= 1
+time 0.009000[ms]
+view=0
+bunch= 3 Ntrack[iview][thebunch] = 1
+posx= 0 posy= -324.9 posz= 215.1 bunch= 3charge= 1043 hittime= 1708
+posx= 0 posy= -287.5 posz= 172.5 bunch= 3charge= 820 hittime= 1813
+posx= 0 posy= -274.9 posz= 158.1 bunch= 3charge= 1962 hittime= 1721
+posx= 0 posy= -224.9 posz= 72.6 bunch= 3charge= 795 hittime= 1991
+posx= 0 posy= -212.5 posz= 58.5 bunch= 3charge= 1020 hittime= 1976
+posx= 0 posy= -174.9 posz= 15.6 bunch= 3charge= 1693 hittime= 1937
+posx= 0 posy= -162.5 posz= 1.5 bunch= 3charge= 1374 hittime= 1932
+posx= 0 posy= -112.5 posz= -55.5 bunch= 3charge= 1395 hittime= 1734
+posx= 0 posy= -124.9 posz= -69.9 bunch= 3charge= 1125 hittime= 1745
+posx= 0 posy= -87.5 posz= -112.5 bunch= 3charge= 1090 hittime= 1531
+posx= 0 posy= -74.9 posz= -126.9 bunch= 3charge= 1588 hittime= 1603
+posx= 0 posy= -37.5 posz= -169.5 bunch= 3charge= 1024 hittime= 1637
+Ntrack= 1
+Clustering
+time 0.077000[ms]
+MakeCell
+cellcount= 13
+time 0.033000[ms]
+Search
+time 1.039000[ms]
+Update
+time 0.003000[ms]
+Recon
+maxstate= 6
+maxstate= 0
+Ntrack= 1
+time 0.010000[ms]
+view=1
+bunch= 3 Ntrack[iview][thebunch] = 1
+posx= 75.1 posy= 0 posz= 215.1 bunch= 3charge= 956 hittime= 2016
+posx= 62.5 posy= 0 posz= 201 bunch= 3charge= 1049 hittime= 2075
+posx= 75.1 posy= 0 posz= 186.6 bunch= 3charge= 1782 hittime= 1922
+posx= 87.5 posy= 0 posz= 144 bunch= 3charge= 1585 hittime= 1943
+posx= 87.5 posy= 0 posz= 87 bunch= 3charge= 1032 hittime= 1994
+posx= 87.5 posy= 0 posz= 30 bunch= 3charge= 1190 hittime= 1964
+posx= 112.5 posy= 0 posz= -27 bunch= 3charge= 1007 hittime= 1857
+posx= 112.5 posy= 0 posz= -84 bunch= 3charge= 2817 hittime= 1717
+posx= 137.5 posy= 0 posz= -141 bunch= 3charge= 2556 hittime= 2138
+posx= 125.1 posy= 0 posz= -126.9 bunch= 3charge= 1892 hittime= 2168
+posx= 137.5 posy= 0 posz= -198 bunch= 3charge= 1189 hittime= 2264
+Ntrack= 1
+ientry= 7008
+Clustering
+time 0.078000[ms]
+MakeCell
+cellcount= 18
+time 0.032000[ms]
+Search
+time 1.779000[ms]
+Update
+time 0.006000[ms]
+Recon
+maxstate= 6
+maxstate= 0
+Ntrack= 1
+time 0.011000[ms]
+view=0
+bunch= 7 Ntrack[iview][thebunch] = 1
+posx= -1 posy= 875 posz= 814 bunch= 7charge= 6350 hittime= 6350
+posx= -1 posy= 925 posz= 768 bunch= 7charge= 6350 hittime= 6350
+posx= -1 posy= 975 posz= 722 bunch= 7charge= 6350 hittime= 6350
+posx= -1 posy= 1025 posz= 676 bunch= 7charge= 6350 hittime= 6350
+posx= -1 posy= 1075 posz= 630 bunch= 7charge= 6350 hittime= 6350
+posx= -1 posy= 1125 posz= 584 bunch= 7charge= 6350 hittime= 6350
+posx= -1 posy= 1175 posz= 492 bunch= 7charge= 6350 hittime= 6350
+posx= -1 posy= 1175 posz= 538 bunch= 7charge= 6350 hittime= 6350
+Ntrack= 1
+Clustering
+time 0.074000[ms]
+MakeCell
+cellcount= 18
+time 0.026000[ms]
+Search
+time 1.768000[ms]
+Update
+time 0.006000[ms]
+Recon
+maxstate= 6
+maxstate= 2
+Ntrack= 1
+time 0.009000[ms]
+view=1
+bunch= 7 Ntrack[iview][thebunch] = 1
+posx= 25 posy= -1 posz= 791 bunch= 7charge= 6350 hittime= 6350
+posx= 75 posy= -1 posz= 745 bunch= 7charge= 6350 hittime= 6350
+posx= 125 posy= -1 posz= 699 bunch= 7charge= 6350 hittime= 6350
+posx= 175 posy= -1 posz= 653 bunch= 7charge= 6350 hittime= 6350
+posx= 175 posy= -1 posz= 607 bunch= 7charge= 6350 hittime= 6350
+posx= 225 posy= -1 posz= 561 bunch= 7charge= 6350 hittime= 6350
+posx= 275 posy= -1 posz= 515 bunch= 7charge= 6350 hittime= 6350
+posx= 325 posy= -1 posz= 469 bunch= 7charge= 6350 hittime= 6350
+Ntrack= 1
+ientry= 7009
+Clustering
+time 0.080000[ms]
+MakeCell
+cellcount= 24
+time 0.030000[ms]
+Search
+time 2.040000[ms]
+Update
+time 0.010000[ms]
+Recon
+maxstate= 11
+maxstate= 0
+Ntrack= 1
+time 0.014000[ms]
+view=0
+bunch= 4 Ntrack[iview][thebunch] = 1
+posx= -1 posy= 325 posz= 814 bunch= 4charge= 4580 hittime= 4580
+posx= -1 posy= 325 posz= 768 bunch= 4charge= 4580 hittime= 4580
+posx= -1 posy= 325 posz= 722 bunch= 4charge= 4580 hittime= 4580
+posx= -1 posy= 325 posz= 676 bunch= 4charge= 4580 hittime= 4580
+posx= -1 posy= 325 posz= 630 bunch= 4charge= 4580 hittime= 4580
+posx= -1 posy= 325 posz= 584 bunch= 4charge= 4580 hittime= 4580
+posx= -1 posy= 375 posz= 446 bunch= 4charge= 4580 hittime= 4580
+posx= -1 posy= 375 posz= 400 bunch= 4charge= 4580 hittime= 4580
+posx= -1 posy= 375 posz= 354 bunch= 4charge= 4580 hittime= 4580
+posx= -1 posy= 375 posz= 308 bunch= 4charge= 4580 hittime= 4580
+posx= -1 posy= 375 posz= 216 bunch= 4charge= 4580 hittime= 4580
+posx= -1 posy= 412.5 posz= 78 bunch= 4charge= 4580 hittime= 4580
+posx= -1 posy= 375 posz= 124 bunch= 4charge= 4580 hittime= 4580
+Ntrack= 1
+Clustering
+time 0.076000[ms]
+MakeCell
+cellcount= 45
+time 0.029000[ms]
+Search
+time 6.162000[ms]
+Update
+time 0.025000[ms]
+Recon
+maxstate= 15
+maxstate= 0
+Ntrack= 1
+time 0.020000[ms]
+view=1
+bunch= 4 Ntrack[iview][thebunch] = 1
+posx= 537.5 posy= -1 posz= 791 bunch= 4charge= 4580 hittime= 4580
+posx= 562.5 posy= -1 posz= 745 bunch= 4charge= 4580 hittime= 4580
+posx= 562.5 posy= -1 posz= 699 bunch= 4charge= 4580 hittime= 4580
+posx= 562.5 posy= -1 posz= 653 bunch= 4charge= 4580 hittime= 4580
+posx= 562.5 posy= -1 posz= 607 bunch= 4charge= 4580 hittime= 4580
+posx= 562.5 posy= -1 posz= 561 bunch= 4charge= 4580 hittime= 4580
+posx= 562.5 posy= -1 posz= 515 bunch= 4charge= 4580 hittime= 4580
+posx= 562.5 posy= -1 posz= 469 bunch= 4charge= 4580 hittime= 4580
+posx= 562.5 posy= -1 posz= 423 bunch= 4charge= 4580 hittime= 4580
+posx= 562.5 posy= -1 posz= 377 bunch= 4charge= 4580 hittime= 4580
+posx= 587.5 posy= -1 posz= 331 bunch= 4charge= 4580 hittime= 4580
+posx= 587.5 posy= -1 posz= 285 bunch= 4charge= 4580 hittime= 4580
+posx= 587.5 posy= -1 posz= 239 bunch= 4charge= 4580 hittime= 4580
+posx= 587.5 posy= -1 posz= 193 bunch= 4charge= 4580 hittime= 4580
+posx= 587.5 posy= -1 posz= 147 bunch= 4charge= 4580 hittime= 4580
+posx= 587.5 posy= -1 posz= 55 bunch= 4charge= 4580 hittime= 4580
+posx= 587.5 posy= -1 posz= 101 bunch= 4charge= 4580 hittime= 4580
+Ntrack= 1
+Clustering
+time 0.081000[ms]
+MakeCell
+cellcount= 19
+time 0.030000[ms]
+Search
+time 1.742000[ms]
+Update
+time 0.004000[ms]
+Recon
+maxstate= 6
+maxstate= 1
+Ntrack= 1
+time 0.012000[ms]
+view=0
+bunch= 4 Ntrack[iview][thebunch] = 1
+posx= 0 posy= -174.9 posz= 186.6 bunch= 4charge= 743 hittime= 2536
+posx= 0 posy= -162.5 posz= 172.5 bunch= 4charge= 1028 hittime= 2342
+posx= 0 posy= -174.9 posz= 215.1 bunch= 4charge= 2048 hittime= 2448
+posx= 0 posy= -162.5 posz= 115.5 bunch= 4charge= 1054 hittime= 2280
+posx= 0 posy= -162.5 posz= 58.5 bunch= 4charge= 730 hittime= 2064
+posx= 0 posy= -137.5 posz= 1.5 bunch= 4charge= 1296 hittime= 2128
+posx= 0 posy= -162.5 posz= 1.5 bunch= 4charge= 1064 hittime= 2085
+posx= 0 posy= -137.5 posz= -55.5 bunch= 4charge= 860 hittime= 2088
+posx= 0 posy= -137.5 posz= -112.5 bunch= 4charge= 2336 hittime= 2221
+posx= 0 posy= -87.5 posz= -169.5 bunch= 4charge= 966 hittime= 1975
+posx= 0 posy= -124.9 posz= -183.9 bunch= 4charge= 1738 hittime= 2379
+posx= 0 posy= -112.5 posz= -226.5 bunch= 4charge= 2009 hittime= 2362
+posx= 0 posy= -124.9 posz= -212.4 bunch= 4charge= 1605 hittime= 2311
+Ntrack= 1
+Clustering
+time 0.077000[ms]
+MakeCell
+cellcount= 13
+time 0.029000[ms]
+Search
+time 0.962000[ms]
+Update
+time 0.003000[ms]
+Recon
+maxstate= 6
+maxstate= 0
+Ntrack= 1
+time 0.010000[ms]
+view=1
+bunch= 4 Ntrack[iview][thebunch] = 1
+posx= -12.5 posy= 0 posz= 201 bunch= 4charge= 928 hittime= 2193
+posx= 12.5 posy= 0 posz= 144 bunch= 4charge= 1864 hittime= 2326
+posx= 12.5 posy= 0 posz= 87 bunch= 4charge= 1579 hittime= 2377
+posx= 12.5 posy= 0 posz= 30 bunch= 4charge= 1258 hittime= 2435
+posx= 12.5 posy= 0 posz= -27 bunch= 4charge= 1082 hittime= 2141
+posx= 12.5 posy= 0 posz= -84 bunch= 4charge= 1065 hittime= 2051
+posx= 25.1 posy= 0 posz= -183.9 bunch= 4charge= 763 hittime= 2367
+posx= 37.5 posy= 0 posz= -198 bunch= 4charge= 1400 hittime= 2150
+posx= 25.1 posy= 0 posz= -155.4 bunch= 4charge= 851 hittime= 2408
+posx= 12.5 posy= 0 posz= -141 bunch= 4charge= 1087 hittime= 2103
+Ntrack= 1
+Clustering
+time 0.093000[ms]
+MakeCell
+cellcount= 13
+time 0.032000[ms]
+Search
+time 1.039000[ms]
+Update
+time 0.004000[ms]
+Recon
+maxstate= 6
+maxstate= 0
+Ntrack= 1
+time 0.011000[ms]
+view=0
+Clustering
+time 0.071000[ms]
+MakeCell
+cellcount= 15
+time 0.032000[ms]
+Search
+time 1.189000[ms]
+Update
+time 0.004000[ms]
+Recon
+maxstate= 6
+maxstate= 0
+Ntrack= 1
+time 0.009000[ms]
+view=0
+bunch= 4 Ntrack[iview][thebunch] = 1
+posx= 0 posy= -412.5 posz= 172.5 bunch= 4charge= 896 hittime= 2306
+posx= 0 posy= -387.5 posz= 115.5 bunch= 4charge= 1490 hittime= 2288
+posx= 0 posy= -387.5 posz= 58.5 bunch= 4charge= 1888 hittime= 2422
+posx= 0 posy= -387.5 posz= 1.5 bunch= 4charge= 1062 hittime= 2420
+posx= 0 posy= -374.9 posz= -41.4 bunch= 4charge= 2689 hittime= 2344
+posx= 0 posy= -374.9 posz= -69.9 bunch= 4charge= 1254 hittime= 2257
+posx= 0 posy= -362.5 posz= -112.5 bunch= 4charge= 2803 hittime= 2356
+posx= 0 posy= -362.5 posz= -169.5 bunch= 4charge= 1542 hittime= 2455
+posx= 0 posy= -362.5 posz= -226.5 bunch= 4charge= 1123 hittime= 2358
+Ntrack= 1
+bunch= 5 Ntrack[iview][thebunch] = 1
+posx= 0 posy= -237.5 posz= 172.5 bunch= 5charge= 813 hittime= 2020
+posx= 0 posy= -224.9 posz= 158.1 bunch= 5charge= 1764 hittime= 1937
+posx= 0 posy= -212.5 posz= 115.5 bunch= 5charge= 935 hittime= 1951
+posx= 0 posy= -187.5 posz= 58.5 bunch= 5charge= 1093 hittime= 1860
+posx= 0 posy= -162.5 posz= 1.5 bunch= 5charge= 2516 hittime= 1838
+posx= 0 posy= -137.5 posz= -55.5 bunch= 5charge= 1215 hittime= 2070
+posx= 0 posy= -112.5 posz= -112.5 bunch= 5charge= 1391 hittime= 2085
+posx= 0 posy= -124.9 posz= -98.4 bunch= 5charge= 1863 hittime= 1998
+posx= 0 posy= -74.9 posz= -212.4 bunch= 5charge= 1706 hittime= 2108
+posx= 0 posy= -62.5 posz= -226.5 bunch= 5charge= 1107 hittime= 2108
+posx= 0 posy= -87.5 posz= -169.5 bunch= 5charge= 1322 hittime= 2134
+Ntrack= 1
+Clustering
+time 0.072000[ms]
+MakeCell
+cellcount= 8
+time 0.029000[ms]
+Search
+time 0.503000[ms]
+Update
+time 0.002000[ms]
+Recon
+maxstate= 4
+maxstate= 0
+Ntrack= 1
+time 0.008000[ms]
+view=1
+Clustering
+time 0.071000[ms]
+MakeCell
+cellcount= 13
+time 0.028000[ms]
+Search
+time 0.983000[ms]
+Update
+time 0.003000[ms]
+Recon
+maxstate= 6
+maxstate= 0
+Ntrack= 1
+time 0.009000[ms]
+view=1
+bunch= 4 Ntrack[iview][thebunch] = 1
+posx= -362.5 posy= 0 posz= 201 bunch= 4charge= 1469 hittime= 2327
+posx= -374.9 posy= 0 posz= 186.6 bunch= 4charge= 1255 hittime= 2342
+posx= -362.5 posy= 0 posz= 144 bunch= 4charge= 858 hittime= 2322
+posx= -362.5 posy= 0 posz= 87 bunch= 4charge= 945 hittime= 2407
+posx= -362.5 posy= 0 posz= 30 bunch= 4charge= 1023 hittime= 2388
+posx= -362.5 posy= 0 posz= -141 bunch= 4charge= 905 hittime= 2470
+posx= -362.5 posy= 0 posz= -27 bunch= 4charge= 1297 hittime= 2346
+Ntrack= 1
+bunch= 5 Ntrack[iview][thebunch] = 1
+posx= -24.9 posy= 0 posz= 215.1 bunch= 5charge= 3673 hittime= 1747
+posx= -37.5 posy= 0 posz= 201 bunch= 5charge= 1090 hittime= 1999
+posx= -62.5 posy= 0 posz= 144 bunch= 5charge= 1182 hittime= 2017
+posx= -74.9 posy= 0 posz= 101.1 bunch= 5charge= 1873 hittime= 1857
+posx= -87.5 posy= 0 posz= 87 bunch= 5charge= 1176 hittime= 1919
+posx= -112.5 posy= 0 posz= 30 bunch= 5charge= 862 hittime= 1965
+posx= -124.9 posy= 0 posz= -12.9 bunch= 5charge= 1285 hittime= 2229
+posx= -137.5 posy= 0 posz= -27 bunch= 5charge= 1093 hittime= 2147
+posx= -162.5 posy= 0 posz= -84 bunch= 5charge= 1416 hittime= 2192
+posx= -187.5 posy= 0 posz= -141 bunch= 5charge= 1541 hittime= 1941
+posx= -187.5 posy= 0 posz= -198 bunch= 5charge= 1088 hittime= 1976
+Ntrack= 1
+ientry= 7010
+Clustering
+time 0.081000[ms]
+MakeCell
+cellcount= 22
+time 0.031000[ms]
+Search
+time 2.329000[ms]
+Update
+time 0.009000[ms]
+Recon
+maxstate= 9
+maxstate= 0
+Ntrack= 1
+time 0.014000[ms]
+view=0
+bunch= 5 Ntrack[iview][thebunch] = 1
+posx= -1 posy= 1175 posz= 584 bunch= 5charge= 5135 hittime= 5135
+posx= -1 posy= 1175 posz= 538 bunch= 5charge= 5135 hittime= 5135
+posx= -1 posy= 1175 posz= 492 bunch= 5charge= 5135 hittime= 5135
+posx= -1 posy= 1175 posz= 400 bunch= 5charge= 5135 hittime= 5135
+posx= -1 posy= 1175 posz= 354 bunch= 5charge= 5135 hittime= 5135
+posx= -1 posy= 1175 posz= 308 bunch= 5charge= 5135 hittime= 5135
+posx= -1 posy= 1125 posz= 262 bunch= 5charge= 5135 hittime= 5135
+posx= -1 posy= 1125 posz= 216 bunch= 5charge= 5135 hittime= 5135
+posx= -1 posy= 1125 posz= 170 bunch= 5charge= 5135 hittime= 5135
+posx= -1 posy= 1125 posz= 78 bunch= 5charge= 5135 hittime= 5135
+posx= -1 posy= 1125 posz= 28 bunch= 5charge= 5135 hittime= 5135
+Ntrack= 1
+Clustering
+time 0.070000[ms]
+MakeCell
+cellcount= 27
+time 0.029000[ms]
+Search
+time 3.076000[ms]
+Update
+time 0.012000[ms]
+Recon
+maxstate= 10
+maxstate= 0
+Ntrack= 1
+time 0.014000[ms]
+view=1
+bunch= 5 Ntrack[iview][thebunch] = 1
+posx= 762.5 posy= -1 posz= 561 bunch= 5charge= 5135 hittime= 5135
+posx= 737.5 posy= -1 posz= 515 bunch= 5charge= 5135 hittime= 5135
+posx= 737.5 posy= -1 posz= 469 bunch= 5charge= 5135 hittime= 5135
+posx= 737.5 posy= -1 posz= 377 bunch= 5charge= 5135 hittime= 5135
+posx= 712.5 posy= -1 posz= 377 bunch= 5charge= 5135 hittime= 5135
+posx= 712.5 posy= -1 posz= 331 bunch= 5charge= 5135 hittime= 5135
+posx= 712.5 posy= -1 posz= 285 bunch= 5charge= 5135 hittime= 5135
+posx= 687.5 posy= -1 posz= 239 bunch= 5charge= 5135 hittime= 5135
+posx= 687.5 posy= -1 posz= 193 bunch= 5charge= 5135 hittime= 5135
+posx= 687.5 posy= -1 posz= 147 bunch= 5charge= 5135 hittime= 5135
+posx= 662.5 posy= -1 posz= 101 bunch= 5charge= 5135 hittime= 5135
+posx= 662.5 posy= -1 posz= 55 bunch= 5charge= 5135 hittime= 5135
+posx= 675 posy= -1 posz= 5 bunch= 5charge= 5135 hittime= 5135
+Ntrack= 1
+Clustering
+time 0.079000[ms]
+MakeCell
+cellcount= 13
+time 0.031000[ms]
+Search
+time 1.028000[ms]
+Update
+time 0.004000[ms]
+Recon
+maxstate= 6
+maxstate= 0
+Ntrack= 1
+time 0.010000[ms]
+view=0
+bunch= 5 Ntrack[iview][thebunch] = 1
+posx= 0 posy= 487.5 posz= 172.5 bunch= 5charge= 1148 hittime= 2201
+posx= 0 posy= 462.5 posz= 115.5 bunch= 5charge= 827 hittime= 2179
+posx= 0 posy= 475.1 posz= 129.6 bunch= 5charge= 1425 hittime= 2164
+posx= 0 posy= 462.5 posz= 58.5 bunch= 5charge= 2446 hittime= 1987
+posx= 0 posy= 462.5 posz= 1.5 bunch= 5charge= 1160 hittime= 2138
+posx= 0 posy= 437.5 posz= -55.5 bunch= 5charge= 875 hittime= 2049
+posx= 0 posy= 437.5 posz= -112.5 bunch= 5charge= 874 hittime= 2245
+posx= 0 posy= 425.1 posz= -155.4 bunch= 5charge= 2009 hittime= 2235
+posx= 0 posy= 412.5 posz= -226.5 bunch= 5charge= 1123 hittime= 2310
+Ntrack= 1
+Clustering
+time 0.070000[ms]
+MakeCell
+cellcount= 17
+time 0.028000[ms]
+Search
+time 1.511000[ms]
+Update
+time 0.003000[ms]
+Recon
+maxstate= 6
+maxstate= 0
+Ntrack= 1
+time 0.009000[ms]
+view=1
+bunch= 5 Ntrack[iview][thebunch] = 1
+posx= 25.1 posy= 0 posz= 215.1 bunch= 5charge= 752 hittime= 2309
+posx= 12.5 posy= 0 posz= 201 bunch= 5charge= 839 hittime= 2499
+posx= 12.5 posy= 0 posz= 144 bunch= 5charge= 1811 hittime= 2383
+posx= -12.5 posy= 0 posz= 87 bunch= 5charge= 1384 hittime= 2499
+posx= -12.5 posy= 0 posz= 30 bunch= 5charge= 1262 hittime= 2487
+posx= -12.5 posy= 0 posz= -27 bunch= 5charge= 1206 hittime= 2329
+posx= -24.9 posy= 0 posz= -41.4 bunch= 5charge= 3311 hittime= 2108
+posx= -37.5 posy= 0 posz= -84 bunch= 5charge= 1281 hittime= 2341
+posx= -62.5 posy= 0 posz= -198 bunch= 5charge= 769 hittime= 2424
+posx= -37.5 posy= 0 posz= -141 bunch= 5charge= 1153 hittime= 2443
+Ntrack= 1
+ientry= 7011
+ientry= 7012
+ientry= 7013
+ientry= 7014
+ientry= 7015
+ientry= 7016
+Clustering
+time 0.084000[ms]
+MakeCell
+cellcount= 11
+time 0.032000[ms]
+Search
+time 0.927000[ms]
+Update
+time 0.003000[ms]
+Recon
+maxstate= 4
+maxstate= 1
+Ntrack= 1
+time 0.007000[ms]
+view=0
+bunch= 4 Ntrack[iview][thebunch] = 1
+posx= -1 posy= 462.5 posz= 952 bunch= 4charge= 4612 hittime= 4612
+posx= -1 posy= 875 posz= 814 bunch= 4charge= 4612 hittime= 4612
+posx= -1 posy= 975 posz= 768 bunch= 4charge= 4612 hittime= 4612
+posx= -1 posy= 1025 posz= 722 bunch= 4charge= 4612 hittime= 4612
+posx= -1 posy= 1125 posz= 630 bunch= 4charge= 4612 hittime= 4612
+posx= -1 posy= 1075 posz= 676 bunch= 4charge= 4612 hittime= 4612
+Ntrack= 1
+Clustering
+time 0.082000[ms]
+MakeCell
+cellcount= 12
+time 0.035000[ms]
+Search
+time 0.894000[ms]
+Update
+time 0.003000[ms]
+Recon
+maxstate= 4
+maxstate= 0
+Ntrack= 1
+time 0.008000[ms]
+view=1
+bunch= 4 Ntrack[iview][thebunch] = 1
+posx= 1075 posy= -1 posz= 791 bunch= 4charge= 4612 hittime= 4612
+posx= 1075 posy= -1 posz= 745 bunch= 4charge= 4612 hittime= 4612
+posx= 1025 posy= -1 posz= 699 bunch= 4charge= 4612 hittime= 4612
+posx= 1025 posy= -1 posz= 653 bunch= 4charge= 4612 hittime= 4612
+posx= 975 posy= -1 posz= 561 bunch= 4charge= 4612 hittime= 4612
+posx= 1025 posy= -1 posz= 607 bunch= 4charge= 4612 hittime= 4612
+Ntrack= 1
+Clustering
+time 0.078000[ms]
+MakeCell
+cellcount= 3
+time 0.032000[ms]
+Search
+time 0.114000[ms]
+Update
+time 0.001000[ms]
+Recon
+maxstate= 1
+Ntrack= 0
+time 0.002000[ms]
+Clustering
+time 0.071000[ms]
+MakeCell
+cellcount= 3
+time 0.029000[ms]
+Search
+time 0.062000[ms]
+Update
+time 0.000000[ms]
+Recon
+maxstate= 1
+Ntrack= 0
+time 0.002000[ms]
+ientry= 7017
+Clustering
+time 0.079000[ms]
+MakeCell
+cellcount= 43
+time 0.033000[ms]
+Search
+time 6.555000[ms]
+Update
+time 0.010000[ms]
+Recon
+maxstate= 6
+maxstate= 5
+maxstate= 4
+maxstate= 3
+maxstate= 1
+Ntrack= 1
+time 0.025000[ms]
+view=0
+bunch= 2 Ntrack[iview][thebunch] = 1
+posx= -1 posy= 562.5 posz= 354 bunch= 2charge= 3417 hittime= 3417
+posx= -1 posy= 587.5 posz= 308 bunch= 2charge= 3417 hittime= 3417
+posx= -1 posy= 612.5 posz= 262 bunch= 2charge= 3417 hittime= 3417
+posx= -1 posy= 587.5 posz= 216 bunch= 2charge= 3417 hittime= 3417
+posx= -1 posy= 612.5 posz= 170 bunch= 2charge= 3417 hittime= 3417
+posx= -1 posy= 687.5 posz= 124 bunch= 2charge= 3417 hittime= 3417
+posx= -1 posy= 662.5 posz= 124 bunch= 2charge= 3417 hittime= 3417
+posx= -1 posy= 687.5 posz= 78 bunch= 2charge= 3417 hittime= 3417
+posx= -1 posy= 712.5 posz= 78 bunch= 2charge= 3417 hittime= 3417
+posx= -1 posy= 725 posz= 28 bunch= 2charge= 3417 hittime= 3417
+Ntrack= 1
+Clustering
+time 0.071000[ms]
+MakeCell
+cellcount= 36
+time 0.031000[ms]
+Search
+time 4.932000[ms]
+Update
+time 0.007000[ms]
+Recon
+maxstate= 6
+maxstate= 3
+maxstate= 1
+Ntrack= 1
+time 0.015000[ms]
+view=1
+bunch= 2 Ntrack[iview][thebunch] = 1
+posx= 612.5 posy= -1 posz= 331 bunch= 2charge= 3417 hittime= 3417
+posx= 562.5 posy= -1 posz= 285 bunch= 2charge= 3417 hittime= 3417
+posx= 537.5 posy= -1 posz= 239 bunch= 2charge= 3417 hittime= 3417
+posx= 537.5 posy= -1 posz= 193 bunch= 2charge= 3417 hittime= 3417
+posx= 537.5 posy= -1 posz= 147 bunch= 2charge= 3417 hittime= 3417
+posx= 512.5 posy= -1 posz= 101 bunch= 2charge= 3417 hittime= 3417
+posx= 537.5 posy= -1 posz= 101 bunch= 2charge= 3417 hittime= 3417
+posx= 537.5 posy= -1 posz= 55 bunch= 2charge= 3417 hittime= 3417
+posx= 525 posy= -1 posz= 5 bunch= 2charge= 3417 hittime= 3417
+Ntrack= 1
+ientry= 7018
+ientry= 7019
+ientry= 7020
+Clustering
+time 0.079000[ms]
+MakeCell
+cellcount= 11
+time 0.030000[ms]
+Search
+time 0.400000[ms]
+Update
+time 0.002000[ms]
+Recon
+maxstate= 1
+Ntrack= 0
+time 0.003000[ms]
+Clustering
+time 0.069000[ms]
+MakeCell
+cellcount= 8
+time 0.022000[ms]
+Search
+time 0.218000[ms]
+Update
+time 0.002000[ms]
+Recon
+maxstate= 1
+Ntrack= 0
+time 0.001000[ms]
+ientry= 7021
+Clustering
+time 0.086000[ms]
+MakeCell
+cellcount= 9
+time 0.032000[ms]
+Search
+time 0.520000[ms]
+Update
+time 0.002000[ms]
+Recon
+maxstate= 5
+maxstate= 0
+Ntrack= 1
+time 0.009000[ms]
+view=0
+bunch= 3 Ntrack[iview][thebunch] = 1
+posx= 0 posy= 125.1 posz= 186.6 bunch= 3charge= 3723 hittime= 2164
+posx= 0 posy= 112.5 posz= 172.5 bunch= 3charge= 1117 hittime= 2450
+posx= 0 posy= 87.5 posz= 115.5 bunch= 3charge= 973 hittime= 2559
+posx= 0 posy= 62.5 posz= 58.5 bunch= 3charge= 1036 hittime= 2754
+posx= 0 posy= 75.1 posz= 72.6 bunch= 3charge= 2956 hittime= 2598
+posx= 0 posy= 25.1 posz= -41.4 bunch= 3charge= 2206 hittime= 2148
+posx= 0 posy= 12.5 posz= -112.5 bunch= 3charge= 1103 hittime= 2263
+posx= 0 posy= -24.9 posz= -155.4 bunch= 3charge= 3046 hittime= 2272
+posx= 0 posy= -37.5 posz= -169.5 bunch= 3charge= 749 hittime= 2298
+posx= 0 posy= -62.5 posz= -226.5 bunch= 3charge= 967 hittime= 2461
+Ntrack= 1
+Clustering
+time 0.072000[ms]
+MakeCell
+cellcount= 13
+time 0.031000[ms]
+Search
+time 0.935000[ms]
+Update
+time 0.003000[ms]
+Recon
+maxstate= 6
+maxstate= 0
+Ntrack= 1
+time 0.008000[ms]
+view=1
+bunch= 3 Ntrack[iview][thebunch] = 1
+posx= -462.5 posy= 0 posz= 201 bunch= 3charge= 886 hittime= 2810
+posx= -474.9 posy= 0 posz= 215.1 bunch= 3charge= 1546 hittime= 2690
+posx= -424.9 posy= 0 posz= 158.1 bunch= 3charge= 866 hittime= 2455
+posx= -412.5 posy= 0 posz= 144 bunch= 3charge= 1461 hittime= 2748
+posx= -374.9 posy= 0 posz= 101.1 bunch= 3charge= 2468 hittime= 2800
+posx= -362.5 posy= 0 posz= 87 bunch= 3charge= 1570 hittime= 2889
+posx= -324.9 posy= 0 posz= 44.1 bunch= 3charge= 1290 hittime= 2893
+posx= -312.5 posy= 0 posz= 30 bunch= 3charge= 1336 hittime= 2866
+posx= -262.5 posy= 0 posz= -27 bunch= 3charge= 914 hittime= 2727
+posx= -237.5 posy= 0 posz= -84 bunch= 3charge= 1071 hittime= 2738
+posx= -224.9 posy= 0 posz= -98.4 bunch= 3charge= 2013 hittime= 2697
+posx= -137.5 posy= 0 posz= -198 bunch= 3charge= 1065 hittime= 2713
+posx= -124.9 posy= 0 posz= -212.4 bunch= 3charge= 2203 hittime= 2578
+posx= -187.5 posy= 0 posz= -141 bunch= 3charge= 1396 hittime= 2687
+posx= -174.9 posy= 0 posz= -155.4 bunch= 3charge= 1917 hittime= 2611
+Ntrack= 1
+ientry= 7022
+Clustering
+time 0.095000[ms]
+MakeCell
+cellcount= 7
+time 0.052000[ms]
+Search
+time 0.480000[ms]
+Update
+time 0.003000[ms]
+Recon
+maxstate= 3
+maxstate= 0
+Ntrack= 1
+time 0.007000[ms]
+view=0
+bunch= 8 Ntrack[iview][thebunch] = 1
+posx= 0 posy= -374.9 posz= 215.1 bunch= 8charge= 1410 hittime= 2472
+posx= 0 posy= -387.5 posz= 172.5 bunch= 8charge= 1966 hittime= 2530
+posx= 0 posy= -424.9 posz= 129.6 bunch= 8charge= 2512 hittime= 2572
+posx= 0 posy= -437.5 posz= 115.5 bunch= 8charge= 1025 hittime= 2432
+posx= 0 posy= -487.5 posz= 1.5 bunch= 8charge= 968 hittime= 2537
+posx= 0 posy= -462.5 posz= 58.5 bunch= 8charge= 1051 hittime= 2513
+Ntrack= 1
+Clustering
+time 0.071000[ms]
+MakeCell
+cellcount= 7
+time 0.028000[ms]
+Search
+time 0.373000[ms]
+Update
+time 0.002000[ms]
+Recon
+maxstate= 3
+maxstate= 0
+Ntrack= 1
+time 0.007000[ms]
+view=1
+bunch= 8 Ntrack[iview][thebunch] = 1
+posx= 487.5 posy= 0 posz= 201 bunch= 8charge= 975 hittime= 2193
+posx= 487.5 posy= 0 posz= 144 bunch= 8charge= 934 hittime= 2249
+posx= 487.5 posy= 0 posz= 87 bunch= 8charge= 1303 hittime= 2639
+posx= 487.5 posy= 0 posz= -27 bunch= 8charge= 972 hittime= 2300
+posx= 487.5 posy= 0 posz= 30 bunch= 8charge= 988 hittime= 2616
+Ntrack= 1
+ientry= 7023
+Clustering
+time 0.083000[ms]
+MakeCell
+cellcount= 14
+time 0.035000[ms]
+Search
+time 0.949000[ms]
+Update
+time 0.003000[ms]
+Recon
+maxstate= 2
+Ntrack= 0
+time 0.002000[ms]
+Clustering
+time 0.079000[ms]
+MakeCell
+cellcount= 3
+time 0.027000[ms]
+Search
+time 0.059000[ms]
+Update
+time 0.001000[ms]
+Recon
+maxstate= 0
+Ntrack= 0
+time 0.002000[ms]
+ientry= 7024
+ientry= 7025
+Clustering
+time 0.085000[ms]
+MakeCell
+cellcount= 7
+time 0.031000[ms]
+Search
+time 0.485000[ms]
+Update
+time 0.003000[ms]
+Recon
+maxstate= 2
+Ntrack= 0
+time 0.002000[ms]
+Clustering
+time 0.071000[ms]
+MakeCell
+cellcount= 15
+time 0.028000[ms]
+Search
+time 1.380000[ms]
+Update
+time 0.004000[ms]
+Recon
+maxstate= 5
+maxstate= 0
+Ntrack= 1
+time 0.009000[ms]
+view=1
+bunch= 5 Ntrack[iview][thebunch] = 1
+posx= 462.5 posy= -1 posz= 285 bunch= 5charge= 5142 hittime= 5142
+posx= 462.5 posy= -1 posz= 239 bunch= 5charge= 5142 hittime= 5142
+posx= 462.5 posy= -1 posz= 193 bunch= 5charge= 5142 hittime= 5142
+posx= 462.5 posy= -1 posz= 147 bunch= 5charge= 5142 hittime= 5142
+posx= 487.5 posy= -1 posz= 101 bunch= 5charge= 5142 hittime= 5142
+posx= 475 posy= -1 posz= 5 bunch= 5charge= 5142 hittime= 5142
+posx= 487.5 posy= -1 posz= 55 bunch= 5charge= 5142 hittime= 5142
+Ntrack= 1
+Clustering
+time 0.080000[ms]
+MakeCell
+cellcount= 11
+time 0.032000[ms]
+Search
+time 0.824000[ms]
+Update
+time 0.004000[ms]
+Recon
+maxstate= 5
+maxstate= 0
+Ntrack= 1
+time 0.009000[ms]
+view=0
+bunch= 5 Ntrack[iview][thebunch] = 1
+posx= 0 posy= -487.5 posz= 115.5 bunch= 5charge= 844 hittime= 2141
+posx= 0 posy= -487.5 posz= 58.5 bunch= 5charge= 1147 hittime= 2389
+posx= 0 posy= -474.9 posz= 15.6 bunch= 5charge= 1298 hittime= 2401
+posx= 0 posy= -462.5 posz= 1.5 bunch= 5charge= 2176 hittime= 2297
+posx= 0 posy= -462.5 posz= -55.5 bunch= 5charge= 1049 hittime= 2175
+posx= 0 posy= -437.5 posz= -112.5 bunch= 5charge= 1619 hittime= 2159
+posx= 0 posy= -437.5 posz= -169.5 bunch= 5charge= 1638 hittime= 2161
+posx= 0 posy= -412.5 posz= -226.5 bunch= 5charge= 1334 hittime= 2208
+Ntrack= 1
+Clustering
+time 0.070000[ms]
+MakeCell
+cellcount= 13
+time 0.027000[ms]
+Search
+time 0.956000[ms]
+Update
+time 0.003000[ms]
+Recon
+maxstate= 6
+maxstate= 0
+Ntrack= 1
+time 0.008000[ms]
+view=1
+bunch= 5 Ntrack[iview][thebunch] = 1
+posx= -137.5 posy= 0 posz= 201 bunch= 5charge= 794 hittime= 2230
+posx= -124.9 posy= 0 posz= 158.1 bunch= 5charge= 2618 hittime= 2148
+posx= -137.5 posy= 0 posz= 144 bunch= 5charge= 742 hittime= 2357
+posx= -124.9 posy= 0 posz= 129.6 bunch= 5charge= 1079 hittime= 2272
+posx= -124.9 posy= 0 posz= 186.6 bunch= 5charge= 3013 hittime= 2076
+posx= -112.5 posy= 0 posz= 87 bunch= 5charge= 1117 hittime= 2438
+posx= -112.5 posy= 0 posz= 30 bunch= 5charge= 1292 hittime= 2395
+posx= -112.5 posy= 0 posz= -27 bunch= 5charge= 1773 hittime= 2415
+posx= -112.5 posy= 0 posz= -84 bunch= 5charge= 1179 hittime= 2470
+posx= -112.5 posy= 0 posz= -141 bunch= 5charge= 1322 hittime= 2220
+posx= -112.5 posy= 0 posz= -198 bunch= 5charge= 1127 hittime= 2325
+Ntrack= 1
+ientry= 7026
+Clustering
+time 0.078000[ms]
+MakeCell
+cellcount= 13
+time 0.031000[ms]
+Search
+time 1.021000[ms]
+Update
+time 0.003000[ms]
+Recon
+maxstate= 6
+maxstate= 0
+Ntrack= 1
+time 0.011000[ms]
+view=0
+bunch= 5 Ntrack[iview][thebunch] = 1
+posx= 0 posy= 362.5 posz= 172.5 bunch= 5charge= 926 hittime= 1926
+posx= 0 posy= 362.5 posz= 115.5 bunch= 5charge= 993 hittime= 1932
+posx= 0 posy= 362.5 posz= 58.5 bunch= 5charge= 1246 hittime= 1928
+posx= 0 posy= 362.5 posz= 1.5 bunch= 5charge= 819 hittime= 1957
+posx= 0 posy= 362.5 posz= -55.5 bunch= 5charge= 763 hittime= 2125
+posx= 0 posy= 362.5 posz= -112.5 bunch= 5charge= 1476 hittime= 2084
+posx= 0 posy= 362.5 posz= -226.5 bunch= 5charge= 971 hittime= 1937
+posx= 0 posy= 362.5 posz= -169.5 bunch= 5charge= 739 hittime= 2006
+Ntrack= 1
+Clustering
+time 0.076000[ms]
+MakeCell
+cellcount= 9
+time 0.027000[ms]
+Search
+time 0.520000[ms]
+Update
+time 0.002000[ms]
+Recon
+maxstate= 5
+maxstate= 0
+Ntrack= 1
+time 0.006000[ms]
+view=1
+bunch= 5 Ntrack[iview][thebunch] = 1
+posx= 462.5 posy= 0 posz= 201 bunch= 5charge= 1290 hittime= 1883
+posx= 462.5 posy= 0 posz= 144 bunch= 5charge= 1092 hittime= 1925
+posx= 462.5 posy= 0 posz= 87 bunch= 5charge= 1080 hittime= 2085
+posx= 462.5 posy= 0 posz= 30 bunch= 5charge= 916 hittime= 2043
+posx= 462.5 posy= 0 posz= -27 bunch= 5charge= 942 hittime= 1650
+posx= 462.5 posy= 0 posz= -141 bunch= 5charge= 1371 hittime= 2081
+posx= 475.1 posy= 0 posz= -155.4 bunch= 5charge= 797 hittime= 2139
+posx= 462.5 posy= 0 posz= -198 bunch= 5charge= 745 hittime= 1871
+Ntrack= 1
+ientry= 7027
+Clustering
+time 0.080000[ms]
+MakeCell
+cellcount= 0
+No cell is created.
+ientry= 7028
+Clustering
+time 0.089000[ms]
+MakeCell
+cellcount= 11
+time 0.033000[ms]
+Search
+time 0.905000[ms]
+Update
+time 0.003000[ms]
+Recon
+maxstate= 4
+maxstate= 0
+Ntrack= 1
+time 0.008000[ms]
+view=0
+bunch= 3 Ntrack[iview][thebunch] = 1
+posx= -1 posy= 1125 posz= 814 bunch= 3charge= 3957 hittime= 3957
+posx= -1 posy= 1125 posz= 768 bunch= 3charge= 3957 hittime= 3957
+posx= -1 posy= 1125 posz= 722 bunch= 3charge= 3957 hittime= 3957
+posx= -1 posy= 1125 posz= 676 bunch= 3charge= 3957 hittime= 3957
+posx= -1 posy= 1175 posz= 492 bunch= 3charge= 3957 hittime= 3957
+posx= -1 posy= 1175 posz= 584 bunch= 3charge= 3957 hittime= 3957
+Ntrack= 1
+Clustering
+time 0.068000[ms]
+MakeCell
+cellcount= 21
+time 0.031000[ms]
+Search
+time 2.162000[ms]
+Update
+time 0.007000[ms]
+Recon
+maxstate= 7
+maxstate= 0
+Ntrack= 1
+time 0.012000[ms]
+view=1
+bunch= 3 Ntrack[iview][thebunch] = 1
+posx= 637.5 posy= -1 posz= 791 bunch= 3charge= 3957 hittime= 3957
+posx= 637.5 posy= -1 posz= 745 bunch= 3charge= 3957 hittime= 3957
+posx= 662.5 posy= -1 posz= 699 bunch= 3charge= 3957 hittime= 3957
+posx= 687.5 posy= -1 posz= 653 bunch= 3charge= 3957 hittime= 3957
+posx= 712.5 posy= -1 posz= 607 bunch= 3charge= 3957 hittime= 3957
+posx= 712.5 posy= -1 posz= 561 bunch= 3charge= 3957 hittime= 3957
+posx= 737.5 posy= -1 posz= 515 bunch= 3charge= 3957 hittime= 3957
+posx= 787.5 posy= -1 posz= 423 bunch= 3charge= 3957 hittime= 3957
+posx= 762.5 posy= -1 posz= 469 bunch= 3charge= 3957 hittime= 3957
+Ntrack= 1
+ientry= 7029
+ientry= 7030
+Clustering
+time 0.080000[ms]
+MakeCell
+cellcount= 33
+time 0.034000[ms]
+Search
+time 3.200000[ms]
+Update
+time 0.008000[ms]
+Recon
+maxstate= 6
+maxstate= 5
+maxstate= 0
+Ntrack= 2
+time 0.019000[ms]
+view=0
+bunch= 8 Ntrack[iview][thebunch] = 2
+posx= -1 posy= 175 posz= 354 bunch= 8charge= 6922 hittime= 6922
+posx= -1 posy= 175 posz= 308 bunch= 8charge= 6922 hittime= 6922
+posx= -1 posy= 175 posz= 262 bunch= 8charge= 6922 hittime= 6922
+posx= -1 posy= 175 posz= 216 bunch= 8charge= 6922 hittime= 6922
+posx= -1 posy= 175 posz= 170 bunch= 8charge= 6922 hittime= 6922
+posx= -1 posy= 175 posz= 124 bunch= 8charge= 6922 hittime= 6922
+posx= -1 posy= 175 posz= 28 bunch= 8charge= 6922 hittime= 6922
+posx= -1 posy= 175 posz= 78 bunch= 8charge= 6922 hittime= 6922
+posx= -1 posy= 125 posz= 814 bunch= 8charge= 6922 hittime= 6922
+posx= -1 posy= 125 posz= 768 bunch= 8charge= 6922 hittime= 6922
+posx= -1 posy= 125 posz= 722 bunch= 8charge= 6922 hittime= 6922
+posx= -1 posy= 125 posz= 676 bunch= 8charge= 6922 hittime= 6922
+posx= -1 posy= 125 posz= 630 bunch= 8charge= 6922 hittime= 6922
+posx= -1 posy= 125 posz= 584 bunch= 8charge= 6922 hittime= 6922
+posx= -1 posy= 125 posz= 538 bunch= 8charge= 6922 hittime= 6922
+Ntrack= 2
+Clustering
+time 0.074000[ms]
+MakeCell
+cellcount= 35
+time 0.027000[ms]
+Search
+time 4.057000[ms]
+Update
+time 0.017000[ms]
+Recon
+maxstate= 12
+maxstate= 0
+Ntrack= 1
+time 0.016000[ms]
+view=1
+bunch= 8 Ntrack[iview][thebunch] = 1
+posx= 487.5 posy= -1 posz= 791 bunch= 8charge= 6922 hittime= 6922
+posx= 462.5 posy= -1 posz= 745 bunch= 8charge= 6922 hittime= 6922
+posx= 437.5 posy= -1 posz= 699 bunch= 8charge= 6922 hittime= 6922
+posx= 437.5 posy= -1 posz= 653 bunch= 8charge= 6922 hittime= 6922
+posx= 412.5 posy= -1 posz= 653 bunch= 8charge= 6922 hittime= 6922
+posx= 412.5 posy= -1 posz= 607 bunch= 8charge= 6922 hittime= 6922
+posx= 375 posy= -1 posz= 561 bunch= 8charge= 6922 hittime= 6922
+posx= 375 posy= -1 posz= 515 bunch= 8charge= 6922 hittime= 6922
+posx= 325 posy= -1 posz= 469 bunch= 8charge= 6922 hittime= 6922
+posx= 325 posy= -1 posz= 423 bunch= 8charge= 6922 hittime= 6922
+posx= 275 posy= -1 posz= 331 bunch= 8charge= 6922 hittime= 6922
+posx= 275 posy= -1 posz= 285 bunch= 8charge= 6922 hittime= 6922
+posx= 225 posy= -1 posz= 239 bunch= 8charge= 6922 hittime= 6922
+posx= 225 posy= -1 posz= 193 bunch= 8charge= 6922 hittime= 6922
+posx= 175 posy= -1 posz= 101 bunch= 8charge= 6922 hittime= 6922
+Ntrack= 1
+Clustering
+time 0.078000[ms]
+MakeCell
+cellcount= 5
+time 0.022000[ms]
+Search
+time 0.245000[ms]
+Update
+time 0.001000[ms]
+Recon
+maxstate= 2
+Ntrack= 0
+time 0.003000[ms]
+Clustering
+time 0.077000[ms]
+MakeCell
+cellcount= 13
+time 0.032000[ms]
+Search
+time 1.022000[ms]
+Update
+time 0.004000[ms]
+Recon
+maxstate= 6
+maxstate= 0
+Ntrack= 1
+time 0.010000[ms]
+view=0
+bunch= 7 Ntrack[iview][thebunch] = 1
+posx= 0 posy= 212.5 posz= 172.5 bunch= 7charge= 1627 hittime= 1684
+posx= 0 posy= 237.5 posz= 115.5 bunch= 7charge= 914 hittime= 1777
+posx= 0 posy= 237.5 posz= 58.5 bunch= 7charge= 1414 hittime= 1740
+posx= 0 posy= 225.1 posz= 44.1 bunch= 7charge= 723 hittime= 2127
+posx= 0 posy= 237.5 posz= 1.5 bunch= 7charge= 1491 hittime= 1742
+posx= 0 posy= 262.5 posz= -55.5 bunch= 7charge= 2011 hittime= 2020
+posx= 0 posy= 262.5 posz= -112.5 bunch= 7charge= 3323 hittime= 1858
+posx= 0 posy= 262.5 posz= -169.5 bunch= 7charge= 850 hittime= 1915
+posx= 0 posy= 275.1 posz= -212.4 bunch= 7charge= 772 hittime= 1725
+Ntrack= 1
+Clustering
+time 0.070000[ms]
+MakeCell
+cellcount= 12
+time 0.025000[ms]
+Search
+time 0.883000[ms]
+Update
+time 0.005000[ms]
+Recon
+maxstate= 6
+maxstate= 0
+Ntrack= 1
+time 0.009000[ms]
+view=1
+bunch= 7 Ntrack[iview][thebunch] = 1
+posx= -474.9 posy= 0 posz= 215.1 bunch= 7charge= 3709 hittime= 1419
+posx= -462.5 posy= 0 posz= 144 bunch= 7charge= 1188 hittime= 1749
+posx= -474.9 posy= 0 posz= 158.1 bunch= 7charge= 3672 hittime= 1417
+posx= -474.9 posy= 0 posz= 129.6 bunch= 7charge= 795 hittime= 1702
+posx= -474.9 posy= 0 posz= 186.6 bunch= 7charge= 3262 hittime= 1369
+posx= -462.5 posy= 0 posz= 87 bunch= 7charge= 1466 hittime= 1751
+posx= -474.9 posy= 0 posz= 72.6 bunch= 7charge= 1537 hittime= 1679
+posx= -462.5 posy= 0 posz= 30 bunch= 7charge= 2126 hittime= 1658
+posx= -462.5 posy= 0 posz= -27 bunch= 7charge= 1102 hittime= 1688
+posx= -462.5 posy= 0 posz= -84 bunch= 7charge= 1200 hittime= 1690
+posx= -462.5 posy= 0 posz= -141 bunch= 7charge= 1936 hittime= 1595
+posx= -462.5 posy= 0 posz= -198 bunch= 7charge= 1080 hittime= 1659
+Ntrack= 1
+ientry= 7031
+ientry= 7032
+Clustering
+time 0.074000[ms]
+MakeCell
+cellcount= 9
+time 0.039000[ms]
+Search
+time 0.553000[ms]
+Update
+time 0.003000[ms]
+Recon
+maxstate= 3
+maxstate= 1
+Ntrack= 1
+time 0.008000[ms]
+view=0
+bunch= 1 Ntrack[iview][thebunch] = 1
+posx= -1 posy= 25 posz= 446 bunch= 1charge= 2812 hittime= 2812
+posx= -1 posy= 25 posz= 400 bunch= 1charge= 2812 hittime= 2812
+posx= -1 posy= 25 posz= 354 bunch= 1charge= 2812 hittime= 2812
+posx= -1 posy= 25 posz= 262 bunch= 1charge= 2812 hittime= 2812
+posx= -1 posy= 25 posz= 308 bunch= 1charge= 2812 hittime= 2812
+Ntrack= 1
+Clustering
+time 0.073000[ms]
+MakeCell
+cellcount= 7
+time 0.035000[ms]
+Search
+time 0.364000[ms]
+Update
+time 0.002000[ms]
+Recon
+maxstate= 3
+maxstate= 0
+Ntrack= 1
+time 0.005000[ms]
+view=1
+bunch= 1 Ntrack[iview][thebunch] = 1
+posx= 25 posy= -1 posz= 377 bunch= 1charge= 2812 hittime= 2812
+posx= 25 posy= -1 posz= 331 bunch= 1charge= 2812 hittime= 2812
+posx= 25 posy= -1 posz= 285 bunch= 1charge= 2812 hittime= 2812
+posx= 25 posy= -1 posz= 193 bunch= 1charge= 2812 hittime= 2812
+posx= 25 posy= -1 posz= 147 bunch= 1charge= 2812 hittime= 2812
+Ntrack= 1
+ientry= 7033
+Clustering
+time 0.094000[ms]
+MakeCell
+cellcount= 48
+time 0.032000[ms]
+Search
+time 6.725000[ms]
+Update
+time 0.030000[ms]
+Recon
+maxstate= 16
+maxstate= 0
+Ntrack= 1
+time 0.024000[ms]
+view=0
+bunch= 5 Ntrack[iview][thebunch] = 1
+posx= -1 posy= 512.5 posz= 814 bunch= 5charge= 5147 hittime= 5147
+posx= -1 posy= 512.5 posz= 768 bunch= 5charge= 5147 hittime= 5147
+posx= -1 posy= 512.5 posz= 722 bunch= 5charge= 5147 hittime= 5147
+posx= -1 posy= 512.5 posz= 676 bunch= 5charge= 5147 hittime= 5147
+posx= -1 posy= 512.5 posz= 630 bunch= 5charge= 5147 hittime= 5147
+posx= -1 posy= 512.5 posz= 584 bunch= 5charge= 5147 hittime= 5147
+posx= -1 posy= 537.5 posz= 538 bunch= 5charge= 5147 hittime= 5147
+posx= -1 posy= 537.5 posz= 492 bunch= 5charge= 5147 hittime= 5147
+posx= -1 posy= 537.5 posz= 446 bunch= 5charge= 5147 hittime= 5147
+posx= -1 posy= 537.5 posz= 400 bunch= 5charge= 5147 hittime= 5147
+posx= -1 posy= 537.5 posz= 354 bunch= 5charge= 5147 hittime= 5147
+posx= -1 posy= 562.5 posz= 308 bunch= 5charge= 5147 hittime= 5147
+posx= -1 posy= 562.5 posz= 262 bunch= 5charge= 5147 hittime= 5147
+posx= -1 posy= 562.5 posz= 216 bunch= 5charge= 5147 hittime= 5147
+posx= -1 posy= 562.5 posz= 170 bunch= 5charge= 5147 hittime= 5147
+posx= -1 posy= 562.5 posz= 124 bunch= 5charge= 5147 hittime= 5147
+posx= -1 posy= 587.5 posz= 78 bunch= 5charge= 5147 hittime= 5147
+posx= -1 posy= 575 posz= 28 bunch= 5charge= 5147 hittime= 5147
+Ntrack= 1
+Clustering
+time 0.074000[ms]
+MakeCell
+cellcount= 48
+time 0.031000[ms]
+Search
+time 5.962000[ms]
+Update
+time 0.024000[ms]
+Recon
+maxstate= 16
+maxstate= 0
+Ntrack= 1
+time 0.017000[ms]
+view=1
+bunch= 5 Ntrack[iview][thebunch] = 1
+posx= 437.5 posy= -1 posz= 791 bunch= 5charge= 5147 hittime= 5147
+posx= 462.5 posy= -1 posz= 745 bunch= 5charge= 5147 hittime= 5147
+posx= 462.5 posy= -1 posz= 699 bunch= 5charge= 5147 hittime= 5147
+posx= 487.5 posy= -1 posz= 653 bunch= 5charge= 5147 hittime= 5147
+posx= 487.5 posy= -1 posz= 607 bunch= 5charge= 5147 hittime= 5147
+posx= 512.5 posy= -1 posz= 607 bunch= 5charge= 5147 hittime= 5147
+posx= 512.5 posy= -1 posz= 561 bunch= 5charge= 5147 hittime= 5147
+posx= 512.5 posy= -1 posz= 515 bunch= 5charge= 5147 hittime= 5147
+posx= 537.5 posy= -1 posz= 515 bunch= 5charge= 5147 hittime= 5147
+posx= 537.5 posy= -1 posz= 469 bunch= 5charge= 5147 hittime= 5147
+posx= 537.5 posy= -1 posz= 423 bunch= 5charge= 5147 hittime= 5147
+posx= 562.5 posy= -1 posz= 423 bunch= 5charge= 5147 hittime= 5147
+posx= 562.5 posy= -1 posz= 377 bunch= 5charge= 5147 hittime= 5147
+posx= 587.5 posy= -1 posz= 331 bunch= 5charge= 5147 hittime= 5147
+posx= 587.5 posy= -1 posz= 285 bunch= 5charge= 5147 hittime= 5147
+posx= 612.5 posy= -1 posz= 239 bunch= 5charge= 5147 hittime= 5147
+posx= 612.5 posy= -1 posz= 193 bunch= 5charge= 5147 hittime= 5147
+posx= 612.5 posy= -1 posz= 147 bunch= 5charge= 5147 hittime= 5147
+posx= 637.5 posy= -1 posz= 101 bunch= 5charge= 5147 hittime= 5147
+posx= 637.5 posy= -1 posz= 55 bunch= 5charge= 5147 hittime= 5147
+posx= 675 posy= -1 posz= 5 bunch= 5charge= 5147 hittime= 5147
+Ntrack= 1
+Clustering
+time 0.096000[ms]
+MakeCell
+cellcount= 13
+time 0.091000[ms]
+Search
+time 0.962000[ms]
+Update
+time 0.004000[ms]
+Recon
+maxstate= 6
+maxstate= 0
+Ntrack= 1
+time 0.008000[ms]
+view=0
+bunch= 5 Ntrack[iview][thebunch] = 1
+posx= 0 posy= 12.5 posz= 172.5 bunch= 5charge= 1320 hittime= 2303
+posx= 0 posy= 12.5 posz= 115.5 bunch= 5charge= 1448 hittime= 2212
+posx= 0 posy= 12.5 posz= 58.5 bunch= 5charge= 762 hittime= 2307
+posx= 0 posy= 25.1 posz= -12.9 bunch= 5charge= 862 hittime= 1536
+posx= 0 posy= 37.5 posz= -55.5 bunch= 5charge= 1088 hittime= 1894
+posx= 0 posy= 37.5 posz= -112.5 bunch= 5charge= 1022 hittime= 1891
+posx= 0 posy= 62.5 posz= -226.5 bunch= 5charge= 987 hittime= 2064
+posx= 0 posy= 37.5 posz= -169.5 bunch= 5charge= 1600 hittime= 2002
+Ntrack= 1
+Clustering
+time 0.069000[ms]
+MakeCell
+cellcount= 13
+time 0.027000[ms]
+Search
+time 0.899000[ms]
+Update
+time 0.003000[ms]
+Recon
+maxstate= 6
+maxstate= 0
+Ntrack= 1
+time 0.007000[ms]
+view=1
+bunch= 5 Ntrack[iview][thebunch] = 1
+posx= 87.5 posy= 0 posz= 201 bunch= 5charge= 978 hittime= 2488
+posx= 112.5 posy= 0 posz= 144 bunch= 5charge= 1008 hittime= 2346
+posx= 137.5 posy= 0 posz= 87 bunch= 5charge= 956 hittime= 2303
+posx= 125.1 posy= 0 posz= 101.1 bunch= 5charge= 2019 hittime= 2188
+posx= 137.5 posy= 0 posz= 30 bunch= 5charge= 1199 hittime= 2251
+posx= 162.5 posy= 0 posz= -27 bunch= 5charge= 1724 hittime= 2244
+posx= 175.1 posy= 0 posz= -69.9 bunch= 5charge= 1846 hittime= 2216
+posx= 187.5 posy= 0 posz= -84 bunch= 5charge= 1168 hittime= 2263
+posx= 187.5 posy= 0 posz= -141 bunch= 5charge= 908 hittime= 2491
+posx= 212.5 posy= 0 posz= -198 bunch= 5charge= 1071 hittime= 2601
+Ntrack= 1
+ientry= 7034
+Clustering
+time 0.097000[ms]
+MakeCell
+cellcount= 20
+time 0.032000[ms]
+Search
+time 1.532000[ms]
+Update
+time 0.004000[ms]
+Recon
+maxstate= 5
+maxstate= 3
+maxstate= 0
+Ntrack= 2
+time 0.014000[ms]
+view=0
+bunch= 2 Ntrack[iview][thebunch] = 2
+posx= -1 posy= 25 posz= 814 bunch= 2charge= 3442 hittime= 3442
+posx= -1 posy= 75 posz= 722 bunch= 2charge= 3442 hittime= 3442
+posx= -1 posy= 75 posz= 676 bunch= 2charge= 3442 hittime= 3442
+posx= -1 posy= 75 posz= 630 bunch= 2charge= 3442 hittime= 3442
+posx= -1 posy= 75 posz= 584 bunch= 2charge= 3442 hittime= 3442
+posx= -1 posy= 75 posz= 446 bunch= 2charge= 3442 hittime= 3442
+posx= -1 posy= 75 posz= 492 bunch= 2charge= 3442 hittime= 3442
+posx= -1 posy= 125 posz= 262 bunch= 2charge= 3442 hittime= 3442
+posx= -1 posy= 125 posz= 170 bunch= 2charge= 3442 hittime= 3442
+posx= -1 posy= 125 posz= 124 bunch= 2charge= 3442 hittime= 3442
+posx= -1 posy= 125 posz= 78 bunch= 2charge= 3442 hittime= 3442
+posx= -1 posy= 175 posz= 28 bunch= 2charge= 3442 hittime= 3442
+Ntrack= 2
+Clustering
+time 0.076000[ms]
+MakeCell
+cellcount= 21
+time 0.030000[ms]
+Search
+time 1.665000[ms]
+Update
+time 0.005000[ms]
+Recon
+maxstate= 6
+maxstate= 2
+Ntrack= 1
+time 0.009000[ms]
+view=1
+bunch= 2 Ntrack[iview][thebunch] = 1
+posx= 1025 posy= -1 posz= 469 bunch= 2charge= 3442 hittime= 3442
+posx= 1075 posy= -1 posz= 377 bunch= 2charge= 3442 hittime= 3442
+posx= 1075 posy= -1 posz= 285 bunch= 2charge= 3442 hittime= 3442
+posx= 1075 posy= -1 posz= 239 bunch= 2charge= 3442 hittime= 3442
+posx= 1075 posy= -1 posz= 193 bunch= 2charge= 3442 hittime= 3442
+posx= 1125 posy= -1 posz= 147 bunch= 2charge= 3442 hittime= 3442
+posx= 1125 posy= -1 posz= 55 bunch= 2charge= 3442 hittime= 3442
+posx= 1125 posy= -1 posz= 101 bunch= 2charge= 3442 hittime= 3442
+Ntrack= 1
+Clustering
+time 0.085000[ms]
+MakeCell
+cellcount= 13
+time 0.042000[ms]
+Search
+time 1.065000[ms]
+Update
+time 0.003000[ms]
+Recon
+maxstate= 5
+maxstate= 1
+Ntrack= 1
+time 0.009000[ms]
+view=0
+bunch= 6 Ntrack[iview][thebunch] = 1
+posx= 0 posy= 175.1 posz= 186.6 bunch= 6charge= 2673 hittime= 2709
+posx= 0 posy= 162.5 posz= 172.5 bunch= 6charge= 1437 hittime= 2629
+posx= 0 posy= 125.1 posz= 129.6 bunch= 6charge= 1387 hittime= 2643
+posx= 0 posy= 112.5 posz= 115.5 bunch= 6charge= 1052 hittime= 2642
+posx= 0 posy= 137.5 posz= 115.5 bunch= 6charge= 1028 hittime= 2572
+posx= 0 posy= 125.1 posz= 101.1 bunch= 6charge= 762 hittime= 2918
+posx= 0 posy= 25.1 posz= -12.9 bunch= 6charge= 869 hittime= 2422
+posx= 0 posy= -37.5 posz= -55.5 bunch= 6charge= 1374 hittime= 2396
+posx= 0 posy= -62.5 posz= -112.5 bunch= 6charge= 1481 hittime= 2406
+posx= 0 posy= -74.9 posz= -155.4 bunch= 6charge= 1983 hittime= 2463
+posx= 0 posy= -87.5 posz= -169.5 bunch= 6charge= 785 hittime= 2489
+posx= 0 posy= -112.5 posz= -226.5 bunch= 6charge= 2143 hittime= 2651
+Ntrack= 1
+Clustering
+time 0.071000[ms]
+MakeCell
+cellcount= 12
+time 0.038000[ms]
+Search
+time 0.692000[ms]
+Update
+time 0.003000[ms]
+Recon
+maxstate= 5
+maxstate= 0
+Ntrack= 1
+time 0.008000[ms]
+view=1
+bunch= 6 Ntrack[iview][thebunch] = 1
+posx= 487.5 posy= 0 posz= 201 bunch= 6charge= 1149 hittime= 2344
+posx= 475.1 posy= 0 posz= 186.6 bunch= 6charge= 1626 hittime= 2394
+posx= 462.5 posy= 0 posz= 144 bunch= 6charge= 1523 hittime= 2368
+posx= 437.5 posy= 0 posz= 87 bunch= 6charge= 2476 hittime= 2716
+posx= 425.1 posy= 0 posz= 72.6 bunch= 6charge= 804 hittime= 2524
+posx= 375.1 posy= 0 posz= -12.9 bunch= 6charge= 1414 hittime= 2292
+posx= 387.5 posy= 0 posz= -27 bunch= 6charge= 1953 hittime= 2341
+posx= 362.5 posy= 0 posz= -84 bunch= 6charge= 1676 hittime= 2311
+posx= 362.5 posy= 0 posz= -198 bunch= 6charge= 1005 hittime= 2505
+posx= 362.5 posy= 0 posz= -141 bunch= 6charge= 1901 hittime= 2538
+posx= 375.1 posy= 0 posz= -155.4 bunch= 6charge= 822 hittime= 2507
+Ntrack= 1
+Clustering
+time 0.079000[ms]
+MakeCell
+cellcount= 13
+time 0.061000[ms]
+Search
+time 1.032000[ms]
+Update
+time 0.004000[ms]
+Recon
+maxstate= 6
+maxstate= 0
+Ntrack= 1
+time 0.011000[ms]
+view=0
+bunch= 6 Ntrack[iview][thebunch] = 1
+posx= 0 posy= 212.5 posz= 172.5 bunch= 6charge= 2572 hittime= 2551
+posx= 0 posy= 225.1 posz= 129.6 bunch= 6charge= 720 hittime= 2635
+posx= 0 posy= 237.5 posz= 115.5 bunch= 6charge= 1599 hittime= 2460
+posx= 0 posy= 237.5 posz= 58.5 bunch= 6charge= 1252 hittime= 2478
+posx= 0 posy= 262.5 posz= 1.5 bunch= 6charge= 1124 hittime= 2471
+posx= 0 posy= 287.5 posz= -55.5 bunch= 6charge= 2063 hittime= 3223
+posx= 0 posy= 312.5 posz= -112.5 bunch= 6charge= 2348 hittime= 2739
+posx= 0 posy= 312.5 posz= -169.5 bunch= 6charge= 1505 hittime= 2312
+posx= 0 posy= 325.1 posz= -183.9 bunch= 6charge= 2397 hittime= 2418
+posx= 0 posy= 337.5 posz= -226.5 bunch= 6charge= 1285 hittime= 2277
+Ntrack= 1
+Clustering
+time 0.071000[ms]
+MakeCell
+cellcount= 13
+time 0.030000[ms]
+Search
+time 0.986000[ms]
+Update
+time 0.003000[ms]
+Recon
+maxstate= 6
+maxstate= 0
+Ntrack= 1
+time 0.008000[ms]
+view=1
+bunch= 6 Ntrack[iview][thebunch] = 1
+posx= -412.5 posy= 0 posz= 201 bunch= 6charge= 2038 hittime= 2465
+posx= -412.5 posy= 0 posz= 144 bunch= 6charge= 1949 hittime= 2427
+posx= -412.5 posy= 0 posz= 87 bunch= 6charge= 2463 hittime= 2555
+posx= -412.5 posy= 0 posz= 30 bunch= 6charge= 1631 hittime= 2426
+posx= -412.5 posy= 0 posz= -27 bunch= 6charge= 1205 hittime= 2497
+posx= -412.5 posy= 0 posz= -84 bunch= 6charge= 817 hittime= 2449
+posx= -412.5 posy= 0 posz= -198 bunch= 6charge= 1837 hittime= 2597
+posx= -424.9 posy= 0 posz= -212.4 bunch= 6charge= 2151 hittime= 2647
+posx= -412.5 posy= 0 posz= -141 bunch= 6charge= 1043 hittime= 2516
+Ntrack= 1
+ientry= 7035
+ientry= 7036
+Clustering
+time 0.079000[ms]
+MakeCell
+cellcount= 9
+time 0.031000[ms]
+Search
+time 0.574000[ms]
+Update
+time 0.004000[ms]
+Recon
+maxstate= 3
+maxstate= 1
+Ntrack= 1
+time 0.007000[ms]
+view=0
+bunch= 4 Ntrack[iview][thebunch] = 1
+posx= -1 posy= 825 posz= 216 bunch= 4charge= 4595 hittime= 4595
+posx= -1 posy= 825 posz= 170 bunch= 4charge= 4595 hittime= 4595
+posx= -1 posy= 875 posz= 124 bunch= 4charge= 4595 hittime= 4595
+posx= -1 posy= 875 posz= 78 bunch= 4charge= 4595 hittime= 4595
+posx= -1 posy= 875 posz= 28 bunch= 4charge= 4595 hittime= 4595
+Ntrack= 1
+Clustering
+time 0.070000[ms]
+MakeCell
+cellcount= 6
+time 0.029000[ms]
+Search
+time 0.208000[ms]
+Update
+time 0.002000[ms]
+Recon
+maxstate= 2
+Ntrack= 0
+time 0.001000[ms]
+Clustering
+time 0.080000[ms]
+MakeCell
+cellcount= 9
+time 0.030000[ms]
+Search
+time 0.643000[ms]
+Update
+time 0.003000[ms]
+Recon
+maxstate= 4
+maxstate= 0
+Ntrack= 1
+time 0.009000[ms]
+view=0
+bunch= 4 Ntrack[iview][thebunch] = 1
+posx= 0 posy= 362.5 posz= 172.5 bunch= 4charge= 2087 hittime= 2463
+posx= 0 posy= 375.1 posz= 129.6 bunch= 4charge= 2730 hittime= 2487
+posx= 0 posy= 387.5 posz= 115.5 bunch= 4charge= 2022 hittime= 2449
+posx= 0 posy= 412.5 posz= 58.5 bunch= 4charge= 858 hittime= 2295
+posx= 0 posy= 425.1 posz= 15.6 bunch= 4charge= 1770 hittime= 2375
+posx= 0 posy= 437.5 posz= 1.5 bunch= 4charge= 1757 hittime= 2385
+posx= 0 posy= 462.5 posz= -55.5 bunch= 4charge= 1605 hittime= 2549
+posx= 0 posy= 487.5 posz= -112.5 bunch= 4charge= 1036 hittime= 2499
+Ntrack= 1
+Clustering
+time 0.071000[ms]
+MakeCell
+cellcount= 11
+time 0.030000[ms]
+Search
+time 0.772000[ms]
+Update
+time 0.003000[ms]
+Recon
+maxstate= 5
+maxstate= 0
+Ntrack= 1
+time 0.008000[ms]
+view=1
+bunch= 4 Ntrack[iview][thebunch] = 1
+posx= -437.5 posy= 0 posz= 201 bunch= 4charge= 1663 hittime= 2480
+posx= -424.9 posy= 0 posz= 158.1 bunch= 4charge= 2212 hittime= 2537
+posx= -412.5 posy= 0 posz= 144 bunch= 4charge= 1336 hittime= 2427
+posx= -412.5 posy= 0 posz= 87 bunch= 4charge= 1242 hittime= 2688
+posx= -387.5 posy= 0 posz= 30 bunch= 4charge= 1579 hittime= 2760
+posx= -374.9 posy= 0 posz= -12.9 bunch= 4charge= 1846 hittime= 2719
+posx= -362.5 posy= 0 posz= -27 bunch= 4charge= 1960 hittime= 2785
+posx= -337.5 posy= 0 posz= -141 bunch= 4charge= 989 hittime= 2711
+posx= -362.5 posy= 0 posz= -84 bunch= 4charge= 1326 hittime= 2690
+Ntrack= 1
+ientry= 7037
+Clustering
+time 0.082000[ms]
+MakeCell
+cellcount= 42
+time 0.047000[ms]
+Search
+time 5.766000[ms]
+Update
+time 0.020000[ms]
+Recon
+maxstate= 14
+maxstate= 0
+Ntrack= 1
+time 0.022000[ms]
+view=0
+bunch= 3 Ntrack[iview][thebunch] = 1
+posx= -1 posy= 687.5 posz= 814 bunch= 3charge= 3955 hittime= 3955
+posx= -1 posy= 712.5 posz= 768 bunch= 3charge= 3955 hittime= 3955
+posx= -1 posy= 712.5 posz= 722 bunch= 3charge= 3955 hittime= 3955
+posx= -1 posy= 712.5 posz= 676 bunch= 3charge= 3955 hittime= 3955
+posx= -1 posy= 712.5 posz= 630 bunch= 3charge= 3955 hittime= 3955
+posx= -1 posy= 737.5 posz= 584 bunch= 3charge= 3955 hittime= 3955
+posx= -1 posy= 737.5 posz= 538 bunch= 3charge= 3955 hittime= 3955
+posx= -1 posy= 737.5 posz= 492 bunch= 3charge= 3955 hittime= 3955
+posx= -1 posy= 737.5 posz= 446 bunch= 3charge= 3955 hittime= 3955
+posx= -1 posy= 737.5 posz= 400 bunch= 3charge= 3955 hittime= 3955
+posx= -1 posy= 737.5 posz= 354 bunch= 3charge= 3955 hittime= 3955
+posx= -1 posy= 762.5 posz= 308 bunch= 3charge= 3955 hittime= 3955
+posx= -1 posy= 762.5 posz= 262 bunch= 3charge= 3955 hittime= 3955
+posx= -1 posy= 762.5 posz= 216 bunch= 3charge= 3955 hittime= 3955
+posx= -1 posy= 762.5 posz= 124 bunch= 3charge= 3955 hittime= 3955
+posx= -1 posy= 762.5 posz= 170 bunch= 3charge= 3955 hittime= 3955
+Ntrack= 1
+Clustering
+time 0.069000[ms]
+MakeCell
+cellcount= 39
+time 0.031000[ms]
+Search
+time 4.665000[ms]
+Update
+time 0.021000[ms]
+Recon
+maxstate= 14
+maxstate= 0
+Ntrack= 1
+time 0.018000[ms]
+view=1
+bunch= 3 Ntrack[iview][thebunch] = 1
+posx= 662.5 posy= -1 posz= 791 bunch= 3charge= 3955 hittime= 3955
+posx= 612.5 posy= -1 posz= 745 bunch= 3charge= 3955 hittime= 3955
+posx= 587.5 posy= -1 posz= 699 bunch= 3charge= 3955 hittime= 3955
+posx= 537.5 posy= -1 posz= 653 bunch= 3charge= 3955 hittime= 3955
+posx= 512.5 posy= -1 posz= 607 bunch= 3charge= 3955 hittime= 3955
+posx= 462.5 posy= -1 posz= 561 bunch= 3charge= 3955 hittime= 3955
+posx= 412.5 posy= -1 posz= 515 bunch= 3charge= 3955 hittime= 3955
+posx= 437.5 posy= -1 posz= 515 bunch= 3charge= 3955 hittime= 3955
+posx= 375 posy= -1 posz= 469 bunch= 3charge= 3955 hittime= 3955
+posx= 325 posy= -1 posz= 423 bunch= 3charge= 3955 hittime= 3955
+posx= 325 posy= -1 posz= 377 bunch= 3charge= 3955 hittime= 3955
+posx= 275 posy= -1 posz= 331 bunch= 3charge= 3955 hittime= 3955
+posx= 175 posy= -1 posz= 239 bunch= 3charge= 3955 hittime= 3955
+posx= 125 posy= -1 posz= 193 bunch= 3charge= 3955 hittime= 3955
+posx= 75 posy= -1 posz= 147 bunch= 3charge= 3955 hittime= 3955
+posx= 25 posy= -1 posz= 55 bunch= 3charge= 3955 hittime= 3955
+posx= 75 posy= -1 posz= 101 bunch= 3charge= 3955 hittime= 3955
+Ntrack= 1
+ientry= 7038
+Clustering
+time 0.069000[ms]
+MakeCell
+cellcount= 43
+time 0.030000[ms]
+Search
+time 5.501000[ms]
+Update
+time 0.023000[ms]
+Recon
+maxstate= 14
+maxstate= 0
+Ntrack= 1
+time 0.021000[ms]
+view=0
+bunch= 4 Ntrack[iview][thebunch] = 1
+posx= -1 posy= 1025 posz= 814 bunch= 4charge= 4560 hittime= 4560
+posx= -1 posy= 1025 posz= 768 bunch= 4charge= 4560 hittime= 4560
+posx= -1 posy= 1025 posz= 722 bunch= 4charge= 4560 hittime= 4560
+posx= -1 posy= 1025 posz= 676 bunch= 4charge= 4560 hittime= 4560
+posx= -1 posy= 1025 posz= 630 bunch= 4charge= 4560 hittime= 4560
+posx= -1 posy= 1025 posz= 584 bunch= 4charge= 4560 hittime= 4560
+posx= -1 posy= 1025 posz= 538 bunch= 4charge= 4560 hittime= 4560
+posx= -1 posy= 1025 posz= 492 bunch= 4charge= 4560 hittime= 4560
+posx= -1 posy= 1025 posz= 446 bunch= 4charge= 4560 hittime= 4560
+posx= -1 posy= 1025 posz= 400 bunch= 4charge= 4560 hittime= 4560
+posx= -1 posy= 1075 posz= 308 bunch= 4charge= 4560 hittime= 4560
+posx= -1 posy= 1075 posz= 262 bunch= 4charge= 4560 hittime= 4560
+posx= -1 posy= 1075 posz= 216 bunch= 4charge= 4560 hittime= 4560
+posx= -1 posy= 1075 posz= 170 bunch= 4charge= 4560 hittime= 4560
+posx= -1 posy= 1075 posz= 28 bunch= 4charge= 4560 hittime= 4560
+posx= -1 posy= 1075 posz= 78 bunch= 4charge= 4560 hittime= 4560
+Ntrack= 1
+Clustering
+time 0.072000[ms]
+MakeCell
+cellcount= 48
+time 0.029000[ms]
+Search
+time 6.684000[ms]
+Update
+time 0.024000[ms]
+Recon
+maxstate= 16
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+maxstate= 14
+1000
+something wrong with this event
+Ntrack= 1
+time 2.761000[ms]
+view=1
+bunch= 4 Ntrack[iview][thebunch] = 1
+posx= 325 posy= -1 posz= 791 bunch= 4charge= 4560 hittime= 4560
+posx= 325 posy= -1 posz= 745 bunch= 4charge= 4560 hittime= 4560
+posx= 325 posy= -1 posz= 699 bunch= 4charge= 4560 hittime= 4560
+posx= 375 posy= -1 posz= 653 bunch= 4charge= 4560 hittime= 4560
+posx= 375 posy= -1 posz= 607 bunch= 4charge= 4560 hittime= 4560
+posx= 375 posy= -1 posz= 561 bunch= 4charge= 4560 hittime= 4560
+posx= 412.5 posy= -1 posz= 515 bunch= 4charge= 4560 hittime= 4560
+posx= 412.5 posy= -1 posz= 469 bunch= 4charge= 4560 hittime= 4560
+posx= 437.5 posy= -1 posz= 469 bunch= 4charge= 4560 hittime= 4560
+posx= 437.5 posy= -1 posz= 423 bunch= 4charge= 4560 hittime= 4560
+posx= 462.5 posy= -1 posz= 377 bunch= 4charge= 4560 hittime= 4560
+posx= 487.5 posy= -1 posz= 331 bunch= 4charge= 4560 hittime= 4560
+posx= 487.5 posy= -1 posz= 285 bunch= 4charge= 4560 hittime= 4560
+posx= 512.5 posy= -1 posz= 239 bunch= 4charge= 4560 hittime= 4560
+posx= 512.5 posy= -1 posz= 193 bunch= 4charge= 4560 hittime= 4560
+posx= 537.5 posy= -1 posz= 193 bunch= 4charge= 4560 hittime= 4560
+posx= 537.5 posy= -1 posz= 147 bunch= 4charge= 4560 hittime= 4560
+posx= 562.5 posy= -1 posz= 101 bunch= 4charge= 4560 hittime= 4560
+posx= 562.5 posy= -1 posz= 55 bunch= 4charge= 4560 hittime= 4560
+posx= 575 posy= -1 posz= 5 bunch= 4charge= 4560 hittime= 4560
+Ntrack= 1
+Clustering
+time 0.083000[ms]
+MakeCell
+cellcount= 1
+time 0.037000[ms]
+Search
+time 0.001000[ms]
+Update
+time 0.000000[ms]
+Recon
+maxstate= 0
+Ntrack= 0
+time 0.002000[ms]
+ientry= 7039
+Clustering
+time 0.081000[ms]
+MakeCell
+cellcount= 45
+time 0.032000[ms]
+Search
+time 6.120000[ms]
+Update
+time 0.025000[ms]
+Recon
+maxstate= 15
+maxstate= 1
+Ntrack= 1
+time 0.022000[ms]
+view=0
+bunch= 1 Ntrack[iview][thebunch] = 1
+posx= -1 posy= 712.5 posz= 814 bunch= 1charge= 2852 hittime= 2852
+posx= -1 posy= 687.5 posz= 768 bunch= 1charge= 2852 hittime= 2852
+posx= -1 posy= 662.5 posz= 722 bunch= 1charge= 2852 hittime= 2852
+posx= -1 posy= 637.5 posz= 722 bunch= 1charge= 2852 hittime= 2852
+posx= -1 posy= 612.5 posz= 676 bunch= 1charge= 2852 hittime= 2852
+posx= -1 posy= 587.5 posz= 630 bunch= 1charge= 2852 hittime= 2852
+posx= -1 posy= 562.5 posz= 584 bunch= 1charge= 2852 hittime= 2852
+posx= -1 posy= 537.5 posz= 538 bunch= 1charge= 2852 hittime= 2852
+posx= -1 posy= 512.5 posz= 492 bunch= 1charge= 2852 hittime= 2852
+posx= -1 posy= 462.5 posz= 446 bunch= 1charge= 2852 hittime= 2852
+posx= -1 posy= 487.5 posz= 446 bunch= 1charge= 2852 hittime= 2852
+posx= -1 posy= 437.5 posz= 400 bunch= 1charge= 2852 hittime= 2852
+posx= -1 posy= 412.5 posz= 354 bunch= 1charge= 2852 hittime= 2852
+posx= -1 posy= 375 posz= 308 bunch= 1charge= 2852 hittime= 2852
+posx= -1 posy= 375 posz= 262 bunch= 1charge= 2852 hittime= 2852
+posx= -1 posy= 325 posz= 216 bunch= 1charge= 2852 hittime= 2852
+posx= -1 posy= 275 posz= 170 bunch= 1charge= 2852 hittime= 2852
+posx= -1 posy= 225 posz= 78 bunch= 1charge= 2852 hittime= 2852
+posx= -1 posy= 275 posz= 124 bunch= 1charge= 2852 hittime= 2852
+Ntrack= 1
+Clustering
+time 0.071000[ms]
+MakeCell
+cellcount= 24
+time 0.032000[ms]
+Search
+time 1.956000[ms]
+Update
+time 0.007000[ms]
+Recon
+maxstate= 10
+maxstate= 0
+Ntrack= 1
+time 0.013000[ms]
+view=1
+bunch= 1 Ntrack[iview][thebunch] = 1
+posx= 1075 posy= -1 posz= 653 bunch= 1charge= 2852 hittime= 2852
+posx= 1075 posy= -1 posz= 607 bunch= 1charge= 2852 hittime= 2852
+posx= 1075 posy= -1 posz= 561 bunch= 1charge= 2852 hittime= 2852
+posx= 1075 posy= -1 posz= 515 bunch= 1charge= 2852 hittime= 2852
+posx= 1075 posy= -1 posz= 469 bunch= 1charge= 2852 hittime= 2852
+posx= 1025 posy= -1 posz= 331 bunch= 1charge= 2852 hittime= 2852
+posx= 1025 posy= -1 posz= 239 bunch= 1charge= 2852 hittime= 2852
+posx= 1025 posy= -1 posz= 193 bunch= 1charge= 2852 hittime= 2852
+posx= 1025 posy= -1 posz= 147 bunch= 1charge= 2852 hittime= 2852
+posx= 1025 posy= -1 posz= 101 bunch= 1charge= 2852 hittime= 2852
+posx= 1025 posy= -1 posz= 55 bunch= 1charge= 2852 hittime= 2852
+posx= 1025 posy= -1 posz= 5 bunch= 1charge= 2852 hittime= 2852
+Ntrack= 1
+ientry= 7040
+Clustering
+time 0.103000[ms]
+MakeCell
+cellcount= 33
+time 0.035000[ms]
+Search
+time 3.850000[ms]
+Update
+time 0.017000[ms]
+Recon
+maxstate= 13
+maxstate= 0
+Ntrack= 1
+time 0.017000[ms]
+view=0
+bunch= 4 Ntrack[iview][thebunch] = 1
+posx= -1 posy= 737.5 posz= 814 bunch= 4charge= 4515 hittime= 4515
+posx= -1 posy= 737.5 posz= 768 bunch= 4charge= 4515 hittime= 4515
+posx= -1 posy= 762.5 posz= 722 bunch= 4charge= 4515 hittime= 4515
+posx= -1 posy= 787.5 posz= 676 bunch= 4charge= 4515 hittime= 4515
+posx= -1 posy= 762.5 posz= 676 bunch= 4charge= 4515 hittime= 4515
+posx= -1 posy= 787.5 posz= 630 bunch= 4charge= 4515 hittime= 4515
+posx= -1 posy= 825 posz= 584 bunch= 4charge= 4515 hittime= 4515
+posx= -1 posy= 825 posz= 538 bunch= 4charge= 4515 hittime= 4515
+posx= -1 posy= 825 posz= 492 bunch= 4charge= 4515 hittime= 4515
+posx= -1 posy= 875 posz= 446 bunch= 4charge= 4515 hittime= 4515
+posx= -1 posy= 875 posz= 400 bunch= 4charge= 4515 hittime= 4515
+posx= -1 posy= 925 posz= 308 bunch= 4charge= 4515 hittime= 4515
+posx= -1 posy= 925 posz= 262 bunch= 4charge= 4515 hittime= 4515
+posx= -1 posy= 975 posz= 170 bunch= 4charge= 4515 hittime= 4515
+posx= -1 posy= 1025 posz= 28 bunch= 4charge= 4515 hittime= 4515
+posx= -1 posy= 1025 posz= 78 bunch= 4charge= 4515 hittime= 4515
+Ntrack= 1
+Clustering
+time 0.076000[ms]
+MakeCell
+cellcount= 35
+time 0.027000[ms]
+Search
+time 3.820000[ms]
+Update
+time 0.011000[ms]
+Recon
+maxstate= 13
+maxstate= 4
+maxstate= 2
+Ntrack= 1
+time 0.019000[ms]
+view=1
+bunch= 4 Ntrack[iview][thebunch] = 1
+posx= 75 posy= -1 posz= 791 bunch= 4charge= 4515 hittime= 4515
+posx= 75 posy= -1 posz= 745 bunch= 4charge= 4515 hittime= 4515
+posx= 75 posy= -1 posz= 699 bunch= 4charge= 4515 hittime= 4515
+posx= 125 posy= -1 posz= 607 bunch= 4charge= 4515 hittime= 4515
+posx= 125 posy= -1 posz= 561 bunch= 4charge= 4515 hittime= 4515
+posx= 125 posy= -1 posz= 515 bunch= 4charge= 4515 hittime= 4515
+posx= 125 posy= -1 posz= 469 bunch= 4charge= 4515 hittime= 4515
+posx= 175 posy= -1 posz= 423 bunch= 4charge= 4515 hittime= 4515
+posx= 225 posy= -1 posz= 285 bunch= 4charge= 4515 hittime= 4515
+posx= 225 posy= -1 posz= 239 bunch= 4charge= 4515 hittime= 4515
+posx= 225 posy= -1 posz= 193 bunch= 4charge= 4515 hittime= 4515
+posx= 225 posy= -1 posz= 147 bunch= 4charge= 4515 hittime= 4515
+posx= 225 posy= -1 posz= 101 bunch= 4charge= 4515 hittime= 4515
+posx= 275 posy= -1 posz= 55 bunch= 4charge= 4515 hittime= 4515
+posx= 275 posy= -1 posz= 5 bunch= 4charge= 4515 hittime= 4515
+Ntrack= 1
+Clustering
+time 0.088000[ms]
+MakeCell
+cellcount= 1
+time 0.032000[ms]
+Search
+time 0.001000[ms]
+Update
+time 0.001000[ms]
+Recon
+maxstate= 0
+Ntrack= 0
+time 0.002000[ms]
+Clustering
+time 0.076000[ms]
+MakeCell
+cellcount= 5
+time 0.030000[ms]
+Search
+time 0.264000[ms]
+Update
+time 0.002000[ms]
+Recon
+maxstate= 2
+Ntrack= 0
+time 0.002000[ms]
+ientry= 7041
+Clustering
+time 0.086000[ms]
+MakeCell
+cellcount= 9
+time 0.032000[ms]
+Search
+time 0.449000[ms]
+Update
+time 0.001000[ms]
+Recon
+maxstate= 2
+Ntrack= 0
+time 0.003000[ms]
+Clustering
+time 0.075000[ms]
+MakeCell
+cellcount= 9
+time 0.030000[ms]
+Search
+time 0.352000[ms]
+Update
+time 0.001000[ms]
+Recon
+maxstate= 2
+Ntrack= 0
+time 0.003000[ms]
+ientry= 7042
+ientry= 7043
+ientry= 7044
+ientry= 7045
+ientry= 7046
+Clustering
+time 0.084000[ms]
+MakeCell
+cellcount= 8
+time 0.031000[ms]
+Search
+time 0.595000[ms]
+Update
+time 0.003000[ms]
+Recon
+maxstate= 4
+maxstate= 0
+Ntrack= 1
+time 0.008000[ms]
+view=0
+bunch= 8 Ntrack[iview][thebunch] = 1
+posx= 0 posy= -412.5 posz= 115.5 bunch= 8charge= 1756 hittime= 2578
+posx= 0 posy= -362.5 posz= 1.5 bunch= 8charge= 1564 hittime= 2240
+posx= 0 posy= -337.5 posz= -55.5 bunch= 8charge= 1003 hittime= 2343
+posx= 0 posy= -324.9 posz= -69.9 bunch= 8charge= 2405 hittime= 2544
+posx= 0 posy= -312.5 posz= -112.5 bunch= 8charge= 1192 hittime= 2443
+posx= 0 posy= -287.5 posz= -169.5 bunch= 8charge= 1313 hittime= 2623
+posx= 0 posy= -262.5 posz= -226.5 bunch= 8charge= 1101 hittime= 2628
+Ntrack= 1
+Clustering
+time 0.070000[ms]
+MakeCell
+cellcount= 7
+time 0.025000[ms]
+Search
+time 0.354000[ms]
+Update
+time 0.002000[ms]
+Recon
+maxstate= 4
+maxstate= 0
+Ntrack= 1
+time 0.007000[ms]
+view=1
+bunch= 8 Ntrack[iview][thebunch] = 1
+posx= 75.1 posy= 0 posz= 101.1 bunch= 8charge= 995 hittime= 2921
+posx= 75.1 posy= 0 posz= 129.6 bunch= 8charge= 923 hittime= 2445
+posx= 75.1 posy= 0 posz= 44.1 bunch= 8charge= 765 hittime= 2809
+posx= 87.5 posy= 0 posz= 30 bunch= 8charge= 2067 hittime= 2691
+posx= 75.1 posy= 0 posz= 72.6 bunch= 8charge= 1043 hittime= 2952
+posx= 87.5 posy= 0 posz= -27 bunch= 8charge= 840 hittime= 2250
+posx= 87.5 posy= 0 posz= -84 bunch= 8charge= 1625 hittime= 2333
+posx= 87.5 posy= 0 posz= -141 bunch= 8charge= 1044 hittime= 2261
+posx= 112.5 posy= 0 posz= -198 bunch= 8charge= 1554 hittime= 2688
+Ntrack= 1
+ientry= 7047
+Clustering
+time 0.083000[ms]
+MakeCell
+cellcount= 15
+time 0.033000[ms]
+Search
+time 1.377000[ms]
+Update
+time 0.004000[ms]
+Recon
+maxstate= 5
+maxstate= 0
+Ntrack= 1
+time 0.009000[ms]
+view=0
+bunch= 8 Ntrack[iview][thebunch] = 1
+posx= -1 posy= 825 posz= 814 bunch= 8charge= 6887 hittime= 6887
+posx= -1 posy= 875 posz= 768 bunch= 8charge= 6887 hittime= 6887
+posx= -1 posy= 875 posz= 722 bunch= 8charge= 6887 hittime= 6887
+posx= -1 posy= 925 posz= 676 bunch= 8charge= 6887 hittime= 6887
+posx= -1 posy= 925 posz= 630 bunch= 8charge= 6887 hittime= 6887
+posx= -1 posy= 975 posz= 538 bunch= 8charge= 6887 hittime= 6887
+posx= -1 posy= 975 posz= 584 bunch= 8charge= 6887 hittime= 6887
+Ntrack= 1
+Clustering
+time 0.070000[ms]
+MakeCell
+cellcount= 29
+time 0.026000[ms]
+Search
+time 3.540000[ms]
+Update
+time 0.009000[ms]
+Recon
+maxstate= 6
+maxstate= 4
+maxstate= 3
+maxstate= 1
+Ntrack= 1
+time 0.015000[ms]
+view=1
+bunch= 8 Ntrack[iview][thebunch] = 1
+posx= 175 posy= -1 posz= 791 bunch= 8charge= 6887 hittime= 6887
+posx= 175 posy= -1 posz= 745 bunch= 8charge= 6887 hittime= 6887
+posx= 125 posy= -1 posz= 699 bunch= 8charge= 6887 hittime= 6887
+posx= 125 posy= -1 posz= 653 bunch= 8charge= 6887 hittime= 6887
+posx= 75 posy= -1 posz= 607 bunch= 8charge= 6887 hittime= 6887
+posx= 75 posy= -1 posz= 561 bunch= 8charge= 6887 hittime= 6887
+posx= 25 posy= -1 posz= 469 bunch= 8charge= 6887 hittime= 6887
+posx= 25 posy= -1 posz= 515 bunch= 8charge= 6887 hittime= 6887
+Ntrack= 1
+ientry= 7048
+Clustering
+time 0.076000[ms]
+MakeCell
+cellcount= 5
+time 0.031000[ms]
+Search
+time 0.285000[ms]
+Update
+time 0.001000[ms]
+Recon
+maxstate= 2
+Ntrack= 0
+time 0.002000[ms]
+Clustering
+time 0.069000[ms]
+MakeCell
+cellcount= 12
+time 0.025000[ms]
+Search
+time 0.881000[ms]
+Update
+time 0.003000[ms]
+Recon
+maxstate= 4
+maxstate= 0
+Ntrack= 1
+time 0.008000[ms]
+view=1
+bunch= 7 Ntrack[iview][thebunch] = 1
+posx= 1075 posy= -1 posz= 791 bunch= 7charge= 6295 hittime= 6295
+posx= 1125 posy= -1 posz= 699 bunch= 7charge= 6295 hittime= 6295
+posx= 1125 posy= -1 posz= 653 bunch= 7charge= 6295 hittime= 6295
+posx= 1175 posy= -1 posz= 607 bunch= 7charge= 6295 hittime= 6295
+posx= 1175 posy= -1 posz= 515 bunch= 7charge= 6295 hittime= 6295
+posx= 1175 posy= -1 posz= 561 bunch= 7charge= 6295 hittime= 6295
+Ntrack= 1
+Clustering
+time 0.080000[ms]
+MakeCell
+cellcount= 13
+time 0.031000[ms]
+Search
+time 1.017000[ms]
+Update
+time 0.004000[ms]
+Recon
+maxstate= 6
+maxstate= 0
+Ntrack= 1
+time 0.010000[ms]
+view=0
+bunch= 7 Ntrack[iview][thebunch] = 1
+posx= 0 posy= -24.9 posz= 186.6 bunch= 7charge= 1893 hittime= 2238
+posx= 0 posy= -12.5 posz= 172.5 bunch= 7charge= 1505 hittime= 2324
+posx= 0 posy= 12.5 posz= 115.5 bunch= 7charge= 1964 hittime= 2218
+posx= 0 posy= 25.1 posz= 101.1 bunch= 7charge= 1384 hittime= 2211
+posx= 0 posy= 12.5 posz= 58.5 bunch= 7charge= 826 hittime= 2246
+posx= 0 posy= 25.1 posz= 44.1 bunch= 7charge= 1935 hittime= 2146
+posx= 0 posy= 37.5 posz= 1.5 bunch= 7charge= 858 hittime= 2278
+posx= 0 posy= 62.5 posz= -55.5 bunch= 7charge= 2009 hittime= 2233
+posx= 0 posy= 87.5 posz= -112.5 bunch= 7charge= 2104 hittime= 2221
+posx= 0 posy= 75.1 posz= -98.4 bunch= 7charge= 2844 hittime= 2165
+posx= 0 posy= 112.5 posz= -226.5 bunch= 7charge= 1586 hittime= 2333
+posx= 0 posy= 137.5 posz= -226.5 bunch= 7charge= 1210 hittime= 2355
+posx= 0 posy= 112.5 posz= -169.5 bunch= 7charge= 1110 hittime= 2410
+Ntrack= 1
+Clustering
+time 0.071000[ms]
+MakeCell
+cellcount= 13
+time 0.026000[ms]
+Search
+time 0.956000[ms]
+Update
+time 0.003000[ms]
+Recon
+maxstate= 6
+maxstate= 0
+Ntrack= 1
+time 0.009000[ms]
+view=1
+bunch= 7 Ntrack[iview][thebunch] = 1
+posx= -337.5 posy= 0 posz= 201 bunch= 7charge= 1191 hittime= 2008
+posx= -312.5 posy= 0 posz= 144 bunch= 7charge= 1088 hittime= 2109
+posx= -262.5 posy= 0 posz= 87 bunch= 7charge= 1609 hittime= 1988
+posx= -274.9 posy= 0 posz= 101.1 bunch= 7charge= 1341 hittime= 2066
+posx= -237.5 posy= 0 posz= 30 bunch= 7charge= 1158 hittime= 2033
+posx= -224.9 posy= 0 posz= 15.6 bunch= 7charge= 1592 hittime= 2011
+posx= -212.5 posy= 0 posz= -27 bunch= 7charge= 1072 hittime= 2270
+posx= -174.9 posy= 0 posz= -69.9 bunch= 7charge= 1153 hittime= 2313
+posx= -162.5 posy= 0 posz= -84 bunch= 7charge= 1420 hittime= 2254
+posx= -112.5 posy= 0 posz= -198 bunch= 7charge= 911 hittime= 1982
+posx= -137.5 posy= 0 posz= -141 bunch= 7charge= 1060 hittime= 1974
+posx= -124.9 posy= 0 posz= -155.4 bunch= 7charge= 1584 hittime= 1963
+Ntrack= 1
+ientry= 7049

@@ -126,6 +126,21 @@ WGCalib/fast:
 .PHONY : WGCalib/fast
 
 # Convenience name for target.
+src/MakeCalib/CMakeFiles/MCCalib.dir/rule:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/MakeCalib/CMakeFiles/MCCalib.dir/rule
+.PHONY : src/MakeCalib/CMakeFiles/MCCalib.dir/rule
+
+# Convenience name for target.
+MCCalib: src/MakeCalib/CMakeFiles/MCCalib.dir/rule
+
+.PHONY : MCCalib
+
+# fast build rule for target.
+MCCalib/fast:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/MakeCalib/CMakeFiles/MCCalib.dir/build.make src/MakeCalib/CMakeFiles/MCCalib.dir/build
+.PHONY : MCCalib/fast
+
+# Convenience name for target.
 src/MakeCalib/CMakeFiles/PMCalib.dir/rule:
 	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/MakeCalib/CMakeFiles/PMCalib.dir/rule
 .PHONY : src/MakeCalib/CMakeFiles/PMCalib.dir/rule
@@ -181,6 +196,33 @@ BMCalib.s: BMCalib.cpp.s
 BMCalib.cpp.s:
 	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/MakeCalib/CMakeFiles/BMCalib.dir/build.make src/MakeCalib/CMakeFiles/BMCalib.dir/BMCalib.cpp.s
 .PHONY : BMCalib.cpp.s
+
+MCCalib.o: MCCalib.cpp.o
+
+.PHONY : MCCalib.o
+
+# target to build an object file
+MCCalib.cpp.o:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/MakeCalib/CMakeFiles/MCCalib.dir/build.make src/MakeCalib/CMakeFiles/MCCalib.dir/MCCalib.cpp.o
+.PHONY : MCCalib.cpp.o
+
+MCCalib.i: MCCalib.cpp.i
+
+.PHONY : MCCalib.i
+
+# target to preprocess a source file
+MCCalib.cpp.i:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/MakeCalib/CMakeFiles/MCCalib.dir/build.make src/MakeCalib/CMakeFiles/MCCalib.dir/MCCalib.cpp.i
+.PHONY : MCCalib.cpp.i
+
+MCCalib.s: MCCalib.cpp.s
+
+.PHONY : MCCalib.s
+
+# target to generate assembly for a file
+MCCalib.cpp.s:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/MakeCalib/CMakeFiles/MCCalib.dir/build.make src/MakeCalib/CMakeFiles/MCCalib.dir/MCCalib.cpp.s
+.PHONY : MCCalib.cpp.s
 
 PMCalib.o: PMCalib.cpp.o
 
@@ -242,14 +284,18 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... WGCalib"
-	@echo "... PMCalib"
 	@echo "... rebuild_cache"
+	@echo "... WGCalib"
+	@echo "... MCCalib"
+	@echo "... PMCalib"
 	@echo "... edit_cache"
 	@echo "... BMCalib"
 	@echo "... BMCalib.o"
 	@echo "... BMCalib.i"
 	@echo "... BMCalib.s"
+	@echo "... MCCalib.o"
+	@echo "... MCCalib.i"
+	@echo "... MCCalib.s"
 	@echo "... PMCalib.o"
 	@echo "... PMCalib.i"
 	@echo "... PMCalib.s"

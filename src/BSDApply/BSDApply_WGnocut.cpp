@@ -50,7 +50,7 @@ int main( int argc, char **argv )
 
   bsdapply->ReadBSDfile();
 
-  for(int idif=0; idif<8; idif++)
+  for(int idif=0; idif<1; idif++)
     {      
       wgrecon[idif] = new WGRecon();
       bmbsd[idif] = new BMBSD();

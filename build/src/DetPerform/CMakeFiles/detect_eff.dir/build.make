@@ -81,6 +81,7 @@ detect_eff_EXTERNAL_OBJECTS =
 ../bin/detect_eff: src/DetPerform/CMakeFiles/detect_eff.dir/build.make
 ../bin/detect_eff: ../lib/library/EVTCluster.so
 ../bin/detect_eff: ../lib/library/BMDisp.so
+../bin/detect_eff: ../lib/library/DetRecon.so
 ../bin/detect_eff: src/DetPerform/CMakeFiles/detect_eff.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../../bin/detect_eff"
 	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/src/DetPerform && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/detect_eff.dir/link.txt --verbose=$(VERBOSE)

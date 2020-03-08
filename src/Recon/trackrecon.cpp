@@ -62,7 +62,7 @@ int main( int argc, char **argv )
 
 #ifdef Single
 
-  TCanvas *canvas1 = new TCanvas("canvas1", "canvas1", 1000, 600);
+  //TCanvas *canvas1 = new TCanvas("canvas1", "canvas1", 1000, 600);
   TCanvas *canvas2 = new TCanvas("canvas2", "canvas2", 1000, 600);
   TCanvas *canvas3 = new TCanvas("canvas3", "canvas3", 1000, 600);
   TCanvas *canvas4 = new TCanvas("canvas4", "canvas4", 1000, 600);
@@ -78,7 +78,6 @@ int main( int argc, char **argv )
 	  break;
 	}
       cout << "startFill" << '\n';
-      cellauto->FillBeforeFit(bmdisp);
       yasutomethod->ystmethod(bmdisp, bmcluster);
       //chargeid->algorithm_A(bmcluster, count_numu, count_numubar, minimumlimit);
       //cout << "count_numu: " << count_numu << " count_numubar: " << count_numubar << '\n';
@@ -87,10 +86,6 @@ int main( int argc, char **argv )
 
   cout << "Draw" << '\n';
 
-  canvas1->cd();
-  cellauto->beforefit[0][0]->Draw("box");
-  canvas1->Update();
-  canvas2->cd();
   trackmatching->pmdisp_corr->Draw("box");
   canvas2->Update();
   canvas3->cd();

@@ -58,6 +58,7 @@ int main( int argc, char **argv )
   //Read tree
   dreader->ReadTree(filepath, bmbranch);  
   dreader->BMSpillMatch(&commonspill);
+  picksignal->PickGain();
 
   for(int ientry=0; ientry<commonspill.size(); ientry++)
   //for(int ientry=0; ientry<100; ientry++)

@@ -18,10 +18,10 @@ void make_plots_wgbsdrelated()
   bsd_plot->Draw("");
   wg_plot->Draw("same");
 
-  TLegend* legend = new TLegend(0.30, 0.70, 0.90, 0.90);
-  delivered = "0.8089+e19";
-  recorded = "0.8021+e19";
-  eff = 0.8021/0.8089;
+  TLegend* legend = new TLegend(0.10, 0.70, 0.70, 0.90);
+  recorded = "10.727+e19";
+  delivered = "10.814+e19";
+  eff = 10.7267/10.814;
   bsdplotname.Form("Delivered P.O.T. (%s)", delivered.Data());
   wgplotname.Form("Recorded P.O.T. (%s)", recorded.Data());
   legend->AddEntry(bsd_plot,bsdplotname, "p");

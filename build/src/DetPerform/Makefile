@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analy
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/local/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/local/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,6 +111,51 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+src/DetPerform/CMakeFiles/find_neutrino.dir/rule:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/DetPerform/CMakeFiles/find_neutrino.dir/rule
+.PHONY : src/DetPerform/CMakeFiles/find_neutrino.dir/rule
+
+# Convenience name for target.
+find_neutrino: src/DetPerform/CMakeFiles/find_neutrino.dir/rule
+
+.PHONY : find_neutrino
+
+# fast build rule for target.
+find_neutrino/fast:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DetPerform/CMakeFiles/find_neutrino.dir/build.make src/DetPerform/CMakeFiles/find_neutrino.dir/build
+.PHONY : find_neutrino/fast
+
+# Convenience name for target.
+src/DetPerform/CMakeFiles/wm_matchingtest.dir/rule:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/DetPerform/CMakeFiles/wm_matchingtest.dir/rule
+.PHONY : src/DetPerform/CMakeFiles/wm_matchingtest.dir/rule
+
+# Convenience name for target.
+wm_matchingtest: src/DetPerform/CMakeFiles/wm_matchingtest.dir/rule
+
+.PHONY : wm_matchingtest
+
+# fast build rule for target.
+wm_matchingtest/fast:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DetPerform/CMakeFiles/wm_matchingtest.dir/build.make src/DetPerform/CMakeFiles/wm_matchingtest.dir/build
+.PHONY : wm_matchingtest/fast
+
+# Convenience name for target.
+src/DetPerform/CMakeFiles/pedist.dir/rule:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/DetPerform/CMakeFiles/pedist.dir/rule
+.PHONY : src/DetPerform/CMakeFiles/pedist.dir/rule
+
+# Convenience name for target.
+pedist: src/DetPerform/CMakeFiles/pedist.dir/rule
+
+.PHONY : pedist
+
+# fast build rule for target.
+pedist/fast:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DetPerform/CMakeFiles/pedist.dir/build.make src/DetPerform/CMakeFiles/pedist.dir/build
+.PHONY : pedist/fast
+
+# Convenience name for target.
 src/DetPerform/CMakeFiles/detect_eff.dir/rule:
 	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/DetPerform/CMakeFiles/detect_eff.dir/rule
 .PHONY : src/DetPerform/CMakeFiles/detect_eff.dir/rule
@@ -124,6 +169,21 @@ detect_eff: src/DetPerform/CMakeFiles/detect_eff.dir/rule
 detect_eff/fast:
 	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DetPerform/CMakeFiles/detect_eff.dir/build.make src/DetPerform/CMakeFiles/detect_eff.dir/build
 .PHONY : detect_eff/fast
+
+# Convenience name for target.
+src/DetPerform/CMakeFiles/matching_eff.dir/rule:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/DetPerform/CMakeFiles/matching_eff.dir/rule
+.PHONY : src/DetPerform/CMakeFiles/matching_eff.dir/rule
+
+# Convenience name for target.
+matching_eff: src/DetPerform/CMakeFiles/matching_eff.dir/rule
+
+.PHONY : matching_eff
+
+# fast build rule for target.
+matching_eff/fast:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DetPerform/CMakeFiles/matching_eff.dir/build.make src/DetPerform/CMakeFiles/matching_eff.dir/build
+.PHONY : matching_eff/fast
 
 # Convenience name for target.
 src/DetPerform/CMakeFiles/det_eventrate.dir/rule:
@@ -141,19 +201,19 @@ det_eventrate/fast:
 .PHONY : det_eventrate/fast
 
 # Convenience name for target.
-src/DetPerform/CMakeFiles/wm_matchingtest.dir/rule:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/DetPerform/CMakeFiles/wm_matchingtest.dir/rule
-.PHONY : src/DetPerform/CMakeFiles/wm_matchingtest.dir/rule
+src/DetPerform/CMakeFiles/tracking_eff.dir/rule:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/DetPerform/CMakeFiles/tracking_eff.dir/rule
+.PHONY : src/DetPerform/CMakeFiles/tracking_eff.dir/rule
 
 # Convenience name for target.
-wm_matchingtest: src/DetPerform/CMakeFiles/wm_matchingtest.dir/rule
+tracking_eff: src/DetPerform/CMakeFiles/tracking_eff.dir/rule
 
-.PHONY : wm_matchingtest
+.PHONY : tracking_eff
 
 # fast build rule for target.
-wm_matchingtest/fast:
-	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DetPerform/CMakeFiles/wm_matchingtest.dir/build.make src/DetPerform/CMakeFiles/wm_matchingtest.dir/build
-.PHONY : wm_matchingtest/fast
+tracking_eff/fast:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DetPerform/CMakeFiles/tracking_eff.dir/build.make src/DetPerform/CMakeFiles/tracking_eff.dir/build
+.PHONY : tracking_eff/fast
 
 # Convenience name for target.
 src/DetPerform/CMakeFiles/wmcoincheck.dir/rule:
@@ -224,6 +284,114 @@ detect_eff.cpp.s:
 	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DetPerform/CMakeFiles/detect_eff.dir/build.make src/DetPerform/CMakeFiles/detect_eff.dir/detect_eff.cpp.s
 .PHONY : detect_eff.cpp.s
 
+find_neutrino.o: find_neutrino.cpp.o
+
+.PHONY : find_neutrino.o
+
+# target to build an object file
+find_neutrino.cpp.o:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DetPerform/CMakeFiles/find_neutrino.dir/build.make src/DetPerform/CMakeFiles/find_neutrino.dir/find_neutrino.cpp.o
+.PHONY : find_neutrino.cpp.o
+
+find_neutrino.i: find_neutrino.cpp.i
+
+.PHONY : find_neutrino.i
+
+# target to preprocess a source file
+find_neutrino.cpp.i:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DetPerform/CMakeFiles/find_neutrino.dir/build.make src/DetPerform/CMakeFiles/find_neutrino.dir/find_neutrino.cpp.i
+.PHONY : find_neutrino.cpp.i
+
+find_neutrino.s: find_neutrino.cpp.s
+
+.PHONY : find_neutrino.s
+
+# target to generate assembly for a file
+find_neutrino.cpp.s:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DetPerform/CMakeFiles/find_neutrino.dir/build.make src/DetPerform/CMakeFiles/find_neutrino.dir/find_neutrino.cpp.s
+.PHONY : find_neutrino.cpp.s
+
+matching_eff.o: matching_eff.cpp.o
+
+.PHONY : matching_eff.o
+
+# target to build an object file
+matching_eff.cpp.o:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DetPerform/CMakeFiles/matching_eff.dir/build.make src/DetPerform/CMakeFiles/matching_eff.dir/matching_eff.cpp.o
+.PHONY : matching_eff.cpp.o
+
+matching_eff.i: matching_eff.cpp.i
+
+.PHONY : matching_eff.i
+
+# target to preprocess a source file
+matching_eff.cpp.i:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DetPerform/CMakeFiles/matching_eff.dir/build.make src/DetPerform/CMakeFiles/matching_eff.dir/matching_eff.cpp.i
+.PHONY : matching_eff.cpp.i
+
+matching_eff.s: matching_eff.cpp.s
+
+.PHONY : matching_eff.s
+
+# target to generate assembly for a file
+matching_eff.cpp.s:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DetPerform/CMakeFiles/matching_eff.dir/build.make src/DetPerform/CMakeFiles/matching_eff.dir/matching_eff.cpp.s
+.PHONY : matching_eff.cpp.s
+
+pedist.o: pedist.cpp.o
+
+.PHONY : pedist.o
+
+# target to build an object file
+pedist.cpp.o:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DetPerform/CMakeFiles/pedist.dir/build.make src/DetPerform/CMakeFiles/pedist.dir/pedist.cpp.o
+.PHONY : pedist.cpp.o
+
+pedist.i: pedist.cpp.i
+
+.PHONY : pedist.i
+
+# target to preprocess a source file
+pedist.cpp.i:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DetPerform/CMakeFiles/pedist.dir/build.make src/DetPerform/CMakeFiles/pedist.dir/pedist.cpp.i
+.PHONY : pedist.cpp.i
+
+pedist.s: pedist.cpp.s
+
+.PHONY : pedist.s
+
+# target to generate assembly for a file
+pedist.cpp.s:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DetPerform/CMakeFiles/pedist.dir/build.make src/DetPerform/CMakeFiles/pedist.dir/pedist.cpp.s
+.PHONY : pedist.cpp.s
+
+tracking_eff.o: tracking_eff.cpp.o
+
+.PHONY : tracking_eff.o
+
+# target to build an object file
+tracking_eff.cpp.o:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DetPerform/CMakeFiles/tracking_eff.dir/build.make src/DetPerform/CMakeFiles/tracking_eff.dir/tracking_eff.cpp.o
+.PHONY : tracking_eff.cpp.o
+
+tracking_eff.i: tracking_eff.cpp.i
+
+.PHONY : tracking_eff.i
+
+# target to preprocess a source file
+tracking_eff.cpp.i:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DetPerform/CMakeFiles/tracking_eff.dir/build.make src/DetPerform/CMakeFiles/tracking_eff.dir/tracking_eff.cpp.i
+.PHONY : tracking_eff.cpp.i
+
+tracking_eff.s: tracking_eff.cpp.s
+
+.PHONY : tracking_eff.s
+
+# target to generate assembly for a file
+tracking_eff.cpp.s:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/DetPerform/CMakeFiles/tracking_eff.dir/build.make src/DetPerform/CMakeFiles/tracking_eff.dir/tracking_eff.cpp.s
+.PHONY : tracking_eff.cpp.s
+
 wm_coin.o: wm_coin.cpp.o
 
 .PHONY : wm_coin.o
@@ -284,11 +452,15 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... edit_cache"
+	@echo "... find_neutrino"
+	@echo "... wm_matchingtest"
+	@echo "... pedist"
 	@echo "... rebuild_cache"
 	@echo "... detect_eff"
+	@echo "... matching_eff"
 	@echo "... det_eventrate"
-	@echo "... edit_cache"
-	@echo "... wm_matchingtest"
+	@echo "... tracking_eff"
 	@echo "... wmcoincheck"
 	@echo "... det_eventrate.o"
 	@echo "... det_eventrate.i"
@@ -296,6 +468,18 @@ help:
 	@echo "... detect_eff.o"
 	@echo "... detect_eff.i"
 	@echo "... detect_eff.s"
+	@echo "... find_neutrino.o"
+	@echo "... find_neutrino.i"
+	@echo "... find_neutrino.s"
+	@echo "... matching_eff.o"
+	@echo "... matching_eff.i"
+	@echo "... matching_eff.s"
+	@echo "... pedist.o"
+	@echo "... pedist.i"
+	@echo "... pedist.s"
+	@echo "... tracking_eff.o"
+	@echo "... tracking_eff.i"
+	@echo "... tracking_eff.s"
 	@echo "... wm_coin.o"
 	@echo "... wm_coin.i"
 	@echo "... wm_coin.s"

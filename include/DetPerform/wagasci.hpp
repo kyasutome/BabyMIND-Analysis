@@ -20,6 +20,11 @@ class WAGASCI
 {
   //parameter
 private:
+  int TDCmax;
+  double slope[2];
+  double szone;
+  double dzone;
+  double bcidwidth;
 
 public:  
 
@@ -27,6 +32,8 @@ public:
 public:
   WAGASCI();
   ~WAGASCI();
+
+  void TDCtoHittime(int oddeven, int TDC, int *htime, int bunch);
 
   
 };

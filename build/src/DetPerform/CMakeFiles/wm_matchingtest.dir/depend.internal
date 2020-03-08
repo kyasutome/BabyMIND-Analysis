@@ -8,6 +8,10 @@ src/DetPerform/CMakeFiles/wm_matchingtest.dir/wm_matchingtest.cpp.o
  ../include/DetPerform/matching.hpp
  ../include/DetPerform/wallmrd.cpp
  ../include/DetPerform/wallmrd.hpp
+ ../include/EvtDisp/Dimension.cpp
+ ../include/EvtDisp/Dimension.hpp
+ ../include/EvtDisp/WGChannelMap.cpp
+ ../include/EvtDisp/WGChannelMap.hpp
  ../lib/src/BMConst.hpp
  ../lib/src/BasicRecon.hpp
  ../lib/src/EVTCluster.hpp
@@ -80,6 +84,7 @@ src/DetPerform/CMakeFiles/wm_matchingtest.dir/wm_matchingtest.cpp.o
  /Users/kenji/local/root/root-6.18.02/built/include/TFitResultPtr.h
  /Users/kenji/local/root/root-6.18.02/built/include/TFormula.h
  /Users/kenji/local/root/root-6.18.02/built/include/TGenericClassInfo.h
+ /Users/kenji/local/root/root-6.18.02/built/include/TGraph.h
  /Users/kenji/local/root/root-6.18.02/built/include/TH1.h
  /Users/kenji/local/root/root-6.18.02/built/include/TH2.h
  /Users/kenji/local/root/root-6.18.02/built/include/TH2D.h

@@ -34,7 +34,7 @@ int main( int argc, char **argv )
   TFile *fout_nocut[8];
   TTree *otree_nocut[8];
 
-  for(int idif=0; idif<8; idif++)
+  for(int idif=0; idif<1; idif++)
     {
       fout[idif] = new TFile(Form("./process/1-WGCalib/WGCalib_%d_dif%d.root", runnumber, idif), "RECREATE");
       otree[idif] = new TTree("tree", "tree");
@@ -45,7 +45,9 @@ int main( int argc, char **argv )
       otree_nocut[idif]->Branch("WGRecon","WGRecon",&wgrecon_nocut,32000,2);
 
       int DIF=idif;
-      filepath.Form("%s/physics_run_2020-02-08_15-28-22_%d_ecal_dif_%d_tree.root", filedir.Data(), runnumber, DIF);
+
+      //wgwmdata->ReadTree(filedir, DIF);
+      filepath.Form("%s/physics_run_2020-02-10_16-10-46_%d_ecal_dif_%d_tree.root", filedir.Data(), runnumber, DIF);
       wgwmdata->ReadTree(filepath, DIF);
 
       for(int ientry=0; ientry<wgwmdata->wgtree[idif]->GetEntries(); ientry++)

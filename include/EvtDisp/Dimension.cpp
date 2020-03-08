@@ -58,7 +58,7 @@ inline Dimension::Dimension()
     }
 
   sciposz[0] = -20;
-  for(int i=0; i<18; i++)
+  for(int i=1; i<=18; i++)
     {
       fin[2] >> temp[0] >> temp[1] >> temp[2] >> temp[3];
       sciposz[i] = temp[3];
@@ -185,8 +185,8 @@ bool Dimension::get_pos_pm_FC(int mod, int view, int pln, double ch, double *pos
 {
 
   double X, Y;
-  double offsetx[2] = {-2000, -2000};
-  double offsety[2] = {-550, -1500};
+  //double offsetx[2] = {-2000, -2000};
+  //double offsety[2] = {-550, -1500};
 
   if(view==0)
     {
@@ -200,8 +200,10 @@ bool Dimension::get_pos_pm_FC(int mod, int view, int pln, double ch, double *pos
       }
 
       *posx = -1;
-      *posz = X+offsetx[view];
-      *posy = Y+offsety[view];
+      *posz = X;
+      *posy = Y;
+      //*posz = X+offsetx[view];
+      //*posy = Y+offsety[view];
     }
 
   if(view==1)
@@ -216,8 +218,10 @@ bool Dimension::get_pos_pm_FC(int mod, int view, int pln, double ch, double *pos
       }
 
       *posy = -1;
-      *posz = X+offsetx[view];
-      *posx = Y+offsety[view];
+      *posz = X;
+      *posx = Y;
+      //*posz = X+offsetx[view];
+      //*posx = Y+offsety[view];
     }
 
   return true;

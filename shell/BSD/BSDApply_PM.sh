@@ -15,7 +15,7 @@ esub=$3
 anadir=${PWD}
 datadir=$anadir/process
 
-filename=$(find  $datadir -type f -name "*PMCalib_$run*$ssub*$esub*")
+filename=$(find  $datadir -type f -name "PMCalib_*$run*_*$ssub*_$esub*")
 if [ $? -eq 0 ] ; then
     echo "Found a file"
     else

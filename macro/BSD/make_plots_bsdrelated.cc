@@ -19,9 +19,11 @@ void make_plots_bsdrelated()
   bm_plot->Draw("same");
 
   TLegend* legend = new TLegend(0.30, 0.70, 0.90, 0.90);
-  delivered = "2.644+e20";
-  recorded = "2.616+e20";
-  eff = 2.616/2.644;
+  delivered = "10.78+e20";
+  recorded = "10.77+e20";
+  //delivered = "2.644+e20";
+  //recorded = "2.616+e20";
+  eff = 10.77/10.78;
   bsdplotname.Form("Delivered P.O.T. (%s)", delivered.Data());
   bmplotname.Form("Recorded P.O.T. (%s)", recorded.Data());
   legend->AddEntry(bsd_plot,bsdplotname, "p");

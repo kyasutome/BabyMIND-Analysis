@@ -56,6 +56,38 @@ BasicRecon:
 	rootcint -f $(@)Dict.cc -c $(@).hpp $(@)LinkDef.hh
 	$(CXX) `root-config --cflags --libs` -shared $(@)Dict.cc $(@).cpp -o ${MAKEDIR}/$(@).so
 
+MCRecon:
+	rootcint -f $(@)Dict.cc -c $(@).hpp $(@)LinkDef.hh
+	$(CXX) `root-config --cflags --libs` -shared $(@)Dict.cc $(@).cpp -o ${MAKEDIR}/$(@).so
+
+DetRecon:
+	rootcint -f $(@)Dict.cc -c $(@).hpp $(@)LinkDef.hh
+	$(CXX) `root-config --cflags --libs` -shared $(@)Dict.cc $(@).cpp -o ${MAKEDIR}/$(@).so
+
+MCTrue:
+	rootcint -f $(@)Dict.cc -c $(@).hpp $(@)LinkDef.hh
+	$(CXX) `root-config --cflags --libs` -shared $(@)Dict.cc $(@).cpp -o ${MAKEDIR}/$(@).so
+
+DetHitCluster:
+	rootcint -f $(@)Dict.cc -c $(@).hpp $(@)LinkDef.hh
+	$(CXX) `root-config --cflags --libs` -shared $(@)Dict.cc $(@).cpp -o ${MAKEDIR}/$(@).so
+
+Cell:
+	rootcint -f $(@)Dict.cc -c $(@).hpp $(@)LinkDef.hh
+	$(CXX) `root-config --cflags --libs` -shared $(@)Dict.cc $(@).cpp -o ${MAKEDIR}/$(@).so
+
+DetCluster:
+	rootcint -f $(@)Dict.cc -c $(@).hpp $(@)LinkDef.hh
+	$(CXX) `root-config --cflags --libs` -shared $(@)Dict.cc $(@).cpp -o ${MAKEDIR}/$(@).so
+
+DetHitClusters:
+	rootcint -f $(@)Dict.cc -c $(@).hpp $(@)LinkDef.hh
+	$(CXX) `root-config --cflags --libs` -shared $(@)Dict.cc $(@).cpp -o ${MAKEDIR}/$(@).so
+
+DetClusters:
+	rootcint -f $(@)Dict.cc -c $(@).hpp $(@)LinkDef.hh
+	$(CXX) `root-config --cflags --libs` -shared $(@)Dict.cc $(@).cpp -o ${MAKEDIR}/$(@).so
+
 move:
 	mv ./*pcm ${MAKEDIR}/
 

@@ -111,6 +111,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+src/MakeEvent/CMakeFiles/MakeMCEvent.dir/rule:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/MakeEvent/CMakeFiles/MakeMCEvent.dir/rule
+.PHONY : src/MakeEvent/CMakeFiles/MakeMCEvent.dir/rule
+
+# Convenience name for target.
+MakeMCEvent: src/MakeEvent/CMakeFiles/MakeMCEvent.dir/rule
+
+.PHONY : MakeMCEvent
+
+# fast build rule for target.
+MakeMCEvent/fast:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/MakeEvent/CMakeFiles/MakeMCEvent.dir/build.make src/MakeEvent/CMakeFiles/MakeMCEvent.dir/build
+.PHONY : MakeMCEvent/fast
+
+# Convenience name for target.
 src/MakeEvent/CMakeFiles/MakeEvent.dir/rule:
 	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f CMakeFiles/Makefile2 src/MakeEvent/CMakeFiles/MakeEvent.dir/rule
 .PHONY : src/MakeEvent/CMakeFiles/MakeEvent.dir/rule
@@ -152,6 +167,33 @@ MakeEvent.cpp.s:
 	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/MakeEvent/CMakeFiles/MakeEvent.dir/build.make src/MakeEvent/CMakeFiles/MakeEvent.dir/MakeEvent.cpp.s
 .PHONY : MakeEvent.cpp.s
 
+MakeMCEvent.o: MakeMCEvent.cpp.o
+
+.PHONY : MakeMCEvent.o
+
+# target to build an object file
+MakeMCEvent.cpp.o:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/MakeEvent/CMakeFiles/MakeMCEvent.dir/build.make src/MakeEvent/CMakeFiles/MakeMCEvent.dir/MakeMCEvent.cpp.o
+.PHONY : MakeMCEvent.cpp.o
+
+MakeMCEvent.i: MakeMCEvent.cpp.i
+
+.PHONY : MakeMCEvent.i
+
+# target to preprocess a source file
+MakeMCEvent.cpp.i:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/MakeEvent/CMakeFiles/MakeMCEvent.dir/build.make src/MakeEvent/CMakeFiles/MakeMCEvent.dir/MakeMCEvent.cpp.i
+.PHONY : MakeMCEvent.cpp.i
+
+MakeMCEvent.s: MakeMCEvent.cpp.s
+
+.PHONY : MakeMCEvent.s
+
+# target to generate assembly for a file
+MakeMCEvent.cpp.s:
+	cd /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build && $(MAKE) -f src/MakeEvent/CMakeFiles/MakeMCEvent.dir/build.make src/MakeEvent/CMakeFiles/MakeMCEvent.dir/MakeMCEvent.cpp.s
+.PHONY : MakeMCEvent.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -160,10 +202,14 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... MakeMCEvent"
 	@echo "... MakeEvent"
 	@echo "... MakeEvent.o"
 	@echo "... MakeEvent.i"
 	@echo "... MakeEvent.s"
+	@echo "... MakeMCEvent.o"
+	@echo "... MakeMCEvent.i"
+	@echo "... MakeMCEvent.s"
 .PHONY : help
 
 

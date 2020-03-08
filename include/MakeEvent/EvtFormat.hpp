@@ -18,6 +18,8 @@
 #include "PMRecon.hpp"
 #include "WGRecon.hpp"
 #include "BMBSD.hpp"
+#include "MCTrue.hpp"
+#include "MCRecon.hpp"
 
 class EvtFormat
 {
@@ -30,9 +32,11 @@ public:
   TChain* bmchain;
   TChain* pmchain;
   TChain* wgchain[8];
+  TChain* mcchain;
   int nbmdata;
   int npmdata;
   int nwgdata[8];
+  int nmcdata;
   int theunixtimeentry;
   int theunixtime;
   int spillnum;
@@ -70,6 +74,7 @@ public:
 		   BMBSD* bmbsd, int *sunixtime, int *eunixtime);
   void ReadPMChain(TString filepath, PMRecon* pmrecon, BMBSD* bmbsd, int *sunixtime, int *eunixtime);
   void ReadWGChain(TString filepath, WGRecon* wgrecon[], BMBSD* bmbsd[], int *sunixtime, int *eunixtime);
+  void ReadMCChain(TString filepath, MCTrue* mctrue, MCRecon* mcrecon, TTree *otree, EVTCluster* evtcluster);
   bool FillEvtClass(TTree* otree, int sunixtimeentry, int eunixtimeentry, vector <int> baseunixtime, vector <double> basepot, 
 		    BMBasicRecon* bmbasicrecon, BMBeaminfo* bmbeaminfo, PMRecon* pmrecon,
 		    WGRecon* wgrecon[8], EVTCluster* evtcluster, TString filepath);
@@ -77,6 +82,7 @@ public:
   void AddBMChain(TString filepath);
   void AddPMChain(TString filepath);
   void AddWGChain(TString filepath, int idif);
+  void AddMCChain(TString filepath);
 
   void PrintTime(time_t unixtime);
   void DeleteChain();

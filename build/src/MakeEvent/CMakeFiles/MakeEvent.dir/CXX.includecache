@@ -195,6 +195,10 @@ WGRecon.hpp
 ../include/MakeEvent/WGRecon.hpp
 BMBSD.hpp
 ../include/MakeEvent/BMBSD.hpp
+MCTrue.hpp
+../include/MakeEvent/MCTrue.hpp
+MCRecon.hpp
+../include/MakeEvent/MCRecon.hpp
 
 ../lib/src/BMBSD.hpp
 iostream
@@ -223,6 +227,22 @@ BMConst.hpp
 ../lib/src/BMConst.hpp
 
 ../lib/src/EVTCluster.hpp
+iostream
+-
+vector
+-
+BMConst.hpp
+../lib/src/BMConst.hpp
+
+../lib/src/MCRecon.hpp
+iostream
+-
+vector
+-
+BMConst.hpp
+../lib/src/BMConst.hpp
+
+../lib/src/MCTrue.hpp
 iostream
 -
 vector

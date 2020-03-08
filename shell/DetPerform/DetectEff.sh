@@ -12,9 +12,10 @@ run=$1
 
 anadir=${PWD}
 #datadir=$anadir/process/TEST
-datadir=$anadir/process/3-EVT
+#datadir=$anadir/process/3-EVT
+datadir=$anadir/process/4-Recon
 
-filename=$(find  $datadir -type f -name "Evt_${run}.root")
+filename=$(find  $datadir -type f -name "Recon_${run}.root")
 if [ $? -eq 0 ] ; then
     echo "Found a file"
     else

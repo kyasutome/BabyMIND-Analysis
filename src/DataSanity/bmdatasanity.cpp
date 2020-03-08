@@ -29,7 +29,7 @@ int main( int argc, char **argv )
   FileStat_t info;
 
   TString bmdirpath, bmfilename;
-  bmdirpath.Form("./process/3-BMBSD");
+  bmdirpath.Form("./process/2-BMBSD");
   TChain* bmchain = new TChain("tree","tree");
 
   //Set Classes
@@ -42,13 +42,25 @@ int main( int argc, char **argv )
   for(int imon=0; imon<2; imon++)
     {
       TString MON;
-      if(imon==0) MON.Form("Nov");
-      if(imon==1) MON.Form("Dec");
+      //if(imon==0) MON.Form("Nov");
+      //if(imon==1) MON.Form("Dec");
+      if(imon==0) 
+	{
+	  MON.Form("Jan");
+	  startdate = 29;
+	  enddate = 32;
+	}
+      if(imon==1) 
+	{
+	  MON.Form("Feb");
+	  startdate = 1;
+	  enddate = 13;
+	}
       for(int idate=startdate; idate<enddate; idate++)
 	{
 	  for(int irun=startrun; irun<endrun; irun++)
 	    {
-	      bmfilename.Form("%s/BMBSD_%d_%s_%d.root", bmdirpath.Data(), idate, MON.Data(), irun);
+	      bmfilename.Form("%s/BMBSD_BM_%d_%s_%d.root", bmdirpath.Data(), idate, MON.Data(), irun);
 	      if (gSystem->GetPathInfo(bmfilename.Data(), info)!=0)
 		{
 		  continue;
@@ -69,8 +81,8 @@ int main( int argc, char **argv )
   cout << "sunix= " << sunix << " eunix= " << eunix << '\n';
 
   TFile* fout = new TFile("./result/BSD/Accumlated_pot.root", "recreate");
-  TH2D *bsd_accumlated_plot = new TH2D("bsd_accumlated_plot", "", 500, sunix, eunix, 500, 0, 4.0);
-  TH2D *bm_accumlated_plot = new TH2D("bm_accumlated_plot", "", 500, sunix, eunix, 500, 0, 4.0);
+  TH2F *bsd_accumlated_plot = new TH2F("bsd_accumlated_plot", "", 500, sunix, eunix, 500, 0, 4.0);
+  TH2F *bm_accumlated_plot = new TH2F("bm_accumlated_plot", "", 500, sunix, eunix, 500, 0, 4.0);
   char ytitle[128] = "Accumlated P.O.T (10^{20})";
   datasanity->SetHistLabel(bsd_accumlated_plot, "Data Taking Efficiency", ytitle);
   datasanity->SetHistLabel(bm_accumlated_plot, "Data Taking Efficiency", ytitle);

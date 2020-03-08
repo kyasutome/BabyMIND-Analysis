@@ -53,8 +53,9 @@ void MakeEachMonitor::Display(EVTCluster* evtcluster)
   v->Draw();
   makedetdisp->DrawWallMRD(0);
   makedetdisp->DrawWallMRD(1);
-  makehitdisp->DrawWMHit(evtcluster, 3);
-  makehitdisp->DrawWMHit(evtcluster, 4);
+  makehitdisp->DrawHit(evtcluster, 1);
+  //makehitdisp->DrawWMHit(evtcluster, 3);
+  //makehitdisp->DrawWMHit(evtcluster, 4);
   monitor2->Update();
 #endif
 
@@ -63,16 +64,18 @@ void MakeEachMonitor::Display(EVTCluster* evtcluster)
   h->Draw();
   makedetdisp->DrawWAGASCI(0,0);
   makedetdisp->DrawWAGASCI(1,0);
-  makehitdisp->DrawWGHit(evtcluster, 0, 1);
-  makehitdisp->DrawWGHit(evtcluster, 0, 2);
+  makehitdisp->DrawHit(evtcluster, 0);
+  //makehitdisp->DrawWGHit(evtcluster, 0, 1);
+  //makehitdisp->DrawWGHit(evtcluster, 0, 2);
   monitor->Update();
 
   monitor2->cd();
   v->Draw();
   makedetdisp->DrawWAGASCI(0,1);
   makedetdisp->DrawWAGASCI(1,1);
-  makehitdisp->DrawWGHit(evtcluster, 1, 1);
-  makehitdisp->DrawWGHit(evtcluster, 1, 2);
+  makehitdisp->DrawHit(evtcluster, 1);
+  //makehitdisp->DrawWGHit(evtcluster, 1, 1);
+  //makehitdisp->DrawWGHit(evtcluster, 1, 2);
   monitor2->Update();
 #endif
 

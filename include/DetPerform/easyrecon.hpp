@@ -58,8 +58,9 @@ public:
   void Recon(EVTCluster* evtcluster, BasicRecon* basicrecon[]);  
   void Fitting(TF1* function, vector<int> plane, vector<int> channel, double fitpar[]);
 
-  bool NHCheck(int mod, int view, BasicRecon* basicrecon);
+  bool NHCheck(int mod, int view, BasicRecon* basicrecon, vector<int> *ataribunch);
   bool FVCheck(int mod, int view);
+  bool SFVCheck(int mod, int view, double posxy[2], double posz[2]);
   
 };
 

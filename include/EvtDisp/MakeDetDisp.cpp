@@ -229,7 +229,7 @@ void MakeDetDisp::DrawBabyMIND(int view)
 	    }
 	}
 
-      for(int i=0; i<NUMBEROFMODULE; i++)
+      for(int i=1; i<=NUMBEROFMODULE; i++)
 	{
 	  for(int j=0; j<48; j++)
 	    DetModule(fdimension->sciposz[i]-10, dhorl[j], fdimension->sciposz[i], uhorl[j]);
@@ -266,7 +266,7 @@ void MakeDetDisp::DrawBabyMIND(int view)
 	    }
 	}
 
-      for(int i=0; i<18; i++)
+      for(int i=1; i<=18; i++)
 	{
 	  for(int j=0; j<8; j++)
 	    DetModule(fdimension->sciposz[i]-35, dverl[j], fdimension->sciposz[i]-15, uverl[j]);

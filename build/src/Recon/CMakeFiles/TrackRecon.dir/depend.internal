@@ -20,6 +20,15 @@ src/Recon/CMakeFiles/TrackRecon.dir/trackrecon.cpp.o
  ../lib/src/BMConst.hpp
  ../lib/src/BMDisp.hpp
  ../lib/src/BMHitCluster.hpp
+ ../lib/src/Cell.cpp
+ ../lib/src/Cell.hpp
+ ../lib/src/DetCluster.hpp
+ ../lib/src/DetClusters.hpp
+ ../lib/src/DetHitCluster.cpp
+ ../lib/src/DetHitCluster.hpp
+ ../lib/src/DetHitClusters.cpp
+ ../lib/src/DetHitClusters.hpp
+ ../lib/src/EVTCluster.hpp
  /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/src/Recon/trackrecon.cpp
  /Users/kenji/local/root/root-6.18.02/built/include/Buttons.h
  /Users/kenji/local/root/root-6.18.02/built/include/Bytes.h

@@ -50,8 +50,9 @@ void PickSignal::YASUSignalCreation(int ientry, BMdata* bmbranch[NUMBEROFFEB], B
             {
               bool firstfill=true;
 	      if(CheckYASUCoincidence(Coinsyasu, bmbranch[yasufeb[ifeb]], &yasumod))
-	      //Fill to BasicRecon Class		
-		FillYASUBasicReconClass(yasumod, ifeb, firstfill, Coinsyasu, bmbasicrecon, bmbranch[yasufeb[ifeb]]);
+		if(ChannelCorr(bmbranch[yasufeb[ifeb]]->hitsChannel->at(Coinsyasu))<=13)
+		  //Fill to BasicRecon Class		
+		  FillYASUBasicReconClass(yasumod, ifeb, firstfill, Coinsyasu, bmbasicrecon, bmbranch[yasufeb[ifeb]]);
 	      firstfill = false;
 	      
 	    }//Coinsyasu loop 
@@ -92,8 +93,8 @@ void PickSignal::SignalCreation(int ientry, BMdata* bmbranch[NUMBEROFFEB], BMBas
 		    if(CheckVerCoincidence(topch, CoinsLeft, CoinsTop, bmbranch[febid[0]], bmbranch[febid[2]]))
 		      {
 			//Fill to BasicRecon Class
-			FillBasicReconClass(imod,firstfill,CoinsLeft,CoinsTop,
-					    bmbasicrecon, bmbranch[febid[0]], bmbranch[febid[2]]);			
+			FillBasicReconClass(imod,firstfill,CoinsLeft,CoinsRight,CoinsTop,
+					    bmbasicrecon, bmbranch[febid[0]], bmbranch[febid[1]], bmbranch[febid[2]]);
 			firstfill = false;
 			
 		      }
@@ -154,8 +155,8 @@ void PickSignal::MakeThreeBounds(int ACoin, BMdata* bmbranch_l, BMdata* bmbranch
 bool PickSignal::CheckHorCoincidence(int CoinsLeft, int CoinsRight, BMdata* bmbranch_l, BMdata* bmbranch_r)
 {
   bool coincidencecheck = false;
-  double timecut = 25;
-  double timedifcut = 10;
+  double timecut = 30;
+  double timedifcut = 7;
   if(bmbranch_l->hitsChannel->at(CoinsLeft) == bmbranch_r->hitsChannel->at(CoinsRight))
     if(fabs(bmbranch_l->hitLeadTime->at(CoinsLeft) - bmbranch_r->hitLeadTime->at(CoinsRight))<timecut)	
       if(bmbranch_l->hitTimeDif->at(CoinsLeft)>timedifcut && bmbranch_r->hitTimeDif->at(CoinsRight)>timedifcut)
@@ -169,7 +170,7 @@ bool PickSignal::CheckHorCoincidence(int CoinsLeft, int CoinsRight, BMdata* bmbr
  {
    bool coincidencecheck = false;
    double timecut = 30;
-   double timedifcut= 5;
+   double timedifcut= 4;
    if(bmbranch_t->hitsChannel->at(CoinsTop)>=32*topch && bmbranch_t->hitsChannel->at(CoinsTop)<32*(1+topch))
      if(fabs(bmbranch_l->hitLeadTime->at(CoinsLeft) - bmbranch_t->hitLeadTime->at(CoinsTop))<timecut)	
        if(bmbranch_t->hitTimeDif->at(CoinsTop)>timedifcut)
@@ -214,10 +215,18 @@ double PickSignal::Findbunch(double hittime)
   return bunch;
 }
 
-void PickSignal::FillBasicReconClass(int imod, bool firstfill, int CoinsLeft, int CoinsTop,
-				    BMBasicRecon* bmbasicrecon, BMdata* bmbranch_l, BMdata* bmbranch_t)
+void PickSignal::FillBasicReconClass(int imod, bool firstfill, int CoinsLeft, int CoinsRight, int CoinsTop,
+				     BMBasicRecon* bmbasicrecon, BMdata* bmbranch_l, BMdata* bmbranch_r, BMdata* bmbranch_t)
 {
   //for horiontal
+  lchannel = bmbranch_l->hitsChannel->at(CoinsLeft);
+  rchannel = bmbranch_r->hitsChannel->at(CoinsRight);
+  tchannel = bmbranch_t->hitsChannel->at(CoinsTop);
+  lgain = gain[febid[0]].at(lchannel);
+  rgain = gain[febid[1]].at(rchannel);
+  tgain = gain[febid[2]].at(tchannel);
+ 
+
   if(firstfill)
     {
       beambunch = Findbunch(bmbranch_l->hitTimefromSpill->at(CoinsLeft));
@@ -226,52 +235,65 @@ void PickSignal::FillBasicReconClass(int imod, bool firstfill, int CoinsLeft, in
       bmbasicrecon->pln.push_back(imod);
       bmbasicrecon->channel.push_back(bmbranch_l->hitsChannel->at(CoinsLeft));
       bmbasicrecon->HG.push_back(bmbranch_l->hitAmpl->at(CoinsLeft));
+      bmbasicrecon->LHG.push_back(bmbranch_l->hitAmpl->at(CoinsLeft));
+      bmbasicrecon->RHG.push_back(bmbranch_r->hitAmpl->at(CoinsRight));
+      //bmbasicrecon->THG.push_back(bmbranch_t->hitAmpl->at(CoinsTop));
+      bmbasicrecon->THG.push_back(-1);
+
+      bmbasicrecon->Lgain.push_back(lgain);
+      bmbasicrecon->Rgain.push_back(rgain);
+      bmbasicrecon->Tgain.push_back(-1);
+
       bmbasicrecon->LG.push_back(bmbranch_l->hitLGAmpl->at(CoinsLeft));
       bmbasicrecon->Ltime.push_back(bmbranch_l->hitLeadTime->at(CoinsLeft));
       bmbasicrecon->Ftime.push_back(bmbranch_l->hitTrailTime->at(CoinsLeft));
       bmbasicrecon->Htime.push_back(bmbranch_l->hitTimefromSpill->at(CoinsLeft)*2.5);
       bmbasicrecon->bunch.push_back(beambunch);
       bmbasicrecon->timedif.push_back(bmbranch_l->hitTimeDif->at(CoinsLeft));
+
     }
   //for vertical
   int verch = (int)(bmbranch_t->hitsChannel->at(CoinsTop))%32;
   //verch = verch/2;
   beambunch = Findbunch(bmbranch_t->hitTimefromSpill->at(CoinsTop));
   if(imod==2 || imod==11 || imod==13 || imod==17 || imod==18)
-    {
+    verch = verch;
+  else
+    verch = 31-verch;
+
       bmbasicrecon->mod.push_back(5); // PM:0, WG1:1, WG2:2, WMS:3, WMN:4, BM:5, BM-Y:6
       bmbasicrecon->view.push_back(1);
       bmbasicrecon->pln.push_back(imod);
       bmbasicrecon->channel.push_back(verch);
       bmbasicrecon->HG.push_back(bmbranch_t->hitAmpl->at(CoinsTop));
+      //bmbasicrecon->LHG.push_back(bmbranch_l->hitAmpl->at(CoinsLeft));
+      //bmbasicrecon->RHG.push_back(bmbranch_r->hitAmpl->at(CoinsRight));
+      bmbasicrecon->LHG.push_back(-1);
+      bmbasicrecon->RHG.push_back(-1);
+      bmbasicrecon->THG.push_back(bmbranch_t->hitAmpl->at(CoinsTop));
       bmbasicrecon->LG.push_back(bmbranch_t->hitLGAmpl->at(CoinsTop));
-      bmbasicrecon->Ltime.push_back(bmbranch_t->hitLeadTime->at(CoinsTop));
-      bmbasicrecon->Ftime.push_back(bmbranch_t->hitTrailTime->at(CoinsTop));
-      bmbasicrecon->Htime.push_back(bmbranch_t->hitTimefromSpill->at(CoinsTop)*2.5);
-      bmbasicrecon->bunch.push_back(beambunch);
-      bmbasicrecon->timedif.push_back(bmbranch_t->hitTimeDif->at(CoinsTop));      
-    }
 
-  else
-    {
-      bmbasicrecon->mod.push_back(5); // PM:0, WG1:1, WG2:2, WMS:3, WMN:4, BM:5, BM-Y:6
-      bmbasicrecon->view.push_back(1);
-      bmbasicrecon->pln.push_back(imod);
-      bmbasicrecon->channel.push_back(31-verch);
-      bmbasicrecon->HG.push_back(bmbranch_t->hitAmpl->at(CoinsTop));
-      bmbasicrecon->LG.push_back(bmbranch_t->hitLGAmpl->at(CoinsTop));
+      bmbasicrecon->Lgain.push_back(-1);
+      bmbasicrecon->Rgain.push_back(-1);
+      bmbasicrecon->Tgain.push_back(tgain);
+
       bmbasicrecon->Ltime.push_back(bmbranch_t->hitLeadTime->at(CoinsTop));
       bmbasicrecon->Ftime.push_back(bmbranch_t->hitTrailTime->at(CoinsTop));
       bmbasicrecon->Htime.push_back(bmbranch_t->hitTimefromSpill->at(CoinsTop)*2.5);
       bmbasicrecon->bunch.push_back(beambunch);
-      bmbasicrecon->timedif.push_back(bmbranch_t->hitTimeDif->at(CoinsTop));      
-    }
+      bmbasicrecon->timedif.push_back(bmbranch_t->hitTimeDif->at(CoinsTop)); 
 
 }
 
 void PickSignal::FillYASUBasicReconClass(int imod, int ifeb, 
 					 bool firstfill, int Coinsyasu, BMBasicRecon* bmbasicrecon, BMdata* bmbranch)
 {
+
+  lchannel = bmbranch->hitsChannel->at(Coinsyasu);
+  lchannel = ChannelCorr(lchannel);
+  
+  lgain = gain[yasufeb[ifeb]].at(lchannel);
+
   if(firstfill)
     {
       beambunch = Findbunch(bmbranch->hitTimefromSpill->at(Coinsyasu));
@@ -290,13 +312,22 @@ void PickSignal::FillYASUBasicReconClass(int imod, int ifeb,
 	bmbasicrecon->channel.push_back(ChannelCorr(bmbranch->hitsChannel->at(Coinsyasu)));
 
       bmbasicrecon->HG.push_back(bmbranch->hitAmpl->at(Coinsyasu));
+      bmbasicrecon->LHG.push_back(bmbranch->hitAmpl->at(Coinsyasu));
+      bmbasicrecon->RHG.push_back(-1);
+      bmbasicrecon->THG.push_back(-1);
       bmbasicrecon->LG.push_back(bmbranch->hitLGAmpl->at(Coinsyasu));
+
+      bmbasicrecon->Lgain.push_back(lgain);
+      bmbasicrecon->Rgain.push_back(-1);
+      bmbasicrecon->Tgain.push_back(-1);
+
       bmbasicrecon->Ltime.push_back(bmbranch->hitLeadTime->at(Coinsyasu));
       bmbasicrecon->Ftime.push_back(bmbranch->hitTrailTime->at(Coinsyasu));
       bmbasicrecon->Htime.push_back(bmbranch->hitTimefromSpill->at(Coinsyasu)*2.5);
       bmbasicrecon->bunch.push_back(beambunch);
       bmbasicrecon->timedif.push_back(bmbranch->hitTimeDif->at(Coinsyasu));
     }
+
 }
 
 double PickSignal::ChannelCorr(double channel)
@@ -310,6 +341,40 @@ double PickSignal::ChannelCorr(double channel)
     corrchannel = channel-25;
     
   return corrchannel;
+}
+
+void PickSignal::PickGain()
+{
+  TString filename;
+  int NSlot[8] = {6, 6, 6, 6, 5, 5, 6, 6};
+  double dummy;
+  double thegain;
+  int feb;
+
+  finnch.open("./data/nfebchannel.txt");
+  for(int ifeb=0; ifeb<64; ifeb++)
+    {
+      finnch >> dummy >> Nchannel[ifeb];
+    }
+
+  for(int imcr=0; imcr<8; imcr++)
+    {
+      for(int ifile=0; ifile<NSlot[imcr]; ifile++)
+	{
+	  filename.Form("./data/BMCalib_1204_2020/MCR_%d_Slot_%d_gain.txt", imcr, ifile);
+	  feb = imcr*8 + ifile;
+	  fin[feb].open(filename.Data());
+	 
+	  for(int ich=0; ich<Nchannel[feb]; ich++)
+	    {
+	      fin[feb] >> dummy >> thegain;
+	      gain[feb].push_back(thegain);
+	    }
+	}
+    }
+ 
+  cout << "Read gain data..." << '\n';
+
 }
 
 void PickSignal::Error(int error)

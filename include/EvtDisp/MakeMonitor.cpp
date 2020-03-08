@@ -24,6 +24,13 @@ MakeDetDisp* makedetdisp = new MakeDetDisp();
 
 void MakeMonitor::Display(EVTCluster* evtcluster)
 {
+
+  if(!firstdraw)
+    {
+      h->Delete();
+      v->Delete();
+    }
+
   if(firstdraw)
     {
       monitor = new TCanvas("monitor", "monitor", 2000, 1600);
@@ -39,6 +46,7 @@ void MakeMonitor::Display(EVTCluster* evtcluster)
       pad_bottom->Draw();
       firstdraw=false;
     }
+
 
   string dayofweek[] = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
   spillnumber = evtcluster->spillnum;
@@ -74,10 +82,11 @@ void MakeMonitor::Display(EVTCluster* evtcluster)
   makedetdisp->DrawProtonModule(0);
   makedetdisp->DrawWAGASCI(1,0);
   makedetdisp->DrawWAGASCI(2,0);
-  makehitdisp->DrawBMHit(evtcluster, 0);
-  makehitdisp->DrawPMHit(evtcluster, 0);
-  makehitdisp->DrawWGHit(evtcluster, 0, 1);
-  makehitdisp->DrawWGHit(evtcluster, 0, 2);
+  makehitdisp->DrawHit(evtcluster, 0);
+  //makehitdisp->DrawBMHit(evtcluster, 0);
+  //makehitdisp->DrawPMHit(evtcluster, 0);
+  //makehitdisp->DrawWGHit(evtcluster, 0, 1);
+  //makehitdisp->DrawWGHit(evtcluster, 0, 2);
 
   pad_top->cd();
   v->Draw();
@@ -87,12 +96,13 @@ void MakeMonitor::Display(EVTCluster* evtcluster)
   makedetdisp->DrawWAGASCI(2,1);
   makedetdisp->DrawWallMRD(3);
   makedetdisp->DrawWallMRD(4);
-  makehitdisp->DrawBMHit(evtcluster, 1);
-  makehitdisp->DrawPMHit(evtcluster, 1);
-  makehitdisp->DrawWGHit(evtcluster, 1, 1);
-  makehitdisp->DrawWGHit(evtcluster, 1, 2);
-  makehitdisp->DrawWMHit(evtcluster, 3);
-  makehitdisp->DrawWMHit(evtcluster, 4);
+  makehitdisp->DrawHit(evtcluster, 1);
+  //makehitdisp->DrawBMHit(evtcluster, 1);
+  //makehitdisp->DrawPMHit(evtcluster, 1);
+  //makehitdisp->DrawWGHit(evtcluster, 1, 1);
+  //makehitdisp->DrawWGHit(evtcluster, 1, 2);
+  //makehitdisp->DrawWMHit(evtcluster, 3);
+  //makehitdisp->DrawWMHit(evtcluster, 4);
 
   cout << TIME.Data() << '\n';
 

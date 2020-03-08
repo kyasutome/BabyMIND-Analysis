@@ -20,6 +20,8 @@ src/MakeEvent/CMakeFiles/MakeEvent.dir/MakeEvent.cpp.o
  ../lib/src/BMBeaminfo.hpp
  ../lib/src/BMConst.hpp
  ../lib/src/EVTCluster.hpp
+ ../lib/src/MCRecon.hpp
+ ../lib/src/MCTrue.hpp
  ../lib/src/PMRecon.hpp
  ../lib/src/WGRecon.hpp
  /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/src/MakeEvent/MakeEvent.cpp

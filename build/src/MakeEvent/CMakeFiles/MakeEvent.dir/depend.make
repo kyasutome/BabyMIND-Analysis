@@ -19,6 +19,8 @@ src/MakeEvent/CMakeFiles/MakeEvent.dir/MakeEvent.cpp.o: ../lib/src/BMBasicRecon.
 src/MakeEvent/CMakeFiles/MakeEvent.dir/MakeEvent.cpp.o: ../lib/src/BMBeaminfo.hpp
 src/MakeEvent/CMakeFiles/MakeEvent.dir/MakeEvent.cpp.o: ../lib/src/BMConst.hpp
 src/MakeEvent/CMakeFiles/MakeEvent.dir/MakeEvent.cpp.o: ../lib/src/EVTCluster.hpp
+src/MakeEvent/CMakeFiles/MakeEvent.dir/MakeEvent.cpp.o: ../lib/src/MCRecon.hpp
+src/MakeEvent/CMakeFiles/MakeEvent.dir/MakeEvent.cpp.o: ../lib/src/MCTrue.hpp
 src/MakeEvent/CMakeFiles/MakeEvent.dir/MakeEvent.cpp.o: ../lib/src/PMRecon.hpp
 src/MakeEvent/CMakeFiles/MakeEvent.dir/MakeEvent.cpp.o: ../lib/src/WGRecon.hpp
 src/MakeEvent/CMakeFiles/MakeEvent.dir/MakeEvent.cpp.o: ../src/MakeEvent/MakeEvent.cpp
