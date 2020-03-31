@@ -6,7 +6,7 @@ using namespace std;
 void calc_offaxis_flux()
 {
   TString filedir;
-  filedir.Form("/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/fluxfile");
+  filedir.Form("${anadir}/fluxfile");
   TString filename;
 
   double Sum[2];

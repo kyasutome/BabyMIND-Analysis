@@ -7,8 +7,8 @@
 
 using namespace std;
 //#define debug
-#define MC
-//#define beam
+//#define MC
+#define beam
 
 MakeHitDisp::MakeHitDisp()
 {

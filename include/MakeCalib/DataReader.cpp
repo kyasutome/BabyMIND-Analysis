@@ -9,11 +9,12 @@ using namespace std;
 DataReader::DataReader()
 {
 
-  for(int ifeb=0; ifeb<NUMBEROFFEB; ifeb++)
-    {
-      intersection[ifeb].clear();
-      febspill[ifeb].clear();
-    }
+  for(int i=0; i<3; i++)
+    for(int ifeb=0; ifeb<NUMBEROFFEB; ifeb++)
+      {
+	intersection[i][ifeb].clear();
+	febspill[i][ifeb].clear();
+      }
 
   cout << "read required data file..." << '\n';
 
@@ -96,6 +97,7 @@ void DataReader::ReadTree(TString filename, BMdata* BMbranch[NUMBEROFFEB])
     for(int itree=0; itree<NUMBEROFFEB; itree++)
     //for(int itree=0; itree<10; itree++)
       {
+	int countspill=0;
 	int totalhits=0;
 	treename.Form("FEB_%d", itree);
 	if((TTree*)Fileinput->Get(treename))
@@ -144,21 +146,36 @@ void DataReader::ReadTree(TString filename, BMdata* BMbranch[NUMBEROFFEB])
 		FEBtree[itree]->GetEntry(ientry);
 		for(int idata=0; idata<BMbranch[itree]->SpillTag->size(); idata++)
 		  {
-		    febspill[itree].push_back(BMbranch[itree]->SpillTag->at(idata));
+		    if(countspill<=20000)
+		      febspill[0][itree].push_back(BMbranch[itree]->SpillTag->at(idata));
+		    if(countspill>20000 && countspill<=40000)
+		      febspill[1][itree].push_back(BMbranch[itree]->SpillTag->at(idata));
+		    if(countspill>40000 && countspill<=60000)
+		      febspill[2][itree].push_back(BMbranch[itree]->SpillTag->at(idata));
 		  }		
+		countspill++;
 		totalhits += BMbranch[itree]->SpillTag->size();
 	      }
 
 	    //cout << "FEB:" << itree << " the number of FEB events= " << totalhits  << '\n';
 	    cout <<  totalhits  << '\n';
 	  }
-	DuplicateCut(&febspill[itree]);
+
+	DuplicateCut(&febspill[0][itree]);
+	DuplicateCut(&febspill[1][itree]);
+	DuplicateCut(&febspill[2][itree]);
       }
     
   }//File Exist (else)
 
   cout << "****************** Read Summary ******************"  << '\n';
-  cout << "Total Number of Spills = " << febspill[0].size() << '\n';
+  cout << "Total Number of Spills = " << febspill[0][0].size() << '\n';
+  cout << "Total Number of Spills = " << febspill[1][0].size() << '\n';
+  cout << "Total Number of Spills = " << febspill[2][0].size() << '\n';
+  cout << '\n';
+  cout << "Total Number of Spills = " << febspill[0][1].size() << '\n';
+  cout << "Total Number of Spills = " << febspill[1][1].size() << '\n';
+  cout << "Total Number of Spills = " << febspill[2][1].size() << '\n';
 
 }
 
@@ -169,36 +186,39 @@ void DataReader::DuplicateCut(vector<double> *vec)
 }
 
 
-void DataReader::BMSpillMatch(vector<double> *commonspill)
+void DataReader::BMSpillMatch(vector<double> commonspill[])
 {
-  set_intersection(febspill[0].begin(), febspill[0].end(),
-		   febspill[1].begin(), febspill[1].end(),
-		   inserter(intersection[0], intersection[0].end()));
-
-  for(int ifeb=1; ifeb<62; ifeb++)
+  for(int i=0; i<3; i++)
     {
-      if(febspill[ifeb].size()!=0)
+      if(febspill[i][0].size()==0) continue;
+      set_intersection(febspill[i][0].begin(), febspill[i][0].end(),
+		       febspill[i][1].begin(), febspill[i][1].end(),
+		       inserter(intersection[i][0], intersection[i][0].end()));
+      
+      for(int ifeb=1; ifeb<62; ifeb++)
 	{
-	  set_intersection(febspill[ifeb-1].begin(), febspill[ifeb-1].end(),
-			   febspill[ifeb].begin(), febspill[ifeb].end(),
-			   inserter(intersection[ifeb], intersection[ifeb].end()));
+	  if(febspill[i][ifeb].size()!=0)
+	    {
+	      set_intersection(febspill[i][ifeb-1].begin(), febspill[i][ifeb-1].end(),
+			       febspill[i][ifeb].begin(), febspill[i][ifeb].end(),
+			       inserter(intersection[i][ifeb], intersection[i][ifeb].end()));
+	    }
+	  
+	  if(febspill[i][ifeb].size()==0)
+	    {
+	      set_intersection(febspill[i][ifeb-1].begin(), febspill[i][ifeb-1].end(),
+			       febspill[i][ifeb-1].begin(), febspill[i][ifeb-1].end(),
+			       inserter(intersection[i][ifeb], intersection[i][ifeb].end()));
+	      
+	    }
 	}
-
-      if(febspill[ifeb].size()==0)
-	{
-	  set_intersection(febspill[ifeb-1].begin(), febspill[ifeb-1].end(),
-			   febspill[ifeb-1].begin(), febspill[ifeb-1].end(),
-			   inserter(intersection[ifeb], intersection[ifeb].end()));
-
-	}
-
+      
+      for(int j=0; j<intersection[i][61].size(); j++)
+	commonspill[i].push_back(intersection[i][61].at(j));
     }
-
   
-  for(int i=0; i<intersection[61].size(); i++)
-    commonspill->push_back(intersection[61].at(i));
-  
-
-  cout << "Total Number of Common Spills = " << febspill[0].size() << '\n';
+  cout << "Total Number of Common Spills = " << commonspill[0].size() << '\n';
+  cout << "Total Number of Common Spills = " << commonspill[1].size() << '\n';
+  cout << "Total Number of Common Spills = " << commonspill[2].size() << '\n';
 
 }

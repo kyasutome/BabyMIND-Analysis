@@ -18,7 +18,8 @@ private:
   double correction[19];
   //char file[300] = "./data/wagasci_mapping_table_2020_0130.txt";
   //char file[300] = "./data/wagasci_mapping_table_2020_0204.txt";
-  char file[300] = "./data/wagasci_mapping_table_2020_0208.txt";
+  //char file[300] = "./data/wagasci_mapping_table_2020_0208.txt";
+  char file[300] = "./data/wagasci_mapping_table_2020_0309.txt";
   const unsigned NDIFS      = 8;
   unsigned NCHIPS     = 20;
   const unsigned NCHANNELS  = 32;

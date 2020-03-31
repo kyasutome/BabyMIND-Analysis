@@ -29,7 +29,10 @@ private:
   int startsub;
   int endsub;
   int firstmatchspillentry=-1;
-  int dayspill = 20000;
+  int bmcount=0;
+  int wgcount=0;
+  int pmcount=0;
+  int dayspill = 31000;
   int thebeamspill;
   int thebmspill;
   int thewgspill;
@@ -66,7 +69,8 @@ public:
   void FindFirstSpill(int *detfirstspill, int detmon, int detdate, int dethour, int mod);
   void MakeBeamGroup(int isub);
   void SpillMatch(int isub, int mod);
-  void FillBSD(TTree* tree, TTree* otree, BMBSD* bmbsd, int mod);
+  void FillBSD(TTree* tree, TTree* otree, BMBSD* bmbsd, int mod, BMBasicRecon* bmbasicrecon,
+	       BMBeaminfo* bmbeaminfo);
   void KillAll();
 
   bool CheckDetTime(time_t unixtime, int mon, int date, int hour);

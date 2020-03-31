@@ -1,5 +1,6 @@
 #include <iostream>
 #include <stdio.h>
+#include <ctime>
 #include <time.h>
 
 
@@ -21,7 +22,7 @@ CellAutomation::CellAutomation()
 
   //Proton Module
   mindist[0] = 20;
-  maxdist[0] = 180;
+  maxdist[0] = 190;
   clusterz[0][0] = 30;
   clusterz[1][0] = 30;
   clusterxy[0][0] = 30;
@@ -29,7 +30,7 @@ CellAutomation::CellAutomation()
 
   //WAGASCI (upstream)
   mindist[1] = 10;
-  maxdist[1] = 130;
+  maxdist[1] = 100;
   clusterz[0][1] = 30;
   clusterz[1][1] = 30;
   clusterxy[0][1] = 20;
@@ -37,7 +38,7 @@ CellAutomation::CellAutomation()
 
   //WAGASCI (downstream)
   mindist[2] = 10;
-  maxdist[2] = 130;
+  maxdist[2] = 100;
   clusterz[0][2] = 30;
   clusterz[1][2] = 30;
   clusterxy[0][2] = 20;
@@ -60,12 +61,16 @@ CellAutomation::CellAutomation()
   //Baby MIND
   mindist[5] = 50;
   maxdist[5] = 950;
-  clusterz[0][5] = 100;
-  clusterz[1][5] = 100;
+  clusterz[0][5] = 50;
+  clusterz[1][5] = 50;
   clusterxy[0][5] = 70;
   clusterxy[1][5] = 250;
+
+
+  Chithreshold[0][0] = 500.;
+  Chithreshold[0][1] = 500.;    
   
-  for(int imod=0; imod<5; imod++)
+  for(int imod=1; imod<5; imod++)
     {
       Chithreshold[imod][0] = 500.;
       Chithreshold[imod][1] = 500.;
@@ -103,24 +108,29 @@ CellAutomation::CellAutomation()
 	    for(int itrack=0; itrack<30; itrack++)
 	      reconcluster[iview][ibunch][imod][itrack] = new DetCluster();
 	  }
-	
-	for(int i=0; i<5000; i++)
-	  dethitcluster[iview][i] = new DetHitCluster();
+
+	for(int j=0; j<2; j++)
+	  for(int i=0; i<5000; i++)
+	    dethitcluster[iview][j][i] = new DetHitCluster();
 
 	ataribunch[iview].clear();
 	
       }//ibunch
-    
+
 }
 
 CellAutomation::~CellAutomation()
 {
 }
 
-void CellAutomation::CellAutomaton(int targetmod, int view)
+void CellAutomation::CellAutomaton(int targetmod, int view, EVTCluster* evtcluster, vector<int> reject[])
 {
   for(int ibunch=1; ibunch<9; ibunch++)
     {
+      counttrack=0;
+      int repeat=0;
+      bool repeatflag = false;
+      eliminatehitgroup.clear();
       if(countbunchhit[view][ibunch]<=3) continue;
       
       Fillbeforerecon(ibunch, targetmod, view);
@@ -150,12 +160,12 @@ void CellAutomation::CellAutomaton(int targetmod, int view)
 
       cout << "Update" << '\n';      
       SetTime();
-      UpdateCellState(ibunch, view);
+      UpdateCellState(ibunch, view, 0);
       ShowTime();
  
       cout << "Recon" << '\n';           
       SetTime();
-      Reconstruction(ibunch, targetmod, view);
+      repeatflag = Reconstruction(ibunch, targetmod, view, repeat);
       ShowTime();
 
       if(Ntrack[view][ibunch]>=1)
@@ -163,21 +173,74 @@ void CellAutomation::CellAutomaton(int targetmod, int view)
 	  ataribunch[view].push_back(ibunch);
 	  cout << "view=" << view << '\n';
 	}
+
+      if(repeatflag)
+	{
+	  repeat++;
+	  testcluster[view][ibunch][targetmod]->Clear();
+	  detclusters[view][ibunch][targetmod]->Clear();	  
+
+	  //for(int i=0; i<5000; i++)
+	  //dethitcluster[view][i]->Clear();
+
+	  ReadData(targetmod, view, evtcluster, repeat);
+	  eliminatehitgroup.clear();
+	  Clustering(ibunch, targetmod, view);
+	  if(!MakeCell(ibunch, targetmod, view))
+	    {
+	      cout << "No cell is created." << '\n';
+	      continue;
+	    }
+	  SearchNeiborCell(ibunch, view, targetmod);	  
+	  UpdateCellState(ibunch, view, repeat);
+	  Reconstruction(ibunch, targetmod, view, repeat);
+	  //Reverse();
+	}
+
+      cout << "Reject start" << '\n';
+      if(Ntrack[view][ibunch]>=4)
+	RejectTracks(view, ibunch, targetmod, Ntrack[view][ibunch], &reject[ibunch]);
+
+      cout << "Reject end" << '\n';
+
+      if(Ntrack[view][ibunch]>=1)
+	{
+	  auto it = std::find(ataribunch[view].begin(), ataribunch[view].end(), ibunch);
+	  if( it != ataribunch[view].end())
+	    continue;
+	  ataribunch[view].push_back(ibunch);
+	  cout << "view=" << view << '\n';
+	}
     }
 }
 
-void CellAutomation::ReadData(int targetmod, int targetview, EVTCluster* evtcluster)
+void CellAutomation::ReadData(int targetmod, int targetview, EVTCluster* evtcluster, int repeat)
 {
+  totalhit=0;
   for(int ihit=0; ihit<evtcluster->mod.size(); ihit++)
     {
+      auto it = std::find(eliminatehitgroup.begin(), eliminatehitgroup.end(), ihit);
+      if( it != eliminatehitgroup.end())
+	continue;
+      
       bool timeclustering = false;
       double posx = evtcluster->dposx.at(ihit);
       double posy = evtcluster->dposy.at(ihit);
       double posz = evtcluster->dposz.at(ihit);
-      //double charge = evtcluster->charge.at(ihit);
-      //double hittime = evtcluster->Htime.at(ihit);
+     
+#ifdef beam
+      double charge = evtcluster->charge.at(ihit);
+      double hittime = evtcluster->Htime.at(ihit);
+      double pel = evtcluster->pel.at(ihit);
+      double per = evtcluster->per.at(ihit);
+      double pet = evtcluster->pet.at(ihit);
+#endif
+
+#ifdef MC
       double charge = -1.;
       double hittime = -1.;
+
+#endif
       int mod = evtcluster->mod.at(ihit);
       int view = evtcluster->view.at(ihit);
       int bunch = evtcluster->bunch.at(ihit);
@@ -203,38 +266,49 @@ void CellAutomation::ReadData(int targetmod, int targetview, EVTCluster* evtclus
 
       if(mod==targetmod && view==targetview)
 	{	  
-	  dethitcluster[unifiedview][ihit]->posz = posz;
-	  dethitcluster[unifiedview][ihit]->posx = posx;
-	  dethitcluster[unifiedview][ihit]->posy = posy;
-	  dethitcluster[unifiedview][ihit]->HG = charge;
-	  dethitcluster[unifiedview][ihit]->Htime = hittime;
+	  totalhit++;
+	  dethitcluster[unifiedview][repeat][ihit]->HG = charge;
+	  dethitcluster[unifiedview][repeat][ihit]->Htime = hittime;
+	  dethitcluster[unifiedview][repeat][ihit]->hitid = ihit;
 
-	  // cout << "targetview= " << targetview << " posx= " << posx << " posz= " << posz << '\n';
+	  if(view==0)
+	    {
+	      if(repeat==0 || repeat==1)
+		{
+		  dethitcluster[unifiedview][repeat][ihit]->posz = posz;
+		  dethitcluster[unifiedview][repeat][ihit]->posy = posy;
+		}
+	      if(repeat==2)
+		{
+		  dethitcluster[unifiedview][repeat][ihit]->posz = posy;
+		  dethitcluster[unifiedview][repeat][ihit]->posy = posz;
+		}
+	    }
 
-	  /*
-	  if(targetmod==5 && view==1)
-	    for(int ielement=0; ielement<testcluster[unifiedview][bunch][targetmod]->cluster.size(); ielement++)
-	      {
-		double reftime = testcluster[unifiedview][bunch][targetmod]->cluster.at(0)->Htime;
-		if(fabs(hittime - reftime) < 15)
-		  {
-		    cout << "reftime= " << reftime << " hittime= " << hittime << '\n';
-		    timeclustering = true;
-		    break;
-		  }
-	      }//ielement 
+	  if(view==1)
+	    {
+	      if(repeat==0 || repeat==1)
+		{
+		  dethitcluster[unifiedview][repeat][ihit]->posz = posz;
+		  dethitcluster[unifiedview][repeat][ihit]->posx = posx;
+		}
+	      if(repeat==2)
+		{
+		  dethitcluster[unifiedview][repeat][ihit]->posz = posx;
+		  dethitcluster[unifiedview][repeat][ihit]->posx = posz;
+		}
+	    }
 
-	    if(testcluster[unifiedview][bunch][targetmod]->cluster.size()==0)
-	      timeclustering = true;
-
-	    if(targetmod==5 && view==1 && !timeclustering)
-	      continue;
-	  */
-	    
-	    testcluster[unifiedview][bunch][targetmod]->cluster.push_back(dethitcluster[unifiedview][ihit]);
-	    countbunchhit[unifiedview][bunch]++;
+#ifdef beam
+	  dethitcluster[unifiedview][repeat][ihit]->per = per;
+	  dethitcluster[unifiedview][repeat][ihit]->pel = pel;
+	  dethitcluster[unifiedview][repeat][ihit]->pet = pet;
+#endif
+	  
+	  testcluster[unifiedview][bunch][targetmod]->cluster.push_back(dethitcluster[unifiedview][repeat][ihit]);
+	  countbunchhit[unifiedview][bunch]++;
 	}  
-    }
+    }//ihit
  
   //for(int bunch=1; bunch<=8; bunch++)
   // cout << "countbunchhit[bunch]= " << countbunchhit[unifiedview][bunch] << '\n';
@@ -293,7 +367,9 @@ void CellAutomation::Clustering(int bunch, int targetmod, int view)
 		  if(view==1)
 		    refposxy = dethitclusters[icluster]->cluster.at(ielement)->posx;
 		  
-		  if((fabs(posz-refposz) < clusterz[view][targetmod]) && (fabs(posxy-refposxy)<clusterxy[view][targetmod]))
+		  if((fabs(posz-refposz) < clusterz[view][targetmod]) 
+		     && 
+		     (fabs(posxy-refposxy) < clusterxy[view][targetmod]))
 		    {		      
 		      clustering = true;
 		      break;
@@ -345,11 +421,14 @@ bool CellAutomation::MakeCell(int bunch, int targetmod, int view)
   for(int ihit1=0; ihit1<detclusters[view][bunch][targetmod]->cluster.size()-1; ihit1++)
     for(int ihit2=ihit1+1; ihit2<detclusters[view][bunch][targetmod]->cluster.size(); ihit2++)
       if(fabs(detclusters[view][bunch][targetmod]
-	      ->cluster.at(ihit1)->posz-detclusters[view][bunch][targetmod]->cluster.at(ihit2)->posz)<maxdist[targetmod] &&
+	      ->cluster.at(ihit1)->posz-detclusters[view][bunch][targetmod]->cluster.at(ihit2)->posz)
+	 < maxdist[targetmod] 
+	 &&
 	 fabs(detclusters[view][bunch][targetmod]
-	      ->cluster.at(ihit1)->posz-detclusters[view][bunch][targetmod]->cluster.at(ihit2)->posz)>mindist[targetmod])
+	      ->cluster.at(ihit1)->posz-detclusters[view][bunch][targetmod]->cluster.at(ihit2)->posz)
+	 > mindist[targetmod])
 	{
-	  cell[view][bunch][cellcount]->dethitclusters[0] = detclusters[view][bunch][targetmod]->cluster.at(ihit1);	 
+	  cell[view][bunch][cellcount]->dethitclusters[0] = detclusters[view][bunch][targetmod]->cluster.at(ihit1);
 	  cell[view][bunch][cellcount]->dethitclusters[1] = detclusters[view][bunch][targetmod]->cluster.at(ihit2);
 	  cell[view][bunch][cellcount]->state=0;
 	  cell[view][bunch][cellcount]->idcard=cellcount;
@@ -361,8 +440,6 @@ bool CellAutomation::MakeCell(int bunch, int targetmod, int view)
 	  cell[view][bunch][cellcount]->meanposxy 
 	    = (detclusters[view][bunch][targetmod]->cluster.at(ihit1)->posxy 
 	       + detclusters[view][bunch][targetmod]->cluster.at(ihit2)->posxy)/2;
-
-	  //cout << "meanposz= " << cell[view][bunch][cellcount]->meanposz << " meanposy = " << cell[view][bunch][cellcount]->meanposxy << '\n';
 
 	  cellcount++;
 	}
@@ -381,8 +458,7 @@ bool CellAutomation::MakeCell(int bunch, int targetmod, int view)
       cout << cell[view][bunch][i]->meanposxy << '\n';
     }
   */
- 
- 
+  
 #ifdef debug
   for(int i=0; i<cellcount; i++)
     {
@@ -445,9 +521,12 @@ void CellAutomation::SearchNeiborCell(int bunch, int view, int mod)
     {
       if(cell[view][bunch][i]->downneibor.size()>=1)
 	{
-	  cout << "i= " << i << " " << cell[view][bunch][i]->meanposz << " " << cell[view][bunch][i]->downneibor.size() << " " 
-	       << cell[view][bunch][i]->upneibor.size() << " downneibor= " << cell[view][bunch][i]->downneibor.at(0)  << '\n';
-	  cout << cell[view][bunch][i]->dethitclusters[0]->posxy << " " << cell[view][bunch][i]->dethitclusters[1]->posxy << '\n';
+	  cout << "i= " << i << " " << cell[view][bunch][i]->meanposz << " " 
+	       << cell[view][bunch][i]->downneibor.size() << " " 
+	       << cell[view][bunch][i]->upneibor.size() << " downneibor= " 
+	       << cell[view][bunch][i]->downneibor.at(0)  << '\n';
+	  cout << cell[view][bunch][i]->dethitclusters[0]->posxy << " " 
+	       << cell[view][bunch][i]->dethitclusters[1]->posxy << '\n';
 	}
     }
 #endif 
@@ -466,10 +545,6 @@ double CellAutomation::GetChisquare(double posz1[], double posz2[], double posxy
       posxy[i].push_back(posxy1[i]);
       posxy[i].push_back(posxy2[i]);
       meanposz[i] = (posz1[i]+posz2[i])/2.;
-      //graposz[0+i*2] = posz1[i];
-      //graposz[1+i*2] = posz2[i];
-      //graposxy[0+i*2] = posxy1[i];
-      //graposxy[1+i*2] = posxy2[i];
     }
 
   if(meanposz[0] >= meanposz[1])
@@ -572,8 +647,6 @@ bool CellAutomation::SearchCommonCell(Cell* cell1, Cell* cell2)
       minxy = position4.at(minzid);
     }
 
-  
-
   //cout << "minz= " << minz << " maxz= " << maxz << '\n';
   //cout << "minxy= " << minxy << " maxxy= " << maxxy << '\n';
   
@@ -584,8 +657,7 @@ bool CellAutomation::SearchCommonCell(Cell* cell1, Cell* cell2)
       return commoncell;
 }
 
-
-void CellAutomation::UpdateCellState(int bunch, int view)
+void CellAutomation::UpdateCellState(int bunch, int view, int repeat)
 {
   vector<int> successcell;
   stategroup_sort.clear();
@@ -611,7 +683,7 @@ void CellAutomation::UpdateCellState(int bunch, int view)
       std::sort(successcell.begin(), successcell.end());
       auto last = std::unique(successcell.begin(), successcell.end());
       successcell.erase(last, successcell.end());
-
+      
       if(successcell.size()==0)
 	breakflag = true;
       
@@ -619,7 +691,9 @@ void CellAutomation::UpdateCellState(int bunch, int view)
 	{
 	  cell[view][bunch][successcell.at(icell)]->state++;	    
 	}
-      
+      if(breakflag) break;
+
+      /*
 #ifdef debug
       for(int icell=0; icell<cellcount; icell++)
 	{
@@ -631,13 +705,45 @@ void CellAutomation::UpdateCellState(int bunch, int view)
 	       << " upsize= " << cell[view][bunch][icell]->upneibor.size()
 	       << " downsize= " << cell[view][bunch][icell]->downneibor.size()
 	       << " StateSize= " << stategroup.size() << '\n'; 
-	}
-#endif 
-
-      if(breakflag) break;
+	       }
+	       #endif 
+      */
+      
     }//istep
 
+  vector<int> processedhit;
+  int HitID;
+  
+  if(repeat==2)
+    for(int icell=0; icell<cellcount; icell++)
+      {
+	for(int icluster=0; icluster<2; icluster++)
+	  for(int i=0; i<cell[view][bunch][icell]->dethitclusters[icluster]->cluster.size(); i++)
+	    {
+	      HitID =  cell[view][bunch][icell]->dethitclusters[icluster]->cluster.at(i)->hitid;	    
+	      auto it = std::find(processedhit.begin(), processedhit.end(), HitID);
+	      if( it != processedhit.end())
+		continue;
 
+	      double tempposz = cell[view][bunch][icell]->dethitclusters[icluster]->cluster.at(i)->posz;
+	      double tempposxy;
+	      if(view==0)
+		{
+		  tempposxy = cell[view][bunch][icell]->dethitclusters[icluster]->cluster.at(i)->posy;
+		  cell[view][bunch][icell]->dethitclusters[icluster]->cluster.at(i)->posz = tempposxy;
+		  cell[view][bunch][icell]->dethitclusters[icluster]->cluster.at(i)->posy = tempposz;
+		}
+	      if(view==1)
+		{
+		  tempposxy = cell[view][bunch][icell]->dethitclusters[icluster]->cluster.at(i)->posx;
+		  cell[view][bunch][icell]->dethitclusters[icluster]->cluster.at(i)->posz = tempposxy;
+		  cell[view][bunch][icell]->dethitclusters[icluster]->cluster.at(i)->posx = tempposz;
+		}
+	      processedhit.push_back(HitID);
+	    }
+      }
+  
+  
 /*
   for(int icell=0; icell<cellcount; icell++)
     {     
@@ -653,9 +759,8 @@ void CellAutomation::UpdateCellState(int bunch, int view)
       for(int inei=0; inei<cell[view][bunch][icell]->upneibor.size(); inei++)
 	cout << "Upneibor= " << cell[view][bunch][icell]->upneibor.at(inei) << '\n';      
     }
-*/
-
-
+*/  
+  
   for(int icell=0; icell<cellcount; icell++)  
     {
       stategroup_sort.push_back(cell[view][bunch][icell]->state);
@@ -664,10 +769,10 @@ void CellAutomation::UpdateCellState(int bunch, int view)
     }
 }
 
-
-void CellAutomation::Reconstruction(int bunch, int targetmod, int view)
+bool CellAutomation::Reconstruction(int bunch, int targetmod, int view, int repeat)
 {
-  int counttrack=0;
+  bool nextrecon = false;
+  //counttrack=0;
   eliminategroup.clear();
   safetycount=0;
 
@@ -692,7 +797,7 @@ void CellAutomation::Reconstruction(int bunch, int targetmod, int view)
       stategroup_sort.erase(last, stategroup_sort.end());
       maxstate = *std::max_element(stategroup_sort.begin(), stategroup_sort.end());
       cout << "maxstate= " << maxstate << '\n';
-      if(maxstate<=2) break;
+      if(maxstate<=1) break;
       
       for(int icell=0; icell<cellcount; icell++)
 	{
@@ -722,9 +827,7 @@ void CellAutomation::Reconstruction(int bunch, int targetmod, int view)
 		    }
 		  
 		  currentstate = cell[view][bunch][basecell]->state;
-		  
-		  //cout << "iprocess= " << iprocess << " basecell= " << basecell << " currentstate= " << currentstate  << '\n';
-		  
+		  		  
 		  vector<double> position1;
 		  position1.clear();
 		  position1.push_back(cell[view][bunch][basecell]->dethitclusters[0]->posz);
@@ -734,8 +837,6 @@ void CellAutomation::Reconstruction(int bunch, int targetmod, int view)
 		  int basecellid = basecellit - position1.begin();
 		  
 		  int ncell = cell[view][bunch][basecell]->upneibor.size();
-
-		  //cout << "ncell= " << ncell << '\n';
 		  
 		  if(ncell==0)
 		    {
@@ -774,6 +875,7 @@ void CellAutomation::Reconstruction(int bunch, int targetmod, int view)
 		      
 		      double thecellz = minposz - *std::min_element(temp.begin(), temp.end());
 		      auto posit = find(position2.begin(), position2.end(), thecellz);
+
 		      /*
 		      for(int i=0; i<position2.size(); i++)
 			{
@@ -786,8 +888,10 @@ void CellAutomation::Reconstruction(int bunch, int targetmod, int view)
 			  int pos = posit - position2.begin();
 			  int anothercell = cell[view][bunch][basecell]->upneibor.at(pos);
 			  //cout << "find the same z position" << '\n';
-			  double posytrydif = fabs(cell[view][bunch][thecell]->meanposxy - cell[view][bunch][basecell]->meanposxy);
-			  double posyrefdif = fabs(cell[view][bunch][anothercell]->meanposxy - cell[view][bunch][basecell]->meanposxy);
+			  double posytrydif 
+			    = fabs(cell[view][bunch][thecell]->meanposxy-cell[view][bunch][basecell]->meanposxy);
+			  double posyrefdif 
+			    = fabs(cell[view][bunch][anothercell]->meanposxy-cell[view][bunch][basecell]->meanposxy);
 			  if(posytrydif < posyrefdif)
 			    {
 			      /*
@@ -809,8 +913,7 @@ void CellAutomation::Reconstruction(int bunch, int targetmod, int view)
 			      */			      
 			      thecellz = 9999;
 			    }
-			}
-		      
+			}		      
 		      position2.push_back(thecellz);
 		    }//icell
 	      
@@ -855,16 +958,25 @@ void CellAutomation::Reconstruction(int bunch, int targetmod, int view)
 		  if(cell[view][bunch][nextcell]->state==0)
 		    {
 		      for(int i=0; i<cell[view][bunch][basecell]->dethitclusters[basecellid]->cluster.size(); i++)
-			reconcluster[view][bunch][targetmod][counttrack]
-			  ->cluster.push_back(cell[view][bunch][basecell]->dethitclusters[basecellid]->cluster.at(i));
+			{
+			  reconcluster[view][bunch][targetmod][counttrack]
+			    ->cluster.push_back(cell[view][bunch][basecell]
+						->dethitclusters[basecellid]->cluster.at(i));
+	
+			}
 		      for(int i=0; i<cell[view][bunch][nextcell]->dethitclusters[0]->cluster.size(); i++)
-			reconcluster[view][bunch][targetmod][counttrack]
-			  ->cluster.push_back(cell[view][bunch][nextcell]->dethitclusters[0]->cluster.at(i));
+			{
+			  reconcluster[view][bunch][targetmod][counttrack]
+			    ->cluster.push_back(cell[view][bunch][nextcell]->dethitclusters[0]->cluster.at(i));
+
+			}
 		      for(int i=0; i<cell[view][bunch][nextcell]->dethitclusters[1]->cluster.size(); i++)
-			reconcluster[view][bunch][targetmod][counttrack]
-			  ->cluster.push_back(cell[view][bunch][nextcell]->dethitclusters[1]->cluster.at(i));
-		      //cout << "CLUSTER SIZE= " << reconcluster[view][bunch][targetmod][counttrack]->cluster.size() 
-		      //	   << "******************************************************" << '\n';
+			{
+			  reconcluster[view][bunch][targetmod][counttrack]
+			    ->cluster.push_back(cell[view][bunch][nextcell]->dethitclusters[1]->cluster.at(i));
+	
+			}
+
   		      counttrack++;
 		      for(int i=0; i<eliminatesubgroup.size(); i++)
 			{
@@ -881,6 +993,7 @@ void CellAutomation::Reconstruction(int bunch, int targetmod, int view)
 		      //cout << "value= " << cell[view][bunch][basecell]->dethitclusters[basecellid]->cluster.at(i)->posz << '\n';
 		      reconcluster[view][bunch][targetmod][counttrack]
 			->cluster.push_back(cell[view][bunch][basecell]->dethitclusters[basecellid]->cluster.at(i));
+	
 		    }
 
 		}//fabs condition
@@ -905,9 +1018,72 @@ void CellAutomation::Reconstruction(int bunch, int targetmod, int view)
 	  break;
 	}
     }//while
+
+  for(int itrack=0; itrack<counttrack; itrack++)
+    for(int ihit=0; ihit<reconcluster[view][bunch][targetmod][itrack]->cluster.size(); ihit++)
+      {
+	int HITID = reconcluster[view][bunch][targetmod][itrack]->cluster.at(ihit)->hitid;
+	eliminatehitgroup.push_back(HITID);
+      }
+
+  std::sort(eliminatehitgroup.begin(), eliminatehitgroup.end());
+  auto last = std::unique(eliminatehitgroup.begin(), eliminatehitgroup.end());
+  eliminatehitgroup.erase(last, eliminatehitgroup.end());
+  if(repeat==0)
+    totalreconhit[repeat] = eliminatehitgroup.size();
+  if(repeat==1)
+    totalreconhit[repeat] = eliminatehitgroup.size()-totalreconhit[0];
+  if(repeat==2)
+    totalreconhit[repeat] = eliminatehitgroup.size()-totalreconhit[0]-totalreconhit[1];
   
   Ntrack[view][bunch] = counttrack;
   cout << "Ntrack= " << Ntrack[view][bunch] << '\n';
+  cout << "Total Recon Hit = " << totalreconhit[repeat] << "/" << " TotalHit = " << totalhit << '\n';
+
+  if( (totalhit - totalreconhit[repeat] >= 4) && targetmod<=2 && repeat<=1)
+    nextrecon = true;
+  return nextrecon;
+}
+
+void CellAutomation::RejectTracks(int view, int bunch, int targetmod, int ntrack, vector<int> *reject)
+{
+  vector<int> occupiedhitid[3];
+  int HITID;
+  for(int itrack=0; itrack<3; itrack++)
+    {
+      int overlap=0;
+      for(int ihit=0; ihit<reconcluster[view][bunch][targetmod][itrack]->cluster.size(); ihit++)
+	{
+	  int HITID = reconcluster[view][bunch][targetmod][itrack]->cluster.at(ihit)->hitid;
+	  occupiedhitid[itrack].push_back(HITID);
+	}      
+    }  
+
+  for(int itrack=3; itrack<ntrack; itrack++)
+    {
+      int overlap=0;
+      for(int ihit=0; ihit<reconcluster[view][bunch][targetmod][itrack]->cluster.size(); ihit++)
+	{
+	  int tryid = reconcluster[view][bunch][targetmod][itrack]->cluster.at(ihit)->hitid;
+	  auto it1 = std::find(occupiedhitid[0].begin(), occupiedhitid[0].end(), tryid);
+	  auto it2 = std::find(occupiedhitid[1].begin(), occupiedhitid[1].end(), tryid);
+	  auto it3 = std::find(occupiedhitid[2].begin(), occupiedhitid[2].end(), tryid);
+          if( it1 != occupiedhitid[0].end() || it2 != occupiedhitid[1].end() || it3 != occupiedhitid[2].end())
+	    overlap++;
+	}    
+      if(overlap>=2 && targetmod<=2)
+	{
+	  reject->push_back(itrack);
+	  cout << "view= " << view << " bunch= " << bunch   << " reject track= " << itrack << '\n';
+	}
+      if(overlap>=2 && targetmod==5)
+	{
+	  reject->push_back(itrack);
+	  cout << "view= " << view << " bunch= " << bunch   << " reject track= " << itrack << '\n';
+	}
+      
+    }//itrack  
+
 }
 
 void CellAutomation::SetTime()
@@ -947,8 +1123,9 @@ void CellAutomation::Clear()
 	  
 	}//ibunch
 
-      for(int i=0; i<5000; i++)
-	dethitcluster[iview][i]->Clear();
+      for(int j=0; j<2; j++)
+	for(int i=0; i<5000; i++)
+	  dethitcluster[iview][j][i]->Clear();
       
       ataribunch[iview].clear();
 

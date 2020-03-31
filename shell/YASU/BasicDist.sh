@@ -8,7 +8,7 @@ if [ $# -ne 0 ] ; then
   exit 1
 fi
 
-anadir=${PWD}
+#anadir=${PWD}
 datadir=$anadir/process/6-YASU
 
 filename=$(find  $datadir -type f -name "*BMCalib*")

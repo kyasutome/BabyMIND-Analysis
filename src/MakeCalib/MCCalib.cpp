@@ -21,6 +21,7 @@ int main( int argc, char **argv )
 
   std::string name = string(argv[1]);
   int runnumber = std::atoi(argv[2]);
+
   TString filedir(name);
   TString filepath;
 
@@ -29,7 +30,7 @@ int main( int argc, char **argv )
   MCTrue* mctrue = new MCTrue();
   MCdata* mcdata = new MCdata();
 
-  TFile *fout = new TFile(Form("./process/1-MCCalib/MCCalib_%d.root", runnumber), "RECREATE");
+  TFile *fout = new TFile(Form("${processdir}/process/1-MCCalib/MCCalib_%d.root", runnumber), "RECREATE");
   TTree *otree = new TTree("tree", "tree");
   otree->Branch("MCRecon","MCRecon",&mcrecon,32000,2);
   otree->Branch("MCTrue","MCTrue",&mctrue,32000,2);

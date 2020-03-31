@@ -1,7 +1,7 @@
 
 void make_plots_wgbsdrelated()
 {
-  TString filepath = "./result/BSD/WGAccumlated_pot.root";
+  TString filepath = "${processdir}/result/BSD/WGAccumlated_pot.root";
   TFile* fin = new TFile(filepath, "read");
   TH2F *bsd_plot = (TH2F*)fin->Get("bsd_accumlated_plot");
   TH2F *wg_plot = (TH2F*)fin->Get("wg_accumlated_plot");

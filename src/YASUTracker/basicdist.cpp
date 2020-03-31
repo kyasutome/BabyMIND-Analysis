@@ -23,7 +23,7 @@ int main( int argc, char **argv )
   std::string name = string(argv[1]);
   TString bmfilepath(name);
   //TApplication app("app", 0, 0, 0, 0);
-  TFile* ofile = new TFile("./result/YASU/basicdist.root","RECREATE");
+  TFile* ofile = new TFile("${processdir}/result/YASU/basicdist.root","RECREATE");
 
   //Set Parameters
   TChain* bmchain = new TChain("tree","tree");

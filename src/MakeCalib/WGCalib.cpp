@@ -36,11 +36,13 @@ int main( int argc, char **argv )
 
   for(int idif=0; idif<1; idif++)
     {
-      fout[idif] = new TFile(Form("./process/1-WGCalib/WGCalib_%d_dif%d.root", runnumber, idif), "RECREATE");
+      fout[idif] = new TFile(Form("${processdir}/process/1-WGCalib/WGCalib_%d_dif%d.root", runnumber, idif), 
+			     "RECREATE");
       otree[idif] = new TTree("tree", "tree");
       otree[idif]->Branch("WGRecon","WGRecon",&wgrecon,32000,2);
 
-      fout_nocut[idif] = new TFile(Form("./process/0-WGnocut/WGCalib_%d_dif%d.root", runnumber, idif), "RECREATE");
+      fout_nocut[idif] = new TFile(Form("${processdir}/process/0-WGnocut/WGCalib_%d_dif%d.root", 
+					runnumber, idif), "RECREATE");
       otree_nocut[idif] = new TTree("tree", "tree");
       otree_nocut[idif]->Branch("WGRecon","WGRecon",&wgrecon_nocut,32000,2);
 

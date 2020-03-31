@@ -28,13 +28,13 @@ PickSignal::~PickSignal()
 
 
 void PickSignal::YASUSignalCreation(int ientry, BMdata* bmbranch[NUMBEROFFEB], BMBasicRecon* bmbasicrecon, DataReader* dreader,
-				    vector<double> commonspill)
+				    vector<double> commonspill, int id)
 {  
   for(int ifeb=0; ifeb<2; ifeb++)
     {
       spillnum = commonspill.at(ientry);
-      auto spillit = find(dreader->febspill[yasufeb[ifeb]].begin(), dreader->febspill[yasufeb[ifeb]].end(), spillnum);
-      spillnum = spillit - dreader->febspill[yasufeb[ifeb]].begin();
+      auto spillit = find(dreader->febspill[id][yasufeb[ifeb]].begin(), dreader->febspill[id][yasufeb[ifeb]].end(), spillnum);
+      spillnum = spillit - dreader->febspill[id][yasufeb[ifeb]].begin();
       dreader->FEBtree[yasufeb[ifeb]]->GetEntry(spillnum);
 
       MakeGTrigCoins(bmbranch[yasufeb[ifeb]], &GTrigTagCoins, 0);
@@ -63,7 +63,7 @@ void PickSignal::YASUSignalCreation(int ientry, BMdata* bmbranch[NUMBEROFFEB], B
 }
 
 void PickSignal::SignalCreation(int ientry, BMdata* bmbranch[NUMBEROFFEB], BMBasicRecon* bmbasicrecon, DataReader* dreader, 
-				vector<double> commonspill) 
+				vector<double> commonspill, int id) 
 {
   for(int imod=1; imod<NUMBEROFMODULE+1; imod++)
   //for(int imod=1; imod<5; imod++)
@@ -72,8 +72,8 @@ void PickSignal::SignalCreation(int ientry, BMdata* bmbranch[NUMBEROFFEB], BMBas
 	{
 	  febid[ifeb] = dreader->MapCon[ifeb+1][imod];
 	  spillnum = commonspill.at(ientry);
-	  auto spillit = find(dreader->febspill[febid[ifeb]].begin(), dreader->febspill[febid[ifeb]].end(), spillnum);
-	  spillnum = spillit - dreader->febspill[febid[ifeb]].begin();
+	  auto spillit = find(dreader->febspill[id][febid[ifeb]].begin(), dreader->febspill[id][febid[ifeb]].end(), spillnum);
+	  spillnum = spillit - dreader->febspill[id][febid[ifeb]].begin() + 20000*id;
 	  dreader->FEBtree[febid[ifeb]]->GetEntry(spillnum);
 	}//ifeb loop
       
@@ -197,8 +197,8 @@ bool PickSignal::CheckYASUCoincidence(int Coinsyasu, BMdata* bmbranch, int* yasu
 double PickSignal::Findbunch(double hittime)
 {
   double bunch;
-  int lbound[8] = {40700, 41350, 41950, 42500, 43050, 43600, 44200, 44800};
-  int ubound[8] = {41000, 41650, 42200, 42850, 43400, 44000, 44500, 45100};
+  int lbound[8] = {40600, 41250, 41850, 42400, 42950, 43550, 44150, 44800};
+  int ubound[8] = {41100, 41750, 42300, 42750, 43500, 44100, 44650, 45100};
   bool beambunch = false;
 
   for(int i=0; i<8; i++)

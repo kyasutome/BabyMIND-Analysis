@@ -16,12 +16,15 @@ DetRecon::DetRecon()
 	    {
 	      for(int itrack=0; itrack<20; itrack++)
 		{	      
-		  for(int ihit=0; ihit<300; ihit++)
+		  for(int ihit=0; ihit<1000; ihit++)
 		    {
 		      posx[imod][iview][ibunch][itrack][ihit]=-9999.;
 		      posy[imod][iview][ibunch][itrack][ihit]=-9999.;
 		      posz[imod][iview][ibunch][itrack][ihit]=-9999.;
 		      charge[imod][iview][ibunch][itrack][ihit]=-9999.;
+		      per[imod][iview][ibunch][itrack][ihit]=-9999.;
+		      pel[imod][iview][ibunch][itrack][ihit]=-9999.;
+		      pet[imod][iview][ibunch][itrack][ihit]=-9999.;
 		      hittime[imod][iview][ibunch][itrack][ihit]=-9999.;
 		    }
 		  
@@ -68,12 +71,15 @@ void DetRecon::Clear()
 	    {
 	      for(int itrack=0; itrack<20; itrack++)
 		{	      
-		  for(int ihit=0; ihit<300; ihit++)
+		  for(int ihit=0; ihit<1000; ihit++)
 		    {
 		      posx[imod][iview][ibunch][itrack][ihit]=-9999.;
 		      posy[imod][iview][ibunch][itrack][ihit]=-9999.;
 		      posz[imod][iview][ibunch][itrack][ihit]=-9999.;
 		      charge[imod][iview][ibunch][itrack][ihit]=-9999.;
+		      per[imod][iview][ibunch][itrack][ihit]=-9999.;
+		      pel[imod][iview][ibunch][itrack][ihit]=-9999.;
+		      pet[imod][iview][ibunch][itrack][ihit]=-9999.;
 		      hittime[imod][iview][ibunch][itrack][ihit]=-9999.;
 		    }
 		  

@@ -46,7 +46,8 @@ int main( int argc, char **argv )
   tree->SetBranchAddress("PMRecon",&pmrecon);
 
   TString ofilepath;
-  ofilepath.Form("./process/2-BMBSD/BMBSD_PM_%s_%s_%s.root", run.c_str(), ssub.c_str(), esub.c_str());
+  ofilepath.Form("${processdir}/process/2-BMBSD/BMBSD_PM_%s_%s_%s.root", 
+		 run.c_str(), ssub.c_str(), esub.c_str());
   TFile* fout = new TFile(ofilepath, "recreate");
   TTree* otree = new TTree("tree", "tree");  
   otree->Branch("PMRecon","PMRecon", &pmrecon, 32000, 2);
@@ -89,7 +90,7 @@ int main( int argc, char **argv )
     {
       bsdapply->MakeBeamGroup(isub);
       bsdapply->SpillMatch(isub, 0);
-      bsdapply->FillBSD(tree, otree, bmbsd, 0);
+      //bsdapply->FillBSD(tree, otree, bmbsd, 0);
     }
 
   fout->cd();

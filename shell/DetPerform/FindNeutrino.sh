@@ -2,19 +2,19 @@
 
 if [ $# -ne 1 ] ; then
   echo ""
-  echo "  !!! ./FindNeutrino.sh [run]!!!"
+  echo "  !!! ./FindnuVertex.sh [run]!!!"
   echo "example)"
-  echo "./FindNeutrino.sh 92"
+  echo "./FindnuVertex.sh 4"
   exit 1
 fi
 
 run=$1
 
-anadir=${PWD}
+#anadir=${PWD}
 #datadir=$anadir/process/TEST
-datadir=$anadir/process/3-EVT
+datadir=$anadir/process/4-Recon
 
-filename=$(find  $datadir -type f -name "Evt_${run}.root")
+filename=$(find  $datadir -type f -name "Recon_${run}.root")
 if [ $? -eq 0 ] ; then
     echo "Found a file"
     else
@@ -25,4 +25,4 @@ echo "Filename="$filename
 echo "Analyze the file..."
 
 cd $anadir
-./bin/find_neutrino $filename $run
+./bin/find_nuvertex $filename $run

@@ -12,7 +12,7 @@ pmrun=$1
 pmssub=$2
 pmesub=$3
 
-anadir=${PWD}
+#anadir=${PWD}
 datadir=$anadir/process
 
 echo "Analyze the file..."

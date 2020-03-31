@@ -163,6 +163,8 @@ TCanvas.h
 /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/src/DetPerform/TCanvas.h
 TLegend.h
 /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/src/DetPerform/TLegend.h
+TStyle.h
+/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/src/DetPerform/TStyle.h
 easyrecon.cpp
 /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/src/DetPerform/easyrecon.cpp
 wallmrd.cpp
@@ -616,6 +618,12 @@ thread
 unordered_set
 -
 
+/Users/kenji/local/root/root-6.18.02/built/include/TColor.h
+TNamed.h
+/Users/kenji/local/root/root-6.18.02/built/include/TNamed.h
+TArrayI.h
+/Users/kenji/local/root/root-6.18.02/built/include/TArrayI.h
+
 /Users/kenji/local/root/root-6.18.02/built/include/TDataType.h
 TDictionary.h
 /Users/kenji/local/root/root-6.18.02/built/include/TDictionary.h
@@ -1045,6 +1053,24 @@ stdio.h
 -
 string
 -
+
+/Users/kenji/local/root/root-6.18.02/built/include/TStyle.h
+TNamed.h
+/Users/kenji/local/root/root-6.18.02/built/include/TNamed.h
+TAttAxis.h
+/Users/kenji/local/root/root-6.18.02/built/include/TAttAxis.h
+TAttLine.h
+/Users/kenji/local/root/root-6.18.02/built/include/TAttLine.h
+TAttFill.h
+/Users/kenji/local/root/root-6.18.02/built/include/TAttFill.h
+TAttText.h
+/Users/kenji/local/root/root-6.18.02/built/include/TAttText.h
+TAttMarker.h
+/Users/kenji/local/root/root-6.18.02/built/include/TAttMarker.h
+TArrayI.h
+/Users/kenji/local/root/root-6.18.02/built/include/TArrayI.h
+TColor.h
+/Users/kenji/local/root/root-6.18.02/built/include/TColor.h
 
 /Users/kenji/local/root/root-6.18.02/built/include/TSysEvtHandler.h
 TObject.h

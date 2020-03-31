@@ -58,9 +58,36 @@ int main( int argc, char **argv )
   tree->SetBranchAddress("DetRecon", &detrecon);
   cout << tree->GetEntries() << '\n';
 
+  TFile *fout = new TFile("${processdir}/result/DetPerform/detecteff.root", "RECREATE");
+  TTree *otree = new TTree("tree", "tree");
+
+  double numerator_origin[2][19];
+  otree->Branch("numerator_origin",numerator_origin,"numerator_origin[2][19]/D");
+  double denomenator_origin[2][19];
+  otree->Branch("denomenator_origin",denomenator_origin,"denomenator_origin[2][19]/D");
+  double numerator_yasu[2][2];
+  otree->Branch("numerator_yasu",numerator_yasu,"numerator_yasu[2][2]/D");
+  double denomenator_yasu[2][2];
+  otree->Branch("denomenator_yasu",denomenator_yasu,"denomenator_yasu[2][2]/D");
+
+  for(int iview=0; iview<2; iview++)
+    {
+      for(int ipln=0; ipln<19; ipln++)
+	{
+	  numerator_origin[iview][ipln]=0;
+	  denomenator_origin[iview][ipln]=0;
+	}
+      for(int ipln=0; ipln<2; ipln++)
+	{
+	  numerator_yasu[iview][ipln]=0;
+	  denomenator_yasu[iview][ipln]=0;
+	}
+    }
+
   int tracksample[20];
   //for(int ientry=0; ientry<3000; ientry++)
-  for(int ientry=0; ientry<tree->GetEntries(); ientry++)
+  for(int ientry=8000; ientry<tree->GetEntries(); ientry++)
+  //for(int ientry=8000; ientry<8100; ientry++)
     {
       for(int iview=0; iview<2; iview++)
 	for(int ibunch=0; ibunch<9; ibunch++)
@@ -217,6 +244,8 @@ int main( int argc, char **argv )
     {
       cout << "pln#= " << iplane << " "  << counteff[0][iplane] << "/" << counttotal[0][iplane] << " = " 
 	   << counteff[0][iplane]/(double)counttotal[0][iplane]*100 << "%" << '\n';
+      numerator_origin[0][iplane] = counteff[0][iplane];
+      denomenator_origin[0][iplane] = counttotal[0][iplane];
     }
 
   cout << "top view" << '\n';
@@ -224,6 +253,8 @@ int main( int argc, char **argv )
     {
       cout << "pln#= " << iplane << " "  << counteff[1][iplane] << "/" << counttotal[1][iplane] << " = " 
 	   << counteff[1][iplane]/(double)counttotal[1][iplane]*100 << "%" << '\n';
+      numerator_origin[1][iplane] = counteff[1][iplane];
+      denomenator_origin[1][iplane] = counttotal[1][iplane];
     }
 
 
@@ -232,6 +263,8 @@ int main( int argc, char **argv )
     {
       cout << "pln#= " << iplane+19 << " "  << countyasueff[iplane][0] << "/" << countyasutotal[iplane][0] << " = " 
 	   << countyasueff[iplane][0]/(double)countyasutotal[iplane][0]*100 << "%" << '\n';
+      numerator_yasu[iplane][0] = countyasueff[iplane][0];
+      denomenator_yasu[iplane][0] = countyasutotal[iplane][0];
     }
 
   cout << "Right Module" << '\n';
@@ -239,9 +272,14 @@ int main( int argc, char **argv )
     {
       cout << "pln#= " << iplane+19 << " "  << countyasueff[iplane][1] << "/" << countyasutotal[iplane][1] << " = " 
 	   << countyasueff[iplane][1]/(double)countyasutotal[iplane][1]*100 << "%" << '\n';
+      numerator_yasu[iplane][1] = countyasueff[iplane][1];
+      denomenator_yasu[iplane][1] = countyasutotal[iplane][1];
     }
-  
-  
+
+  otree->Fill();
+  otree->Write();
+  fout->Close();
+
   return 0;
   
 }

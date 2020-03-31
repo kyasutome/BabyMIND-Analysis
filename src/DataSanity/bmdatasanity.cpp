@@ -29,7 +29,7 @@ int main( int argc, char **argv )
   FileStat_t info;
 
   TString bmdirpath, bmfilename;
-  bmdirpath.Form("./process/2-BMBSD");
+  bmdirpath.Form("${processdir}/process/2-BMBSD");
   TChain* bmchain = new TChain("tree","tree");
 
   //Set Classes
@@ -80,7 +80,7 @@ int main( int argc, char **argv )
 
   cout << "sunix= " << sunix << " eunix= " << eunix << '\n';
 
-  TFile* fout = new TFile("./result/BSD/Accumlated_pot.root", "recreate");
+  TFile* fout = new TFile("${processdir}/result/BSD/Accumlated_pot.root", "recreate");
   TH2F *bsd_accumlated_plot = new TH2F("bsd_accumlated_plot", "", 500, sunix, eunix, 500, 0, 4.0);
   TH2F *bm_accumlated_plot = new TH2F("bm_accumlated_plot", "", 500, sunix, eunix, 500, 0, 4.0);
   char ytitle[128] = "Accumlated P.O.T (10^{20})";

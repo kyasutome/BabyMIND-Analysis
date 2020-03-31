@@ -9,7 +9,7 @@ if [ $# -ne 1 ] ; then
 fi
 
 runnumber=$1
-anadir=${PWD}
+#anadir=${PWD}
 
 #datadir="/Users/kenji/Dropbox/wagasci/wagasci/physdata/beam"
 #filename=$(find  $datadir -type f -name "*_${runnumber}_ecal_dif_0_tree.root")

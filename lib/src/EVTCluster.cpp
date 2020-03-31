@@ -12,6 +12,9 @@ EVTCluster::EVTCluster()
   pln.clear();
   channel.clear();
   charge.clear();
+  pel.clear();
+  per.clear();
+  pet.clear();
   Htime.clear();
   timedif.clear();
   bunch.clear();
@@ -44,6 +47,9 @@ void EVTCluster::Clear()
   pln.clear();
   channel.clear();
   charge.clear();
+  pel.clear();
+  per.clear();
+  pet.clear();
   Htime.clear();
   timedif.clear();
   bunch.clear();

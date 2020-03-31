@@ -69,7 +69,7 @@ int main( int argc, char **argv )
       tree[idif]= (TTree*)fin[idif]->Get("tree");
       tree[idif]->SetBranchAddress("WGRecon",&wgrecon[idif]);
 
-      ofilepath.Form("./process/0-WGnocut/WGBSD_%d_dif%d.root", wgrun, idif);      
+      ofilepath.Form("${processdir}/process/0-WGnocut/WGBSD_%d_dif%d.root", wgrun, idif);      
       fout[idif]= new TFile(ofilepath, "recreate");
       otree[idif]= new TTree("tree", "tree");  
       otree[idif]->Branch("WGRecon","WGRecon", &wgrecon[idif], 32000, 2);
@@ -107,7 +107,7 @@ int main( int argc, char **argv )
 	{
 	  bsdapply->MakeBeamGroup(isub);
 	  bsdapply->SpillMatch(isub, 1);
-	  bsdapply->FillBSD(tree[idif], otree[idif], bmbsd[idif], 1);
+	  //bsdapply->FillBSD(tree[idif], otree[idif], bmbsd[idif], 1);
 	}
 
       fout[idif]->cd();

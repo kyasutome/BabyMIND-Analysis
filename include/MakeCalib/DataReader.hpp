@@ -19,7 +19,7 @@ private:
   TFile* Fileinput;
   TString treename;
   FileStat_t info;
-  vector<double> intersection[NUMBEROFFEB];
+  vector<double> intersection[3][NUMBEROFFEB];
 
 public:
   Int_t Nentry[NUMBEROFFEB];
@@ -28,7 +28,7 @@ public:
   Double_t geomHor[5][95];
   Double_t geomVer[5][32];
   Double_t ModPos[4][19];
-  vector<double> febspill[NUMBEROFFEB];
+  vector<double> febspill[3][NUMBEROFFEB];
   
   //function
 public:
@@ -36,7 +36,7 @@ public:
   ~DataReader();
 
   void ReadTree(TString filename, BMdata* BMbranch[NUMBEROFFEB]);
-  void BMSpillMatch(vector<double> *commonspill);
+  void BMSpillMatch(vector<double> commonspill[]);
   static void DuplicateCut(vector<double> *vec);
 
 

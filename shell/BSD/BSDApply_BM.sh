@@ -15,7 +15,7 @@ bmmon=$4
 bmdate=$5
 bmhour=$6
 
-anadir=${PWD}
+#anadir=${PWD}
 datadir=$anadir/process
 
 filename=$(find  $datadir -type f -name "*BMCalib_$date$month*$run*")

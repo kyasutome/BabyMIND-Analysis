@@ -8,9 +8,10 @@ if [ $# -ne 1 ] ; then
   exit 1
 fi
 
-run=$1
+vertex=$1
+run=$2
 
-anadir=${PWD}
+#anadir=${PWD}
 datadir=$anadir/process/1-MCCalib
 
 #filename=$(find  $datadir -type f -name "*MCCalib_$run*")
@@ -23,4 +24,4 @@ datadir=$anadir/process/1-MCCalib
 #echo "Analyze the file..."
 
 cd $anadir
-./bin/MakeMCEvent $datadir $run
+./bin/MakeMCEvent $datadir $vertex $run

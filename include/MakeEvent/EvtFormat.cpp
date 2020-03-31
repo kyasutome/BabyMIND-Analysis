@@ -168,10 +168,15 @@ void EvtFormat::ReadMCChain(TString filepath, MCTrue *mctrue, MCRecon* mcrecon, 
 void EvtFormat::AddBMChain(TString filepath)
 {
 
-  //bmchain->Add(Form("%s/BMBSD_BM_25_Jan*.root",filepath.Data()));
-  //bmchain->Add(Form("%s/BMBSD_BM_26_Jan*.root",filepath.Data()));
-  //bmchain->Add(Form("%s/BMBSD_BM_27_Jan*.root",filepath.Data()));
-  //bmchain->Add(Form("%s/BMBSD_BM_28_Jan*.root",filepath.Data()));
+  //bmchain->Add(Form("%s/BMBSD_BM_29_Jan*.root",filepath.Data()));
+  //bmchain->Add(Form("%s/BMBSD_BM_30_Jan*.root",filepath.Data()));
+  //bmchain->Add(Form("%s/BMBSD_BM_31_Jan*.root",filepath.Data()));
+
+  
+  bmchain->Add(Form("%s/BMBSD_BM_25_Jan*.root",filepath.Data()));
+  bmchain->Add(Form("%s/BMBSD_BM_26_Jan*.root",filepath.Data()));
+  bmchain->Add(Form("%s/BMBSD_BM_27_Jan*.root",filepath.Data()));
+  bmchain->Add(Form("%s/BMBSD_BM_28_Jan*.root",filepath.Data()));
   bmchain->Add(Form("%s/BMBSD_BM_29_Jan*.root",filepath.Data()));
   bmchain->Add(Form("%s/BMBSD_BM_30_Jan*.root",filepath.Data()));
   bmchain->Add(Form("%s/BMBSD_BM_31_Jan*.root",filepath.Data()));
@@ -186,18 +191,26 @@ void EvtFormat::AddBMChain(TString filepath)
   bmchain->Add(Form("%s/BMBSD_BM_9_Feb*.root",filepath.Data()));
   bmchain->Add(Form("%s/BMBSD_BM_10_Feb*.root",filepath.Data()));
   
+  
 }
 
 void EvtFormat::AddPMChain(TString filepath)
 {
-  //pmchain->Add(Form("%s/BMBSD_PM_32453_60_80.root",filepath.Data()));
-  //pmchain->Add(Form("%s/BMBSD_PM_32453_80_100.root",filepath.Data()));
-  //pmchain->Add(Form("%s/BMBSD_PM_32453_100_123.root",filepath.Data()));
-  //pmchain->Add(Form("%s/BMBSD_PM_32461_0_20.root",filepath.Data()));
-  //pmchain->Add(Form("%s/BMBSD_PM_32461_20_40.root",filepath.Data()));
-  //pmchain->Add(Form("%s/BMBSD_PM_32461_40_48.root",filepath.Data()));
   //pmchain->Add(Form("%s/BMBSD_PM_32462_0_10.root",filepath.Data()));
   //pmchain->Add(Form("%s/BMBSD_PM_32462_10_20.root",filepath.Data()));
+  //pmchain->Add(Form("%s/BMBSD_PM_32462_20_34.root",filepath.Data()));
+  //pmchain->Add(Form("%s/BMBSD_PM_32462_34_50.root",filepath.Data()));
+  //pmchain->Add(Form("%s/BMBSD_PM_32462_50_70.root",filepath.Data()));
+  //pmchain->Add(Form("%s/BMBSD_PM_32462_70_90.root",filepath.Data()));
+  
+  pmchain->Add(Form("%s/BMBSD_PM_32453_60_80.root",filepath.Data()));
+  pmchain->Add(Form("%s/BMBSD_PM_32453_80_100.root",filepath.Data()));
+  pmchain->Add(Form("%s/BMBSD_PM_32453_100_123.root",filepath.Data()));
+  pmchain->Add(Form("%s/BMBSD_PM_32461_0_20.root",filepath.Data()));
+  pmchain->Add(Form("%s/BMBSD_PM_32461_20_40.root",filepath.Data()));
+  pmchain->Add(Form("%s/BMBSD_PM_32461_40_48.root",filepath.Data()));
+  pmchain->Add(Form("%s/BMBSD_PM_32462_0_10.root",filepath.Data()));
+  pmchain->Add(Form("%s/BMBSD_PM_32462_10_20.root",filepath.Data()));
   pmchain->Add(Form("%s/BMBSD_PM_32462_20_34.root",filepath.Data()));
   pmchain->Add(Form("%s/BMBSD_PM_32462_34_50.root",filepath.Data()));
   pmchain->Add(Form("%s/BMBSD_PM_32462_50_70.root",filepath.Data()));
@@ -218,10 +231,14 @@ void EvtFormat::AddPMChain(TString filepath)
   pmchain->Add(Form("%s/BMBSD_PM_32470_20_32.root",filepath.Data()));
   pmchain->Add(Form("%s/BMBSD_PM_32470_32_50.root",filepath.Data()));
   pmchain->Add(Form("%s/BMBSD_PM_32470_50_84.root",filepath.Data()));
+
 }
 
 void EvtFormat::AddWGChain(TString filepath, int idif)
 {
+  //wgchain[idif]->Add(Form("%s/BMBSD_WG_92_dif%d.root",filepath.Data(), idif));
+  //wgchain[idif]->Add(Form("%s/BMBSD_WG_93_dif%d.root",filepath.Data(), idif));
+  
   wgchain[idif]->Add(Form("%s/BMBSD_WG_92_dif%d.root",filepath.Data(), idif));
   wgchain[idif]->Add(Form("%s/BMBSD_WG_93_dif%d.root",filepath.Data(), idif));
   wgchain[idif]->Add(Form("%s/BMBSD_WG_95_dif%d.root",filepath.Data(), idif));
@@ -236,16 +253,32 @@ void EvtFormat::AddWGChain(TString filepath, int idif)
   wgchain[idif]->Add(Form("%s/BMBSD_WG_104_dif%d.root",filepath.Data(), idif));
   wgchain[idif]->Add(Form("%s/BMBSD_WG_105_dif%d.root",filepath.Data(), idif));
   wgchain[idif]->Add(Form("%s/BMBSD_WG_106_dif%d.root",filepath.Data(), idif));
-  //wgchain[idif]->Add(Form("%s/BMBSD_WG_*_dif%d.root",filepath.Data(), idif));  
+  
 }
 
 void EvtFormat::AddMCChain(TString filepath)
 {
-  //mcchain->Add(Form("%s/MCCalib_0.root",filepath.Data()));
-  mcchain->Add(Form("%s/MCCalib_4.root",filepath.Data()));
+  /*
+  for(int i=2; i<20; i++)
+    {
+      mcchain->Add(Form("%s/MCCalib_%d.root",filepath.Data(), i));
+    }
+  */
+
+  /*
+  for(int i=1; i<20; i++)
+    {
+      mcchain->Add(Form("%s/MCCalib_anti_%d.root",filepath.Data(), i));
+    }
+  */
+
+  for(int i=1; i<10; i++)
+    {
+      mcchain->Add(Form("%s/MCCalib_vertex3_%d.root",filepath.Data(), i));
+    }
+
   
 }
-
 
 bool EvtFormat::FillEvtClass(TTree *otree, int sunixtimeentry, int eunixtimeentry, vector<int> baseunixtime, vector<double> basepot, 
 			     BMBasicRecon* bmbasicrecon, BMBeaminfo* bmbeaminfo, PMRecon* pmrecon,
@@ -330,16 +363,29 @@ bool EvtFormat::FillEvtClass(TTree *otree, int sunixtimeentry, int eunixtimeentr
 	{	  
 	  bmchain->GetEntry(bmentry);
 	  spillnum = bmbeaminfo->spillnum;
-	  for(int i=0; i<bmbasicrecon->mod.size(); i++)
+	  //cout << "mod= " << bmbasicrecon->mod.size() << " LHG= " << bmbasicrecon->LHG.size() << '\n';
+	  //cout << "mod= " << bmbasicrecon->mod.size() << " RHG= " << bmbasicrecon->RHG.size() << '\n';
+	  //cout << "mod= " << bmbasicrecon->mod.size() << " THG= " << bmbasicrecon->THG.size() << '\n';
+	  for(int i=0; i<bmbasicrecon->LHG.size(); i++)
 	    {
 	      posx=-1;
 	      posy=-1;
 	      posz=-1;
-
 	      mod = bmbasicrecon->mod.at(i);
 	      view = bmbasicrecon->view.at(i);
 	      pln = bmbasicrecon->pln.at(i);
 	      channel = bmbasicrecon->channel.at(i);
+	      
+	      LHG = bmbasicrecon->LHG.at(i);
+	      RHG = bmbasicrecon->RHG.at(i);
+	      THG = bmbasicrecon->THG.at(i);
+	      lgain = bmbasicrecon->Lgain.at(i);
+	      rgain = bmbasicrecon->Rgain.at(i);
+	      tgain = bmbasicrecon->Tgain.at(i);
+	      
+	      pel = (LHG-50.)/lgain;
+	      per = (RHG-50.)/rgain;
+	      pet = (THG-50.)/tgain;
 	      
 	      fdimension->get_pos_bm_FC(mod, view, pln, channel, &dposx, &dposy, &dposz);
 	      if(view==0)
@@ -348,7 +394,20 @@ bool EvtFormat::FillEvtClass(TTree *otree, int sunixtimeentry, int eunixtimeentr
 		  //posy = dposy+fdimension->offset[(int)view][1][(int)mod];
 		  posz = dposz;
 		  posy = dposy;
-		  //cout << "pln= " << pln << " posz= " << posz << '\n';
+		  //cout << "pln= " << pln << " posz= " << posz << '\n';		  
+		  
+		  if(LHG!=-1)
+		    evtcluster->pel.push_back(pel);
+		  if(LHG==-1)
+		    evtcluster->pel.push_back(-1);
+		  if(RHG!=-1)
+		    evtcluster->per.push_back(per);
+		  if(RHG==-1)
+		    evtcluster->per.push_back(-1);
+		  if(THG!=-1)
+		    evtcluster->pet.push_back(pet);
+		  if(THG==-1)
+		    evtcluster->pet.push_back(-1);
 		}
 
 	      if(view==1)
@@ -357,7 +416,22 @@ bool EvtFormat::FillEvtClass(TTree *otree, int sunixtimeentry, int eunixtimeentr
 		  //posx = dposx+fdimension->offset[(int)view][1][(int)mod];
 		  posz = dposz;
 		  posx = dposx;
+
+		  if(LHG!=-1)
+		    evtcluster->pel.push_back(pel);
+		  if(LHG==-1)
+		    evtcluster->pel.push_back(-1);
+		  if(RHG!=-1)
+		    evtcluster->per.push_back(per);
+		  if(RHG==-1)
+		    evtcluster->per.push_back(-1);
+		  if(THG!=-1)
+		    evtcluster->pet.push_back(pet);
+		  if(THG==-1)
+		    evtcluster->pet.push_back(-1);
+
 		}
+
 	      evtcluster->posx.push_back(posx);
 	      evtcluster->posy.push_back(posy);
 	      evtcluster->posz.push_back(posz);
@@ -408,12 +482,17 @@ bool EvtFormat::FillEvtClass(TTree *otree, int sunixtimeentry, int eunixtimeentr
 		  posz = dposz+fdimension->offset[(int)view][0][(int)mod];
 		  posx = dposx+fdimension->offset[(int)view][1][(int)mod];
 		}
+
 	      evtcluster->posx.push_back(posx);
 	      evtcluster->posy.push_back(posy);
 	      evtcluster->posz.push_back(posz);
 	      evtcluster->dposx.push_back(dposx);
 	      evtcluster->dposy.push_back(dposy);
 	      evtcluster->dposz.push_back(dposz);
+
+	      evtcluster->pel.push_back(-1);
+	      evtcluster->per.push_back(-1);
+	      evtcluster->pet.push_back(-1);
 	    }
 
 	  (evtcluster->mod).insert(evtcluster->mod.end(), pmrecon->mod->begin(), pmrecon->mod->end());         
@@ -472,6 +551,10 @@ bool EvtFormat::FillEvtClass(TTree *otree, int sunixtimeentry, int eunixtimeentr
 		  evtcluster->dposx.push_back(dposx);
 		  evtcluster->dposy.push_back(dposy);
 		  evtcluster->dposz.push_back(dposz);
+
+		  evtcluster->pel.push_back(-1);
+		  evtcluster->per.push_back(-1);
+		  evtcluster->pet.push_back(-1);
 		}
 
 	      (evtcluster->mod).insert(evtcluster->mod.end(), wgrecon[idif]->mod.begin(), wgrecon[idif]->mod.end());         

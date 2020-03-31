@@ -1,3 +1,4 @@
+
 #!/bin/sh
 
 if [ $# -ne 3 ] ; then
@@ -12,7 +13,7 @@ run=$1
 ssub=$2
 esub=$3
 
-anadir=${PWD}
+#anadir=${PWD}
 datadir=$anadir/process
 
 filename=$(find  $datadir -type f -name "PMCalib_*$run*_*$ssub*_$esub*")

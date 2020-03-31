@@ -39,7 +39,7 @@ int main( int argc, char **argv )
 
   TString ofilepath;
   //ofilepath.Form("./result/DetPerform/BM_pedist_Jan_30_31.root");
-  ofilepath.Form("./result/DetPerform/BM_pedist_Feb_1_2.root");
+  ofilepath.Form("${processdir}/result/DetPerform/BM_pedist_Feb_1_2.root");
   TFile* fout = new TFile(ofilepath, "recreate");
   TTree* otree = new TTree("tree", "tree");
   double ope_hor[18][96][2];

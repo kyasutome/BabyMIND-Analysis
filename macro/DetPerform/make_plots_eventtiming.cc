@@ -6,7 +6,7 @@ void make_plots_eventtiming()
 {
   TCanvas *canvas[7];
   TString filename;
-  filename.Form("./result/DetPerform/eventtiming.root");
+  filename.Form("${processdir}/result/DetPerform/eventtiming.root");
   TFile *fin = new TFile(filename, "READ");
   TH1D *hist_eventtiming[7];
   TString histname;

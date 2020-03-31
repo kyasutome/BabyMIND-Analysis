@@ -10,7 +10,7 @@ fi
 
 wgrun=$1
 
-anadir=${PWD}
+#anadir=${PWD}
 datadir=$anadir/process/2-BMBSD
 
 #filename=$(find  $datadir -type f -name "*BMCalib*$date$month*$run-$subrun*")

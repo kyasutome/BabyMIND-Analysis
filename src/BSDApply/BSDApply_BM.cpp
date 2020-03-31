@@ -49,12 +49,13 @@ int main( int argc, char **argv )
   tree->SetBranchAddress("BMBeaminfo",&bmbeaminfo);
 
   TString ofilepath;
-  ofilepath.Form("./process/2-BMBSD/BMBSD_BM_%s_%s_%s.root", date.c_str(), month.c_str(), run.c_str());
+  ofilepath.Form("${processdir}/process/2-BMBSD/BMBSD_BM_%s_%s_%s.root", 
+		 date.c_str(), month.c_str(), run.c_str());
   TFile* fout = new TFile(ofilepath, "recreate");
   TTree* otree = new TTree("tree", "tree");  
-  otree->Branch("BMBasicRecon","BMBasicRecon", &bmbasicrecon, 32000, 2);
-  otree->Branch("BMBeaminfo","BMBeaminfo", &bmbeaminfo, 32000, 2);
-  otree->Branch("BMBSD", "BMBSD", &bmbsd, 32000, 2);
+  otree->Branch("BMBasicRecon","BMBasicRecon", &bmbasicrecon, 64000, 2);
+  otree->Branch("BMBeaminfo","BMBeaminfo", &bmbeaminfo, 64000, 2);
+  otree->Branch("BMBSD", "BMBSD", &bmbsd, 64000, 2);
 
   tree->GetEntry(0);
   int bmfirstspill = bmbeaminfo->spillnum;
@@ -90,7 +91,7 @@ int main( int argc, char **argv )
     {
       bsdapply->MakeBeamGroup(isub);
       bsdapply->SpillMatch(isub, 5);
-      bsdapply->FillBSD(tree, otree, bmbsd, 5);
+      bsdapply->FillBSD(tree, otree, bmbsd, 5, bmbasicrecon, bmbeaminfo);
     }
 
   fout->cd();

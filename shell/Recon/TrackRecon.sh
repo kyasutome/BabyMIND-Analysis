@@ -13,7 +13,7 @@ month=$2
 run=$3
 entry=$4
 
-anadir=${PWD}
+#anadir=${PWD}
 datadir=$anadir/process
 
 filename=$(find  $datadir -type f -name "*BMEvt_${date}${month}_${run}*")

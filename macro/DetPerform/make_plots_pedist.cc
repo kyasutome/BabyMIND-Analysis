@@ -7,7 +7,7 @@ void make_plots_pedist()
   TCanvas *c1 = new TCanvas("c1", "c1", 1000, 600);
   
   TString filename;
-  filename.Form("./result/DetPerform/BM_pedist.root");
+  filename.Form("${processdir}/result/DetPerform/BM_pedist.root");
   TFile *fin = new TFile(filename, "READ");
   TTree *tree = (TTree*)fin->Get("tree");
 

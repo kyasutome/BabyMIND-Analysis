@@ -745,24 +745,32 @@ src/MakeEvent/CMakeFiles/MakeEvent.dir/clean:
 # Directory level rules for directory src/DetPerform
 
 # Recursive "all" directory target.
+src/DetPerform/all: src/DetPerform/CMakeFiles/charge_eff.dir/all
+src/DetPerform/all: src/DetPerform/CMakeFiles/find_nuvertex.dir/all
 src/DetPerform/all: src/DetPerform/CMakeFiles/find_neutrino.dir/all
-src/DetPerform/all: src/DetPerform/CMakeFiles/wm_matchingtest.dir/all
-src/DetPerform/all: src/DetPerform/CMakeFiles/pedist.dir/all
 src/DetPerform/all: src/DetPerform/CMakeFiles/detect_eff.dir/all
+src/DetPerform/all: src/DetPerform/CMakeFiles/eventrate_detail.dir/all
 src/DetPerform/all: src/DetPerform/CMakeFiles/matching_eff.dir/all
 src/DetPerform/all: src/DetPerform/CMakeFiles/det_eventrate.dir/all
+src/DetPerform/all: src/DetPerform/CMakeFiles/pedist.dir/all
+src/DetPerform/all: src/DetPerform/CMakeFiles/lightyield_dist.dir/all
+src/DetPerform/all: src/DetPerform/CMakeFiles/wm_matchingtest.dir/all
 src/DetPerform/all: src/DetPerform/CMakeFiles/tracking_eff.dir/all
 src/DetPerform/all: src/DetPerform/CMakeFiles/wmcoincheck.dir/all
 
 .PHONY : src/DetPerform/all
 
 # Recursive "clean" directory target.
+src/DetPerform/clean: src/DetPerform/CMakeFiles/charge_eff.dir/clean
+src/DetPerform/clean: src/DetPerform/CMakeFiles/find_nuvertex.dir/clean
 src/DetPerform/clean: src/DetPerform/CMakeFiles/find_neutrino.dir/clean
-src/DetPerform/clean: src/DetPerform/CMakeFiles/wm_matchingtest.dir/clean
-src/DetPerform/clean: src/DetPerform/CMakeFiles/pedist.dir/clean
 src/DetPerform/clean: src/DetPerform/CMakeFiles/detect_eff.dir/clean
+src/DetPerform/clean: src/DetPerform/CMakeFiles/eventrate_detail.dir/clean
 src/DetPerform/clean: src/DetPerform/CMakeFiles/matching_eff.dir/clean
 src/DetPerform/clean: src/DetPerform/CMakeFiles/det_eventrate.dir/clean
+src/DetPerform/clean: src/DetPerform/CMakeFiles/pedist.dir/clean
+src/DetPerform/clean: src/DetPerform/CMakeFiles/lightyield_dist.dir/clean
+src/DetPerform/clean: src/DetPerform/CMakeFiles/wm_matchingtest.dir/clean
 src/DetPerform/clean: src/DetPerform/CMakeFiles/tracking_eff.dir/clean
 src/DetPerform/clean: src/DetPerform/CMakeFiles/wmcoincheck.dir/clean
 
@@ -774,13 +782,67 @@ src/DetPerform/preinstall:
 .PHONY : src/DetPerform/preinstall
 
 #=============================================================================
+# Target rules for target src/DetPerform/CMakeFiles/charge_eff.dir
+
+# All Build rule for target.
+src/DetPerform/CMakeFiles/charge_eff.dir/all:
+	$(MAKE) -f src/DetPerform/CMakeFiles/charge_eff.dir/build.make src/DetPerform/CMakeFiles/charge_eff.dir/depend
+	$(MAKE) -f src/DetPerform/CMakeFiles/charge_eff.dir/build.make src/DetPerform/CMakeFiles/charge_eff.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=37,38 "Built target charge_eff"
+.PHONY : src/DetPerform/CMakeFiles/charge_eff.dir/all
+
+# Build rule for subdir invocation for target.
+src/DetPerform/CMakeFiles/charge_eff.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 src/DetPerform/CMakeFiles/charge_eff.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles 0
+.PHONY : src/DetPerform/CMakeFiles/charge_eff.dir/rule
+
+# Convenience name for target.
+charge_eff: src/DetPerform/CMakeFiles/charge_eff.dir/rule
+
+.PHONY : charge_eff
+
+# clean rule for target.
+src/DetPerform/CMakeFiles/charge_eff.dir/clean:
+	$(MAKE) -f src/DetPerform/CMakeFiles/charge_eff.dir/build.make src/DetPerform/CMakeFiles/charge_eff.dir/clean
+.PHONY : src/DetPerform/CMakeFiles/charge_eff.dir/clean
+
+#=============================================================================
+# Target rules for target src/DetPerform/CMakeFiles/find_nuvertex.dir
+
+# All Build rule for target.
+src/DetPerform/CMakeFiles/find_nuvertex.dir/all:
+	$(MAKE) -f src/DetPerform/CMakeFiles/find_nuvertex.dir/build.make src/DetPerform/CMakeFiles/find_nuvertex.dir/depend
+	$(MAKE) -f src/DetPerform/CMakeFiles/find_nuvertex.dir/build.make src/DetPerform/CMakeFiles/find_nuvertex.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=47,48 "Built target find_nuvertex"
+.PHONY : src/DetPerform/CMakeFiles/find_nuvertex.dir/all
+
+# Build rule for subdir invocation for target.
+src/DetPerform/CMakeFiles/find_nuvertex.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 src/DetPerform/CMakeFiles/find_nuvertex.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles 0
+.PHONY : src/DetPerform/CMakeFiles/find_nuvertex.dir/rule
+
+# Convenience name for target.
+find_nuvertex: src/DetPerform/CMakeFiles/find_nuvertex.dir/rule
+
+.PHONY : find_nuvertex
+
+# clean rule for target.
+src/DetPerform/CMakeFiles/find_nuvertex.dir/clean:
+	$(MAKE) -f src/DetPerform/CMakeFiles/find_nuvertex.dir/build.make src/DetPerform/CMakeFiles/find_nuvertex.dir/clean
+.PHONY : src/DetPerform/CMakeFiles/find_nuvertex.dir/clean
+
+#=============================================================================
 # Target rules for target src/DetPerform/CMakeFiles/find_neutrino.dir
 
 # All Build rule for target.
 src/DetPerform/CMakeFiles/find_neutrino.dir/all:
 	$(MAKE) -f src/DetPerform/CMakeFiles/find_neutrino.dir/build.make src/DetPerform/CMakeFiles/find_neutrino.dir/depend
 	$(MAKE) -f src/DetPerform/CMakeFiles/find_neutrino.dir/build.make src/DetPerform/CMakeFiles/find_neutrino.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=41,42 "Built target find_neutrino"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=45,46 "Built target find_neutrino"
 .PHONY : src/DetPerform/CMakeFiles/find_neutrino.dir/all
 
 # Build rule for subdir invocation for target.
@@ -801,67 +863,13 @@ src/DetPerform/CMakeFiles/find_neutrino.dir/clean:
 .PHONY : src/DetPerform/CMakeFiles/find_neutrino.dir/clean
 
 #=============================================================================
-# Target rules for target src/DetPerform/CMakeFiles/wm_matchingtest.dir
-
-# All Build rule for target.
-src/DetPerform/CMakeFiles/wm_matchingtest.dir/all:
-	$(MAKE) -f src/DetPerform/CMakeFiles/wm_matchingtest.dir/build.make src/DetPerform/CMakeFiles/wm_matchingtest.dir/depend
-	$(MAKE) -f src/DetPerform/CMakeFiles/wm_matchingtest.dir/build.make src/DetPerform/CMakeFiles/wm_matchingtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=49,50 "Built target wm_matchingtest"
-.PHONY : src/DetPerform/CMakeFiles/wm_matchingtest.dir/all
-
-# Build rule for subdir invocation for target.
-src/DetPerform/CMakeFiles/wm_matchingtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 src/DetPerform/CMakeFiles/wm_matchingtest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles 0
-.PHONY : src/DetPerform/CMakeFiles/wm_matchingtest.dir/rule
-
-# Convenience name for target.
-wm_matchingtest: src/DetPerform/CMakeFiles/wm_matchingtest.dir/rule
-
-.PHONY : wm_matchingtest
-
-# clean rule for target.
-src/DetPerform/CMakeFiles/wm_matchingtest.dir/clean:
-	$(MAKE) -f src/DetPerform/CMakeFiles/wm_matchingtest.dir/build.make src/DetPerform/CMakeFiles/wm_matchingtest.dir/clean
-.PHONY : src/DetPerform/CMakeFiles/wm_matchingtest.dir/clean
-
-#=============================================================================
-# Target rules for target src/DetPerform/CMakeFiles/pedist.dir
-
-# All Build rule for target.
-src/DetPerform/CMakeFiles/pedist.dir/all:
-	$(MAKE) -f src/DetPerform/CMakeFiles/pedist.dir/build.make src/DetPerform/CMakeFiles/pedist.dir/depend
-	$(MAKE) -f src/DetPerform/CMakeFiles/pedist.dir/build.make src/DetPerform/CMakeFiles/pedist.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=45,46 "Built target pedist"
-.PHONY : src/DetPerform/CMakeFiles/pedist.dir/all
-
-# Build rule for subdir invocation for target.
-src/DetPerform/CMakeFiles/pedist.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 src/DetPerform/CMakeFiles/pedist.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles 0
-.PHONY : src/DetPerform/CMakeFiles/pedist.dir/rule
-
-# Convenience name for target.
-pedist: src/DetPerform/CMakeFiles/pedist.dir/rule
-
-.PHONY : pedist
-
-# clean rule for target.
-src/DetPerform/CMakeFiles/pedist.dir/clean:
-	$(MAKE) -f src/DetPerform/CMakeFiles/pedist.dir/build.make src/DetPerform/CMakeFiles/pedist.dir/clean
-.PHONY : src/DetPerform/CMakeFiles/pedist.dir/clean
-
-#=============================================================================
 # Target rules for target src/DetPerform/CMakeFiles/detect_eff.dir
 
 # All Build rule for target.
 src/DetPerform/CMakeFiles/detect_eff.dir/all:
 	$(MAKE) -f src/DetPerform/CMakeFiles/detect_eff.dir/build.make src/DetPerform/CMakeFiles/detect_eff.dir/depend
 	$(MAKE) -f src/DetPerform/CMakeFiles/detect_eff.dir/build.make src/DetPerform/CMakeFiles/detect_eff.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=39,40 "Built target detect_eff"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=41,42 "Built target detect_eff"
 .PHONY : src/DetPerform/CMakeFiles/detect_eff.dir/all
 
 # Build rule for subdir invocation for target.
@@ -882,13 +890,40 @@ src/DetPerform/CMakeFiles/detect_eff.dir/clean:
 .PHONY : src/DetPerform/CMakeFiles/detect_eff.dir/clean
 
 #=============================================================================
+# Target rules for target src/DetPerform/CMakeFiles/eventrate_detail.dir
+
+# All Build rule for target.
+src/DetPerform/CMakeFiles/eventrate_detail.dir/all:
+	$(MAKE) -f src/DetPerform/CMakeFiles/eventrate_detail.dir/build.make src/DetPerform/CMakeFiles/eventrate_detail.dir/depend
+	$(MAKE) -f src/DetPerform/CMakeFiles/eventrate_detail.dir/build.make src/DetPerform/CMakeFiles/eventrate_detail.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=43,44 "Built target eventrate_detail"
+.PHONY : src/DetPerform/CMakeFiles/eventrate_detail.dir/all
+
+# Build rule for subdir invocation for target.
+src/DetPerform/CMakeFiles/eventrate_detail.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 src/DetPerform/CMakeFiles/eventrate_detail.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles 0
+.PHONY : src/DetPerform/CMakeFiles/eventrate_detail.dir/rule
+
+# Convenience name for target.
+eventrate_detail: src/DetPerform/CMakeFiles/eventrate_detail.dir/rule
+
+.PHONY : eventrate_detail
+
+# clean rule for target.
+src/DetPerform/CMakeFiles/eventrate_detail.dir/clean:
+	$(MAKE) -f src/DetPerform/CMakeFiles/eventrate_detail.dir/build.make src/DetPerform/CMakeFiles/eventrate_detail.dir/clean
+.PHONY : src/DetPerform/CMakeFiles/eventrate_detail.dir/clean
+
+#=============================================================================
 # Target rules for target src/DetPerform/CMakeFiles/matching_eff.dir
 
 # All Build rule for target.
 src/DetPerform/CMakeFiles/matching_eff.dir/all:
 	$(MAKE) -f src/DetPerform/CMakeFiles/matching_eff.dir/build.make src/DetPerform/CMakeFiles/matching_eff.dir/depend
 	$(MAKE) -f src/DetPerform/CMakeFiles/matching_eff.dir/build.make src/DetPerform/CMakeFiles/matching_eff.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=43,44 "Built target matching_eff"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=51,52 "Built target matching_eff"
 .PHONY : src/DetPerform/CMakeFiles/matching_eff.dir/all
 
 # Build rule for subdir invocation for target.
@@ -915,7 +950,7 @@ src/DetPerform/CMakeFiles/matching_eff.dir/clean:
 src/DetPerform/CMakeFiles/det_eventrate.dir/all:
 	$(MAKE) -f src/DetPerform/CMakeFiles/det_eventrate.dir/build.make src/DetPerform/CMakeFiles/det_eventrate.dir/depend
 	$(MAKE) -f src/DetPerform/CMakeFiles/det_eventrate.dir/build.make src/DetPerform/CMakeFiles/det_eventrate.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=37,38 "Built target det_eventrate"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=39,40 "Built target det_eventrate"
 .PHONY : src/DetPerform/CMakeFiles/det_eventrate.dir/all
 
 # Build rule for subdir invocation for target.
@@ -936,13 +971,94 @@ src/DetPerform/CMakeFiles/det_eventrate.dir/clean:
 .PHONY : src/DetPerform/CMakeFiles/det_eventrate.dir/clean
 
 #=============================================================================
+# Target rules for target src/DetPerform/CMakeFiles/pedist.dir
+
+# All Build rule for target.
+src/DetPerform/CMakeFiles/pedist.dir/all:
+	$(MAKE) -f src/DetPerform/CMakeFiles/pedist.dir/build.make src/DetPerform/CMakeFiles/pedist.dir/depend
+	$(MAKE) -f src/DetPerform/CMakeFiles/pedist.dir/build.make src/DetPerform/CMakeFiles/pedist.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=53,54 "Built target pedist"
+.PHONY : src/DetPerform/CMakeFiles/pedist.dir/all
+
+# Build rule for subdir invocation for target.
+src/DetPerform/CMakeFiles/pedist.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 src/DetPerform/CMakeFiles/pedist.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles 0
+.PHONY : src/DetPerform/CMakeFiles/pedist.dir/rule
+
+# Convenience name for target.
+pedist: src/DetPerform/CMakeFiles/pedist.dir/rule
+
+.PHONY : pedist
+
+# clean rule for target.
+src/DetPerform/CMakeFiles/pedist.dir/clean:
+	$(MAKE) -f src/DetPerform/CMakeFiles/pedist.dir/build.make src/DetPerform/CMakeFiles/pedist.dir/clean
+.PHONY : src/DetPerform/CMakeFiles/pedist.dir/clean
+
+#=============================================================================
+# Target rules for target src/DetPerform/CMakeFiles/lightyield_dist.dir
+
+# All Build rule for target.
+src/DetPerform/CMakeFiles/lightyield_dist.dir/all:
+	$(MAKE) -f src/DetPerform/CMakeFiles/lightyield_dist.dir/build.make src/DetPerform/CMakeFiles/lightyield_dist.dir/depend
+	$(MAKE) -f src/DetPerform/CMakeFiles/lightyield_dist.dir/build.make src/DetPerform/CMakeFiles/lightyield_dist.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=49,50 "Built target lightyield_dist"
+.PHONY : src/DetPerform/CMakeFiles/lightyield_dist.dir/all
+
+# Build rule for subdir invocation for target.
+src/DetPerform/CMakeFiles/lightyield_dist.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 src/DetPerform/CMakeFiles/lightyield_dist.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles 0
+.PHONY : src/DetPerform/CMakeFiles/lightyield_dist.dir/rule
+
+# Convenience name for target.
+lightyield_dist: src/DetPerform/CMakeFiles/lightyield_dist.dir/rule
+
+.PHONY : lightyield_dist
+
+# clean rule for target.
+src/DetPerform/CMakeFiles/lightyield_dist.dir/clean:
+	$(MAKE) -f src/DetPerform/CMakeFiles/lightyield_dist.dir/build.make src/DetPerform/CMakeFiles/lightyield_dist.dir/clean
+.PHONY : src/DetPerform/CMakeFiles/lightyield_dist.dir/clean
+
+#=============================================================================
+# Target rules for target src/DetPerform/CMakeFiles/wm_matchingtest.dir
+
+# All Build rule for target.
+src/DetPerform/CMakeFiles/wm_matchingtest.dir/all:
+	$(MAKE) -f src/DetPerform/CMakeFiles/wm_matchingtest.dir/build.make src/DetPerform/CMakeFiles/wm_matchingtest.dir/depend
+	$(MAKE) -f src/DetPerform/CMakeFiles/wm_matchingtest.dir/build.make src/DetPerform/CMakeFiles/wm_matchingtest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=57,58 "Built target wm_matchingtest"
+.PHONY : src/DetPerform/CMakeFiles/wm_matchingtest.dir/all
+
+# Build rule for subdir invocation for target.
+src/DetPerform/CMakeFiles/wm_matchingtest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 src/DetPerform/CMakeFiles/wm_matchingtest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles 0
+.PHONY : src/DetPerform/CMakeFiles/wm_matchingtest.dir/rule
+
+# Convenience name for target.
+wm_matchingtest: src/DetPerform/CMakeFiles/wm_matchingtest.dir/rule
+
+.PHONY : wm_matchingtest
+
+# clean rule for target.
+src/DetPerform/CMakeFiles/wm_matchingtest.dir/clean:
+	$(MAKE) -f src/DetPerform/CMakeFiles/wm_matchingtest.dir/build.make src/DetPerform/CMakeFiles/wm_matchingtest.dir/clean
+.PHONY : src/DetPerform/CMakeFiles/wm_matchingtest.dir/clean
+
+#=============================================================================
 # Target rules for target src/DetPerform/CMakeFiles/tracking_eff.dir
 
 # All Build rule for target.
 src/DetPerform/CMakeFiles/tracking_eff.dir/all:
 	$(MAKE) -f src/DetPerform/CMakeFiles/tracking_eff.dir/build.make src/DetPerform/CMakeFiles/tracking_eff.dir/depend
 	$(MAKE) -f src/DetPerform/CMakeFiles/tracking_eff.dir/build.make src/DetPerform/CMakeFiles/tracking_eff.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=47,48 "Built target tracking_eff"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=55,56 "Built target tracking_eff"
 .PHONY : src/DetPerform/CMakeFiles/tracking_eff.dir/all
 
 # Build rule for subdir invocation for target.
@@ -969,7 +1085,7 @@ src/DetPerform/CMakeFiles/tracking_eff.dir/clean:
 src/DetPerform/CMakeFiles/wmcoincheck.dir/all:
 	$(MAKE) -f src/DetPerform/CMakeFiles/wmcoincheck.dir/build.make src/DetPerform/CMakeFiles/wmcoincheck.dir/depend
 	$(MAKE) -f src/DetPerform/CMakeFiles/wmcoincheck.dir/build.make src/DetPerform/CMakeFiles/wmcoincheck.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=51,52 "Built target wmcoincheck"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kenji/Dropbox/wagasci/babymind/software/BabyMIND-Analysis/build/CMakeFiles --progress-num=59,60 "Built target wmcoincheck"
 .PHONY : src/DetPerform/CMakeFiles/wmcoincheck.dir/all
 
 # Build rule for subdir invocation for target.

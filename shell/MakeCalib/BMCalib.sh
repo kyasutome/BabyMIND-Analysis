@@ -12,7 +12,7 @@ date=$1
 month=$2
 run=$3
 
-anadir=${PWD}
+#anadir=${PWD}
 datadir=$anadir/../../data/physdata/$date$month
 
 filename=$(find  $datadir -type f -name "*Run$run*all*")

@@ -225,7 +225,7 @@ int main( int argc, char **argv )
   WMDQCheck *wmdqcheck = new WMDQCheck();
   WMDQData *wmdqdata = new WMDQData();
   
-  TFile *fout = new TFile(Form("./process/8-WMDQCHECK/WMDQCHECK.root"), "recreate");
+  TFile *fout = new TFile(Form("${processdir}/process/8-WMDQCHECK/WMDQCHECK.root"), "recreate");
   TTree *otree = new TTree("tree","tree");
   otree->Branch("WMDQData","WMDQData",&wmdqdata,32000,2);
 

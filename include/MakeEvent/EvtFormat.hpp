@@ -56,6 +56,9 @@ public:
   vector <int> wgunix[8];
 
   int mod, view, pln, channel;
+  double LHG, RHG, THG;
+  double lgain, rgain, tgain;
+  double pel, per, pet;
   double dposx, dposy, dposz;
   double posx, posy, posz;
 

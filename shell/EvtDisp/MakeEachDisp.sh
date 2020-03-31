@@ -11,7 +11,7 @@ fi
 filepath=$1
 targetentry=$2
 
-anadir=${PWD}
+#anadir=${PWD}
 datadir=$anadir/process
 
 echo "Analyze the file..."

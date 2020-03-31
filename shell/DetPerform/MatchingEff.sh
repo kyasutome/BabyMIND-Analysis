@@ -10,7 +10,7 @@ fi
 
 run=$1
 
-anadir=${PWD}
+#anadir=${PWD}
 datadir=$anadir/process/4-Recon
 
 filename=$(find  $datadir -type f -name "Recon_${run}.root")

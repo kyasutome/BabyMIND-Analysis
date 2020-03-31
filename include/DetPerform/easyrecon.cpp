@@ -132,7 +132,7 @@ bool EasyRecon::NHCheck(int mod, int view, BasicRecon* basicrecon, vector<int> *
 	}
       
       if(mod==5)
-	if(basicrecon->Nhit[view][ibunch]>10)
+	if(basicrecon->Nhit[view][ibunch]>0)
 	  {
 	    ataribunch->push_back(ibunch);
 	    nhcheck = true;

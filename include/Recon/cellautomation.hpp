@@ -34,6 +34,9 @@ private:
   int unifiedview;
   int safetycount=0;
   int cellcount=0;
+  int totalhit=0;
+  int totalreconhit[3]={0, 0, 0};
+  int counttrack=0;
   int maxstate;
   int currentstate;
   const static int ncell=4000;
@@ -51,6 +54,7 @@ private:
   vector<int> idcardgroup;
   vector<int> eliminategroup;
   vector<int> eliminatesubgroup;
+  vector<int> eliminatehitgroup;
 
   TF1* linear;
   TH1D *fitpaper;
@@ -60,7 +64,7 @@ private:
   clock_t start, end;
 
   Cell* cell[2][9][ncell];
-  DetHitCluster* dethitcluster[2][5000];
+  DetHitCluster* dethitcluster[2][2][5000];
   DetCluster* testcluster[2][9][6];
   DetClusters* detclusters[2][9][6];
 
@@ -71,21 +75,22 @@ public:
   DetCluster* reconcluster[2][9][6][30];
   int Ntrack[2][9];
   int countbunchhit[2][9];
-   vector<int>ataribunch[2];
+  vector<int>ataribunch[2];
 
 public:
 
   CellAutomation();
   ~CellAutomation();
 
-  void ReadData(int targetmod, int targetview, EVTCluster* evtcluster);
-  void CellAutomaton(int targetmod, int view);
+  void ReadData(int targetmod, int targetview, EVTCluster* evtcluster, int repeat);
+  void CellAutomaton(int targetmod, int view, EVTCluster* evtcluster, vector<int> reject[]);
   void Fillbeforerecon(int bunch, int targetmod, int view);
   void Clustering(int bunch, int targetmod, int view);
   bool MakeCell(int bunch, int targetmod, int view);
   void SearchNeiborCell(int bunch, int view, int mod);
-  void UpdateCellState(int bunch, int view);
-  void Reconstruction(int bunch, int targetmod, int view);
+  void UpdateCellState(int bunch, int view, int repeat);
+  bool Reconstruction(int bunch, int targetmod, int view, int repeat);
+  void RejectTracks(int view, int bunch, int targetmod, int ntrack, vector<int> *reject);
   bool SearchCommonCell(Cell* cell1, Cell* cell2);
   double GetChisquare(double posz1[], double posz2[], double posxy1[], double posxy2[]);
   void SetTime();

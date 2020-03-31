@@ -19,9 +19,9 @@ void check_pedist_dif()
   for(int i=0; i<2; i++)
     {      
       if(i==0)
-	filename.Form("./result/DetPerform/BM_pedist_Jan_30_31.root");
+	filename.Form("${processdir}/result/DetPerform/BM_pedist_Jan_30_31.root");
       if(i==1)
-	filename.Form("./result/DetPerform/BM_pedist_Feb_1_2.root");
+	filename.Form("${processdir}/result/DetPerform/BM_pedist_Feb_1_2.root");
       fin[i] = new TFile(filename, "READ");
       tree[i] = (TTree*)fin[i]->Get("tree");
       adcdist_hor_left_total[i] = (TH1D*)fin[i]->Get("adcdist_hor_left_total");

@@ -19,6 +19,9 @@ public:
   vector<double> channel;
   vector<double> timedif;
   vector<double> charge;
+  vector<double> pel;
+  vector<double> per;
+  vector<double> pet;
   vector<double> Htime;
   vector<double> bunch;
   vector<double> posx;

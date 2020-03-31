@@ -35,7 +35,7 @@ int main( int argc, char **argv )
   FileStat_t info;
 
   TString wgdirpath, wgfilename;
-  wgdirpath.Form("./process/0-WGnocut");
+  wgdirpath.Form("${processdir}/process/0-WGnocut");
   TChain* wgchain = new TChain("tree","tree");
 
   //Set Classes
@@ -66,7 +66,7 @@ int main( int argc, char **argv )
 
   cout << "sunix= " << sunix << " eunix= " << eunix << '\n';
 
-  TFile* fout = new TFile("./result/BSD/WGAccumlated_pot.root", "recreate");
+  TFile* fout = new TFile("${processdir}/result/BSD/WGAccumlated_pot.root", "recreate");
   TH2F *bsd_accumlated_plot = new TH2F("bsd_accumlated_plot", "", 100, sunix, eunix, 100, 0, 30);
   TH2F *wg_accumlated_plot = new TH2F("wg_accumlated_plot", "", 100, sunix, eunix, 100, 0, 30);
   char ytitle[128] = "Accumlated P.O.T (10^{19})";

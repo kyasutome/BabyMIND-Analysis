@@ -18,7 +18,11 @@ DetHitCluster::DetHitCluster()
   dposy=-1.;
   dposz=-1.;
   HG=-1;
+  per=-1.;
+  pel=-1.;
+  pet=-1.;
   Htime=-1;
+  hitid=-1;
 }
 
 DetHitCluster::~DetHitCluster()
@@ -38,5 +42,9 @@ void DetHitCluster::Clear()
   dposy=-1.;
   dposz=-1.;
   HG=-1;
+  per=-1.;
+  pel=-1.;
+  pet=-1.;
   Htime=-1;
+  hitid=-1;
 }

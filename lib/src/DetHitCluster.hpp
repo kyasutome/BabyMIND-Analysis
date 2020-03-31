@@ -25,6 +25,10 @@ public:
   double dposz;
   double HG;
   double Htime;
+  double per;
+  double pel;
+  double pet;
+  double hitid;
 
   DetHitCluster();
   ~DetHitCluster(); 

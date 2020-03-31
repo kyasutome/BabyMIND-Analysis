@@ -174,6 +174,7 @@ void BabyMIND::CalcPEMean()
   
 }
 
+
 bool BabyMIND::ConverttoPln(vector<int> activepln)
 {
   plane.clear();
@@ -185,7 +186,7 @@ bool BabyMIND::ConverttoPln(vector<int> activepln)
       for(int iref=1; iref<=18; iref++)
 	{
 	  refposition = planepos[iref];
-	  if(fabs(theposition-refposition)<=20)
+	  if(fabs(theposition-refposition)<=30)
 	    {
 	      theplane = iref;
 	      break;
@@ -195,6 +196,9 @@ bool BabyMIND::ConverttoPln(vector<int> activepln)
       plane.push_back(theplane);
       //cout << "theplane= " << theplane << '\n';
     }//ihit
+
+  auto last =unique(plane.begin(), plane.end());
+  plane.erase(last, plane.end());
 }
 
 bool BabyMIND::SearchCoinPlns(int Plane)
@@ -237,6 +241,13 @@ void BabyMIND::CalcDetEff(int Plane, vector<int> activepln, int* counttotal, int
 	{
 	  *counteff = *counteff+1;
 	}
+      /*
+      if(!SearchThePln(Plane))
+	{
+	  if(Plane==16)
+	    cout << "top out" << '\n';
+	}
+      */
     }
 }
 

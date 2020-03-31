@@ -1,7 +1,7 @@
 
 void make_plots_bsdrelated()
 {
-  TString filepath = "./result/BSD/Accumlated_pot.root";
+  TString filepath = "${processdir}/result/BSD/Accumlated_pot.root";
   TFile* fin = new TFile(filepath, "read");
   TH2D *bsd_plot = (TH2D*)fin->Get("bsd_accumlated_plot");
   TH2D *bm_plot = (TH2D*)fin->Get("bm_accumlated_plot");

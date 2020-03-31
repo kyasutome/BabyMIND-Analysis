@@ -30,7 +30,6 @@ MCdata::MCdata()
   
 }
 
-
 MCdata::~MCdata()
 {
 }

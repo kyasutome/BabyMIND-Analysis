@@ -13,7 +13,7 @@ erun=$2
 
 dirpath=./process
 
-anadir=${PWD}
+#anadir=${PWD}
 datadir=$anadir/process
 
 echo "Analyze the file..."

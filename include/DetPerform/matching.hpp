@@ -24,16 +24,18 @@ private:
   double epsilon;
   TGraph* fitgraph[6][2];
   TF1* linear;
-  double slope[6][2];
-  double intercept[6][2];
 
 public:
+
+  double slope[6][2];
+  double intercept[6][2];
 
   double posfinalpln[6][2];
   double moddisttobm[6][2];
   Dimension* fdimension;
 
   double aveposxy[2][20];
+  double dist[2];
 
   //function
 public:

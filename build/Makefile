@@ -345,6 +345,32 @@ MakeEvent/fast:
 .PHONY : MakeEvent/fast
 
 #=============================================================================
+# Target rules for targets named charge_eff
+
+# Build rule for target.
+charge_eff: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 charge_eff
+.PHONY : charge_eff
+
+# fast build rule for target.
+charge_eff/fast:
+	$(MAKE) -f src/DetPerform/CMakeFiles/charge_eff.dir/build.make src/DetPerform/CMakeFiles/charge_eff.dir/build
+.PHONY : charge_eff/fast
+
+#=============================================================================
+# Target rules for targets named find_nuvertex
+
+# Build rule for target.
+find_nuvertex: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 find_nuvertex
+.PHONY : find_nuvertex
+
+# fast build rule for target.
+find_nuvertex/fast:
+	$(MAKE) -f src/DetPerform/CMakeFiles/find_nuvertex.dir/build.make src/DetPerform/CMakeFiles/find_nuvertex.dir/build
+.PHONY : find_nuvertex/fast
+
+#=============================================================================
 # Target rules for targets named find_neutrino
 
 # Build rule for target.
@@ -358,32 +384,6 @@ find_neutrino/fast:
 .PHONY : find_neutrino/fast
 
 #=============================================================================
-# Target rules for targets named wm_matchingtest
-
-# Build rule for target.
-wm_matchingtest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 wm_matchingtest
-.PHONY : wm_matchingtest
-
-# fast build rule for target.
-wm_matchingtest/fast:
-	$(MAKE) -f src/DetPerform/CMakeFiles/wm_matchingtest.dir/build.make src/DetPerform/CMakeFiles/wm_matchingtest.dir/build
-.PHONY : wm_matchingtest/fast
-
-#=============================================================================
-# Target rules for targets named pedist
-
-# Build rule for target.
-pedist: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pedist
-.PHONY : pedist
-
-# fast build rule for target.
-pedist/fast:
-	$(MAKE) -f src/DetPerform/CMakeFiles/pedist.dir/build.make src/DetPerform/CMakeFiles/pedist.dir/build
-.PHONY : pedist/fast
-
-#=============================================================================
 # Target rules for targets named detect_eff
 
 # Build rule for target.
@@ -395,6 +395,19 @@ detect_eff: cmake_check_build_system
 detect_eff/fast:
 	$(MAKE) -f src/DetPerform/CMakeFiles/detect_eff.dir/build.make src/DetPerform/CMakeFiles/detect_eff.dir/build
 .PHONY : detect_eff/fast
+
+#=============================================================================
+# Target rules for targets named eventrate_detail
+
+# Build rule for target.
+eventrate_detail: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 eventrate_detail
+.PHONY : eventrate_detail
+
+# fast build rule for target.
+eventrate_detail/fast:
+	$(MAKE) -f src/DetPerform/CMakeFiles/eventrate_detail.dir/build.make src/DetPerform/CMakeFiles/eventrate_detail.dir/build
+.PHONY : eventrate_detail/fast
 
 #=============================================================================
 # Target rules for targets named matching_eff
@@ -421,6 +434,45 @@ det_eventrate: cmake_check_build_system
 det_eventrate/fast:
 	$(MAKE) -f src/DetPerform/CMakeFiles/det_eventrate.dir/build.make src/DetPerform/CMakeFiles/det_eventrate.dir/build
 .PHONY : det_eventrate/fast
+
+#=============================================================================
+# Target rules for targets named pedist
+
+# Build rule for target.
+pedist: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pedist
+.PHONY : pedist
+
+# fast build rule for target.
+pedist/fast:
+	$(MAKE) -f src/DetPerform/CMakeFiles/pedist.dir/build.make src/DetPerform/CMakeFiles/pedist.dir/build
+.PHONY : pedist/fast
+
+#=============================================================================
+# Target rules for targets named lightyield_dist
+
+# Build rule for target.
+lightyield_dist: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 lightyield_dist
+.PHONY : lightyield_dist
+
+# fast build rule for target.
+lightyield_dist/fast:
+	$(MAKE) -f src/DetPerform/CMakeFiles/lightyield_dist.dir/build.make src/DetPerform/CMakeFiles/lightyield_dist.dir/build
+.PHONY : lightyield_dist/fast
+
+#=============================================================================
+# Target rules for targets named wm_matchingtest
+
+# Build rule for target.
+wm_matchingtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 wm_matchingtest
+.PHONY : wm_matchingtest
+
+# fast build rule for target.
+wm_matchingtest/fast:
+	$(MAKE) -f src/DetPerform/CMakeFiles/wm_matchingtest.dir/build.make src/DetPerform/CMakeFiles/wm_matchingtest.dir/build
+.PHONY : wm_matchingtest/fast
 
 #=============================================================================
 # Target rules for targets named tracking_eff
@@ -474,12 +526,16 @@ help:
 	@echo "... WMDataQuality"
 	@echo "... MakeMCEvent"
 	@echo "... MakeEvent"
+	@echo "... charge_eff"
+	@echo "... find_nuvertex"
 	@echo "... find_neutrino"
-	@echo "... wm_matchingtest"
-	@echo "... pedist"
 	@echo "... detect_eff"
+	@echo "... eventrate_detail"
 	@echo "... matching_eff"
 	@echo "... det_eventrate"
+	@echo "... pedist"
+	@echo "... lightyield_dist"
+	@echo "... wm_matchingtest"
 	@echo "... tracking_eff"
 	@echo "... wmcoincheck"
 .PHONY : help

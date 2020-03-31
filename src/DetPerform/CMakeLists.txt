@@ -55,6 +55,24 @@ if    (ROOT_FOUND)
   						${PROJECT_SOURCE_DIR}/include/DetPerform	
   						${PROJECT_SOURCE_DIR}/lib/src)
 
+  ADD_EXECUTABLE(eventrate_detail		eventrate_detail.cpp)
+  TARGET_LINK_LIBRARIES(eventrate_detail	${PROJECT_SOURCE_DIR}/lib/library/BMBasicRecon.so
+  						${PROJECT_SOURCE_DIR}/lib/library/BMBeaminfo.so
+						${PROJECT_SOURCE_DIR}/lib/library/BMBSD.so
+						${PROJECT_SOURCE_DIR}/lib/library/EVTCluster.so	
+						${PROJECT_SOURCE_DIR}/lib/library/PMRecon.so
+						${PROJECT_SOURCE_DIR}/lib/library/WGRecon.so		
+						${PROJECT_SOURCE_DIR}/lib/library/BasicRecon.so
+  						${PROJECT_SOURCE_DIR}/lib/library/DetRecon.so		
+						${ROOT_LIBRARIES})
+
+  TARGET_INCLUDE_DIRECTORIES(eventrate_detail	PUBLIC	${PROJECT_SOURCE_DIR}/include/MakeCalib
+  						${PROJECT_SOURCE_DIR}/include/EvtDisp	
+  						${PROJECT_SOURCE_DIR}/include/MakeEvent	
+  						${PROJECT_SOURCE_DIR}/include/BSDApply	
+  						${PROJECT_SOURCE_DIR}/include/DetPerform	
+  						${PROJECT_SOURCE_DIR}/lib/src)
+
   ADD_EXECUTABLE(detect_eff		        detect_eff.cpp)
   TARGET_LINK_LIBRARIES(detect_eff		${PROJECT_SOURCE_DIR}/lib/library/EVTCluster.so	
   						${PROJECT_SOURCE_DIR}/lib/library/BMDisp.so
@@ -122,6 +140,53 @@ if    (ROOT_FOUND)
   						${PROJECT_SOURCE_DIR}/include/BSDApply	
   						${PROJECT_SOURCE_DIR}/include/DetPerform	
   						${PROJECT_SOURCE_DIR}/lib/src)
+
+  ADD_EXECUTABLE(find_nuvertex		        find_nuvertex.cpp)
+  TARGET_LINK_LIBRARIES(find_nuvertex		${PROJECT_SOURCE_DIR}/lib/library/EVTCluster.so	
+  						${PROJECT_SOURCE_DIR}/lib/library/BMDisp.so
+  						${PROJECT_SOURCE_DIR}/lib/library/DetRecon.so
+  						${PROJECT_SOURCE_DIR}/lib/library/MCRecon.so
+  						${PROJECT_SOURCE_DIR}/lib/library/MCTrue.so
+						${ROOT_LIBRARIES})
+
+  TARGET_INCLUDE_DIRECTORIES(find_nuvertex	PUBLIC	${PROJECT_SOURCE_DIR}/include/MakeCalib
+  						${PROJECT_SOURCE_DIR}/include/EvtDisp	
+  						${PROJECT_SOURCE_DIR}/include/MakeEvent	
+  						${PROJECT_SOURCE_DIR}/include/BSDApply	
+  						${PROJECT_SOURCE_DIR}/include/DetPerform	
+  						${PROJECT_SOURCE_DIR}/lib/src)
+
+  ADD_EXECUTABLE(charge_eff		        charge_eff.cpp)
+  TARGET_LINK_LIBRARIES(charge_eff		${PROJECT_SOURCE_DIR}/lib/library/EVTCluster.so	
+  						${PROJECT_SOURCE_DIR}/lib/library/BMDisp.so
+  						${PROJECT_SOURCE_DIR}/lib/library/DetRecon.so
+  						${PROJECT_SOURCE_DIR}/lib/library/MCRecon.so
+  						${PROJECT_SOURCE_DIR}/lib/library/MCTrue.so
+						${ROOT_LIBRARIES})
+
+  TARGET_INCLUDE_DIRECTORIES(charge_eff		PUBLIC	${PROJECT_SOURCE_DIR}/include/MakeCalib
+  						${PROJECT_SOURCE_DIR}/include/EvtDisp	
+  						${PROJECT_SOURCE_DIR}/include/MakeEvent	
+  						${PROJECT_SOURCE_DIR}/include/BSDApply	
+  						${PROJECT_SOURCE_DIR}/include/DetPerform	
+  						${PROJECT_SOURCE_DIR}/lib/src)
+
+  ADD_EXECUTABLE(lightyield_dist		lightyield_dist.cpp)
+  TARGET_LINK_LIBRARIES(lightyield_dist		${PROJECT_SOURCE_DIR}/lib/library/EVTCluster.so	
+  						${PROJECT_SOURCE_DIR}/lib/library/BMDisp.so
+  						${PROJECT_SOURCE_DIR}/lib/library/DetRecon.so
+  						${PROJECT_SOURCE_DIR}/lib/library/MCRecon.so
+  						${PROJECT_SOURCE_DIR}/lib/library/MCTrue.so
+						${ROOT_LIBRARIES})
+
+  TARGET_INCLUDE_DIRECTORIES(lightyield_dist    PUBLIC	${PROJECT_SOURCE_DIR}/include/MakeCalib
+  						${PROJECT_SOURCE_DIR}/include/EvtDisp	
+  						${PROJECT_SOURCE_DIR}/include/MakeEvent	
+  						${PROJECT_SOURCE_DIR}/include/BSDApply	
+  						${PROJECT_SOURCE_DIR}/include/DetPerform	
+  						${PROJECT_SOURCE_DIR}/lib/src)
+
+
 
 
 

@@ -6,6 +6,7 @@
 #include "TApplication.h"
 #include "TCanvas.h"
 #include "TLegend.h"
+#include "TStyle.h"
 
 //include
 #include "easyrecon.cpp"
@@ -17,8 +18,8 @@
 
 using namespace std;
 
-#define finer
-//#define normal
+//#define finer
+#define normal
 
 int main( int argc, char **argv )
 {
@@ -27,13 +28,15 @@ int main( int argc, char **argv )
   TString histname;
 
   TApplication app("app", 0, 0, 0, 0);
-  TCanvas *c1 = new TCanvas("c1", "c1", 1800, 500);
+  TCanvas *c1 = new TCanvas("c1", "c1", 1800, 700);
 
   TH1D* hist_evtrate;
   TGraphErrors* graph_evtrate[7];
 
   int startdate = 25;
   histname.Form("evtrate");
+
+  double eachPOT[50];
 
   int num = 0;
 
@@ -97,7 +100,7 @@ int main( int argc, char **argv )
   hist_evtrate->GetXaxis()->SetBinLabel(19,"2/12");
   #endif 
   
-  hist_evtrate->SetMaximum(0.30);
+  hist_evtrate->SetMaximum(0.35);
   hist_evtrate->GetXaxis()->SetLabelSize(0.08);
   hist_evtrate->SetTitle("EventRate (sand muons);;(/10^{14} P.O.T)");
   hist_evtrate->SetStats(0);
@@ -142,8 +145,8 @@ int main( int argc, char **argv )
 
   vector<int> ataribunch;
 
-  //for(int ientry=0; ientry<NEntry; ientry++)
-  for(int ientry=0; ientry<300000; ientry++)
+  for(int ientry=0; ientry<NEntry; ientry++)
+  //for(int ientry=0; ientry<300000; ientry++)
     {
       ataribunch.clear();
       tree->GetEntry(ientry);
@@ -166,6 +169,7 @@ int main( int argc, char **argv )
 		for(int imod=0; imod<6; imod++)
 		  sandmuonrate[imod][datecount] = sandmuonrate[imod][datecount]/POT*norm;
 		TPOT=evtcluster->totalpot;
+		//eachPOT[datecount]=POT;
 		datecount++;
 		hourcount=0;
 	      }
@@ -183,6 +187,7 @@ int main( int argc, char **argv )
 	      sandmuonrate[imod][datecount] = sandmuonrate[imod][datecount]/POT*norm;
 	    
 	    TPOT=evtcluster->totalpot;
+	    eachPOT[datecount]=POT*norm;
 	    datecount++;
 	  }
 #endif 
@@ -199,6 +204,8 @@ int main( int argc, char **argv )
 	    
 	    for(int imod=0; imod<6; imod++)
 	      sandmuonrate[imod][datecount] = sandmuonrate[imod][datecount]/POT*norm;
+	    eachPOT[datecount]=POT/norm;
+
 	    TPOT=evtcluster->totalpot;
 	    datecount++;
 	    hourcount=0;
@@ -214,8 +221,10 @@ int main( int argc, char **argv )
 
 	    for(int imod=0; imod<6; imod++)
 	      sandmuonrate[imod][datecount] = sandmuonrate[imod][datecount]/POT*norm;
+	    eachPOT[datecount]=POT/norm;
 	    
 	    TPOT=evtcluster->totalpot;
+
 	    datecount++;
 	  }
 #endif 
@@ -276,7 +285,10 @@ int main( int argc, char **argv )
     }//ientry
 
   for(int imod=0; imod<6; imod++)
-    sandmuonrate[imod][datecount] = sandmuonrate[imod][datecount]/POT*norm;  
+    {
+      sandmuonrate[imod][datecount] = sandmuonrate[imod][datecount]/POT*norm;  
+    }
+  eachPOT[datecount]=POT/norm;
 
   for(int icount=0; icount<=datecount; icount++)
     {
@@ -289,9 +301,15 @@ int main( int argc, char **argv )
       cout << '\n';
 
       for(int imod=0; imod<6; imod++)
-	error_rate[imod][icount] = 0;
-    }  
+	{
+	  double sum = eachPOT[icount];
+	  double x = sandmuonrate[imod][icount]*eachPOT[icount];
 
+	  error_rate[imod][icount] = sqrt(x)/sum;
+	  cout << "error_rate[imod][icount]= " << error_rate[imod][icount] << " " << eachPOT[icount]  << '\n';
+	}
+    }
+  
   for(int imod=0; imod<6; imod++)
     {
       //hist_evtrate[imod]->Fill(icount+1, sandmuonrate[icount][imod]);
@@ -308,6 +326,10 @@ int main( int argc, char **argv )
   graph_evtrate[3]->Draw("P,same");
   graph_evtrate[4]->Draw("P,same");
   graph_evtrate[5]->Draw("P,same");
+  TF1 *linear = new TF1("linear", "[0]", 1, 17);
+  linear->SetParameters(0, 0.27);
+  gStyle->SetOptFit(1111);
+  graph_evtrate[5]->Fit(linear, "", "", 1, 18);
 
   TLegend *legend = new TLegend(0.70, 0.50, 0.90, 0.80);
   legend->AddEntry(graph_evtrate[0], "Proton Module", "P");
@@ -316,7 +338,8 @@ int main( int argc, char **argv )
   legend->AddEntry(graph_evtrate[3], "WallMRD North", "P");
   legend->AddEntry(graph_evtrate[4], "WallMRD South", "P");
   legend->AddEntry(graph_evtrate[5], "Baby MIND", "P");
-  //legend->Draw();
+  legend->SetFillStyle(0);
+  legend->Draw();
 
   c1->Update();
   app.Run();

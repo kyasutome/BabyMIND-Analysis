@@ -124,7 +124,7 @@ int main( int argc, char **argv )
   tree->SetBranchAddress("EVTCluster", &inputcluster);
   cout << tree->GetEntries() << '\n';
 
-  TFile *fout = new TFile("./result/DetPerform/eventtiming.root", "RECREATE");
+  TFile *fout = new TFile("${processdir}/result/DetPerform/eventtiming.root", "RECREATE");
 
   for(int imod=0; imod<3; imod++)
     {
@@ -283,7 +283,8 @@ int main( int argc, char **argv )
 #ifdef display
 	  cout << "ientry= " << ientry << '\n'; 
 	  makemonitor->Display(targetcluster);
-	  CanvasName.Form("./plots/EvtDisp/EvtDisp_0220/EvtDisp_spill_%d.png", inputcluster->spillnum);
+	  CanvasName.Form("${processdir}/plots/EvtDisp/EvtDisp_0220/EvtDisp_spill_%d.png", 
+			  inputcluster->spillnum);
 	  makemonitor->monitor->Print(CanvasName);
 	  makemonitor->timeinfo->Delete();
 	  makemonitor->spillinfo->Delete();

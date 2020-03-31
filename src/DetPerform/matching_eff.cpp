@@ -73,7 +73,7 @@ int main( int argc, char **argv )
     }
 
   //for(int ientry=0; ientry<tree->GetEntries(); ientry++)
-  for(int ientry=0; ientry<15000; ientry++)
+  for(int ientry=0; ientry<14300; ientry++)
     {
       tree->GetEntry(ientry);
 
@@ -155,7 +155,7 @@ int main( int argc, char **argv )
 		  //cout << "posz= " << posz << '\n';
 		  activepln[iview][ibunch].push_back(posz);
 		  
-		  if(fabs(posz-matching->posfinalpln[targetmod][iview])<5)
+		  if(fabs(posz-matching->posfinalpln[targetmod][iview])<20)
 		    finalposxy_candidate[iview][ibunch].push_back(posxy);
 		  
 		}//ihit 
@@ -205,7 +205,7 @@ int main( int argc, char **argv )
 	      
 	      for(int itrack=0; itrack<bmntrack[iview][thebunch]; itrack++)
 		{		
-		  //cout << "ientry= " << ientry << " iview= " << iview << " ibunch= " << thebunch << '\n';
+		  cout << "ientry= " << ientry << " iview= " << iview << " ibunch= " << thebunch << '\n';
 		  if(iview==0)
 		    {
 		      if(matching->Matchingbm(iview, itrack, extrapolatexy[iview][thebunch], 
@@ -225,16 +225,16 @@ int main( int argc, char **argv )
 		}
 
 	      if(iview==0)
-		if(bmhitmatchflag[iview]==false)		    
+		if(bmmatchflag[iview]==false)		    
 		  if(matching->SearchMatchHit(iview, thebunch, extrapolatexy[iview][thebunch],
 					      bmposz[iview][thebunch], bmposxy[iview][thebunch]))
-		    bmmatchflag[iview] = true;
+		    bmhitmatchflag[iview] = true;
 	      
 	      if(iview==1)
-		if(bmhitmatchflag[iview]==false)		    
+		if(bmmatchflag[iview]==false)		    
 		  if(matching->SearchMatchHit(iview, thebunch, extrapolatexy[iview][thebunch], 
 					      bmposz[iview][thebunch], bmposxy[iview][thebunch]))
-		    bmmatchflag[iview] = true;
+		    bmhitmatchflag[iview] = true;
 	      
 	    }
 	  
@@ -242,7 +242,7 @@ int main( int argc, char **argv )
 	    {
 	      matching_total[targetmod]++;
 
-	      if((!bmmatchflag[0] || !bmmatchflag[1]) && (!bmhitmatchflag[0] || !bmhitmatchflag[1]))
+	      if(!((bmmatchflag[0] || bmhitmatchflag[0]) && (bmmatchflag[1] || bmhitmatchflag[1])))
 		{
 		 
 		  cout << "ientry= " << ientry << " ibunch= " << ibunch  << '\n';
@@ -274,7 +274,7 @@ int main( int argc, char **argv )
 	      trackmatching[1].push_back(bunch);
 	    }
 
-	    else if( bmhitmatchflag[0] && bmhitmatchflag[1] )
+	  else if( (bmmatchflag[0] || bmhitmatchflag[0]) && (bmmatchflag[1] || bmhitmatchflag[1]) )
 	    {
 	      matching_eff[targetmod]++;
 	      notrackhitmatching[0].push_back(ientry);
@@ -286,6 +286,11 @@ int main( int argc, char **argv )
 	}//ibunch
      
     }//ientry
+
+  for(int i=0; i<notrackmatching[0].size(); i++)
+    {
+      cout << notrackmatching[0].at(i) << '\n';
+    }
   
   cout << "1 track sample= " << tracksample[1] << '\n';
   cout << "Total Matching Candidates= " 

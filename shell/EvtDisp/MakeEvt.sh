@@ -17,7 +17,7 @@ pmssub=$6
 pmesub=$7
 wgrun=$8
 
-anadir=${PWD}
+#anadir=${PWD}
 datadir=$anadir/process/6-YASU/
 
 filename=$(find  $datadir -type f -name "*BMCalib*$date$month*$run-$subrun*")

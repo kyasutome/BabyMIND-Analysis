@@ -13,7 +13,7 @@ date=$2
 mon=$3
 hour=$4
 
-anadir=${PWD}
+#anadir=${PWD}
 datadir=$anadir/process/1-WGCalib
 
 #filename=$(find  $datadir -type f -name "*WGCalib_$run*$ssub*$esub*")

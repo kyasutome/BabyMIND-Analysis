@@ -13,11 +13,14 @@ private:
 
 public:
 
-  double charge[6][2][9][20][300];
-  double hittime[6][2][9][20][300];
-  double posx[6][2][9][20][300];
-  double posy[6][2][9][20][300];
-  double posz[6][2][9][20][300];
+  double charge[6][2][9][20][1000];
+  double per[6][2][9][20][1000];
+  double pel[6][2][9][20][1000];
+  double pet[6][2][9][20][1000];
+  double hittime[6][2][9][20][1000];
+  double posx[6][2][9][20][1000];
+  double posy[6][2][9][20][1000];
+  double posz[6][2][9][20][1000];
 
   double iposx[6][2][9][20];
   double iposy[6][2][9][20];

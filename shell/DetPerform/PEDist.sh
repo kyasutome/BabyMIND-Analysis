@@ -10,7 +10,7 @@ fi
 
 run=$1
 
-anadir=${PWD}
+#anadir=${PWD}
 datadir=$anadir/process/1-BMCalib
 
 echo "Filename="$filename

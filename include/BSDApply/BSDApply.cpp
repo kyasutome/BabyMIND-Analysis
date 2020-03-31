@@ -115,7 +115,7 @@ void BSDApply::MakeBeamGroup(int isub)
     beamgroup[i].clear();
 
   //int startentry = firstmatchspillentry + isub*nsubdata;
-  int startentry = firstmatchspillentry + isub*950;
+  int startentry = firstmatchspillentry + isub*990;
   for(int ibsd=startentry; ibsd<startentry+dayspill; ibsd++)
     {
       bsdchain->GetEntry(ibsd);
@@ -133,7 +133,7 @@ void BSDApply::SpillMatch(int isub, int mod)
   vector<double> detgroup_s;
 
   if(mod==0) detgroup_s = pmgroup[isub][0];  
-  if(mod==1) detgroup_s = wggroup[isub][0];  
+  if(mod==1) detgroup_s = wggroup[isub][0];
   if(mod==5) detgroup_s = bmgroup[isub][0];
 
   sort(beamgroup_s.begin(), beamgroup_s.end());
@@ -144,7 +144,8 @@ void BSDApply::SpillMatch(int isub, int mod)
 
 }
 
-void BSDApply::FillBSD(TTree* tree, TTree* otree, BMBSD* bmbsd, int mod)
+void BSDApply::FillBSD(TTree* tree, TTree* otree, BMBSD* bmbsd, int mod, BMBasicRecon* bmbasicrecon,
+		       BMBeaminfo* bmbeaminfo)
 {
   for(int ispill=0; ispill<matchingspill.size(); ispill++)
     {
@@ -157,26 +158,38 @@ void BSDApply::FillBSD(TTree* tree, TTree* otree, BMBSD* bmbsd, int mod)
       if(mod==0)
 	{
 	  thebeamspill = matchingspill.at(ispill);
-	  thespillit = find(pmspill.begin(), pmspill.end(), thebeamspill);
+	  thespillit = find(pmspill.begin()+pmcount, pmspill.end(), thebeamspill);
 	  thepmspill = thespillit - pmspill.begin();
 	  tree->GetEntry(thepmspill);
-	  cout << "pmspill= " << thepmspill << '\n';
+	  pmcount++;
 	}
 
       if(mod==1)
 	{
 	  thebeamspill = matchingspill.at(ispill);
-	  thespillit = find(wgspill.begin(), wgspill.end(), thebeamspill);
+	  thespillit = find(wgspill.begin()+wgcount, wgspill.end(), thebeamspill);
 	  thewgspill = thespillit - wgspill.begin();
 	  tree->GetEntry(thewgspill);
+	  wgcount++;
 	}
 
       if(mod==5)
 	{
 	  thebeamspill = matchingspill.at(ispill);
-	  thespillit = find(bmspill.begin(), bmspill.end(), thebeamspill);
-	  thebmspill = thespillit - bmspill.begin();
-	  tree->GetEntry(thebmspill);
+	  //thespillit = find(bmspill.begin()+bmcount, bmspill.end(), thebeamspill);
+	  
+	  thespillit = find(bmspill.begin()+bmcount, bmspill.begin()+bmcount+1000, thebeamspill);
+	  
+	  if(thespillit!=bmspill.begin()+bmcount+1000)
+	    {
+	      thebmspill = thespillit - bmspill.begin();
+	      
+	      cout << "thebmspill= " << thebmspill << " bmspill= " << bmspill.at(thebmspill) 
+		   << " thebeamspill= " << thebeamspill << '\n';
+	      
+	      tree->GetEntry(thebmspill);
+	    }
+	  bmcount++;
 	}
 
       otree->Fill();
@@ -230,26 +243,30 @@ bool BSDApply::CheckMainteDay(int Mon, int Date, int *detfirstspill, int mod)
     }
 
   
-  
   if(Mon==2 && Date==2 && mod==1) 
     {
       *detfirstspill = 31383;
       maintecheck = true;
     }
 
-
+    
   if(Mon==2 && Date==2 && mod==5) 
     {
       *detfirstspill = 31383;
+      //*detfirstspill = 1423;
       maintecheck = true;
     }
   
   
-  //if(Mon==2 && Date==6 && mod==5) 
-  //  {
-  //    *detfirstspill = 22890;
-  //    maintecheck = true;
-  //  }
+  //Just for 2/5 data
+  
+  if(Mon==2 && Date==6 && mod==5) 
+    {
+      *detfirstspill = 22890;
+      maintecheck = true;
+    }
+      
+  
 
   /*
   if(Mon==2 && Date==6 && mod==1) 

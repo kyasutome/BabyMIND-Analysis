@@ -36,9 +36,9 @@ public:
   ~PickSignal();
 
   void SignalCreation(int ientry, BMdata* bmbranch[NUMBEROFFEB], BMBasicRecon* bmbasicrecon, DataReader* dreader,
-		      vector<double> commonspill);
+		      vector<double> commonspill, int id);
   void YASUSignalCreation(int ientry, BMdata* bmbranch[NUMBEROFFEB], BMBasicRecon* bmbasicrecon, DataReader* dreader,
-			  vector<double> commonspill);
+			  vector<double> commonspill, int id);
   void MakeGTrigCoins(BMdata* bmbranch, vector<double>* GTrigTagCoins, int range);
   void MakeThreeBounds(int ACoin, BMdata* bmbranch_l, BMdata* bmbranch_r, BMdata* bmbranch_t);
   void FillBasicReconClass(int imod, bool firstfill, int CoinsLeft, int CoinsRight, int CoinsTop, 
